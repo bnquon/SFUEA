@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      inset: {
+        '100vh': '100vh'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
