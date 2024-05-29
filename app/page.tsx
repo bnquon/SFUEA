@@ -23,8 +23,9 @@ export default function Home() {
     return (
         <main className="relative">
 
-            <div className="h-screen w-screen bg-black flex justify-center items-center relative text-white">
-                SAMPLE TEXT SAMPLE TEXT
+            <div className="h-screen w-screen bg-black flex flex-col justify-center items-center relative text-white text-center">
+                <p className="text-5xl font-semibold mb-8">JOIN SFU'S LARGEST GAMING CLUB <br /> WITH OVER <span className="font-bold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">5500</span> MEMBERS</p>
+                <button id="btn-grad" className="text-3xl font-bold">GAME WITH US</button>
             </div>
 
             <div className="h-screen w-screen sticky top-0 z-0">
