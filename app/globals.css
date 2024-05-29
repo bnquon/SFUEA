@@ -32,3 +32,11 @@ body {
     text-wrap: balance;
   }
 }
+
+#mask {
+  mask-image: url('../public/mask.svg');
+  background: red;
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  transition: linear;
+}
