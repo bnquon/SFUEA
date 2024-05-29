@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { raleway } from "@/app/ui/fonts";
 import "./globals.css";
 import Navbar from "./ui/Navbar";
-
+import { Providers } from './providers';
 
 
 export const metadata: Metadata = {

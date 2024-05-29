@@ -1,30 +1,41 @@
+"use client"
 import Image from "next/image";
+import { motion, useMotionValue } from "framer-motion"
 import { useInView } from "react-intersection-observer";
-
 export default function Home() {
 
-    // const { ref, inView, entry } = useInView({
-    //  /* Optional options */
-    //  threshold: 0,
-    // });
+    const y = useMotionValue(0)
+
+    const { ref, inView } = useInView({
+        /* Optional options */
+        threshold: 0.2,
+    });
+
+    if (inView) {
+        console.log(inView);
+    }
 
     return (
-        <main className="flex flex-col max-w-full overflow-x-hidden">
-            <div id="section1" className="h-screen w-screen bg-red-900 flex justify-center items-center relative">
-                Raleway
-                RALEWAY
-                section1
-            </div>
-            <div id="section2" className="h-screen w-screen bg-amber-500 flex justify-center items-top text-white relative z-10">
-                Hello
-            </div>
-            <div id="section3" className="h-screen w-screen bg-black text-white flex justify-center items-center absolute top-100vh z-0">
-                <Image src='/racc.png' width={100} height={100}></Image>
-            </div>
+        <main className="relative">
 
-            {/* <div id="section3" className="h-screen w-screen bg-rose-900">
-                section3
-            </div> */}
+            
+                <div id="section1" className="h-screen w-screen bg-blue-500 flex justify-center items-center relative">
+                    Raleway
+                    RALEWAY
+                    section1
+                </div>
+
+                <div className="sticky top-0 h-screen bg-red-500 flex justify-center items-center z-10">
+                    SAMPLE TEXT SAMPLE TEXT
+                    <motion.div className="w-28 h-28 rounded-full bg-white overflow-hidden flex justify-center items-end absolute duration-300" style={{opacity: inView? '1': '0'}}>
+                        <Image src='/racc.png' width={75} height={60} alt="raccoon"></Image>
+                    </motion.div>   
+                </div>
+
+                <div ref={ref} className="h-screen w-screen bg-blue-500 flex justify-center items-center relative">
+                    SAMPLE TEXT SAMPLE TEXT
+                </div>
+
         </main>
     );
 }

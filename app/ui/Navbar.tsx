@@ -36,7 +36,7 @@ function Navbar() {
                                         'px-3 py-1 hover:bg-slate-200/20 max-w-fit rounded-xl',
                                         {
                                             // Render these classNames for selected path
-                                            'px-3 py-1 bg-slate-200 hover:bg-slate-200 text-neutral-800 font-bold max-w-fit rounded-xl' : pathname === link.href,
+                                            'px-3 py-1 bg-red-500 hover:bg-slate-200 text-neutral-800 font-bold max-w-fit rounded-xl' : pathname === link.href,
                                         },
                                     )}>
                                         { link.name }
