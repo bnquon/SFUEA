@@ -29,6 +29,9 @@ export default function Home() {
             </div>
 
             <div className="h-screen w-screen sticky top-0 z-0">
+
+                {/* THIS MOTION DIV IS THE PAGE UNDERNEATH */}
+
                 <motion.div  
                     style={{
                         visibility: mousePosition > 0? 'visible': 'hidden'
@@ -44,11 +47,15 @@ export default function Home() {
                     <Image src='/racc.png' height={80} width={80} alt="racc"></Image>
                 </motion.div >
 
+                {/* THIS DIV IS THE PAGE ONTOP */}
+                
                 <div className="h-screen w-screen text-6xl flex justify-center items-center bg-[#C0C0C0]">
                     <p className="w-1/2 text-[#131313]">I'm a <span>selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience.</p>
                 </div>
 
             </div>
+
+            {/* THIS DIV IS THE PAGE BELOW NEEDED FOR MORE SCROLLING SPACE */}
 
             <div className="h-screen w-screen bg-transparent flex justify-center items-center relative"></div>
 
