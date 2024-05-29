@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -19,24 +18,19 @@ export default function Home() {
         }
     }, []);
 
-    const { ref, inView } = useInView({
-        /* Optional options */
-        threshold: 0.2,
-    });
-
-    if (inView) {
-        console.log(inView);
-    }
-
     return (
         <main className="relative">
             <div className="h-screen w-screen fixed top-0 z-10">
                 <motion.div  
                     animate={{
-                        WebkitMaskSize: `${mousePosition*3}px`,
+                        WebkitMaskSize: `${mousePosition*2.5}px`,
                     }}
+                    transition={{ type: "spring",
+                    ease: "easeOut",
+                    stiffness: 0, 
+                    damping: 25 }}
                     id="mask" className="h-screen w-screen text-6xl flex justify-center items-center absolute top-0 bg-emerald-500"> 
-                    <p className="w-1/2"> A visual designer - with skills that haven't been replaced by A.I (yet) - making good shit only if the paycheck is equally good.</p>
+                    <Image src='/racc.png' height={80} width={80} alt="racc"></Image>
                 </motion.div >
 
                 <div className="h-screen w-screen text-6xl flex justify-center items-center bg-blue-500">
