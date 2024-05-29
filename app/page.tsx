@@ -34,18 +34,18 @@ export default function Home() {
                         visibility: mousePosition > 0? 'visible': 'hidden'
                     }}
                     animate={{
-                        WebkitMaskSize: `${mousePosition*3}px`,
+                        WebkitMaskSize: `${mousePosition*3.5}px`,
                     }}
                     transition={{ type: "spring",
                     ease: "easeOut",
                     stiffness: 0, 
                     damping: 0 }}
-                    id="mask" className="h-screen w-screen text-6xl flex justify-center items-center absolute top-0 bg-emerald-500"> 
+                    id="mask" className="h-screen w-screen text-6xl flex justify-center items-center absolute top-0 bg-[#131313]"> 
                     <Image src='/racc.png' height={80} width={80} alt="racc"></Image>
                 </motion.div >
 
-                <div className="h-screen w-screen text-6xl flex justify-center items-center bg-blue-500">
-                    <p className="w-1/2">I'm a <span>selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience.</p>
+                <div className="h-screen w-screen text-6xl flex justify-center items-center bg-[#C0C0C0]">
+                    <p className="w-1/2 text-[#131313]">I'm a <span>selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience.</p>
                 </div>
 
             </div>
