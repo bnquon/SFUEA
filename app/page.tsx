@@ -23,11 +23,11 @@ export default function Home() {
     return (
         <main className="relative">
 
-            <div className="h-screen w-screen bg-white flex justify-center items-center relative text-black">
+            <div className="h-screen w-screen bg-black flex justify-center items-center relative text-white">
                 SAMPLE TEXT SAMPLE TEXT
             </div>
 
-            <div className="h-screen w-screen sticky top-0 z-10">
+            <div className="h-screen w-screen sticky top-0 z-0">
                 <motion.div  
                     animate={{
                         WebkitMaskSize: `${mousePosition*3}px`,
@@ -35,7 +35,7 @@ export default function Home() {
                     transition={{ type: "spring",
                     ease: "easeOut",
                     stiffness: 0, 
-                    damping: 25 }}
+                    damping: 0 }}
                     id="mask" className="h-screen w-screen text-6xl flex justify-center items-center absolute top-0 bg-emerald-500"> 
                     <Image src='/racc.png' height={80} width={80} alt="racc"></Image>
                 </motion.div >
@@ -46,9 +46,7 @@ export default function Home() {
 
             </div>
 
-            <div className="h-screen w-screen bg-black flex justify-center items-center relative">
-                SAMPLE TEXT SAMPLE TEXT
-            </div>
+            <div className="h-screen w-screen bg-transparent flex justify-center items-center relative"></div>
 
         </main>
     );

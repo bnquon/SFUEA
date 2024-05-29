@@ -18,7 +18,7 @@ function Navbar() {
 
     return (
         <StickyHeadroom scrollHeight={100}> 
-            <div id="container" className="fixed z-50">
+            <div id="container" className="fixed z-30">
                 <div id="3sections" className="grid py-4 w-screen grid-rows-1 grid-cols-3">
                     <div id="logo">
                         <Image src={"/placeholderlogo.png"} alt={'PLACEHOLDER'} width={50} height={50} className="mx-6"></Image>
