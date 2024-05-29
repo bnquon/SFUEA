@@ -8,7 +8,9 @@ export default function Home() {
     const [mousePosition, setMousePosition] = useState(0);
 
     const handleScroll = () => {
-        setMousePosition(window.scrollY);
+        const scrollPosition = window.scrollY - 1.15*window.innerHeight;
+        console.log(scrollPosition);
+        setMousePosition(scrollPosition > 0 ? scrollPosition : 0);
     };
 
     useEffect(() => {
@@ -20,10 +22,15 @@ export default function Home() {
 
     return (
         <main className="relative">
-            <div className="h-screen w-screen fixed top-0 z-10">
+
+            <div className="h-screen w-screen bg-white flex justify-center items-center relative text-black">
+                SAMPLE TEXT SAMPLE TEXT
+            </div>
+
+            <div className="h-screen w-screen sticky top-0 z-10">
                 <motion.div  
                     animate={{
-                        WebkitMaskSize: `${mousePosition*2.5}px`,
+                        WebkitMaskSize: `${mousePosition*3}px`,
                     }}
                     transition={{ type: "spring",
                     ease: "easeOut",
@@ -38,9 +45,11 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className="h-screen w-screen bg-black flex justify-center items-center absolute top-[100vh]">
+
+            <div className="h-screen w-screen bg-black flex justify-center items-center relative">
                 SAMPLE TEXT SAMPLE TEXT
             </div>
+
         </main>
     );
 }
