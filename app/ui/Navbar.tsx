@@ -25,7 +25,7 @@ function Navbar() {
                     </div>
 
                     <div id="pageSwitcher" className="col-start-2 flex justify-center">
-                        <div id="outerBorder" className="flex max-w-fit px-6 py-3 bg-slate-200/20 backdrop-blur-sm rounded-3xl gap-8 items-center">
+                        <div id="outerBorder" className="flex max-w-fit px-6 py-3 bg-slate-200/20 backdrop-blur-sm rounded-[20px] gap-8 items-center">
                             { links.map((link) => {
                                 return (
                                     <Link 
@@ -33,7 +33,7 @@ function Navbar() {
                                     href={ link.href }
                                     className={clsx(
                                         // Render these classNames for non-selected paths
-                                        'px-3 py-1 hover:bg-slate-200/20 max-w-fit rounded-xl',
+                                        'px-3 py-1 hover:bg-slate-200/20 max-w-fit rounded-xl text-xl',
                                         {
                                             // Render these classNames for selected path
                                             'px-3 py-1 bg-red-500 hover:bg-slate-200 text-neutral-800 font-bold max-w-fit rounded-xl' : pathname === link.href,
