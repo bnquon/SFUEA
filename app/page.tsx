@@ -38,7 +38,7 @@ export default function Home() {
                     stiffness: 0, 
                     damping: 0 }}
                     id="mask" className="h-screen w-screen text-6xl flex justify-center items-center absolute top-0 bg-emerald-500"> 
-                    <Image src='/racc.png' height={80} width={80} alt="racc"></Image>
+                    <Image style={{display: mousePosition > 0? 'block': 'none'}} src='/racc.png' height={80} width={80} alt="racc"></Image>
                 </motion.div >
 
                 <div className="h-screen w-screen text-6xl flex justify-center items-center bg-blue-500">
