@@ -1,10 +1,32 @@
 "use client"
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 
 export default function Home() {
 
+    type Game = {
+        title: string;
+        picture: string;
+    }
+
+    const games: Game[] = [
+        {
+            title: "Valorant",
+            picture: '/val.jpg'
+        },
+        {
+            title: "League of Legends",
+            picture: '/crank.jpg'
+        },
+        {
+            title: "TFT",
+            picture: '/tft.jpg'
+        }
+    ];
+
+    const count = useMotionValue(1000)
+    const rounded = useTransform(count, Math.round);
     const [mousePosition, setMousePosition] = useState(0);
 
     const handleScroll = () => {
@@ -14,6 +36,10 @@ export default function Home() {
     };
 
     useEffect(() => {
+        const animation = animate(count, 5500, {
+            duration: 3
+        })
+
         window.addEventListener('scroll', handleScroll, {passive: true});
         return () => {
             window.removeEventListener('scroll', handleScroll)
@@ -24,8 +50,8 @@ export default function Home() {
         <main className="relative">
 
             <div className="h-screen w-screen bg-black flex flex-col justify-center items-center relative text-white text-center">
-                <p className="text-5xl font-semibold mb-8">JOIN SFU'S LARGEST GAMING CLUB <br /> WITH OVER <span className="font-bold text-6xl text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">5500</span> MEMBERS</p>
-                <button id="btn-grad" className="text-3xl font-bold">GAME WITH US</button>
+                <p className="text-5xl font-normal mb-8">JOIN SFU'S LARGEST GAMING CLUB <br /> WITH OVER <motion.span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">{rounded}</motion.span> MEMBERS</p>
+                <motion.button whileTap={{scale: 0.95}} whileHover={{scale: 1.05}} id="btn-grad" className="text-3xl font-bold">GAME WITH US</motion.button>
             </div>
 
             <div className="h-screen w-screen sticky top-0 z-0">
@@ -34,6 +60,7 @@ export default function Home() {
 
                 <motion.div  
                     style={{
+                        zIndex: mousePosition > 0? '10': '-10',
                         visibility: mousePosition > 0? 'visible': 'hidden'
                     }}
                     animate={{
@@ -44,7 +71,17 @@ export default function Home() {
                     stiffness: 0, 
                     damping: 0 }}
                     id="mask" className="h-screen w-screen text-6xl flex justify-center items-center absolute top-0 bg-[#131313]"> 
-                    <Image src='/racc.png' height={80} width={80} alt="racc"></Image>
+                    <Image className="absolute top-[40vh] left-1/2 -translate-x-1/2" src='/racc.png' height={120} width={120} alt="racc"></Image>
+                    <p className="absolute top-[20vh] left-1/2 -translate-x-1/2 text-8xl text-white font-bold">GAMING TEAMS</p>
+                    <div className="w-[80vw] h-[40vh] absolute bottom-[10vh] bg-slate-200 flex gap-3">
+                        {games.map((game, index) => (
+                            <div key={index} id="game-card" className="relative w-[12vw] duration-300 cursor-pointer hover:w-[20vw]">
+                                <Image id="game-picture" className="w-full h-full object-cover brightness-50 hover:brightness-100" src={game.picture} alt={game.title} layout="fill" />
+                                {/* I WANT VERTICAL TEXT LIKE BOOKS */}
+                                <h2 className="absolute bottom-0 left-0 h-full bg-black bg-opacity-50 text-white text-center px-2 font-semibold" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>{game.title}</h2>
+                            </div>
+                        ))}
+                    </div>
                 </motion.div >
 
                 {/* THIS DIV IS THE PAGE ONTOP */}
@@ -57,7 +94,7 @@ export default function Home() {
 
             {/* THIS DIV IS THE PAGE BELOW NEEDED FOR MORE SCROLLING SPACE */}
 
-            <div className="h-screen w-screen bg-transparent flex justify-center items-center relative"></div>
+            <div className="h-screen w-screen bg-transparent flex justify-center items-center relative -z-40"></div>
 
         </main>
     );

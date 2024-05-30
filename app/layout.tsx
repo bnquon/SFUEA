@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { raleway } from "@/app/ui/fonts";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from 'geist/font/sans'
 import "./globals.css";
 import Navbar from "./ui/Navbar";
 import { Providers } from './providers';
@@ -17,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${raleway.className}`}>
+			<body className={`${GeistSans.className}`}>
 					<Navbar />
 					{children}
 			</body>
