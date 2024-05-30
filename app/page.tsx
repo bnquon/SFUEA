@@ -86,8 +86,18 @@ export default function Home() {
 
                 {/* THIS DIV IS THE PAGE ONTOP */}
                 
-                <div className="h-screen w-screen text-6xl flex justify-center items-center bg-[#C0C0C0]">
-                    <p className="w-1/2 text-[#131313]">I'm a <span>selectively skilled</span> product designer with strong focus on producing high quality & impactful digital experience.</p>
+                <div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[#e5e5e5]">
+                    <div className="w-1/2 mb-10 mr-[27%] text-black">
+                        <h1 className="text-7xl font-bold mb-6">ABOUT US.</h1>
+                        <p className="text-xl w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus sapiente commodi. Aliquid sunt tempore iste repellendus explicabo dignissimos placeat, autem harum dolore reprehenderit quis! Quo totam dignissimos earum.</p>
+                    </div>
+
+                    <div className="w-screen h-[40vh] flex justify-center gap-6 relative">
+                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                    
                 </div>
 
             </div>
