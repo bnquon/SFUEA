@@ -93,9 +93,18 @@ export default function Home() {
                     </div>
 
                     <div className="w-screen h-[40vh] flex justify-center gap-6 relative">
-                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">
+                            <h6 className="font-bold text-red-500 text-4xl mb-6 mt-2">TITLE</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">
+                            <h6 className="font-bold text-red-500 text-4xl mb-6 mt-2">TITLE</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
+                        <div className="w-[25%] bg-white text-2xl text-black p-5 shadow-md">
+                            <h6 className="font-bold text-red-500 text-4xl mb-6 mt-2">TITLE</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </div>
                     </div>
                     
                 </div>
