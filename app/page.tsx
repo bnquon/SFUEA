@@ -64,36 +64,11 @@ export default function Home() {
                 <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="text-3xl font-bold italic">GAME WITH US</motion.button>
             </div>
 
-            <div className="h-screen w-screen sticky top-0 z-0">
-                <motion.div
-                    style={{
-                        zIndex: mousePosition > 0 ? '10' : '-10',
-                        visibility: mousePosition > 0 ? 'visible' : 'hidden'
-                    }}
-                    animate={{
-                        WebkitMaskSize: `${mousePosition * 3.5}px`,
-                    }}
-                    transition={{ type: "spring", ease: "easeOut", stiffness: 0, damping: 0 }}
-                    id="mask" className="h-screen w-screen text-6xl flex flex-col justify-center items-center absolute top-0 bg-[#131313]">
-                    <Image className="absolute top-[30vh] left-1/2 -translate-x-1/2" src='/racc.png' height={120} width={120} alt="racc" />
-                    <div className="w-1/2 mb-[40px] mr-[27%] text-white">
-                        <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">GAMING TEAMS.</h1>
-                        <p className="text-xl w-1/2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus sapiente commodi.
-                            Aliquid sunt tempore iste repellendus explicabo dignissimos placeat.
-                        </p>
-                    </div>
-                    <div className="w-[80vw] h-[45vh] relative bg-slate-200 flex gap-3">
-                        {games.map((game, index) => (
-                            <div key={index} id="game-card" className="relative w-[12vw] duration-300 cursor-pointer hover:w-[20vw]">
-                                <Image id="game-picture" className="w-full h-full object-cover brightness-50 hover:brightness-100" src={game.picture} alt={game.title} layout="fill" />
-                                <h2 className="absolute bottom-0 left-0 h-full bg-black bg-opacity-50 text-white text-center px-2 font-semibold" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>{game.title}</h2>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
+			
+			{/* Div of the whole page section */}
+            <div className="w-screen relative">
 
-                <div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[silver]">
+				<div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[silver] sticky top-0">
                     <div className="w-1/2 mb-10 mr-[27%] text-black">
                         <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">ABOUT US.</h1>
                         <p className="text-xl w-1/2">
@@ -174,9 +149,40 @@ export default function Home() {
 
                     </div>
                 </div>
+
+                <motion.div
+                    style={{
+                        zIndex: mousePosition > 0 ? '10' : '-10',
+                        visibility: mousePosition > 0 ? 'visible' : 'hidden'
+                    }}
+                    animate={{
+                        WebkitMaskSize: `${mousePosition * 3.5}px`,
+                    }}
+                    transition={{ type: "spring", ease: "easeOut", stiffness: 0, damping: 0 }}
+                    id="mask" className="h-screen w-screen text-6xl flex flex-col justify-center items-center relative bg-[#131313]">
+                    <Image className="absolute top-[30vh] left-1/2 -translate-x-1/2" src='/racc.png' height={120} width={120} alt="racc" />
+                    <div className="w-1/2 mb-[40px] mr-[27%] text-white">
+                        <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">GAMING TEAMS.</h1>
+                        <p className="text-xl w-1/2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus sapiente commodi.
+                            Aliquid sunt tempore iste repellendus explicabo dignissimos placeat.
+                        </p>
+                    </div>
+                    <div className="w-[80vw] h-[45vh] relative bg-slate-200 flex gap-3">
+                        {games.map((game, index) => (
+                            <div key={index} id="game-card" className="relative w-[12vw] duration-300 cursor-pointer hover:w-[20vw]">
+                                <Image id="game-picture" className="w-full h-full object-cover brightness-50 hover:brightness-100" src={game.picture} alt={game.title} layout="fill" />
+                                <h2 className="absolute bottom-0 left-0 h-full bg-black bg-opacity-50 text-white text-center px-2 font-semibold" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>{game.title}</h2>
+                            </div>
+                        ))}
+                    </div>
+
+
+                </motion.div>
+
             </div>
 
-            <div className="h-screen w-screen bg-transparent flex justify-center items-center relative -z-40"></div>
+            <div className="h-screen w-screen bg-blue-500 flex justify-center items-center relative"></div>
         </main>
     );
 }
