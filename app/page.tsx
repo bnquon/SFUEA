@@ -22,7 +22,11 @@ export default function Home() {
         {
             title: "TFT",
             picture: '/tft.jpg'
-        }
+        },
+		{
+			title: 'Overwatch',
+			picture: '/overwatch.jpeg'
+		}
     ];
 
     const count = useMotionValue(1000);
@@ -53,7 +57,7 @@ export default function Home() {
                     JOIN SFU'S LARGEST GAMING CLUB <br />
                     WITH OVER <motion.span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">{rounded}</motion.span> MEMBERS
                 </p>
-                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="text-3xl font-bold">GAME WITH US</motion.button>
+                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="text-3xl font-bold italic">GAME WITH US</motion.button>
             </div>
 
             <div className="h-screen w-screen sticky top-0 z-0">
