@@ -69,7 +69,7 @@ export default function Home() {
                     id="mask" className="h-screen w-screen text-6xl flex flex-col justify-center items-center absolute top-0 bg-[#131313]">
                     <Image className="absolute top-[30vh] left-1/2 -translate-x-1/2" src='/racc.png' height={120} width={120} alt="racc" />
                     <div className="w-1/2 mb-[40px] mr-[27%] text-white">
-                        <h1 className="text-7xl font-bold mb-6">GAMING TEAMS.</h1>
+                        <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">GAMING TEAMS.</h1>
                         <p className="text-xl w-1/2">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus sapiente commodi.
                             Aliquid sunt tempore iste repellendus explicabo dignissimos placeat.
@@ -85,9 +85,9 @@ export default function Home() {
                     </div>
                 </motion.div>
 
-                <div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[#e5e5e5]">
+                <div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[silver]">
                     <div className="w-1/2 mb-10 mr-[27%] text-black">
-                        <h1 className="text-7xl font-bold mb-6">ABOUT US.</h1>
+                        <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">ABOUT US.</h1>
                         <p className="text-xl w-1/2">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur praesentium natus sapiente commodi.
                             Aliquid sunt tempore iste repellendus explicabo dignissimos placeat.
