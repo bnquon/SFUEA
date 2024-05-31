@@ -50,6 +50,10 @@ export default function Home() {
         };
     }, []);
 
+	// MAKE THE DIV STICKY TO THE TOP BUT THEN HAVE THE WHOLE DIV NOT BE STICKY AND HAVE IT REVEAL AND
+	// MAKE THE MASK REVEAL AS THE PAGE UNDERNEATH IS SCROLLING
+	// TLDR; MAKE TOP PAGE STICKY + FILLER PAGE UNDER + REVEAL PAGE RELATIVE 
+
     return (
         <main className="relative">
             <div className="h-screen w-screen bg-black flex flex-col justify-center items-center relative text-white text-center">
