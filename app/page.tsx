@@ -1,7 +1,9 @@
 "use client"
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { BasicCalendar } from "./Components/Calendar";
 
 export default function Home() {
 
@@ -180,6 +182,8 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+
+            <BasicCalendar/>
 
         </main>
     );
