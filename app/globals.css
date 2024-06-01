@@ -32,15 +32,6 @@ body {
     text-wrap: balance;
   }
 }
-
-#mask {
-  mask-image: url('../public/mask.svg');
-  background: clear;
-  mask-repeat: no-repeat;
-  mask-position: 50% 50%;
-  transition: linear;
-}
-
          
 #btn-grad {
   background-image: linear-gradient(to right, #e52d27 0%, #fa3a41  51%, #e52d27  100%);
@@ -55,6 +46,7 @@ body {
   display: block;
 }
 
-#game-card:hover #game-picture {
+#game-cell:hover #game-picture {
   filter: brightness(1);
+  transform: scale(1.1);
 }
