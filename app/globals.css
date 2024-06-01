@@ -50,3 +50,19 @@ body {
   filter: brightness(1);
   transform: scale(1.1);
 }
+
+.rbc-day-bg {
+  background-color: black !important;
+}
+
+.rbc-off-range-bg {
+  background-color: #222222 !important;
+}
+
+.rbc-toolbar-label {
+  font-size: 3rem;
+}
+
+.rbc-toolbar {
+  margin-bottom: 2rem !important;
+}
