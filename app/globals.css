@@ -133,10 +133,6 @@ body {
   display: none !important;
 }
 
-.rbc-active {
-  background-color: red !important;
-}
-
 tr {
   background-color: black !important;
 }
@@ -172,4 +168,8 @@ tr {
 
 #event-card:hover img {
   filter: brightness(0.75);
+}
+
+.slick-slide > div {
+  margin: 0 20px;
 }

@@ -1,13 +1,28 @@
 "use client"
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowRight, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default function Home() {
+export default function Home() {    
+
+    const slider = useRef(null);
+
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+    };
 
     type Game = {
         title: string;
@@ -176,29 +191,42 @@ export default function Home() {
                 </h1>
 
                 <p className="text-xl font-semibold mb-10 w-2/5">
-                        Browse the games we have competitive teams, executives, or directors for!
-                        The executives and directors run in-houses and events for their desired game to foster the community for each one!
-                    </p>
+                    Browse the games we have competitive teams, executives, or directors for!
+                    The executives and directors run in-houses and events for their desired game to foster the community for each one!
+                </p>
 
-                    <div className="w-full h-[60vh] relative flex ml-[-5vw]">
-                        <div className="w-[5vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150" icon={faCircleArrowLeft} style={{color: "#ff0000",}}/>
-                        </div>
-
-                        <div className="w-[75vw] h-full flex box-border relative overflow-x-scroll gap-[3.33%]">
-                            {games.map((game, index) => (
-                            <div key={index} className="min-w-[22.5%] max-w-[22.5%] h-full flex flex-col items-center justify-center box-border relative">
-                                <p id="game-title" className="flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
-                                <p className="pb-[15%] absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
-                                <Image src={game.picture} alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}/>
-                            </div>
-                            ))}
-                        </div>
-
-                        <div className="w-[5vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150" icon={faCircleArrowRight} style={{color: "#ff0000",}}/>
-                        </div>
+                <div className="w-[calc(85vw+40px)] h-[60vh] relative flex ml-[calc(-5vw-20px)]">
+                    <div className="w-[5vw] h-full items-center flex justify-center">
+                        <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
+                        onClick={() => slider?.current?.slickPrev()}
+                        icon={faCircleArrowLeft} style={{color: "#ff0000",}}/>
                     </div>
+
+                    <div className="w-[calc(75vw+40px)] h-full box-border relative">
+                        <Slider ref={slider} {...settings}>
+                            {games.map((game, index) => (
+                                <div key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative">
+                                    <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
+                                    <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
+                                    <Image 
+                                        src={game.picture} 
+                                        alt={game.title} 
+                                        layout="fill" 
+                                        objectFit="cover" 
+                                        style={{ width: '100%', height: '100%' }}
+                                    />
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
+
+                    <div className="w-[5vw] h-full items-center flex justify-center">
+                        <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
+                        onClick={() => slider?.current?.slickNext()}
+                        icon={faCircleArrowRight} style={{color: "#ff0000",}}/>
+                    </div>
+                </div>
+
 
             </div>
 
