@@ -46,7 +46,7 @@ export const Footer = () => {
             </div>
 
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-                <Image src='/racc.png' width={200} height={200} alt='logo'></Image>
+                <Image src='/racc.png' width={175} height={175} alt='logo'></Image>
             </div>
 
         </div>
