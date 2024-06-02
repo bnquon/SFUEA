@@ -32,7 +32,7 @@ body {
     text-wrap: balance;
   }
 }
-         
+
 #btn-grad {
   background-image: linear-gradient(to right, #e52d27 0%, #fa3a41  51%, #e52d27  100%);
   margin: 10px;

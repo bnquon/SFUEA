@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleArrowRight, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons"
+import { faSquareCaretRight, faSquareCaretLeft } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -199,13 +199,13 @@ export default function Home() {
                     <div className="w-[5vw] h-full items-center flex justify-center">
                         <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
                         onClick={() => slider?.current?.slickPrev()}
-                        icon={faCircleArrowLeft} style={{color: "#ff0000",}}/>
+                        icon={faSquareCaretLeft} style={{color: "#ff0000",}}/>
                     </div>
 
                     <div className="w-[calc(75vw+40px)] h-full box-border relative">
                         <Slider ref={slider} {...settings}>
                             {games.map((game, index) => (
-                                <div key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative">
+                                <div key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer">
                                     <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
                                     <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                     <Image 
@@ -223,7 +223,7 @@ export default function Home() {
                     <div className="w-[5vw] h-full items-center flex justify-center">
                         <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
                         onClick={() => slider?.current?.slickNext()}
-                        icon={faCircleArrowRight} style={{color: "#ff0000",}}/>
+                        icon={faSquareCaretRight} style={{color: "#ff0000",}}/>
                     </div>
                 </div>
 
