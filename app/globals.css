@@ -155,6 +155,9 @@ tr {
   color: black !important;
 }
 
+.rbc-agenda-empty {
+  color: black !important;
+}
 
 #event-card:hover #event-info {
   transform: translateY(0);
@@ -172,4 +175,8 @@ tr {
 
 .slick-slide > div {
   margin: 0 20px;
+}
+
+#footer-btn {
+  padding: 20px 48px;
 }
