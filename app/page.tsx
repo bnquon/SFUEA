@@ -168,20 +168,23 @@ export default function Home() {
             </div>
 
             {/* GRID CONTAINER */}
-            <div className="w-screen h-screen bg-[#131313] relative flex flex-col justify-center items-center">
-                <h1 className="w-[75%] text-7xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">TEAMS.</h1>
-                <div className="w-[75%] h-[80%] grid grid-cols-3 grid-rows-4 gap-12">
+            <div className="w-screen h-screen bg-[#131313] relative flex flex-col justify-center items-start pl-[12.5vw]">
+                <h1 className="w-[75%] text-7xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+                    TEAMS.
+                </h1>
+            
+                <div className="w-[75vw] h-[65%] flex box-border relative overflow-x-scroll gap-[3.33%]">
                     {games.map((game, index) => (
-                        <div key={index} id="game-cell" className="flex flex-col w-full h-full relative rounded-2xl overflow-hidden">
-                            <div className="w-full h-full bg-blue-30 relative">
-                                <Image src={game.picture} id="game-picture" alt="GamePicture" className="duration-300 brightness-50" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                            </div>
-                        
-                            <p className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-center text-4xl font-bold">{game.title}</p>
-                        </div>
+                    <div key={index} className="min-w-[22.5%] max-w-[22.5%] h-full flex flex-col items-center justify-center box-border relative">
+                        <p className="flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
+                        <p className="pb-[15%] absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
+                        <Image src={game.picture} alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}/>
+                    </div>
                     ))}
                 </div>
             </div>
+
+
 
             <BasicCalendar/>
 
