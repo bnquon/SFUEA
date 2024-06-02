@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faSquareInstagram, faFacebookF, faXTwitter, faTwitch} from "@fortawesome/free-brands-svg-icons"
+import { faDiscord, faSquareInstagram, faFacebookF, faXTwitter, faTwitch, faTiktok} from "@fortawesome/free-brands-svg-icons"
 
 export const Footer = () => {
   return (
@@ -38,6 +38,9 @@ export const Footer = () => {
                     </div>
                     <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faTwitch} style={{color: '000000'}}></FontAwesomeIcon>
+                    </div>
+                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                        <FontAwesomeIcon className='text-2xl' icon={faTiktok} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
                 </div>
 
