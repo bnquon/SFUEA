@@ -26,7 +26,7 @@ export const BasicCalendar = () => {
         EVENT SCHEDULE.
       </h1>
 
-      <div className='w-3/5 h-3/4 relative'>
+      <div className='w-[60%] h-[70%] relative'>
         <Calendar
           events={events}
           localizer={localizer}
