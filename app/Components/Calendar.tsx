@@ -21,18 +21,17 @@ export const BasicCalendar = () => {
   ];
 
   return (
-    <div className='h-[100vh] w-screen flex flex-col gap-10 justify-center items-center relative bg-[silver]'>
-      <h1 className="w-3/4 text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+    <div className='h-[100vh] w-screen flex flex-col gap-10 justify-center items-start relative bg-[silver] pl-[12.5vw]'>
+      <h1 className="w-3/4 text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
         EVENT SCHEDULE.
       </h1>
 
-      <div className='w-3/4 h-4/5 relative'>
+      <div className='w-3/5 h-3/4 relative'>
         <Calendar
           events={events}
           localizer={localizer}
           startAccessor="start"
           endAccessor="end"
-          style={{ height: '100%' }}
         />
       </div>
     </div>

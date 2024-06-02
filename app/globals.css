@@ -56,12 +56,13 @@ body {
 }
 
 .rbc-off-range-bg {
-  background-color: #454545 !important;
+  background-color: rgb(95, 95, 95) !important;
 }
 
 .rbc-header {
   background-color: black !important;
   color: white !important;
+  border: 1px solid rgb(95, 95, 95) !important;
 }
 
 .rbc-toolbar-label {
@@ -84,6 +85,7 @@ body {
   height: 100%;
   width: 100% !important;
   background-color: red !important;
+  padding-left: 4px !important;
 }
 
 .rbc-events-container {
@@ -91,9 +93,13 @@ body {
   width: 100% !important;
 }
 
+.rbc-event-content {
+  font-size: 16px !important;
+}
+
 .rbc-timeslot-group {
   padding: 0 !important;
-  border: 1px solid darkgray !important;
+  border: 1px solid rgb(95, 95, 95) !important;
   border-collapse: collapse !important;
 }
 
@@ -129,4 +135,12 @@ body {
 
 tr {
   background-color: black !important;
+}
+
+.rbc-off-range {
+  color: white !important;
+}
+
+.rbc-current-time-indicator {
+  background-color: red !important;
 }
