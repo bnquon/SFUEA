@@ -51,6 +51,10 @@ body {
   transform: scale(1.1);
 }
 
+#game-title {
+  text-shadow: 2px 2px 2px #000000;
+}
+
 .rbc-day-bg {
   background-color: black !important;
 }

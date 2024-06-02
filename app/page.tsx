@@ -42,7 +42,7 @@ export default function Home() {
             picture: '/destiny.jpg'
         },
         {
-            title: 'Rainbow 6 Siege',
+            title: 'Rainbow Six Siege',
             picture: '/r6.jpg'
         },
         {
@@ -169,14 +169,19 @@ export default function Home() {
 
             {/* GRID CONTAINER */}
             <div className="w-screen h-screen bg-[#131313] relative flex flex-col justify-center items-start pl-[12.5vw]">
-                <h1 className="w-[75%] text-7xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
-                    TEAMS.
+                <h1 className="w-[75%] text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+                    GAMING TEAMS.
                 </h1>
+
+                <p className="text-xl font-semibold mb-10 w-2/5">
+                        Browse the games we have competitive teams, executives, or directors for!
+                        The executives and directors run in-houses and events for their desired game to foster the community for each one!
+                    </p>
             
-                <div className="w-[75vw] h-[65%] flex box-border relative overflow-x-scroll gap-[3.33%]">
+                <div className="w-[75vw] h-[60%] flex box-border relative overflow-x-scroll gap-[3.33%]">
                     {games.map((game, index) => (
                     <div key={index} className="min-w-[22.5%] max-w-[22.5%] h-full flex flex-col items-center justify-center box-border relative">
-                        <p className="flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
+                        <p id="game-title" className="flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
                         <p className="pb-[15%] absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                         <Image src={game.picture} alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}/>
                     </div>
