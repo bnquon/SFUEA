@@ -182,9 +182,9 @@ export default function Home() {
 
                     <div className="w-full h-[60vh] relative flex ml-[-5vw]">
                         <div className="w-[5vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="text-5xl" icon={faCircleArrowLeft} style={{color: "#ff0000",}}/>
+                            <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150" icon={faCircleArrowLeft} style={{color: "#ff0000",}}/>
                         </div>
-                        
+
                         <div className="w-[75vw] h-full flex box-border relative overflow-x-scroll gap-[3.33%]">
                             {games.map((game, index) => (
                             <div key={index} className="min-w-[22.5%] max-w-[22.5%] h-full flex flex-col items-center justify-center box-border relative">
@@ -196,7 +196,7 @@ export default function Home() {
                         </div>
 
                         <div className="w-[5vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="text-5xl" icon={faCircleArrowRight} style={{color: "#ff0000",}}/>
+                            <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150" icon={faCircleArrowRight} style={{color: "#ff0000",}}/>
                         </div>
                     </div>
 
