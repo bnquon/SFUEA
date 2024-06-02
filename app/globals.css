@@ -56,13 +56,77 @@ body {
 }
 
 .rbc-off-range-bg {
-  background-color: #222222 !important;
+  background-color: #454545 !important;
+}
+
+.rbc-header {
+  background-color: black !important;
+  color: white !important;
 }
 
 .rbc-toolbar-label {
+  color: black !important;
   font-size: 2rem;
+  font-weight: 700;
 }
 
 .rbc-toolbar {
-  margin-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.rbc-toolbar > .rbc-btn-group > button {
+  background-color: black !important;
+  color: white !important;
+}
+
+.rbc-event {
+  padding: 0 !important;
+  height: 100%;
+  width: 100% !important;
+  background-color: red !important;
+}
+
+.rbc-events-container {
+  border: none !important;
+  width: 100% !important;
+}
+
+.rbc-timeslot-group {
+  padding: 0 !important;
+  border: 1px solid darkgray !important;
+  border-collapse: collapse !important;
+}
+
+.rbc-time-slot {
+  color: white;
+  border: none !important;
+  padding: 0 !important;
+}
+.rbc-time-column, .rbc-day-slot {
+  background-color: black !important;
+  border: none !important;
+}
+
+.rbc-time-header-gutter {
+  background-color: black !important;
+}
+
+.rbc-row-content {
+  border: none !important;
+}
+
+.rbc-time-content {
+  border: none !important;
+}
+
+.rbc-allday-cell {
+  display: none !important;
+}
+
+.rbc-active {
+  background-color: red !important;
+}
+
+tr {
+  background-color: black !important;
 }
