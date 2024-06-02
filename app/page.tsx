@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleArrowRight, faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons"
 
 export default function Home() {
 
@@ -177,16 +179,27 @@ export default function Home() {
                         Browse the games we have competitive teams, executives, or directors for!
                         The executives and directors run in-houses and events for their desired game to foster the community for each one!
                     </p>
-            
-                <div className="w-[75vw] h-[60%] flex box-border relative overflow-x-scroll gap-[3.33%]">
-                    {games.map((game, index) => (
-                    <div key={index} className="min-w-[22.5%] max-w-[22.5%] h-full flex flex-col items-center justify-center box-border relative">
-                        <p id="game-title" className="flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
-                        <p className="pb-[15%] absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
-                        <Image src={game.picture} alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}/>
+
+                    <div className="w-full h-[60vh] relative flex ml-[-5vw]">
+                        <div className="w-[5vw] h-full items-center flex justify-center">
+                            <FontAwesomeIcon className="text-5xl" icon={faCircleArrowLeft} style={{color: "#ff0000",}}/>
+                        </div>
+                        
+                        <div className="w-[75vw] h-full flex box-border relative overflow-x-scroll gap-[3.33%]">
+                            {games.map((game, index) => (
+                            <div key={index} className="min-w-[22.5%] max-w-[22.5%] h-full flex flex-col items-center justify-center box-border relative">
+                                <p id="game-title" className="flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
+                                <p className="pb-[15%] absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
+                                <Image src={game.picture} alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}/>
+                            </div>
+                            ))}
+                        </div>
+
+                        <div className="w-[5vw] h-full items-center flex justify-center">
+                            <FontAwesomeIcon className="text-5xl" icon={faCircleArrowRight} style={{color: "#ff0000",}}/>
+                        </div>
                     </div>
-                    ))}
-                </div>
+
             </div>
 
 
