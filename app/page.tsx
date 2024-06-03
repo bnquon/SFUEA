@@ -24,6 +24,7 @@ export default function Home() {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 4000,
+        dots: true,
     };
 
     type Game = {
@@ -121,7 +122,7 @@ export default function Home() {
             {/* ABOUT US PAGE */}
             <div className="pt-[10vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
                 <div className="w-[75vw] mb-10 text-black">
-                    <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">ABOUT US.</h1>
+                    <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">WHO WE ARE.</h1>
                     <p className="text-xl font-semibold w-2/5">
                         The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players. 
                         Join us for exciting tournaments, in-houses, in-person events, and more!
@@ -207,10 +208,12 @@ export default function Home() {
                     <div className="w-[calc(75vw+40px)] h-full box-border relative">
                         <Slider ref={slider} {...settings}>
                             {games.map((game, index) => (
-                                <div key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden">
+                                <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden">
                                     <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
                                     <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                     <Image 
+                                        id="game-pic"
+                                        className="duration-300"
                                         src={game.picture} 
                                         alt={game.title} 
                                         layout="fill" 
