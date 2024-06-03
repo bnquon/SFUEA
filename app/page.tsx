@@ -119,7 +119,7 @@ export default function Home() {
             </div>
 
             {/* ABOUT US PAGE */}
-            <div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+            <div className="h-screen w-screen text-6xl flex flex-col justify-center items-center bg-[#e5e5e5]">
                 <div className="w-[75vw] mb-10 text-black">
                     <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">ABOUT US.</h1>
                     <p className="text-xl font-semibold w-2/5">
@@ -140,7 +140,7 @@ export default function Home() {
                                 <h3 className="text-xl text-black">Game in the Gamers' Lounge!</h3>
 
 
-                                <p className="mt-2 text-base text-gray-500">
+                                <p className="mt-2 text-base text-gray-900">
                                 Drop into the Gamer' Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
                                 </p>
                             </div>
@@ -158,7 +158,7 @@ export default function Home() {
                                 <h3 className="text-xl text-black">Connect with Like-Minded Gamers!</h3>
 
 
-                                <p className="mt-2 text-base text-gray-500">
+                                <p className="mt-2 text-base text-gray-900">
                                     Forge friendships and bond over shared interests at our gatherings. 
                                     Join us for lively conversations, and the chance to meet others who share your passion for gaming.
                                 </p>
@@ -176,7 +176,7 @@ export default function Home() {
 
                                 <h3 className="text-xl text-black">Engage in Diverse Student-Run Events!</h3>
 
-                                <p className="mt-2 text-base text-gray-500">
+                                <p className="mt-2 text-base text-gray-900">
                                     Participate in a variety of student-run events, ranging from competitive tournaments and 
                                     casual game nights to community meetups and themed gaming sessions.
                                 </p>

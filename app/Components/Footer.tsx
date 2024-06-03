@@ -5,7 +5,7 @@ import { faDiscord, faSquareInstagram, faFacebookF, faXTwitter, faTwitch, faTikt
 
 export const Footer = () => {
   return (
-    <div className='pt-[20vh] relative bg-[silver]'>
+    <div className='pt-[20vh] relative bg-[#e5e5e5]'>
         <div className="w-full h-[50vh] bg-black relative pl-[12.5vw]">
 
             <div className="w-[45%] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col p-10 box-border gap-6">

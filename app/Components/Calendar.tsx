@@ -21,7 +21,7 @@ export const BasicCalendar = () => {
   ];
 
   return (
-    <div className='h-[165vh] w-screen flex flex-col justify-center items-start relative bg-[silver] pl-[12.5vw]'>
+    <div className='h-[165vh] w-screen flex flex-col justify-center items-start relative bg-[#e5e5e5] pl-[12.5vw]'>
       <h1 className="w-3/4 mb-6 text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
         EVENT SCHEDULE.
       </h1>
