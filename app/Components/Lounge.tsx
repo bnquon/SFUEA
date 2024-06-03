@@ -4,7 +4,7 @@ import { faComputer, faLocationDot, faCircleExclamation } from "@fortawesome/fre
 
 export const Lounge = () => {
   return (
-    <div className='w-full h-screen relative pl-[12.5vw] bg-[#e5e5e5] flex flex-col pt-[10vh] pb-[10vh]'>
+    <div className='w-full h-screen relative pl-[12.5vw] bg-[#d3d3d3] flex flex-col pt-[10vh] pb-[10vh]'>
         <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r mb-14 from-red-700 to-red-400">GAMERS' LOUNGE.</h1>
         {/* <p className='text-xl w-2/5 font-semibold text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> */}
     
