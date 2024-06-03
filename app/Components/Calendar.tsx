@@ -21,12 +21,15 @@ export const BasicCalendar = () => {
   ];
 
   return (
-    <div className='h-[150vh] w-screen flex flex-col gap-10 justify-center items-start relative bg-[silver] pl-[12.5vw]'>
-      <h1 className="w-3/4 text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+    <div className='h-[165vh] w-screen flex flex-col justify-center items-start relative bg-[silver] pl-[12.5vw]'>
+      <h1 className="w-3/4 mb-6 text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
         EVENT SCHEDULE.
       </h1>
+      <p className="text-xl font-semibold w-2/5 mb-14 text-black">
+        Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
+      </p>
 
-      <div className="w-[75vw] h-[75vh] relative flex box-border">
+      <div className="w-[75vw] h-[75vh] relative flex box-border mb-20">
         <div className='w-full h-full relative'>
           <Calendar
             events={events}
@@ -37,7 +40,7 @@ export const BasicCalendar = () => {
         </div>
       </div>
 
-      <p className='text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600'>RECENT EVENTS.</p>
+      <p className='text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-12'>RECENT EVENTS.</p>
 
       <div className='w-[75vw] h-[25vh] relative flex gap-5'>
         <div id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative'>

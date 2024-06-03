@@ -10,6 +10,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Footer } from "./Components/Footer";
+import { Lounge } from "./Components/Lounge";
 
 export default function Home() {    
 
@@ -136,11 +137,11 @@ export default function Home() {
 
                             <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
 
-                                <h3 className="text-xl text-black">Game in the Gamer's Lounge!</h3>
+                                <h3 className="text-xl text-black">Game in the Gamers' Lounge!</h3>
 
 
                                 <p className="mt-2 text-base text-gray-500">
-                                Drop into the Gamer's Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
+                                Drop into the Gamer' Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
                                 </p>
                             </div>
                         </article>
@@ -230,8 +231,9 @@ export default function Home() {
 
 
             </div>
-
-
+            
+            
+            <Lounge/>
 
             <BasicCalendar/>
 
