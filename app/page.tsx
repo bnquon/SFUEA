@@ -119,7 +119,7 @@ export default function Home() {
             </div>
 
             {/* ABOUT US PAGE */}
-            <div className="pt-[10vh] pb-[10vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+            <div className="pt-[10vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
                 <div className="w-[75vw] mb-10 text-black">
                     <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">ABOUT US.</h1>
                     <p className="text-xl font-semibold w-2/5">
@@ -187,7 +187,7 @@ export default function Home() {
             </div>
 
             {/* GRID CONTAINER */}
-            <div className="w-screen pt-[10vh] pb-[10vh] bg-[#d3d3d3] relative flex flex-col justify-center items-start pl-[12.5vw]">
+            <div className="w-screen pt-[5vh] pb-[5vh] bg-[#d3d3d3] relative flex flex-col justify-center items-start pl-[12.5vw]">
                 <h1 className="w-[75%] text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                     GAMING TEAMS.
                 </h1>
