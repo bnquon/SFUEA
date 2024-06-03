@@ -27,7 +27,7 @@ export const Lounge = () => {
                             </p>
                             <span className='text-xl bg-black w-fit p-2 rounded-xl text-white flex items-center duration-200 hover:bg-red-500'>
                                 Full Specs &nbsp;
-                                <FontAwesomeIcon className='text-2xl' icon={faArrowRight}/>
+                                <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowRight}/>
                             </span>
                         </div>
 
@@ -36,7 +36,7 @@ export const Lounge = () => {
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='text-xl bg-black w-fit p-2 rounded-xl text-white duration-200 hover:bg-red-500'>
+                            <span className='text-xl bg-black w-fit p-2 rounded-xl flex items-center text-white duration-200 hover:bg-red-500'>
                                 Video Guide &nbsp;
                                 <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowRight}/>
                             </span>
@@ -49,7 +49,7 @@ export const Lounge = () => {
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='text-xl bg-black w-fit p-2 rounded-xl text-white duration-200 hover:bg-red-500'>
+                            <span className='text-xl bg-black w-fit p-2 rounded-xl flex items-center text-white duration-200 hover:bg-red-500'>
                                 Full Schedule &nbsp;
                                 <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowRight}/>
                             </span>
@@ -60,7 +60,7 @@ export const Lounge = () => {
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='text-xl bg-black w-fit p-2 rounded-xl text-white duration-200 hover:bg-red-500'>
+                            <span className='text-xl bg-black w-fit p-2 rounded-xl flex items-center text-white duration-200 hover:bg-red-500'>
                                 Read More &nbsp;
                                 <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowRight}/>
                             </span>
