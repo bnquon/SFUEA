@@ -28,7 +28,7 @@ export const BasicCalendar = () => {
           <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
               <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">EVENT SCHEDULE.</h1>
           </div>
-          <div className="flex-grow flex items-center pl-8 pr-2">
+          <div className="flex-grow flex items-center pl-8">
               <p className="text-xl font-semibold flex-grow">
                 Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
               </p>

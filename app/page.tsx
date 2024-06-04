@@ -110,8 +110,65 @@ export default function Home() {
         <main className="relative">
 
             {/* HOME PAGE */}
-            <div className="w-screen flex flex-col relative items-center bg-[#d3d3d3] text-white pt-[10vh] pb-[7.5vh]">
-                <div className="w-[75vw] relative flex">
+            <div className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[12.5vh] gap-[8vh]">
+
+                <div className="w-[75vw] h-[70%] relative flex box-border">
+                    <div className="flex flex-col w-[50%] justify-center relative">
+                        <p className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                        <p className="w-4/5 text-black text-xl font-medium mb-8">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation. 
+                        </p>
+
+                        <div className="flex gap-8 box-border items-center p-4 pl-0">
+                            <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-2xl font-bold italic mr-10">
+                                <span>
+                                    GAME WITH US &nbsp;
+                                    <FontAwesomeIcon className="-rotate-45 flex-shrink-0" icon={faArrowCircleRight}/>
+                                </span>
+                            </motion.button>
+                            <div className="flex flex-col text-black">
+                                <p className="text-3xl font-bold">5500+</p>
+                                <p className="text-xl font-light">Members</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col w-[50%] justify-center relative bg-white">
+                        
+                    </div>
+                </div>
+
+                <div className="w-[75vw] h-[15vh] border-t-black border-t-2 flex">
+                    <div className="w-1/4 flex items-center text-2xl text-black">
+                        <p>Tournaments</p>
+                    </div>
+                    <div className="w-1/4 flex items-center text-2xl text-black">
+                        <p>In-Houses</p>
+                    </div>
+                    <div className="w-1/4 flex items-center text-2xl text-black">
+                        <p>Events</p>
+                    </div>
+                    <div className="w-1/4 flex items-center text-2xl text-black">
+                        <p>Scroll to Discover More</p>
+                    </div>
+                </div>
+                
+                {/* <div className="w-[75vw] relative flex justify-center box-border gap-8">
+                    <div className="flex flex-col w-[30%] justify-center">
+                        <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
+                        <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
+                    </div>
+                    <img src="/test2.jpg" className="h-[60vh] w-2/5 rounded-3xl object-fill" alt="" />
+                    <div className="flex flex-col w-[30%] justify-center">
+                        <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
+                        <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
+                    </div>
+                </div> */}
+
+
+                {/* <div className="w-[75vw] relative flex">
                     <div className="flex flex-col w-[60%] justify-center">
                         <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
                         <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
@@ -123,7 +180,7 @@ export default function Home() {
 
                 <div className="w-[75vw] relative flex mt-4">
                     <div className="flex flex-col w-full justify-center">
-                        <img src="/test2.jpg" className="h-[50vh] rounded-3xl object-fill" alt="" />
+                        <img src="/test2.jpg" className="h-[50vh] rounded-3xl object-cover" alt="" />
                     </div>
                     <div id="cta-sub" className="text-black text-4xl font-bold bg-[#d3d3d3] absolute p-4 right-0">
                         <p>With over 5500 <br /> club members!</p>
@@ -137,7 +194,7 @@ export default function Home() {
                             </span>
                         </motion.button>
                     </div>
-                </div>
+                </div> */}
 
             </div>
 
@@ -147,7 +204,7 @@ export default function Home() {
                     <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
                         <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">WHO WE ARE.</h1>
                     </div>
-                    <div className="flex-grow flex items-center pl-8 pr-2">
+                    <div className="flex-grow flex items-center pl-8">
                         <p className="text-xl font-semibold flex-grow">
                             The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                         </p>
@@ -224,26 +281,26 @@ export default function Home() {
                     <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
                         <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">GAMING TEAMS.</h1>
                     </div>
-                    <div className="flex-grow flex items-center pl-8 pr-2">
+                    <div className="flex-grow flex items-center justify-between pl-8">
                         <p className="text-xl font-semibold flex-grow">
                             Browse the games we have competitive teams, executives, or directors for!
                             The executives and directors run in-houses and events for their desired game to foster the community for each one!
                         </p>
-                        <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                        <span className='text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
                             Learn More &nbsp;
                             <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                         </span>
                     </div>
                 </div>  
 
-                <div className="w-[calc(85vw+40px)] h-[60vh] relative flex ml-[calc(-5vw-20px)]">
+                <div className="w-[calc(85vw+60px)] h-[60vh] relative flex ml-[calc(-5vw-30px)]">
                     <div className="w-[5vw] h-full items-center flex justify-center">
                         <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
                         onClick={() => slider?.current?.slickPrev()}
                         icon={faSquareCaretLeft} style={{color: "#ff0000",}}/>
                     </div>
 
-                    <div className="w-[calc(75vw+40px)] h-full box-border relative">
+                    <div className="w-[calc(75vw+60px)] h-full box-border relative">
                         <Slider ref={slider} {...settings}>
                             {games.map((game, index) => (
                                 <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden">

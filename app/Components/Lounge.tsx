@@ -1,12 +1,25 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays } from "@fortawesome/free-solid-svg-icons"
+import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 
 export const Lounge = () => {
   return (
     <div className='w-full relative pl-[12.5vw] bg-[#d3d3d3] flex flex-col pt-[7.5vh] pb-[7.5vh]'>
 
-        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 mb-[60px]">GAMERS' LOUNGE.</h1>
+        <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
+            <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
+                <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">GAMERS' LOUNGE</h1>
+            </div>
+            <div className="flex-grow flex items-center pl-8">
+                <p className="text-xl font-semibold flex-grow">
+                    Visit the hub for eSports and recreational gaming on SFU Burnaby campus!
+                </p>
+                <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                    Learn More &nbsp;
+                    <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+                </span>
+            </div>
+            </div>
         {/* <p className='text-xl w-2/5 font-semibold text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> */}
     
         <div className='w-[75vw] flex relative box-border gap-4'>
