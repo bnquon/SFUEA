@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareCaretRight, faSquareCaretLeft } from "@fortawesome/free-solid-svg-icons"
+import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -110,24 +110,53 @@ export default function Home() {
         <main className="relative">
 
             {/* HOME PAGE */}
-            <div className="h-screen w-screen flex flex-col justify-center items-center relative text-white text-center">
-                <Image src='/homebg.png' alt="homebg" width={0} height={0} className="absolute top-0 left-0 -z-10 scale-125" sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                <p className="text-5xl font-normal mb-8">
-                    JOIN SFU'S LARGEST GAMING CLUB <br />
-                    WITH OVER <motion.span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">{rounded}</motion.span> MEMBERS
-                </p>
-                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="text-3xl font-bold italic">GAME WITH US</motion.button>
+            <div className="w-screen flex flex-col relative items-center bg-[#d3d3d3] text-white pt-[12.5vh] pb-[7.5vh]">
+                <div className="w-[75vw] relative flex">
+                    <div className="flex flex-col w-[60%] justify-center">
+                        <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
+                        <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
+                    </div>
+                    <div className="flex w-[40%] justify-end relative">
+                        <img src="/real-logo.png" className="w-[40%]" alt="" />
+                    </div>
+                </div>
+
+                <div className="w-[75vw] relative flex mt-4">
+                    <div className="flex flex-col w-full justify-center">
+                        <img src="/test-min.jpg" className="h-[45vh] rounded-3xl object-cover" alt="" />
+                    </div>
+                    <div id="cta-sub" className="text-black text-4xl font-bold bg-[#d3d3d3] absolute p-4 right-0">
+                        <p>With over 5500 <br /> club members!</p>
+                    </div>
+
+                    <div id="cta-btn" className="text-black text-4xl font-bold bg-[#d3d3d3] absolute p-4 pl-0 bottom-0 left-0">
+                        <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="text-3xl font-bold italic">
+                            <span>
+                                GAME WITH US &nbsp;
+                                <FontAwesomeIcon className="-rotate-45" icon={faArrowCircleRight}/>
+                            </span>
+                        </motion.button>
+                    </div>
+                </div>
+
             </div>
 
             {/* ABOUT US PAGE */}
-            <div className="pt-[10vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div className="w-[75vw] mb-10 text-black">
-                    <h1 className="text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">WHO WE ARE.</h1>
-                    <p className="text-xl font-semibold w-2/5">
-                        The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players. 
-                        Join us for exciting tournaments, in-houses, in-person events, and more!
-                    </p>
-                </div>
+            <div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
+                    <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
+                        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">WHO WE ARE.</h1>
+                    </div>
+                    <div className="flex-grow flex items-center pl-8 pr-2">
+                        <p className="text-xl font-semibold flex-grow">
+                            The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
+                        </p>
+                        <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                            Learn More &nbsp;
+                            <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+                        </span>
+                    </div>
+                </div>  
 
                 <div className="w-[75vw] h-[50vh] flex justify-center gap-6 relative">
                     <div className="w-1/3 relative">
@@ -188,15 +217,24 @@ export default function Home() {
             </div>
 
             {/* GRID CONTAINER */}
-            <div className="w-screen pt-[5vh] pb-[5vh] bg-[#d3d3d3] relative flex flex-col justify-center items-start pl-[12.5vw]">
-                <h1 className="w-[75%] text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
-                    GAMING TEAMS.
-                </h1>
 
-                <p className="text-xl font-semibold mb-10 w-2/5 text-black">
-                    Browse the games we have competitive teams, executives, or directors for!
-                    The executives and directors run in-houses and events for their desired game to foster the community for each one!
-                </p>
+            <div className="w-screen pt-[7.5vh] pb-[5vh] bg-[#d3d3d3] relative flex flex-col justify-center items-start pl-[12.5vw]">
+
+                <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
+                    <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
+                        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">GAMING TEAMS.</h1>
+                    </div>
+                    <div className="flex-grow flex items-center pl-8 pr-2">
+                        <p className="text-xl font-semibold flex-grow">
+                            Browse the games we have competitive teams, executives, or directors for!
+                            The executives and directors run in-houses and events for their desired game to foster the community for each one!
+                        </p>
+                        <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                            Learn More &nbsp;
+                            <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+                        </span>
+                    </div>
+                </div>  
 
                 <div className="w-[calc(85vw+40px)] h-[60vh] relative flex ml-[calc(-5vw-20px)]">
                     <div className="w-[5vw] h-full items-center flex justify-center">

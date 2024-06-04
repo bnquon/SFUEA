@@ -56,7 +56,7 @@ body {
 
 .rbc-day-bg {
   background-color: white !important;
-  border: 1px solid black !important;
+  border: 1px solid darkgray !important;
 }
 
 .rbc-now, .rbc-current {
@@ -91,7 +91,7 @@ body {
 .rbc-header {
   background-color: black !important;
   color: white !important;
-  border: 1px solid rgb(95, 95, 95) !important;
+  border: 1px solid darkgray !important;
   font-size: 20px !important;
 }
 
@@ -218,4 +218,12 @@ body {
 
 #footer-btn {
   padding: 20px 48px;
+}
+
+#cta-sub {
+  border-radius: 0 0 0 20px;
+}
+
+#cta-btn {
+  border-radius: 0 20px 0 0;
 }
