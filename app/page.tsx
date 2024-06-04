@@ -110,7 +110,7 @@ export default function Home() {
         <main className="relative">
 
             {/* HOME PAGE */}
-            <div className="w-screen flex flex-col relative items-center bg-[#d3d3d3] text-white pt-[12.5vh] pb-[7.5vh]">
+            <div className="w-screen flex flex-col relative items-center bg-[#d3d3d3] text-white pt-[10vh] pb-[7.5vh]">
                 <div className="w-[75vw] relative flex">
                     <div className="flex flex-col w-[60%] justify-center">
                         <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
@@ -123,7 +123,7 @@ export default function Home() {
 
                 <div className="w-[75vw] relative flex mt-4">
                     <div className="flex flex-col w-full justify-center">
-                        <img src="/test-min.jpg" className="h-[45vh] rounded-3xl object-cover" alt="" />
+                        <img src="/test2.jpg" className="h-[50vh] rounded-3xl object-fill" alt="" />
                     </div>
                     <div id="cta-sub" className="text-black text-4xl font-bold bg-[#d3d3d3] absolute p-4 right-0">
                         <p>With over 5500 <br /> club members!</p>
