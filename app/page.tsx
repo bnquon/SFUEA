@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
+import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faPeopleGroup } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -135,22 +135,45 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col w-[50%] justify-center relative bg-white">
-                        
+                    <div className="flex w-[50%] box-border gap-4 justify-center relative">
+                        {/* Left Column */}
+                        <div className="w-[40%] h-full flex flex-col relative box-border gap-4">
+                            <div className="h-2/5 bg-black rounded-xl"></div>
+                            <div className="h-3/5 bg-black rounded-xl"></div>
+                        </div>
+
+                        {/* Right Column */}
+                        <div className="w-[60%] h-full flex flex-col relative">    
+                            <div className="w-full h-full flex flex-col relative box-border gap-4">
+                                <div className="h-2/5 bg-black rounded-xl"></div>
+                                <div className="h-1/5 bg-black rounded-xl"></div>
+                                <div className="h-2/5 bg-black rounded-xl"></div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
                 <div className="w-[75vw] h-[15vh] border-t-black border-t-2 flex">
-                    <div className="w-1/4 flex items-center text-2xl text-black">
-                        <p>Tournaments</p>
+                    <div className="w-1/4 flex items-center text-3xl text-black">
+                        <p className="flex items-center">
+                            <FontAwesomeIcon icon={faTrophy}/> &nbsp;
+                            Tournaments
+                        </p>
                     </div>
-                    <div className="w-1/4 flex items-center text-2xl text-black">
-                        <p>In-Houses</p>
+                    <div className="w-1/4 flex items-center text-3xl text-black">
+                        <p className="flex items-center">
+                            <FontAwesomeIcon icon={faHeadset}/> &nbsp;
+                            In-Houses
+                        </p>
                     </div>
-                    <div className="w-1/4 flex items-center text-2xl text-black">
-                        <p>Events</p>
+                    <div className="w-1/4 flex items-center text-3xl text-black">
+                        <p className="flex items-center">
+                            <FontAwesomeIcon icon={faPeopleGroup}/> &nbsp;
+                            In-Person Events
+                        </p>
                     </div>
-                    <div className="w-1/4 flex items-center text-2xl text-black">
+                    <div className="w-1/4 flex items-center text-3xl text-black">
                         <p>Scroll to Discover More</p>
                     </div>
                 </div>
