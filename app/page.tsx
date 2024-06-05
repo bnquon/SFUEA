@@ -3,16 +3,22 @@
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion } from 'framer-motion';
-import { BasicCalendar } from "./Components/Calendar";
+import { useInView } from 'react-intersection-observer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faUsers, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 
 export default function Home() {    
+
+    const [headerInView, inView] = useInView({
+        threshold: 0.15,
+        triggerOnce: true
+    })
 
     const [atTop, setAtTop] = useState(true);
   
@@ -129,7 +135,7 @@ export default function Home() {
                                 </span>
                             </motion.button>
                             <div className="flex flex-col text-black">
-                                <p className="text-3xl font-bold">5500+</p>
+                                <p className="text-3xl font-bold">3800+</p>
                                 <p className="text-xl font-light">Members</p>
                             </div>
 
@@ -198,15 +204,15 @@ export default function Home() {
 
             {/* ABOUT US PAGE */}
             <div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
-                    <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
+                <div ref={headerInView} className="w-[75vw] mb-[60px] text-black flex relative box-border overflow-hidden">
+                    <div style={{transform: inView ? 'translateY(0)': 'translateY(100%)'}} className="duration-500 w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
                         <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">WHO WE ARE.</h1>
                     </div>
-                    <div className="flex-grow flex items-center pl-8">
-                        <p className="text-xl font-semibold flex-grow">
+                    <div className="flex-grow flex items-center pl-8 overflow-hidden">
+                        <p style={{transform: inView ? 'translateY(0)': 'translateY(100%)'}} className="duration-500 text-xl font-semibold flex-grow">
                             The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                         </p>
-                        <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                        <span style={{transform: inView ? 'translateY(0)': 'translateY(100%)'}} className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-500 cursor-pointer bg-black ml-4'>
                             Learn More &nbsp;
                             <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                         </span>
