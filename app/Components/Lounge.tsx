@@ -24,7 +24,7 @@ export const Lounge = () => {
     
         <div className='w-[75vw] flex relative box-border gap-4'>
 
-            <div className="relative rounded-md w-[60%] h-[70vh] overflow-hidden">
+            <div className="relative rounded-md w-[60%] h-[70vh] overflow-hidden shadow-lg">
                 <img src="/gamerslounge3.jpg" className='object-cover w-full h-full' alt="Gamers Lounge" />
             </div>
 

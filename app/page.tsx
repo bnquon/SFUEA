@@ -146,11 +146,11 @@ export default function Home() {
                         {/* Right Column */}
                         <div className="w-[60%] h-full flex flex-col relative">    
                             <div className="w-full h-full flex flex-col relative box-border gap-4">
-                                <div className="h-1/2 bg-black rounded-xl overflow-hidden">
+                                <div className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
                                     <img src="/test-min.jpg" className="h-full w-full object-cover" alt="" />
                                 </div>
                                 {/* <div className="h-1/5 bg-black rounded-xl"></div> */}
-                                <div className="h-1/2 bg-black rounded-xl overflow-hidden">
+                                <div className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
                                     <img src="/test2.jpg" className="h-full w-full object-cover" alt="" />
                                 </div>
                             </div>
@@ -158,9 +158,9 @@ export default function Home() {
                         
                         {/* Left Column */}
                         <div className="w-[40%] h-full flex justify-center flex-col relative box-border gap-4">
-                            <div className="h-[50%] bg-black rounded-xl overflow-hidden"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></div>
+                            <div className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></div>
                 
-                            <div className="h-[50%] bg-black rounded-xl overflow-hidden"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></div>
+                            <div className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></div>
                         </div>
 
                     </div>
@@ -307,7 +307,7 @@ export default function Home() {
                     <div className="w-[calc(75vw+60px)] h-full box-border relative">
                         <Slider ref={slider} {...settings}>
                             {games.map((game, index) => (
-                                <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden">
+                                <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
                                     <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
                                     <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                     <Image 
