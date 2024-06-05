@@ -25,7 +25,7 @@ export const Footer = () => {
                 
                 <div className='flex h-[8vh] gap-4 relative w-[45%]'>
                     <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
-                        <FontAwesomeIcon className='text-2xl' icon={faDiscord} style={{color: '000000'}}></FontAwesomeIcon>
+                        <FontAwesomeIcon className='text-xl' icon={faDiscord} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
                     <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faSquareInstagram} style={{color: '000000'}}></FontAwesomeIcon>

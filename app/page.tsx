@@ -1,11 +1,11 @@
 "use client"
 
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { useRef, useState, useEffect } from "react";
+import { motion } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faPeopleGroup, faUsers } from "@fortawesome/free-solid-svg-icons"
+import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faUsers, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,6 +13,25 @@ import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 
 export default function Home() {    
+
+    const [atTop, setAtTop] = useState(true);
+  
+    useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY === 0) {
+            setAtTop(true);
+        } else {
+            setAtTop(false);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+
+    }, []);
 
     const slider = useRef(null);
 
@@ -83,34 +102,16 @@ export default function Home() {
         }
     ];
 
-    const count = useMotionValue(1000);
-    const rounded = useTransform(count, Math.round);
-    const [mousePosition, setMousePosition] = useState(0);
-
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY - 1.15 * window.innerHeight;
-        console.log(scrollPosition);
-        setMousePosition(scrollPosition > 0 ? scrollPosition : 0);
-    };
-
-    useEffect(() => {
-        const animation = animate(count, 5500, {
-            duration: 3
-        });
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
 	// NEED ANOTHER FIXED PAGE ABOVE THE GAMING TEAM PAGE TO MAKE IT SCROLL UP ON REVEAL AND HAVE THE MASK IN A FIXED CENTER POSITION
 
     return (
         <main className="relative">
 
+            {/* <AnimationIntro/> */}
+
             {/* HOME PAGE */}
-            <div className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[12.5vh] gap-[8vh]">
+            <div className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[15vh] gap-[8vh]">
 
                 <div className="w-[75vw] h-[70%] relative flex box-border">
                     <div className="flex flex-col w-[45%] justify-center relative">
@@ -163,7 +164,7 @@ export default function Home() {
                 <div className="w-[75vw] h-[15vh] border-t-black border-t-2 flex">
                     <div className="w-1/4 flex items-center text-3xl text-black">
                         <p className="flex items-center">
-                            <FontAwesomeIcon className="text-red-500" icon={faTrophy}/> &nbsp;
+                            <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                             Tournaments
                         </p>
                     </div>
@@ -175,55 +176,23 @@ export default function Home() {
                     </div>
                     <div className="w-1/4 flex items-center text-3xl text-black">
                         <p className="flex items-center">
-                            <FontAwesomeIcon className="text-red-500" icon={faUsers}/> &nbsp;
+                            <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                             In-Person Events
                         </p>
                     </div>
-                    <div className="w-1/4 flex items-center justify-end text-3xl text-black">
-                        <p>Scroll to Discover More</p>
-                    </div>
+                    <motion.div className="w-1/4 flex items-center justify-end text-3xl text-black"
+                    animate={{
+                        y: [0, -10, 0] // Keyframes for the jump effect
+                    }}
+                    transition={{
+                        duration: 1.5, // Duration for one cycle of the animation
+                        repeat: Infinity, // Repeat the animation infinitely
+                        repeatType: 'loop', // Loop the animation
+                        ease: 'easeInOut' // Easing function
+                    }}>
+                        <FontAwesomeIcon className="text-black duration-200" style={{ opacity: atTop? '1': '0'}} icon={faAnglesDown}/>
+                    </motion.div>
                 </div>
-                
-                {/* <div className="w-[75vw] relative flex justify-center box-border gap-8">
-                    <div className="flex flex-col w-[30%] justify-center">
-                        <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
-                        <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
-                    </div>
-                    <img src="/test2.jpg" className="h-[60vh] w-2/5 rounded-3xl object-fill" alt="" />
-                    <div className="flex flex-col w-[30%] justify-center">
-                        <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
-                        <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
-                    </div>
-                </div> */}
-
-
-                {/* <div className="w-[75vw] relative flex">
-                    <div className="flex flex-col w-[60%] justify-center">
-                        <p className="text-7xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">SFU GAMING AND ESPORTS CLUB</p>
-                        <p className="text-black text-4xl font-medium">Simon Fraser University's competitive and casual gaming community</p>
-                    </div>
-                    <div className="flex w-[40%] justify-end relative">
-                        <img src="/real-logo.png" className="w-[40%]" alt="" />
-                    </div>
-                </div>
-
-                <div className="w-[75vw] relative flex mt-4">
-                    <div className="flex flex-col w-full justify-center">
-                        <img src="/test2.jpg" className="h-[50vh] rounded-3xl object-cover" alt="" />
-                    </div>
-                    <div id="cta-sub" className="text-black text-4xl font-bold bg-[#d3d3d3] absolute p-4 right-0">
-                        <p>With over 5500 <br /> club members!</p>
-                    </div>
-
-                    <div id="cta-btn" className="text-black text-4xl font-bold bg-[#d3d3d3] absolute p-4 pl-0 bottom-0 left-0">
-                        <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="text-3xl font-bold italic">
-                            <span>
-                                GAME WITH US &nbsp;
-                                <FontAwesomeIcon className="-rotate-45" icon={faArrowCircleRight}/>
-                            </span>
-                        </motion.button>
-                    </div>
-                </div> */}
 
             </div>
 
@@ -308,7 +277,7 @@ export default function Home() {
 
                 <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
                     <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
-                        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">GAMING TEAMS.</h1>
+                        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">OUR TEAMS.</h1>
                     </div>
                     <div className="flex-grow flex items-center justify-between pl-8">
                         <p className="text-xl font-semibold flex-grow">
