@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { BasicCalendar } from "./Components/Calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faPeopleGroup } from "@fortawesome/free-solid-svg-icons"
+import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faPeopleGroup, faUsers } from "@fortawesome/free-solid-svg-icons"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[12.5vh] gap-[8vh]">
 
                 <div className="w-[75vw] h-[70%] relative flex box-border">
-                    <div className="flex flex-col w-[50%] justify-center relative">
+                    <div className="flex flex-col w-[45%] justify-center relative">
                         <p className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
                         <p className="w-4/5 text-black text-xl font-medium mb-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -121,7 +121,7 @@ export default function Home() {
                         </p>
 
                         <div className="flex gap-8 box-border items-center p-4 pl-0">
-                            <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-2xl font-bold italic mr-10">
+                            <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-3xl font-bold italic mr-10">
                                 <span>
                                     GAME WITH US &nbsp;
                                     <FontAwesomeIcon className="-rotate-45 flex-shrink-0" icon={faArrowCircleRight}/>
@@ -135,21 +135,27 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex w-[50%] box-border gap-4 justify-center relative">
-                        {/* Left Column */}
-                        <div className="w-[40%] h-full flex flex-col relative box-border gap-4">
-                            <div className="h-2/5 bg-black rounded-xl"></div>
-                            <div className="h-3/5 bg-black rounded-xl"></div>
-                        </div>
-
+                    <div className="flex w-[55%] box-border gap-4 justify-center relative">
                         {/* Right Column */}
                         <div className="w-[60%] h-full flex flex-col relative">    
                             <div className="w-full h-full flex flex-col relative box-border gap-4">
-                                <div className="h-2/5 bg-black rounded-xl"></div>
-                                <div className="h-1/5 bg-black rounded-xl"></div>
-                                <div className="h-2/5 bg-black rounded-xl"></div>
+                                <div className="h-1/2 bg-black rounded-xl overflow-hidden">
+                                    <img src="/test-min.jpg" className="h-full w-full object-cover" alt="" />
+                                </div>
+                                {/* <div className="h-1/5 bg-black rounded-xl"></div> */}
+                                <div className="h-1/2 bg-black rounded-xl overflow-hidden">
+                                    <img src="/test2.jpg" className="h-full w-full object-cover" alt="" />
+                                </div>
                             </div>
                         </div>
+                        
+                        {/* Left Column */}
+                        <div className="w-[40%] h-full flex justify-center flex-col relative box-border gap-4">
+                            <div className="h-[50%] bg-black rounded-xl overflow-hidden"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></div>
+                
+                            <div className="h-[50%] bg-black rounded-xl overflow-hidden"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -157,23 +163,23 @@ export default function Home() {
                 <div className="w-[75vw] h-[15vh] border-t-black border-t-2 flex">
                     <div className="w-1/4 flex items-center text-3xl text-black">
                         <p className="flex items-center">
-                            <FontAwesomeIcon icon={faTrophy}/> &nbsp;
+                            <FontAwesomeIcon className="text-red-500" icon={faTrophy}/> &nbsp;
                             Tournaments
                         </p>
                     </div>
                     <div className="w-1/4 flex items-center text-3xl text-black">
                         <p className="flex items-center">
-                            <FontAwesomeIcon icon={faHeadset}/> &nbsp;
+                            <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                             In-Houses
                         </p>
                     </div>
                     <div className="w-1/4 flex items-center text-3xl text-black">
                         <p className="flex items-center">
-                            <FontAwesomeIcon icon={faPeopleGroup}/> &nbsp;
+                            <FontAwesomeIcon className="text-red-500" icon={faUsers}/> &nbsp;
                             In-Person Events
                         </p>
                     </div>
-                    <div className="w-1/4 flex items-center text-3xl text-black">
+                    <div className="w-1/4 flex items-center justify-end text-3xl text-black">
                         <p>Scroll to Discover More</p>
                     </div>
                 </div>
