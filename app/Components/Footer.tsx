@@ -8,18 +8,21 @@ export const Footer = () => {
     <div className='pt-[20vh] relative bg-[#d3d3d3]'>
         <div className="w-full h-[50vh] bg-black relative pl-[12.5vw]">
 
-            <div className="w-[45%] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col p-10 box-border gap-6">
-                <p className='text-5xl font-bold'>JOIN THE CLUB.</p>
-                <p className='text-2xl'>We want to see you in the Gamers' Lounge or the next in-house!</p>
+            <div className="w-[45%] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
+                <div>
+                    <p className='text-5xl font-bold'>JOIN THE CLUB.</p> <br />
+                    <p className='text-2xl'>We want to see you in the Gamers' Lounge or the next in-house!</p>
+                </div>
                 <button id='footer-btn' className='bg-black w-fit rounded-full text-2xl hover:bg-white hover:text-black duration-200'>Get Started</button>
             </div>
             
             <div className='relative w-[45%] h-[20vh] flex flex-col mt-[-20px]'>
                 <h1 className='mb-8 text-2xl'>SFU Gaming and Esports Club</h1>
 
-                <ul className='flex gap-8 mb-10 text-xl w-[45%]'>
+                <ul className='flex gap-8 mb-10 text-xl'>
                     <li>About</li>
                     <li>Teams</li>
+                    <li>Gamers' Lounge</li>
                     <li>Events</li>
                 </ul>
                 

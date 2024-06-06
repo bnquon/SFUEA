@@ -117,7 +117,7 @@ export default function Home() {
             {/* <AnimationIntro/> */}
 
             {/* HOME PAGE */}
-            <div className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[15vh] gap-[8vh]">
+            <div id="container" className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[15vh] gap-[8vh]">
 
                 <div className="w-[75vw] h-[70%] relative flex box-border">
                     <div className="flex flex-col w-[45%] justify-center relative">
@@ -131,7 +131,6 @@ export default function Home() {
                             <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-3xl font-bold italic mr-10">
                                 <span>
                                     GAME WITH US &nbsp;
-                                    <FontAwesomeIcon className="-rotate-45 flex-shrink-0" icon={faArrowCircleRight}/>
                                 </span>
                             </motion.button>
                             <div className="flex flex-col text-black">
@@ -205,14 +204,14 @@ export default function Home() {
             {/* ABOUT US PAGE */}
             <div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
                 <div ref={headerInView} className="w-[75vw] mb-[60px] text-black flex relative box-border overflow-hidden">
-                    <div style={{transform: inView ? 'translateY(0)': 'translateY(100%)'}} className="duration-500 w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
+                    <div className="duration-500 w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
                         <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">WHO WE ARE.</h1>
                     </div>
                     <div className="flex-grow flex items-center pl-8 overflow-hidden">
-                        <p style={{transform: inView ? 'translateY(0)': 'translateY(100%)'}} className="duration-500 text-xl font-semibold flex-grow">
+                        <p className="duration-500 text-xl font-semibold flex-grow">
                             The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                         </p>
-                        <span style={{transform: inView ? 'translateY(0)': 'translateY(100%)'}} className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-500 cursor-pointer bg-black ml-4'>
+                        <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
                             Learn More &nbsp;
                             <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                         </span>
@@ -290,7 +289,7 @@ export default function Home() {
                             Browse the games we have competitive teams, executives, or directors for!
                             The executives and directors run in-houses and events for their desired game to foster the community for each one!
                         </p>
-                        <span className='text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                        <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
                             Learn More &nbsp;
                             <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                         </span>

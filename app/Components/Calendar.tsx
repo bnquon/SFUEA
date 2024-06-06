@@ -32,7 +32,7 @@ export const BasicCalendar = () => {
               <p className="text-xl font-semibold flex-grow">
                 Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
               </p>
-              <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+              <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
                   Learn More &nbsp;
                   <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
               </span>
@@ -54,15 +54,15 @@ export const BasicCalendar = () => {
 
       <div className='w-[75vw] h-[25vh] relative flex gap-5'>
         <div id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
-          <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1601247387326-f8bcb5a234d4?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
           <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
-          <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1497752531616-c3afd9760a11?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className='w-full h-full object-cover' src="/IMG_7099.jpg" alt="" />
           <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
-          <img className='w-full h-full object-cover' src="https://images.unsplash.com/photo-1577411726054-04c5b721b367?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+          <img className='w-full h-full object-cover' src="/IMG_20230930_145502-min.jpg" alt="" />
           <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
       </div>

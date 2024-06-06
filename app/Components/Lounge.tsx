@@ -14,7 +14,7 @@ export const Lounge = () => {
                 <p className="text-xl font-semibold flex-grow">
                     Visit the hub for eSports and recreational gaming on SFU Burnaby campus!
                 </p>
-                <span className='h-fit text-xl p-3 rounded-xl flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
+                <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
                     Learn More &nbsp;
                     <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                 </span>
@@ -33,29 +33,29 @@ export const Lounge = () => {
                 <div className="w-full h-full flex flex-col gap-4">
 
                     <div className='w-full h-1/2 flex gap-4'>
-                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-5 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faComputer}/>
-                                <p className='text-3xl font-semibold'>&nbsp;PC SPECS</p>
+                                <p className='text-2xl font-semibold'>&nbsp;PC SPECS</p>
                             </span>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit text-xl p-3 rounded-xl flex items-center justify-between text-black duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Full Specs &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
                         </div>
 
-                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-5 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faLocationDot}/>
-                                <p className='text-3xl font-semibold'>&nbsp;LOCATION</p>
+                                <p className='text-2xl font-semibold'>&nbsp;LOCATION</p>
                             </span>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit text-xl p-3 rounded-xl flex items-center justify-between text-black duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Video Guide &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
@@ -63,29 +63,29 @@ export const Lounge = () => {
                     </div>
                     
                     <div className='w-full h-1/2 flex gap-4'>
-                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-5 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faCalendarDays}/>
-                                <p className='text-3xl font-semibold'>&nbsp;SCHEDULE</p>
+                                <p className='text-2xl font-semibold'>&nbsp;SCHEDULE</p>
                             </span>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit text-xl p-3 rounded-xl flex items-center justify-between text-black duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Full Schedule &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
                         </div>
 
-                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-5 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faCircleExclamation}/>
-                                <p className='text-3xl font-semibold'>&nbsp;NOTES</p>
+                                <p className='text-2xl font-semibold'>&nbsp;NOTES</p>
                             </span>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit text-xl p-3 rounded-xl flex items-center justify-between text-black duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Read More &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
