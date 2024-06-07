@@ -339,17 +339,29 @@ export default function Home() {
             <BasicCalendar/>
 
             <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div className="w-[75vw] h-[35vh] rounded-xl bg-red-500 flex relative">
-                    <div className="w-[40%] h-full flex flex-col items-start justify-center gap-5 p-4">
-                        <p className="text-4xl font-bold">SFU Esports Jerseys</p>
+                <div className="w-[75vw] h-[35vh] flex relative bg-white rounded-xl">
+                    <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 p-10">
+                        <p className="text-4xl font-bold text-red-500">SFU Esports Jerseys</p>
                         <span className='w-fit text-xl p-2 mt-2 rounded-xl flex items-center bg-black text-white'>
                             SHOP NOW &nbsp;
                             <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
                         </span>
                     </div>
                     
-                    <div className="w-3/5 bg-white h-full">
+                    <div className="w-[70%] h-full relative box-border">
+                        <div className="w-full h-full flex relative box-border gap-8">
+                            <div className="w-1/3 h-full relative">
+                                <Image src='/pinkJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            </div>
 
+                            <div className="w-1/3 h-full relative">
+                                <Image src='/blackJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            </div>
+
+                            <div className="w-1/3 h-full relative">
+                                <Image src='/whiteJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
