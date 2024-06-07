@@ -4,7 +4,6 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from 'geist/font/sans'
 import "./globals.css";
 import Navbar from "./ui/Navbar";
-import { Providers } from './providers';
 
 
 export const metadata: Metadata = {

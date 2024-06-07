@@ -338,6 +338,23 @@ export default function Home() {
 
             <BasicCalendar/>
 
+            <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="w-[75vw] h-[35vh] rounded-xl bg-red-500 flex relative">
+                    <div className="w-[40%] h-full flex flex-col items-start justify-center gap-5 p-4">
+                        <p className="text-4xl font-bold">SFU Esports Jerseys</p>
+                        <span className='w-fit text-xl p-2 mt-2 rounded-xl flex items-center bg-black text-white'>
+                            SHOP NOW &nbsp;
+                            <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
+                        </span>
+                    </div>
+                    
+                    <div className="w-3/5 bg-white h-full">
+
+                    </div>
+                </div>
+            </div>
+
+
             <Footer/>
 
         </main>
