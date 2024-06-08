@@ -370,14 +370,6 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3] relative">
-                <div className="text-2xl rounded-3xl p-5 text-black bg-white relative group">
-                    <p>dummy</p>
-                    <p className="absolute bg-black text-white hidden rounded-sm bottom-0 translate-y-full group-hover:block">LSDKJFLSDJKFLKJSDFLSDJKFLSDJFLSDJFLSDJFLDFJS</p>
-                </div>
-
-            </div>
-
             <Footer/>
 
         </main>
