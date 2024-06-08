@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import StickyHeadroom from '@integreat-app/react-sticky-headroom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
 const links = [
     { name: 'Home', href: '/' },
@@ -24,8 +26,7 @@ function Navbar() {
                 <div className='w-1/4 flex justify-start items-center'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
-                <div id="pageSwitcher" className="w-1/2 flex justify-center items-center">
-                    <div id="outerBorder" className="flex max-w-fit px-6 py-3 bg-slate-200/20 backdrop-blur-sm rounded-[20px] gap-8 items-center">
+                <div id="pageSwitcher" className="w-1/2 flex justify-evenly items-center relative">
                         {links.map((link) => {
                             if (link.name != 'Teams') {
                                 return (
@@ -34,10 +35,10 @@ function Navbar() {
                                         href={link.href}
                                         className={clsx(
                                             // Render these classNames for non-selected paths
-                                            'px-3 py-1 hover:bg-slate-200/20 max-w-fit rounded-xl text-xl font-bold',
+                                            'flex justify-center items-center px-3 py-1 h-full hover:bg-slate-200/20 max-w-fit rounded-xl text-xl font-bold',
                                             {
                                                 // Render these classNames for selected path
-                                                'px-3 py-1 bg-red-500 text-black hover:bg-slate-200 font-bold max-w-fit rounded-xl': pathname === link.href,
+                                                'flex justify-center items-center px-3 py-1 bg-red-500 text-black hover:bg-slate-200 font-bold max-w-fit rounded-xl': pathname === link.href,
                                             },
                                         )}>
                                         {link.name}
@@ -45,42 +46,38 @@ function Navbar() {
                                 )    
                             }
                             return (
-                                <div className='relative group'>
+                                <div className='relative group h-full'>
                                     <Link
                                         key={link.name}
                                         href={link.href}
                                         className={clsx(
                                             // Render these classNames for non-selected paths
-                                            'px-3 py-1 hover:bg-slate-200/20 max-w-fit rounded-xl text-xl font-bold',
+                                            'flex justify-center items-center px-3 py-1 h-full hover:bg-slate-200/20 max-w-fit rounded-xl text-xl font-bold',
                                             {
                                                 // Render these classNames for selected path
-                                                'px-3 py-1 bg-red-500 text-black hover:bg-slate-200 font-bold max-w-fit rounded-xl': pathname === link.href,
+                                                'flex justify-center items-center px-3 py-1 h-full bg-red-500 text-black hover:bg-slate-200 font-bold max-w-fit rounded-xl': pathname === link.href,
                                             },
                                         )}>
-                                        {link.name}
+                                        <span>
+                                        {link.name}&nbsp; <FontAwesomeIcon className='text-xl' icon={faCaretDown}/>
+                                        </span>
                                     </Link>
 
-                                    <div className='absolute bottom-0 translate-y-full left-0 hidden group-hover:block w-[20vw]'>
-                                        <div className='text-xl bg-black text-white'>
-                                            GAMES HERE 
+                                    <div className='absolute bottom-0 translate-y-[calc(100%+1.5vh)] left-0 hidden group-hover:block w-[30vw]'>
+                                        <div className='text-xl bg-black text-white grid grid-cols-2 grid-rows-6'>
+                                            {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
+                                                <div key={index} className='w-full h-full font-bold p-4 flex items-center justify-center'>
+                                                    {game}
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>        
                                 </div>
                             );
 
                         })}
-                    </div>        
+    
                 </div>
-
-                {/* 
-                <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3] relative">
-                    <div className="text-2xl rounded-3xl p-5 text-black bg-white relative group">
-                        <p>dummy</p>
-                        <p className="absolute bg-black text-white hidden rounded-sm bottom-0 translate-y-full group-hover:block">LSDKJFLSDJKFLKJSDFLSDJKFLSDJFLSDJFLSDJFLDFJS</p>
-                    </div>
-
-                </div>
-                */}
 
                 <div className="w-1/4 flex justify-end items-center">
                     <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='px-6 py-3 bg-red-500 max-w-fit rounded-xl text-xl font-bold'>JOIN NOW</motion.button>
