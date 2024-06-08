@@ -338,34 +338,36 @@ export default function Home() {
 
             <BasicCalendar/>
 
+            {/* bg-gradient-to-r from-black to-red-500 */}
+
             <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div className="w-[75vw] h-[35vh] flex relative bg-gradient-to-r from-red-500 to-white rounded-xl">
-                    <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 p-10">
-                        <p className="text-4xl font-bold text-black">SFU Esports Jerseys</p>
-                        <span className='w-fit text-xl p-3 mt-2 rounded-xl flex items-center bg-black text-white'>
+                <div className="w-[75vw] h-[35vh] flex relative rounded-xl box-border bg-gradient-to-r from-red-500 to-black px-[5%] shadow-md">
+                    <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 text-white">
+                        <p className="text-4xl font-bold">BUY A JERSEY!</p>
+                        <p className="text-2xl">Club staff and competitive players get 10% off!</p>
+                        <span className='w-fit text-xl px-4 py-2 mt-2 rounded-xl flex items-center bg-black text-white'>
                             SHOP NOW &nbsp;
                             <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
                         </span>
                     </div>
                     
-                    <div className="w-[70%] h-full relative box-border">
-                        <div className="w-full h-full flex relative box-border gap-8">
-                            <div className="w-1/3 h-full relative">
-                                <Image src='/pinkJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
-                            </div>
-
-                            <div className="w-1/3 h-full relative">
+                    <div className="h-full relative box-border">
+                        <div className="h-full flex relative box-border gap-0">
+                            <div className="h-full relative">
                                 <Image src='/blackJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
                             </div>
 
-                            <div className="w-1/3 h-full relative">
+                            <div className="h-full relative ml-[-5%]">
+                                <Image src='/pinkJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            </div>
+
+                            <div className="h-full relative ml-[-5%]">
                                 <Image src='/whiteJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <Footer/>
 
