@@ -339,10 +339,10 @@ export default function Home() {
             <BasicCalendar/>
 
             <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div className="w-[75vw] h-[35vh] flex relative bg-white rounded-xl">
+                <div className="w-[75vw] h-[35vh] flex relative bg-gradient-to-r from-red-500 to-white rounded-xl">
                     <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 p-10">
-                        <p className="text-4xl font-bold text-red-500">SFU Esports Jerseys</p>
-                        <span className='w-fit text-xl p-2 mt-2 rounded-xl flex items-center bg-black text-white'>
+                        <p className="text-4xl font-bold text-black">SFU Esports Jerseys</p>
+                        <span className='w-fit text-xl p-3 mt-2 rounded-xl flex items-center bg-black text-white'>
                             SHOP NOW &nbsp;
                             <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
                         </span>
