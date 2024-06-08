@@ -338,10 +338,8 @@ export default function Home() {
 
             <BasicCalendar/>
 
-            {/* bg-gradient-to-r from-black to-red-500 */}
-
             <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div className="w-[75vw] h-[35vh] flex relative rounded-xl box-border bg-gradient-to-r from-red-500 to-black px-[5%] shadow-md">
+                <div className="w-[75vw] h-[35vh] flex relative rounded-xl box-border bg-gradient-to-r from-red-500 from-20% via-black to-black px-[5%] shadow-md">
                     <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 text-white">
                         <p className="text-4xl font-bold">BUY A JERSEY!</p>
                         <p className="text-2xl">Club staff and competitive players get 10% off!</p>
@@ -353,20 +351,31 @@ export default function Home() {
                     
                     <div className="h-full relative box-border">
                         <div className="h-full flex relative box-border gap-0">
-                            <div className="h-full relative">
-                                <Image src='/blackJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            <div className="h-full w-1/3 relative flex">
+                                <Image className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
 
-                            <div className="h-full relative ml-[-5%]">
-                                <Image src='/pinkJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            <div className="h-full w-1/3 relative flex">
+                                <Image className="absolute  scale-x-125 scale-y-110" src='/pinkJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
 
-                            <div className="h-full relative ml-[-5%]">
-                                <Image src='/whiteJerseyFront.webp'width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.1)'}}></Image>
+                            <div className="h-full w-1/3 relative flex">
+                                <Image className="absolute scale-x-125 scale-y-110" src='/whiteJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3] relative">
+                <div className="text-2xl rounded-3xl p-5 text-black bg-white relative group">
+                    <p>dummy</p>
+                    <p className="absolute bg-black text-white hidden rounded-sm bottom-0 translate-y-full group-hover:block">LSDKJFLSDJKFLKJSDFLSDJKFLSDJFLSDJFLSDJFLDFJS</p>
+                </div>
+
             </div>
 
             <Footer/>
