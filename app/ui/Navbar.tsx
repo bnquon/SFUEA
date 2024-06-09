@@ -22,22 +22,20 @@ function Navbar() {
 
     return (
         <StickyHeadroom scrollHeight={100}> 
-            <div className='w-screen fixed z-30 flex bg-black px-[12.5vw]'>
+            <div className='w-screen fixed z-50 flex bg-black px-[12.5vw]'>
                 <div className='w-1/4 flex justify-start items-center py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
                 <div id="pageSwitcher" className="w-1/2 flex justify-center items-center relative">
                         {links.map((link) => {
-                            if (link.name != 'Teams') {
+                            if (link.name !== 'Teams') {
                                 return (
                                     <Link
                                         key={link.name}
                                         href={link.href}
                                         className={clsx(
-                                            // Render these classNames for non-selected paths
                                             'flex justify-center items-center px-6 h-full hover:bg-slate-200/20 max-w-fit text-xl font-bold',
                                             {
-                                                // Render these classNames for selected path
                                                 'flex justify-center items-center px-6 h-full bg-red-500 text-white text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
@@ -46,27 +44,23 @@ function Navbar() {
                                 )    
                             }
                             return (
-                                <div className='relative group h-full'>
+                                <div key={link.name} className='relative group h-full'>
                                     <Link
-                                        key={link.name}
                                         href={link.href}
                                         className={clsx(
-                                            // Render these classNames for non-selected paths
                                             'flex justify-center items-center px-6 h-full hover:bg-slate-200/20 max-w-fit text-xl font-bold',
                                             {
-                                                // Render these classNames for selected path
                                                 'flex justify-center items-center px-6 h-full bg-red-500 text-white text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         <span>
-                                        {link.name}&nbsp; <FontAwesomeIcon className='text-xl' icon={faCaretDown}/>
+                                            {link.name}&nbsp; <FontAwesomeIcon className='text-xl' icon={faCaretDown}/>
                                         </span>
                                     </Link>
-
-                                    <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw]'>
-                                        <div className='text-xl bg-black text-white grid grid-cols-2 grid-rows-6'>
+                                    <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw] z-50'>
+                                        <div className='text-xl bg-black text-white grid grid-cols-2 grid-rows-6 relative'>
                                             {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
-                                                <div key={index} className='w-full h-full font-bold p-4 flex items-center justify-center'>
+                                                <div key={index} className='w-full h-full font-bold py-4 px-6 flex items-center justify-start'>
                                                     {game}
                                                 </div>
                                             ))}
@@ -74,11 +68,8 @@ function Navbar() {
                                     </div>        
                                 </div>
                             );
-
                         })}
-    
                 </div>
-
                 <div className="w-1/4 flex justify-end items-center">
                     <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='px-6 py-3 bg-red-500 max-w-fit rounded-xl text-xl font-bold'>JOIN NOW</motion.button>
                 </div>
