@@ -22,11 +22,11 @@ function Navbar() {
 
     return (
         <StickyHeadroom scrollHeight={100}> 
-            <div className='w-screen fixed z-30 flex bg-black px-[12.5vw] py-[1.5vh]'>
-                <div className='w-1/4 flex justify-start items-center'>
+            <div className='w-screen fixed z-30 flex bg-black px-[12.5vw]'>
+                <div className='w-1/4 flex justify-start items-center py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
-                <div id="pageSwitcher" className="w-1/2 flex justify-evenly items-center relative">
+                <div id="pageSwitcher" className="w-1/2 flex justify-center items-center relative">
                         {links.map((link) => {
                             if (link.name != 'Teams') {
                                 return (
@@ -35,10 +35,10 @@ function Navbar() {
                                         href={link.href}
                                         className={clsx(
                                             // Render these classNames for non-selected paths
-                                            'flex justify-center items-center px-3 py-1 h-full hover:bg-slate-200/20 max-w-fit rounded-xl text-xl font-bold',
+                                            'flex justify-center items-center px-6 h-full hover:bg-slate-200/20 max-w-fit text-xl font-bold',
                                             {
                                                 // Render these classNames for selected path
-                                                'flex justify-center items-center px-3 py-1 bg-red-500 text-black hover:bg-slate-200 font-bold max-w-fit rounded-xl': pathname === link.href,
+                                                'flex justify-center items-center px-6 h-full bg-red-500 text-white text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         {link.name}
@@ -52,10 +52,10 @@ function Navbar() {
                                         href={link.href}
                                         className={clsx(
                                             // Render these classNames for non-selected paths
-                                            'flex justify-center items-center px-3 py-1 h-full hover:bg-slate-200/20 max-w-fit rounded-xl text-xl font-bold',
+                                            'flex justify-center items-center px-6 h-full hover:bg-slate-200/20 max-w-fit text-xl font-bold',
                                             {
                                                 // Render these classNames for selected path
-                                                'flex justify-center items-center px-3 py-1 h-full bg-red-500 text-black hover:bg-slate-200 font-bold max-w-fit rounded-xl': pathname === link.href,
+                                                'flex justify-center items-center px-6 h-full bg-red-500 text-white text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         <span>
@@ -63,7 +63,7 @@ function Navbar() {
                                         </span>
                                     </Link>
 
-                                    <div className='absolute bottom-0 translate-y-[calc(100%+1.5vh)] left-0 hidden group-hover:block w-[30vw]'>
+                                    <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw]'>
                                         <div className='text-xl bg-black text-white grid grid-cols-2 grid-rows-6'>
                                             {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
                                                 <div key={index} className='w-full h-full font-bold p-4 flex items-center justify-center'>
