@@ -15,10 +15,12 @@ export default function Home() {
 				</div>
       		</div>
 
+			
+
 			<div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 				<div className="grid grid-cols-4 grid-flow-row w-[75vw] box-border gap-[6vw] relative">
 					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqo1gJ3wk534Te8sSGXOt_Xmy_BLkJUjLzWyfIjGm9veFfX8akQEIEO5khmZryADJavKJd-gEV2-vSsyQg7V0w8B6koK6c6ZMyhEbfAt3eOazttsQB0a_iet4GB81kS3TeEVKz5QGwqh8n/w2880-h1800-c/black-red-abstract-polygon-3d-4k-45.jpg" alt="" />
+					<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://images.hdqwalls.com/download/abstract-dark-red-line-5k-bo-800x480.jpg" alt="" />
 						<div className="w-full flex items-center justify-center relative">
 							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
 						</div>
@@ -28,7 +30,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqo1gJ3wk534Te8sSGXOt_Xmy_BLkJUjLzWyfIjGm9veFfX8akQEIEO5khmZryADJavKJd-gEV2-vSsyQg7V0w8B6koK6c6ZMyhEbfAt3eOazttsQB0a_iet4GB81kS3TeEVKz5QGwqh8n/w2880-h1800-c/black-red-abstract-polygon-3d-4k-45.jpg" alt="" />
+						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://i.pinimg.com/originals/c3/c2/28/c3c228e24f7e35c854e27f90145fed0a.jpg" alt="" />
 						<div className="w-full flex items-center justify-center relative">
 							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
 						</div>
@@ -38,7 +40,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqo1gJ3wk534Te8sSGXOt_Xmy_BLkJUjLzWyfIjGm9veFfX8akQEIEO5khmZryADJavKJd-gEV2-vSsyQg7V0w8B6koK6c6ZMyhEbfAt3eOazttsQB0a_iet4GB81kS3TeEVKz5QGwqh8n/w2880-h1800-c/black-red-abstract-polygon-3d-4k-45.jpg" alt="" />
+						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://thumbs.dreamstime.com/b/glitter-textured-red-black-shaded-background-wallpaper-book-page-paintings-printing-mobile-backgrounds-book-covers-screen-149883195.jpg" alt="" />
 						<div className="w-full flex items-center justify-center relative">
 							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
 						</div>
