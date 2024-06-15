@@ -1,6 +1,65 @@
+"use client"
 import Image from "next/image";
+import WidgetBot from '@widgetbot/react-embed'
 
 export default function Home() {
+
+	type Person = {
+		name: string;
+		role: string;
+	}
+	
+	const people: Person[] = [
+		{
+			name: "John Doe",
+			role: "Software Engineer"
+		},
+		{
+			name: "Jane Smith",
+			role: "Product Manager"
+		},
+		{
+			name: "Alex Johnson",
+			role: "UX Designer"
+		},
+		{
+			name: "Emily Brown",
+			role: "Marketing Specialist"
+		},
+		{
+			name: "Michael Lee",
+			role: "Data Analyst"
+		},
+		{
+			name: "Sarah Wilson",
+			role: "Graphic Designer"
+		},
+		{
+			name: "David Martinez",
+			role: "Project Manager"
+		},
+		{
+			name: "Jennifer Taylor",
+			role: "Content Writer"
+		},
+		{
+			name: "Robert Anderson",
+			role: "Sales Representative"
+		},
+		{
+			name: "Michelle Garcia",
+			role: "HR Coordinator"
+		},
+		{
+			name: "William Hernandez",
+			role: "Customer Support Specialist"
+		},
+		{
+			name: "Samantha Young",
+			role: "Financial Analyst"
+		}
+	];
+	
     return (
     	<main className="relative">
 
@@ -15,50 +74,63 @@ export default function Home() {
 				</div>
       		</div>
 
-			
+			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border pt-[0vh] pb-[10vh]">
+				<div className="w-[75vw] flex flex-col box-border gap-5 text-black">
+					<div className="flex w-full box-border gap-10">
+						<div className="w-1/2 h-full flex flex-col justify-between box-border">
+							<h2 className="text-5xl font-bold">Our Mission</h2>
+						</div>
+						<div className="w-1/2 h-full flex flex-col justify-between box-border px-10">
+							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus odio. Sed nec tortor sed nisi convallis tristique. Sed vel nulla ac massa efficitur vulputate. </p>
+						</div>
+					</div>
+					<div className="w-full h-full flex flex-col gap-10 box-border">
+						<div className="w-full h-full flex flex-col justify-between box-border">
+							<div className="flex w-full h-1/2 box-border justify-between gap-10">
+								<div className="w-1/2 h-full flex flex-col justify-between box-border px-10 py-16 gap-6 bg-white rounded-xl">
+									<h2 className="text-3xl font-bold">ICON HERE</h2>
+									<h2 className="text-3xl font-bold">Our Mission</h2>
+									<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus odio. Sed nec tortor sed nisi convallis tristique. Sed vel nulla ac massa efficitur vulputate. Sed at velit eget dui malesuada pellentesque. Nulla facilisis, mauris id lacinia posuere, lectus tellus convallis mi, id suscipit elit ligula vitae neque.</p>
+								</div>
+
+								<div className="w-1/2 h-full flex flex-col justify-between box-border px-10 py-16 gap-6 bg-white rounded-xl">
+									<h2 className="text-3xl font-bold">ICON HERE</h2>
+									<h2 className="text-3xl font-bold">Our Mission</h2>
+									<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus odio. Sed nec tortor sed nisi convallis tristique. Sed vel nulla ac massa efficitur vulputate. Sed at velit eget dui malesuada pellentesque. Nulla facilisis, mauris id lacinia posuere, lectus tellus convallis mi, id suscipit elit ligula vitae neque.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border pt-[5vh] pb-[5vh]">
+
+				<div className="w-[75vw] h-[60vh] flex box-border gap-5">
+					<div className="w-2/5 h-full flex flex-col text-black gap-10 box-border pr-6">
+						<p className="text-4xl font-extrabold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p className="text-3xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+					</div>
+					<WidgetBot className="w-3/5 h-full"
+						server= '1251409341676912660'
+						channel= '1251409341676912663'/>
+				</div>
+			</div>
 
 			<div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
-				<div className="grid grid-cols-4 grid-flow-row w-[75vw] box-border gap-[6vw] relative">
-					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-					<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://images.hdqwalls.com/download/abstract-dark-red-line-5k-bo-800x480.jpg" alt="" />
-						<div className="w-full flex items-center justify-center relative">
-							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
+				<div className="grid grid-cols-4 grid-flow-row w-[75vw] box-border relative gap-[4vw]">
+					{people.map((person, index) => (	
+						<div key={index} className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
+							<div className="absolute w-full h-2/5 bg-black top-0 left-0 z-0"></div>
+							<div className="w-full flex items-center justify-center relative">
+								<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
+							</div>
+							<div className="w-full text-xl px-4 flex flex-col items-center justify-center text-center">
+								<p className="text-2xl text-black font-bold">{person.name}</p>
+								<p className="text-xl text-black font-normal">{person.role}</p>
+							</div>
 						</div>
-						<div className="w-full text-xl px-4 flex flex-col items-center justify-center text-center">
-							<p className="text-2xl text-black font-bold">BRANDON QUON</p>
-							<p className="text-xl text-black font-normal">CEO TO TEST LINE BREAK LINE BREAK </p>
-						</div>
-					</div>
-					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://i.pinimg.com/originals/c3/c2/28/c3c228e24f7e35c854e27f90145fed0a.jpg" alt="" />
-						<div className="w-full flex items-center justify-center relative">
-							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
-						</div>
-						<div className="w-full text-xl px-4 flex flex-col items-center justify-center text-center">
-							<p className="text-2xl text-black font-bold">BRANDON QUON</p>
-							<p className="text-xl text-black font-normal">CEO TO TEST LINE BREAK LINE BREAK </p>
-						</div>
-					</div>
-					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://thumbs.dreamstime.com/b/glitter-textured-red-black-shaded-background-wallpaper-book-page-paintings-printing-mobile-backgrounds-book-covers-screen-149883195.jpg" alt="" />
-						<div className="w-full flex items-center justify-center relative">
-							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
-						</div>
-						<div className="w-full text-xl px-4 flex flex-col items-center justify-center text-center">
-							<p className="text-2xl text-black font-bold">BRANDON QUON</p>
-							<p className="text-xl text-black font-normal">CEO TO TEST LINE BREAK LINE BREAK </p>
-						</div>
-					</div>
-					<div className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-						<img className="z-0 w-full left-0 top-0 absolute h-1/3 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqo1gJ3wk534Te8sSGXOt_Xmy_BLkJUjLzWyfIjGm9veFfX8akQEIEO5khmZryADJavKJd-gEV2-vSsyQg7V0w8B6koK6c6ZMyhEbfAt3eOazttsQB0a_iet4GB81kS3TeEVKz5QGwqh8n/w2880-h1800-c/black-red-abstract-polygon-3d-4k-45.jpg" alt="" />
-						<div className="w-full flex items-center justify-center relative">
-							<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
-						</div>
-						<div className="w-full text-xl px-4 flex flex-col items-center justify-center text-center">
-							<p className="text-2xl text-black font-bold">BRANDON QUON</p>
-							<p className="text-xl text-black font-normal">CEO TO TEST LINE BREAK LINE BREAK </p>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 
