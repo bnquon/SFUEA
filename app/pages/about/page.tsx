@@ -64,13 +64,13 @@ export default function Home() {
     	<main className="relative">
 
       		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[10vh]">
-        		<div className="w-[75vw] items-center flex justify-between text-black py-10 rounded-xl overflow-hidden relative z-0">
+        		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
 					<Image className="absolute brightness-[35%] z-[1]" src='/blob2.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-					<div className="flex flex-col w-3/5 gap-6 text-white z-[2] ml-10">
+					<div className="flex flex-col w-3/5 gap-6 text-white z-[2]">
 						<p className="font-bold text-3xl text-red-500">Who We Are</p>
 						<p className="text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
-					<Image className="z-[2] mr-10" src='/real-logo.png' alt="ex1" width={250} height={250}></Image>
+					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={250} height={250}></Image>
 				</div>
       		</div>
 
@@ -79,9 +79,6 @@ export default function Home() {
 					<div className="flex w-full box-border gap-10">
 						<div className="w-1/2 h-full flex flex-col justify-between box-border">
 							<h2 className="text-5xl font-bold">Our Mission</h2>
-						</div>
-						<div className="w-1/2 h-full flex flex-col justify-between box-border px-10">
-							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus odio. Sed nec tortor sed nisi convallis tristique. Sed vel nulla ac massa efficitur vulputate. </p>
 						</div>
 					</div>
 					<div className="w-full h-full flex flex-col gap-10 box-border">
