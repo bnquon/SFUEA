@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faUsers, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
@@ -14,6 +14,15 @@ import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 
 export default function Home() {    
+
+    const count = useMotionValue(0);
+    const rounded = useTransform(count, Math.round);
+
+    useEffect(() => {
+        const animation = animate(count, 3800, { duration: 3 });
+
+        return animation.stop;
+    }, []);
 
     const [headerInView, inView] = useInView({
         threshold: 0.15,
@@ -134,7 +143,7 @@ export default function Home() {
                                 </span>
                             </motion.button>
                             <div className="flex flex-col text-black">
-                                <p className="text-3xl font-bold">3800+</p>
+                                <motion.p className="text-3xl font-bold tabular-nums">{rounded}</motion.p>
                                 <p className="text-xl font-light">Members</p>
                             </div>
 
