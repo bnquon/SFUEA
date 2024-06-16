@@ -1,5 +1,4 @@
 "use client"
-
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
@@ -48,7 +47,7 @@ export default function Home() {
 
     }, []);
 
-    const slider = useRef(null);
+    const slider = useRef<Slider | null>(null);
 
     const settings = {
         infinite: true,
@@ -361,18 +360,18 @@ export default function Home() {
                     <div className="h-full relative box-border">
                         <div className="h-full flex relative box-border gap-0">
                             <div className="h-full w-1/3 relative flex">
-                                <Image className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                <Image className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
 
                             <div className="h-full w-1/3 relative flex">
-                                <Image className="absolute  scale-x-125 scale-y-110" src='/pinkJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                <Image className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image alt="forced" className="absolute  scale-x-125 scale-y-110" src='/pinkJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image alt="forced" className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
 
                             <div className="h-full w-1/3 relative flex">
-                                <Image className="absolute scale-x-125 scale-y-110" src='/whiteJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                <Image className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/whiteJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
                         </div>
                     </div>
