@@ -64,7 +64,11 @@ export default function Home() {
     return (
     	<main className="relative">
 
-			<div className="fixed left-[7.5vw] top-[15vh] h-[75vh] w-[2vw] z-10 bg-white"></div>
+			<div className="fixed left-[7.5vw] top-[15vh] h-[75vh] w-[2vw] z-10 bg-white overflow-y-auto flex flex-col justify-evenly">
+				{games.map((game) => (
+					<button key={game.title} className="block w-full p-4 bg-red-500 text-black hover:bg-gray-100">{game.title[0]}</button>
+				))}
+			</div>
 
       		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[7.5vh]">
         		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
@@ -79,7 +83,7 @@ export default function Home() {
 
 			<div className="w-screen bg-[#d3d3d3] flex flex-col justify-center items-center">
 				{games.map((game, index) => (
-					<div key={index} className="w-[75vw] h-[25vh] rounded-xl overflow-hidden relative flex justify-center items-center">
+					<div key={index} className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center">
 						<Image src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 						<p id="game-title" className="absolute text-white text-5xl font-bold z-10">{game.title}</p>
 					</div>

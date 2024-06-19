@@ -18,7 +18,7 @@ export default function Home() {
     const rounded = useTransform(count, Math.round);
 
     useEffect(() => {
-        const animation = animate(count, 3800, { duration: 3 });
+        const animation = animate(count, 3800, { duration: 1 });
 
         return animation.stop;
     }, []);
