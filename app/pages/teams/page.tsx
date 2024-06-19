@@ -64,7 +64,7 @@ export default function Home() {
     return (
     	<main className="relative">
 
-			<div className="fixed left-[7.5vw] top-[15vh] h-[75vh] w-[2vw] z-10 bg-white overflow-y-auto flex flex-col justify-evenly">
+			<div className="fixed left-[7.5vw] top-[15vh] h-[75vh] w-[2vw] z-10 overflow-y-auto flex flex-col justify-start gap-2">
 				{games.map((game) => (
 					<button key={game.title} className="block w-full p-4 bg-red-500 text-black hover:bg-gray-100">{game.title[0]}</button>
 				))}
