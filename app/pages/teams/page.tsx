@@ -1,9 +1,30 @@
 import Image from "next/image";
 
-
-
-
 export default function Home() {
+
+    type Person = {
+		name: string;
+		role: string;
+	}
+	
+	const people: Person[] = [
+		{
+			name: "John Doe",
+			role: "Software Engineer"
+		},
+		{
+			name: "Jane Smith",
+			role: "Product Manager"
+		},
+		{
+			name: "Alex Johnson",
+			role: "UX Designer"
+		},
+		{
+			name: "Emily Brown",
+			role: "Marketing Specialist"
+		}
+	];
 
 	type Game = {
         title: string;
@@ -64,12 +85,6 @@ export default function Home() {
     return (
     	<main className="relative">
 
-			<div className="fixed left-[7.5vw] top-[15vh] h-[75vh] w-[2vw] z-10 overflow-y-auto flex flex-col justify-start gap-2">
-				{games.map((game) => (
-					<button key={game.title} className="block w-full p-4 bg-red-500 text-black hover:bg-gray-100">{game.title[0]}</button>
-				))}
-			</div>
-
       		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[7.5vh]">
         		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
 					<Image className="absolute brightness-50 z-[1]" src='/blob1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -81,12 +96,23 @@ export default function Home() {
 				</div>
       		</div>
 
-			<div className="w-screen bg-[#d3d3d3] flex flex-col justify-center items-center">
+			<div className="w-screen bg-[#d3d3d3] flex flex-col pl-[12.5vw]">
 				{games.map((game, index) => (
-					<div key={index} className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center">
-						<Image src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-						<p id="game-title" className="absolute text-white text-5xl font-bold z-10">{game.title}</p>
-					</div>
+                    <div className="w-screen">
+                        <div key={index} className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center">
+                            <Image src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                            <p id="game-title" className="absolute text-white text-5xl font-bold z-10">{game.title}</p>
+                        </div>
+                        
+                        <div key={index} className="w-[75vw] h-[20vh] relative flex box-border gap-4">
+                        {people.map((person) => (
+                                <div className="w-1/4 h-full flex flex-col justify-center items-center text-black bg-gray-500 rounded-xl">
+                                    <p className="text-3xl font-bold">{person.name}</p>
+                                    <p className="text-xl font-semibold">{person.role}</p>
+                                </div>
+                        ))}
+                        </div>
+                    </div>
 				))}
 			</div>
     	</main>

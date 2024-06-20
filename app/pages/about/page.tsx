@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import WidgetBot from '@widgetbot/react-embed'
+import { motion } from "framer-motion";
 
 export default function Home() {
 

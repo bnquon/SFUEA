@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, AnimatePresence } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faUsers, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
@@ -17,8 +17,19 @@ export default function Home() {
     const count = useMotionValue(0);
     const rounded = useTransform(count, Math.round);
 
+    const [isVisible, setIsVisible] = useState(true);
+
+  	useEffect(() => {
+    	const timer = setTimeout(() => {
+      		setIsVisible(false);
+    }, 2000); // Duration matches the total duration of the animation
+
+    	return () => clearTimeout(timer);
+  	}, []);
+
+
     useEffect(() => {
-        const animation = animate(count, 3800, { duration: 1 });
+        const animation = animate(count, 3800, { duration: 2, delay: 2 });
 
         return animation.stop;
     }, []);
@@ -122,7 +133,31 @@ export default function Home() {
     return (
         <main className="relative">
 
-            {/* <AnimationIntro/> */}
+            <AnimatePresence>
+				{isVisible && (
+					<motion.div
+					className="w-screen h-screen bg-black z-[100] flex justify-center items-center fixed top-0 left-0"
+					initial={{ y: 0 }}
+					animate={{ y: [0, -1000] }}
+					exit={{ y: -1000 }}
+					transition={{
+						times: [0.5, 0.75],
+						duration: 2, // Total duration
+						ease: "easeInOut"
+					}}
+					>
+					<Image
+						className="z-[2]"
+						src={'/real-logo.png'}
+						alt="ex1"
+						width={0}
+						height={0}
+						sizes="100vw"
+						style={{ width: '20%', height: 'auto' }}
+					/>
+					</motion.div>
+				)}
+			</AnimatePresence>
 
             {/* HOME PAGE */}
             <div id="container" className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[15vh] gap-[8vh]">
