@@ -85,7 +85,7 @@ export default function Home() {
     return (
     	<main className="relative">
 
-      		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[7.5vh]">
+      		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[15vh]">
         		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
 					<Image className="absolute brightness-50 z-[1]" src='/blob1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 					<div className="flex flex-col w-3/5 gap-6 text-white z-[2]">
@@ -99,16 +99,16 @@ export default function Home() {
 			<div className="w-screen bg-[#d3d3d3] flex flex-col pl-[12.5vw]">
 				{games.map((game, index) => (
                     <div className="w-screen">
-                        <div key={index} className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center">
+                        <div key={index} className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center mb-[6vh]" style={{marginTop: index == 0 ? '0': '10vh'}}>
                             <Image src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                            <p id="game-title" className="absolute text-white text-5xl font-bold z-10">{game.title}</p>
+                            <p id="game-title" className="absolute text-white text-5xl font-bold">{game.title}</p>
                         </div>
                         
-                        <div key={index} className="w-[75vw] h-[20vh] relative flex box-border gap-4">
-                        {people.map((person) => (
-                                <div className="w-1/4 h-full flex flex-col justify-center items-center text-black bg-gray-500 rounded-xl">
+                        <div key={index} className="w-[75vw] h-[15vh] relative flex box-border gap-8">
+                        {people.map((person, index) => (
+                                <div key={index} className="w-1/4 h-full flex flex-col justify-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md">
                                     <p className="text-3xl font-bold">{person.name}</p>
-                                    <p className="text-xl font-semibold">{person.role}</p>
+                                    <p className="text-xl text-red-500 font-semibold">{person.role}</p>
                                 </div>
                         ))}
                         </div>
