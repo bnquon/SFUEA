@@ -96,6 +96,15 @@ export default function Home() {
 				</div>
       		</div>
 
+            <div className="w-screen bg-[#d3d3d3] flex justify-center items-center box-border flex-col pb-[5vh]">
+                <div className="flex items-center justify-center w-[75vw] my-8">
+					<div className="flex-grow border-t border-black"></div>
+					<span className="mx-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">Our Supported Teams</span>
+					<div className="flex-grow border-t border-black"></div>
+				</div>
+            </div>
+
+
 			<div className="w-screen bg-[#d3d3d3] flex flex-col pl-[12.5vw]">
 				{games.map((game, index) => (
                     <div className="w-screen">

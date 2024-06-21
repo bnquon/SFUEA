@@ -75,29 +75,27 @@ export default function Home() {
 				</div>
       		</div>
 
-			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border pt-[0vh] pb-[10vh]">
-				<div className="w-[75vw] flex flex-col box-border gap-5 text-black">
-					<div className="flex w-full box-border gap-10">
-						<div className="w-1/2 h-full flex flex-col justify-between box-border">
-							<h2 className="text-5xl font-bold">Our Mission</h2>
-						</div>
+			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border flex-col pt-[5vh] pb-[5vh]">
+				<div className="flex items-center justify-center w-[75vw] my-8">
+					<div className="flex-grow border-t border-black"></div>
+					<span className="mx-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">Our Mission</span>
+					<div className="flex-grow border-t border-black"></div>
+				</div>
+				<div className="w-[75vw] h-[30vh] flex box-border gap-4">
+					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl">
+						<span className="flex">Icon Here &nbsp; <p className="text-2xl">Goals</p></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 					</div>
-					<div className="w-full h-full flex flex-col gap-10 box-border">
-						<div className="w-full h-full flex flex-col justify-between box-border">
-							<div className="flex w-full h-1/2 box-border justify-between gap-10">
-								<div className="w-1/2 h-full flex flex-col justify-between box-border px-10 py-16 gap-6 bg-white rounded-xl">
-									<h2 className="text-3xl font-bold">ICON HERE</h2>
-									<h2 className="text-3xl font-bold">Our Mission</h2>
-									<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus odio. Sed nec tortor sed nisi convallis tristique. Sed vel nulla ac massa efficitur vulputate. Sed at velit eget dui malesuada pellentesque. Nulla facilisis, mauris id lacinia posuere, lectus tellus convallis mi, id suscipit elit ligula vitae neque.</p>
-								</div>
-
-								<div className="w-1/2 h-full flex flex-col justify-between box-border px-10 py-16 gap-6 bg-white rounded-xl">
-									<h2 className="text-3xl font-bold">ICON HERE</h2>
-									<h2 className="text-3xl font-bold">Our Mission</h2>
-									<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et maximus odio. Sed nec tortor sed nisi convallis tristique. Sed vel nulla ac massa efficitur vulputate. Sed at velit eget dui malesuada pellentesque. Nulla facilisis, mauris id lacinia posuere, lectus tellus convallis mi, id suscipit elit ligula vitae neque.</p>
-								</div>
-							</div>
-						</div>
+					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl">
+						<span className="flex">Icon Here &nbsp; <p className="text-2xl">Goals</p></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl">
+						<span className="flex">Icon Here &nbsp; <p className="text-2xl">Goals</p></span>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 					</div>
 				</div>
 			</div>
@@ -116,6 +114,12 @@ export default function Home() {
 			</div>
 
 			<div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+				<div className="flex items-center justify-center w-[75vw] my-8">
+					<div className="flex-grow border-t border-black"></div>
+					<span className="mx-4 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500">Meet our Leaders</span>
+					<div className="flex-grow border-t border-black"></div>
+				</div>
+
 				<div className="grid grid-cols-4 grid-flow-row w-[75vw] box-border relative gap-[4vw]">
 					{people.map((person, index) => (	
 						<div key={index} className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
