@@ -138,8 +138,8 @@ export default function Home() {
 					<motion.div
 					className="w-screen h-screen bg-black z-[100] flex justify-center items-center fixed top-0 left-0"
 					initial={{ y: 0 }}
-					animate={{ y: [0, -1000] }}
-					exit={{ y: -1000 }}
+					animate={{ y: [0, -1500] }}
+					exit={{ y: -1500 }}
 					transition={{
 						times: [0.5, 0.75],
 						duration: 2, // Total duration
