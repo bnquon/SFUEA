@@ -226,3 +226,16 @@ body {
 #cta-btn {
   border-radius: 0 20px 0 0;
 }
+
+/* @keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#front-image {
+  animation: fadeInOut 6s infinite;
+} */

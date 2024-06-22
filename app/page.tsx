@@ -24,6 +24,12 @@ const fadeInAnimation = {
     }),
 };
 
+const jerseyAnimation = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+
 const pictureAnimation = {
     initial: { scale: 0.2, opacity: 0 },
     animate: (index: number) => ({ scale: 1, opacity: 1, transition: { duration: 0.5, delay: index * 0.1 } }),
@@ -187,11 +193,11 @@ export default function Home() {
 
                 <div className="w-[75vw] h-[70%] relative flex box-border">
                     <div className="flex flex-col w-[45%] justify-center relative">
-                        <motion.p variants={fadeInAnimation} initial='initial' whileInView='animate' viewport={{ once: true }} className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</motion.p>
-                        <p className="w-4/5 text-black text-xl font-medium mb-8">
+                        <p className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                        <motion.p variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-4/5 text-black text-xl font-medium mb-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation. 
-                        </p>
+                        </motion.p>
 
                         <div className="flex gap-8 box-border items-center p-4 pl-0">
                             <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-3xl font-bold italic mr-10">
@@ -425,17 +431,17 @@ export default function Home() {
                         <div className="h-full flex relative box-border gap-0">
                             <div className="h-full w-1/3 relative flex">
                                 <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                <Image alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
 
                             <div className="h-full w-1/3 relative flex">
                                 <Image alt="forced" className="absolute  scale-x-125 scale-y-110" src='/pinkJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                <Image alt="forced" className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
 
                             <div className="h-full w-1/3 relative flex">
                                 <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/whiteJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                <Image alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
+                                <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                             </div>
                         </div>
                     </div>
