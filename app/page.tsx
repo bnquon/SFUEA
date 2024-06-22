@@ -12,8 +12,26 @@ import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 
+const fadeInAnimation = {
+    initial: { opacity: 0, y: 100 },
+    animate: (index: number) => ({
+        opacity: 1, 
+        y: 0,
+        transition: {
+            duration: 0.5,
+            delay: index * 0.1
+        }
+    }),
+};
+
+const pictureAnimation = {
+    initial: { scale: 0.2, opacity: 0 },
+    animate: (index: number) => ({ scale: 1, opacity: 1, transition: { duration: 0.5, delay: index * 0.1 } }),
+}
+
 export default function Home() {    
 
+    
     const count = useMotionValue(0);
     const rounded = useTransform(count, Math.round);
 
@@ -35,6 +53,11 @@ export default function Home() {
     }, []);
 
     const [headerInView, inView] = useInView({
+        threshold: 0.15,
+        triggerOnce: true
+    })
+
+    const [headerInView2, inView2] = useInView({
         threshold: 0.15,
         triggerOnce: true
     })
@@ -133,7 +156,7 @@ export default function Home() {
     return (
         <main className="relative">
 
-            <AnimatePresence>
+            {/* <AnimatePresence>
 				{isVisible && (
 					<motion.div
 					className="w-screen h-screen bg-black z-[100] flex justify-center items-center fixed top-0 left-0"
@@ -157,14 +180,14 @@ export default function Home() {
 					/>
 					</motion.div>
 				)}
-			</AnimatePresence>
+			</AnimatePresence> */}
 
             {/* HOME PAGE */}
             <div id="container" className="w-screen h-screen flex flex-col relative items-center bg-[#d3d3d3] text-white box-border pt-[15vh] gap-[8vh]">
 
                 <div className="w-[75vw] h-[70%] relative flex box-border">
                     <div className="flex flex-col w-[45%] justify-center relative">
-                        <p className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                        <motion.p variants={fadeInAnimation} initial='initial' whileInView='animate' viewport={{ once: true }} className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</motion.p>
                         <p className="w-4/5 text-black text-xl font-medium mb-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation. 
@@ -188,21 +211,21 @@ export default function Home() {
                         {/* Right Column */}
                         <div className="w-[60%] h-full flex flex-col relative">    
                             <div className="w-full h-full flex flex-col relative box-border gap-4">
-                                <div className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
+                                <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
                                     <img src="/test-min.jpg" className="h-full w-full object-cover" alt="" />
-                                </div>
+                                </motion.div>
                                 {/* <div className="h-1/5 bg-black rounded-xl"></div> */}
-                                <div className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
+                                <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
                                     <img src="/test2.jpg" className="h-full w-full object-cover" alt="" />
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                         
                         {/* Left Column */}
                         <div className="w-[40%] h-full flex justify-center flex-col relative box-border gap-4">
-                            <div className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></div>
+                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
                 
-                            <div className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></div>
+                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={4} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
                         </div>
 
                     </div>
@@ -246,9 +269,12 @@ export default function Home() {
 
             {/* ABOUT US PAGE */}
             <div className="pt-[7.5vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
-                <div ref={headerInView} className="w-[75vw] mb-[60px] text-black flex relative box-border overflow-hidden">
-                    <div className="duration-500 w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
-                        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">WHO WE ARE.</h1>
+                <div className="w-[75vw] mb-[60px] text-black flex relative box-border overflow-hidden">
+                    <div ref={headerInView} className="duration-500 w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0 overflow-hidden">
+                        <h1 style={{ 
+                            transform: inView ? 'translateY(0)' : 'translateY(100%)',
+                            transition: 'transform 0.5s ease'
+                            }}  className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">WHO WE ARE.</h1>
                     </div>
                     <div className="flex-grow flex items-center pl-8 overflow-hidden">
                         <p className="duration-500 text-xl font-semibold flex-grow">
@@ -262,7 +288,7 @@ export default function Home() {
                 </div>  
 
                 <div className="w-[75vw] h-[50vh] flex justify-center gap-6 relative">
-                    <div className="w-1/3 relative">
+                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-1/3 relative">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
                                 <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -278,9 +304,9 @@ export default function Home() {
                                 </p>
                             </div>
                         </article>
-                    </div>
+                    </motion.div>
 
-                    <div className="w-1/3">
+                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className="w-1/3">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
                                 <Image src='/ex2.jpg' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -297,9 +323,9 @@ export default function Home() {
                                 </p>
                             </div>
                         </article>
-                    </div>
+                    </motion.div>
 
-                    <div className="w-1/3">
+                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-1/3">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
                                 <Image src='/ex3.jpg' alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -315,7 +341,7 @@ export default function Home() {
                                 </p>
                             </div>
                         </article>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
@@ -324,8 +350,11 @@ export default function Home() {
             <div className="w-screen pt-[7.5vh] pb-[5vh] bg-[#d3d3d3] relative flex flex-col justify-center items-start pl-[12.5vw]">
 
                 <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
-                    <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
-                        <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">OUR TEAMS.</h1>
+                    <div ref={headerInView2} className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0 overflow-hidden">
+                        <h1 style={{ 
+                            transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
+                            transition: 'transform 0.5s ease'
+                            }} className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">OUR TEAMS.</h1>
                     </div>
                     <div className="flex-grow flex items-center justify-between pl-8">
                         <p className="text-xl font-semibold flex-grow">

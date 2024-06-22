@@ -1,6 +1,8 @@
 "use client"
 import Image from "next/image";
 import WidgetBot from '@widgetbot/react-embed'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRocket, faHandHoldingHand, faStar } from "@fortawesome/free-solid-svg-icons"
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -89,7 +91,9 @@ export default function Home() {
 					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl justify-between">
 
 						<div className="h-2/5 w-full">
-							<div className="w-[15%] aspect-square bg-red-500 rounded-xl"></div>
+							<div className="w-[15%] aspect-square bg-red-500 rounded-xl flex justify-center items-center">
+								<FontAwesomeIcon className="text-3xl" icon={faStar} style={{color: 'ffffff'}}></FontAwesomeIcon>
+							</div>
 						</div>
 
 						<div className="flex flex-col h-3/5 justify-evenly">
@@ -102,7 +106,9 @@ export default function Home() {
 					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl justify-between">
 
 						<div className="h-2/5 w-full">
-							<div className="w-[15%] aspect-square bg-red-500 rounded-xl"></div>
+							<div className="w-[15%] aspect-square bg-red-500 rounded-xl flex justify-center items-center">
+								<FontAwesomeIcon className="text-3xl" icon={faHandHoldingHand} style={{color: 'ffffff'}}></FontAwesomeIcon>
+							</div>
 						</div>
 
 						<div className="flex flex-col h-3/5 justify-evenly">
@@ -115,7 +121,9 @@ export default function Home() {
 					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl justify-between">
 
 						<div className="h-2/5 w-full">
-							<div className="w-[15%] aspect-square bg-red-500 rounded-xl"></div>
+							<div className="w-[15%] aspect-square bg-red-500 rounded-xl flex justify-center items-center">
+								<FontAwesomeIcon className="text-3xl" icon={faRocket} style={{color: 'ffffff'}}></FontAwesomeIcon>
+							</div>
 						</div>
 
 						<div className="flex flex-col h-3/5 justify-evenly">
