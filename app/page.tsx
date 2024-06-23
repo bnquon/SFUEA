@@ -58,6 +58,7 @@ const config = {
     expandIcon: "+",
     collapseIcon: "-",
 };
+
 const fadeInAnimation = {
     initial: { opacity: 0, y: 100 },
     animate: (index: number) => ({

@@ -1,9 +1,79 @@
+"use client"
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
+import Faq from "react-faq-component";
+import { Footer } from "@/app/Components/Footer";
 
-// ADD AN FAQ FOR THE LOUNGE
+const data = {
+    rows: [
+        {
+            title: "Lorem ipsum dolor sit amet,",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+              Fusce sed commodo purus, at tempus turpis.`,
+        },
+        {
+            title: "Nunc maximus, magna at ultricies elementum",
+            content:
+                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        },
+        {
+            title: "Curabitur laoreet, mauris vel blandit fringilla",
+            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
+            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
+            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
+            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        },
+        {
+            title: "What is the package version",
+            content: <p>current version is 1.2.1</p>,
+        },
+		{
+            title: "Lorem ipsum dolor sit amet,",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+              Fusce sed commodo purus, at tempus turpis.`,
+        },
+        {
+            title: "Nunc maximus, magna at ultricies elementum",
+            content:
+                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        },
+        {
+            title: "Curabitur laoreet, mauris vel blandit fringilla",
+            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
+            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
+            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
+            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        },
+        {
+            title: "What is the package version",
+            content: <p>current version is 1.2.1</p>,
+        },
+    ],
+};
+
+const styles = {
+    bgColor: '#d3d3d3',
+    titleTextColor: "black",
+    rowTitleColor: "black",
+    // rowContentColor: 'grey',
+    // arrowColor: "red",
+    rowContentTextSize: '16px',
+    rowContentPaddingTop: '8px',
+    rowContentPaddingBottom: '0px',
+    rowTitleTextSize: '24px',
+};
+
+const config = {
+    animate: true,
+    expandIcon: "+",
+    collapseIcon: "-",
+};
 
 export default function Home() {
     return (
@@ -115,7 +185,32 @@ export default function Home() {
 
 
 			</div>
+
+			<div className="relative w-screen bg-[#d3d3d3] flex flex-col justify-center items-center pt-[7.5vh]">
+				<div className="w-[75vw] mb-[8vh]">
+					<span className="relative flex justify-center">
+                    <div
+                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                    ></div>
+
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Lounge FAQ</span>
+                    </span>
+				</div>
+                <div className="w-[75vw] flex box-border">
+					<div className="w-1/2 box-border pr-5 pt-[14px]">
+						<p className="text-3xl font-bold text-black">If you have any more questions, please email us at EMAIL@EMAIL.com or send a message in our discord</p>
+					</div>
+                    <div className="w-1/2">
+						<Faq
+                            data={data}
+                            styles={styles}
+                            config={config}
+                        />
+                    </div>
+                </div>
+            </div>
 				
+			<Footer/>
 
     	</main>
   	);
