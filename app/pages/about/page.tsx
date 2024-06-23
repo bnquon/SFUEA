@@ -138,7 +138,7 @@ export default function Home() {
 			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border pt-[5vh] pb-[5vh]">
 
 				<div className="w-[75vw] h-[60vh] flex box-border gap-5">
-					<div className="w-2/5 h-full flex flex-col text-black gap-10 box-border pr-6">
+					<div className="w-2/5 h-full flex flex-col text-black gap-10 box-border pr-6 justify-center">
 						<p className="text-4xl font-extrabold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						<p className="text-3xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
