@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
 
+// ADD AN FAQ FOR THE LOUNGE
+
 export default function Home() {
     return (
     	<main className="relative">

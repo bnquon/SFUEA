@@ -257,3 +257,7 @@ body {
 .row-title {
   border-bottom: 1px solid black;
 }
+
+.row-content {
+  font-weight: 500;
+}
