@@ -11,7 +11,53 @@ import "slick-carousel/slick/slick-theme.css";
 import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
+import Faq from "react-faq-component";
 
+const data = {
+    rows: [
+        {
+            title: "Lorem ipsum dolor sit amet,",
+            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
+              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
+              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
+              Fusce sed commodo purus, at tempus turpis.`,
+        },
+        {
+            title: "Nunc maximus, magna at ultricies elementum",
+            content:
+                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+        },
+        {
+            title: "Curabitur laoreet, mauris vel blandit fringilla",
+            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
+            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
+            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
+            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+        },
+        {
+            title: "What is the package version",
+            content: <p>current version is 1.2.1</p>,
+        },
+    ],
+};
+
+const styles = {
+    bgColor: '#d3d3d3',
+    titleTextColor: "black",
+    rowTitleColor: "black",
+    // rowContentColor: 'grey',
+    // arrowColor: "red",
+    rowContentTextSize: '16px',
+    rowContentPaddingTop: '8px',
+    rowContentPaddingBottom: '8px',
+    rowTitleTextSize: '24px',
+};
+
+const config = {
+    animate: true,
+    expandIcon: "+",
+    collapseIcon: "-",
+};
 const fadeInAnimation = {
     initial: { opacity: 0, y: 100 },
     animate: (index: number) => ({
@@ -194,10 +240,10 @@ export default function Home() {
                 <div className="w-[75vw] h-[70%] relative flex box-border">
                     <div className="flex flex-col w-[45%] justify-center relative">
                         <p className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
-                        <motion.p variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-4/5 text-black text-xl font-medium mb-8">
+                        <p className="w-4/5 text-black text-xl font-medium mb-8">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation. 
-                        </motion.p>
+                        </p>
 
                         <div className="flex gap-8 box-border items-center p-4 pl-0">
                             <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-3xl font-bold italic mr-10">
@@ -446,7 +492,23 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>           
+            </div>    
+            
+            <div className="relative w-screen bg-[#d3d3d3] flex justify-center pt-[7.5vh]">
+                <div className="w-[75vw] flex">
+                    <div className="w-1/2 flex flex-col box-border pr-5">
+                        <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
+                        <p className="text-xl font-normal text-black">If you don't see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
+                    </div>
+                    <div className="w-1/2">
+                        <Faq
+                            data={data}
+                            styles={styles}
+                            config={config}
+                        />
+                    </div>
+                </div>
+            </div>
 
             <Footer/>
 
