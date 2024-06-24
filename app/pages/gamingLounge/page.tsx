@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
+import { faArrowAltCircleUp, faCircleArrowUp } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
 import Faq from "react-faq-component";
 import { Footer } from "@/app/Components/Footer";
@@ -104,11 +104,11 @@ export default function Home() {
 				</div>
 				<div className="w-[75vw] h-[60vh] flex text-black mb-[10vh]">
 					<div className="w-[30%] h-full flex flex-col box-border gap-4">
-						<div className="w-full h-1/2 flex flex-col items-center justify-start pt-4">
+						<div className="w-full h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">GPU and CPU</h2>
 							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
-						<div className="w-full h-1/2 flex flex-col items-center justify-start pt-4">
+						<div className="w-full h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Ram and Storage</h2>
 							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
@@ -119,11 +119,11 @@ export default function Home() {
 					</div>
 
 					<div className="w-[30%] h-full flex flex-col box-border gap-4">
-						<div className="w-full h-1/2 flex flex-col items-center justify-start pt-4">
+						<div className="w-full h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Peripherals</h2>
 							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
-						<div className="w-full h-1/2 flex flex-col items-center justify-start pt-4">
+						<div className="w-full h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Game Library</h2>
 							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
@@ -166,23 +166,28 @@ export default function Home() {
                     </span>
 				</div>
 
-				<div className="w-[75vw] grid grid-cols-2 gap-5">
-					<div className="flex flex-col gap-4 bg-black justify-center">
-						<div className="bg-white rounded-xl text-black flex flex-col p-4">
-						<p className="text-3xl font-bold">You must bring and show your Student ID to access the lounge</p>
-						</div>
-						<div className="bg-white rounded-xl text-black flex flex-col p-4">
-						<p className="text-3xl font-bold">You must sign the SFUEA x SFSS Gamer's Lounge Waiver and User Agreement</p>
-						</div>
-						<div className="bg-white rounded-xl text-black flex flex-col p-4">
-						<p className="text-3xl font-bold">Give us feedback through the SFU Esports Gamers' Lounge Experience Survey</p>
-						</div>
+				<div className="w-[75vw] flex box-border gap-4 text-black">
+					<div className="w-1/3 flex flex-col">
+						<p className="text-4xl font-bold mb-[4vh]">1.</p>
+						<p className="text-2xl">You must bring and show your student ID to access the lounge</p>
 					</div>
-					<div className="flex">
-						<Image src={"/loungeplaceholder.jpg"} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt="Map" />
+					<div className="w-1/3 flex flex-col">
+						<p className="text-4xl font-bold mb-[4vh]">2.</p>
+						<p className="text-2xl">You must sign the SFUEA x SFSS Gamer's Lounge Waiver and User Agreement</p><br />
+						<span className='h-fit w-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black'>
+							User Agreement &nbsp;
+                            <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
+                        </span>
+					</div>
+					<div className="w-1/3 flex flex-col">
+						<p className="text-4xl font-bold mb-[4vh]">3.</p>
+						<p className="text-2xl">Help us improve the lounge by doing the SFU Esports Gamers' Lounge Experience Survey</p><br />
+						<span className='h-fit w-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black'>
+                            Experience Survey &nbsp;
+                            <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
+                        </span>
 					</div>
 				</div>
-
 
 			</div>
 
@@ -197,8 +202,8 @@ export default function Home() {
                     </span>
 				</div>
                 <div className="w-[75vw] flex box-border">
-					<div className="w-1/2 box-border pr-5 pt-[14px]">
-						<p className="text-3xl font-bold text-black">If you have any more questions, please email us at EMAIL@EMAIL.com or send a message in our discord</p>
+					<div className="w-1/2 box-border pr-8 pt-[14px]">
+						<p className="text-3xl font-semibold text-black">If you have any more questions, please email us at EMAIL@EMAIL.com or chat with us in our discord</p>
 					</div>
                     <div className="w-1/2">
 						<Faq

@@ -105,7 +105,7 @@ export default function Home() {
 				</div> */}
             </div>
 
-            <div className="w-screen bg-[#d3d3d3] flex justify-center items-center">
+            <div className="w-screen bg-[#d3d3d3] flex justify-center items-center pb-[8vh]">
                 <div className="w-[75vw]">
                     <span className="relative flex justify-center">
                     <div
