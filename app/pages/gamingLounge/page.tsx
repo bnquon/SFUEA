@@ -174,15 +174,15 @@ export default function Home() {
 					<div className="w-1/3 flex flex-col">
 						<p className="text-4xl font-bold mb-[4vh]">2.</p>
 						<p className="text-2xl">You must sign the SFUEA x SFSS Gamer's Lounge Waiver and User Agreement</p><br />
-						<span className='h-fit w-fit text-xl p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black'>
-							User Agreement &nbsp;
+						<span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-white bg-black border-black border-2'>
+                            Waiver Agreement &nbsp;
                             <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                         </span>
 					</div>
 					<div className="w-1/3 flex flex-col">
 						<p className="text-4xl font-bold mb-[4vh]">3.</p>
 						<p className="text-2xl">Help us improve the lounge by doing the SFU Esports Gamers' Lounge Experience Survey</p><br />
-						<span className='h-fit w-fit text-xl p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black'>
+						<span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-white bg-black border-black border-2'>
                             Experience Survey &nbsp;
                             <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                         </span>

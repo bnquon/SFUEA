@@ -75,7 +75,7 @@ export const Lounge = () => {
                         <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faComputer}/>
-                                <p className='text-2xl font-semibold'>&nbsp;PC SPECS</p>
+                                <p className='text-2xl font-semibold'>&nbsp;DEVICES</p>
                             </span>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
