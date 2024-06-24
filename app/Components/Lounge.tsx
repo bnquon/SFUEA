@@ -4,10 +4,24 @@ import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCale
 import { motion } from 'framer-motion'
 
 const cardAnimation = {
-    initial: { opacity: 0, x: 100 },
+    initial: { opacity: 0, x: 100, scale: 0.5 },
     animate: (index: number) => ({
         opacity: 1, 
         x: 0,
+        scale: 1,
+        transition: {
+            duration: 0.5,
+            delay: index * 0.2
+        }
+    }),
+};
+
+const pictureAnimation = {
+    initial: { opacity: 0, x: -100, scale: 0.5 },
+    animate: (index: number) => ({
+        opacity: 1, 
+        x: 0,
+        scale: 1,
         transition: {
             duration: 0.5,
             delay: index * 0.2
@@ -49,16 +63,16 @@ export const Lounge = () => {
     
         <div className='w-[75vw] flex relative box-border gap-4'>
 
-            <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md w-[60%] h-[70vh] overflow-hidden shadow-lg">
+            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md w-[60%] h-[70vh] overflow-hidden shadow-lg">
                 <img src="/gamerslounge3.jpg" className='object-cover w-full h-full' alt="Gamers Lounge" />
             </motion.div>
 
             <div className='w-[40%] h-[70vh] relative flex box-border'>
 
-                <div className="w-full h-full flex flex-col gap-4">
+                <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full h-full flex flex-col gap-4">
 
                     <div className='w-full h-1/2 flex gap-4'>
-                        <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faComputer}/>
                                 <p className='text-2xl font-semibold'>&nbsp;PC SPECS</p>
@@ -70,9 +84,9 @@ export const Lounge = () => {
                                 Full Specs &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
-                        </motion.div>
+                        </div>
 
-                        <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faLocationDot}/>
                                 <p className='text-2xl font-semibold'>&nbsp;LOCATION</p>
@@ -84,11 +98,11 @@ export const Lounge = () => {
                                 Video Guide &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
-                        </motion.div>
+                        </div>
                     </div>
                     
                     <div className='w-full h-1/2 flex gap-4'>
-                        <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faCalendarDays}/>
                                 <p className='text-2xl font-semibold'>&nbsp;SCHEDULE</p>
@@ -100,9 +114,9 @@ export const Lounge = () => {
                                 Full Schedule &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
-                        </motion.div>
+                        </div>
 
-                        <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
+                        <div className='w-1/2 h-full bg-white rounded-md shadow-md text-black p-6 flex flex-col justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='text-2xl' icon={faCircleExclamation}/>
                                 <p className='text-2xl font-semibold'>&nbsp;NOTES</p>
@@ -114,11 +128,11 @@ export const Lounge = () => {
                                 Read More &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
-                        </motion.div>
+                        </div>
 
                     </div>
 
-                </div>
+                </motion.div>
                
             </div>
 

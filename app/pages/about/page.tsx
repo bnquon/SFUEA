@@ -78,58 +78,30 @@ export default function Home() {
       		</div>
 
 			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border flex-col pt-[5vh] pb-[5vh]">
-				<div className="w-[75vw] my-8">
+				<div className="w-[75vw] mb-[8vh]">
 					<span className="relative flex justify-center">
                     <div
                         className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-10 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Our Mission</span>
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Our Mission</span>
                     </span>
 				</div>
-				<div className="w-[75vw] h-[30vh] flex box-border gap-4">
-					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl justify-between">
-
-						<div className="h-2/5 w-full">
-							<div className="w-[15%] aspect-square bg-red-500 rounded-xl flex justify-center items-center">
-								<FontAwesomeIcon className="text-3xl" icon={faStar} style={{color: 'ffffff'}}></FontAwesomeIcon>
-							</div>
+				<div className="w-[75vw] flex flex-col box-border">
+					<div className="w-full flex text-black mb-[6vh]">
+						<div className="w-2/5 box-border pr-6">
+							<img src="https://images.unsplash.com/photo-1718641731724-0b583a50df1f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
 						</div>
-
-						<div className="flex flex-col h-3/5 justify-evenly">
-							<p className="text-2xl">Goals</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud.</p>
-						</div>
-					</div>
-					
-					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl justify-between">
-
-						<div className="h-2/5 w-full">
-							<div className="w-[15%] aspect-square bg-red-500 rounded-xl flex justify-center items-center">
-								<FontAwesomeIcon className="text-3xl" icon={faHandHoldingHand} style={{color: 'ffffff'}}></FontAwesomeIcon>
-							</div>
-						</div>
-
-						<div className="flex flex-col h-3/5 justify-evenly">
-							<p className="text-2xl">Value</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud.</p>
-						</div>
-					</div>
-
-					<div className="w-1/3 h-full flex flex-col bg-white text-black p-4 rounded-xl justify-between">
-
-						<div className="h-2/5 w-full">
-							<div className="w-[15%] aspect-square bg-red-500 rounded-xl flex justify-center items-center">
-								<FontAwesomeIcon className="text-3xl" icon={faRocket} style={{color: 'ffffff'}}></FontAwesomeIcon>
-							</div>
-						</div>
-
-						<div className="flex flex-col h-3/5 justify-evenly">
-							<p className="text-2xl">Vision</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-							Ut enim ad minim veniam, quis nostrud.</p>
+						<div className="w-3/5">
+							<p className="text-2xl font-bold">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<br />
+							<p className="text-2xl font-bold">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -137,8 +109,8 @@ export default function Home() {
 
 			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border pt-[5vh] pb-[5vh]">
 
-				<div className="w-[75vw] h-[60vh] flex box-border gap-5">
-					<div className="w-2/5 h-full flex flex-col text-black gap-10 box-border pr-6 justify-center">
+				<div className="w-[75vw] h-[50vh] flex box-border gap-5">
+					<div className="w-2/5 h-full flex flex-col text-black gap-10 box-border pr-6 justify-start">
 						<p className="text-4xl font-extrabold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						<p className="text-3xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
