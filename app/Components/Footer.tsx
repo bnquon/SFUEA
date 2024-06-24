@@ -8,7 +8,7 @@ export const Footer = () => {
     <div className='pt-[20vh] relative bg-[#d3d3d3]'>
         <div className="w-full h-[50vh] bg-black relative pl-[12.5vw]">
 
-            <div className="w-[45%] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
+            <div className="w-[37.5vw] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
                 <div>
                     <p className='text-5xl font-bold'>JOIN THE CLUB.</p> <br />
                     <p className='text-2xl'>We want to see you in the Gamers' Lounge or the next in-house!</p>

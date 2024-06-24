@@ -75,7 +75,7 @@ export const BasicCalendar = () => {
       <p className='text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-12'>RECENT EVENTS.</p>
 
       <div className='w-[75vw] h-[25vh] relative flex gap-5'>
-        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
+        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
           <img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
           <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </motion.div>
@@ -83,7 +83,7 @@ export const BasicCalendar = () => {
           <img className='w-full h-full object-cover' src="/IMG_7099.jpg" alt="" />
           <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </motion.div>
-        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={4} viewport={{ once: true }} id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
+        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} id='event-card' className='w-1/3 h-full rounded-md overflow-hidden relative shadow-lg'>
           <img className='w-full h-full object-cover' src="/IMG_20230930_145502-min.jpg" alt="" />
           <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </motion.div>

@@ -268,7 +268,7 @@ export default function Home() {
                                     <img src="/test-min.jpg" className="h-full w-full object-cover" alt="" />
                                 </motion.div>
                                 {/* <div className="h-1/5 bg-black rounded-xl"></div> */}
-                                <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
+                                <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
                                     <img src="/test2.jpg" className="h-full w-full object-cover" alt="" />
                                 </motion.div>
                             </div>
@@ -276,9 +276,9 @@ export default function Home() {
                         
                         {/* Left Column */}
                         <div className="w-[40%] h-full flex justify-center flex-col relative box-border gap-4">
-                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
+                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
                 
-                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={4} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
+                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
                         </div>
 
                     </div>
@@ -359,7 +359,7 @@ export default function Home() {
                         </article>
                     </motion.div>
 
-                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={2} viewport={{ once: true }} className="w-1/3">
+                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-1/3">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
                                 <Image src='/ex2.jpg' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -378,7 +378,7 @@ export default function Home() {
                         </article>
                     </motion.div>
 
-                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-1/3">
+                    <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="w-1/3">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
                                 <Image src='/ex3.jpg' alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
