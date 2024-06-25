@@ -1,13 +1,16 @@
 'use client'
 
+import dynamic from 'next/dynamic';
 import clsx from 'clsx'; // Conditional className functionalities
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import StickyHeadroom from '@integreat-app/react-sticky-headroom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
+
+// Dynamic import for StickyHeadroom with SSR disabled
+const StickyHeadroom = dynamic(() => import('@integreat-app/react-sticky-headroom'), { ssr: false });
 
 const links = [
     { name: 'Home', href: '/' },
@@ -21,7 +24,7 @@ function Navbar() {
     const pathname = usePathname();
 
     return (
-        <StickyHeadroom scrollHeight={100}> 
+        <StickyHeadroom scrollHeight={100} pinStart={0}> 
             <div className='w-screen fixed z-50 flex bg-black px-[12.5vw]'>
                 <div className='w-1/4 flex justify-start items-center py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>

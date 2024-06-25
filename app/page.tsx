@@ -104,7 +104,12 @@ export default function Home() {
   
     useEffect(() => {
         const handleScroll = () => {
-        if (window.scrollY === 0) {
+        let height;
+        if (typeof window !== 'undefined') { 
+            height = window.scrollY;
+        }
+        
+        if (height === 0) {
             setAtTop(true);
         } else {
             setAtTop(false);
@@ -421,11 +426,12 @@ export default function Home() {
                                     <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                     <Image 
                                         id="game-pic"
-                                        className="duration-300"
+                                        className="duration-300 object-cover"
+                                        width={0}
+                                        height={0}
                                         src={game.picture} 
-                                        alt={game.title} 
-                                        layout="fill" 
-                                        objectFit="cover" 
+                                        alt={game.title}
+                                        sizes="100vw"  
                                         style={{ width: '100%', height: '100%' }}
                                     />
                                 </div>
