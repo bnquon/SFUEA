@@ -220,7 +220,7 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="flex flex-col">
                                 <div className="relative w-full h-[65%]">
-                                    <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src='/ex1.jpg' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
                                 <div className="py-4">
@@ -233,7 +233,7 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial="initial" custom={3} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="h-full flex flex-col">
                                 <div className="relative w-full h-[65%]">
-                                    <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src='/ex1.jpg' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
                                 <div className="py-4">
@@ -251,7 +251,7 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial="initial" custom={5} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="h-full flex flex-col">
                                 <div className="relative w-full h-[65%]">
-                                    <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src='/ex1.jpg' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
                                 <div className="py-4">
