@@ -4,11 +4,10 @@ import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCale
 import { motion } from 'framer-motion'
 
 const cardAnimation = {
-    initial: { opacity: 0, x: 100, scale: 0.5 },
+    initial: { opacity: 0, x: 100},
     animate: (index: number) => ({
         opacity: 1, 
         x: 0,
-        scale: 1,
         transition: {
             duration: 0.5,
             delay: index * 0.2
@@ -17,11 +16,10 @@ const cardAnimation = {
 };
 
 const pictureAnimation = {
-    initial: { opacity: 0, x: -100, scale: 0.5 },
+    initial: { opacity: 0, x: -100 },
     animate: (index: number) => ({
         opacity: 1, 
         x: 0,
-        scale: 1,
         transition: {
             duration: 0.5,
             delay: index * 0.2

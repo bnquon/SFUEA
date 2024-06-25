@@ -1,9 +1,22 @@
 "use client"
 import Image from "next/image";
 import WidgetBot from '@widgetbot/react-embed'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRocket, faHandHoldingHand, faStar } from "@fortawesome/free-solid-svg-icons"
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
+
+const cardAnimation = {
+	initial: {
+		opacity: 0,
+		y: 100
+	},
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: 0.2,
+			duration: 0.3
+		}
+	}
+}
 
 export default function Home() {
 
@@ -142,7 +155,7 @@ export default function Home() {
 
 				<div className="grid grid-cols-4 grid-flow-row w-[75vw] box-border relative gap-[4vw]">
 					{people.map((person, index) => (	
-						<div key={index} className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
+						<motion.div variants={cardAnimation} initial='initial' whileInView='visible' viewport={{ once: true }} key={index} className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
 							<div className="absolute w-full h-2/5 bg-black top-0 left-0 z-0"></div>
 							<div className="w-full flex items-center justify-center relative">
 								<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
@@ -151,7 +164,7 @@ export default function Home() {
 								<p className="text-2xl text-black font-bold">{person.name}</p>
 								<p className="text-xl text-black font-normal">{person.role}</p>
 							</div>
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>

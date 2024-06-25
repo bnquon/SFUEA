@@ -71,11 +71,17 @@ const fadeInAnimation = {
     }),
 };
 
-const jerseyAnimation = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
-  };
-
+const iconAnimation = {
+    initial: { opacity: 0, x: -100 },
+    animate: (index: number) => ({
+        opacity: 1, 
+        x: 0,
+        transition: {
+            duration: 0.5,
+            delay: index * 0.1
+        }
+    }),
+};
 
 const pictureAnimation = {
     initial: { scale: 0.2, opacity: 0 },
@@ -83,27 +89,6 @@ const pictureAnimation = {
 }
 
 export default function Home() {    
-
-    
-    const count = useMotionValue(0);
-    const rounded = useTransform(count, Math.round);
-
-    const [isVisible, setIsVisible] = useState(true);
-
-  	useEffect(() => {
-    	const timer = setTimeout(() => {
-      		setIsVisible(false);
-    }, 2000); // Duration matches the total duration of the animation
-
-    	return () => clearTimeout(timer);
-  	}, []);
-
-
-    useEffect(() => {
-        const animation = animate(count, 3800, { duration: 2, delay: 2 });
-
-        return animation.stop;
-    }, []);
 
     const [headerInView, inView] = useInView({
         threshold: 0.15,
@@ -253,7 +238,7 @@ export default function Home() {
                                 </span>
                             </motion.button>
                             <div className="flex flex-col text-black">
-                                <motion.p className="text-3xl font-bold tabular-nums">{rounded}</motion.p>
+                                <p className="text-3xl font-bold">3800+</p>
                                 <p className="text-xl font-light">Members</p>
                             </div>
 
@@ -287,22 +272,22 @@ export default function Home() {
 
                 <div className="w-[75vw] h-[15vh] border-t-black border-t-2 flex">
                     <div className="w-1/4 flex items-center text-3xl text-black">
-                        <p className="flex items-center">
+                        <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex items-center">
                             <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                             Tournaments
-                        </p>
+                        </motion.p>
                     </div>
                     <div className="w-1/4 flex items-center text-3xl text-black">
-                        <p className="flex items-center">
+                        <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex items-center">
                             <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                             In-Houses
-                        </p>
+                        </motion.p>
                     </div>
                     <div className="w-1/4 flex items-center text-3xl text-black">
-                        <p className="flex items-center">
+                        <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex items-center">
                             <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                             In-Person Events
-                        </p>
+                        </motion.p>
                     </div>
                     <motion.div className="w-1/4 flex items-center justify-end text-3xl text-black"
                     animate={{
@@ -497,7 +482,7 @@ export default function Home() {
             
             <div className="relative w-screen bg-[#d3d3d3] flex justify-center pt-[7.5vh]">
                 <div className="w-[75vw] flex">
-                    <div className="w-1/2 flex flex-col box-border pr-5">
+                    <div className="w-1/2 flex flex-col box-border pr-5 pt-[14px]">
                         <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
                         <p className="text-xl font-normal text-black">If you don't see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                     </div>

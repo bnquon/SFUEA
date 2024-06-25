@@ -2,10 +2,24 @@
 import Image from "next/image";
 import WidgetBot from '@widgetbot/react-embed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIdCard, faCircleArrowUp, faFileLines, faComments, faFile } from "@fortawesome/free-solid-svg-icons"
+import { faIdCard, faCircleArrowUp, faFileLines, faComments } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
 import Faq from "react-faq-component";
+import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer'
 import { Footer } from "@/app/Components/Footer";
+
+const fadeInAnimation = {
+    initial: { opacity: 0, y: 100 },
+    animate: (index: number) => ({
+        opacity: 1, 
+        y: 0,
+        transition: {
+            duration: 0.5,
+            delay: index * 0.1
+        }
+    }),
+};
 
 const data = {
     rows: [
@@ -77,6 +91,9 @@ const config = {
 };
 
 export default function Home() {
+
+    const [raccoonInView, inView] = useInView({threshold: 0.25, triggerOnce: true});
+
     return (
     	<main className="relative">
 
@@ -172,8 +189,10 @@ export default function Home() {
 						<p className="text-2xl font-normal">A regulated schedule is currently under construction. Please stay tuned for announcements in our Discord server.</p>
 					</div>
                     <div className="w-2/3 relative">
-                        <Image src={'/raccoon_construction.png'} height={0} width={0} sizes="100vw" className="absolute scale-x-[-1] h-[25%] w-auto top-0 left-1/2 translate-x-[-50%] -translate-y-[1/2] translate-y-[-100%]" alt="Map"></Image>
-                        <WidgetBot className="w-full h-full"
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[100%] flex justify-center">
+                            <img src="/raccoon_construction.png" id="constructraccoon" className="w-[25%] scale-x-[-1]" alt="Map" />
+                        </div>
+                        <WidgetBot className="w-full h-full" 
                             server= '1251409341676912660'
                             channel= '1251409341676912663'/>
                     </div>
@@ -198,7 +217,7 @@ export default function Home() {
                             <p className="text-2xl">You must bring and show your student ID to access the lounge</p>
                         </div> */}
 
-                        <div className="w-1/3 relative">
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="flex flex-col">
                                 <div className="relative w-full h-[65%]">
                                     <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -209,9 +228,9 @@ export default function Home() {
                                     <h3 className="text-xl text-black">You must bring and show your student ID to access the lounge</h3>
                                 </div>
                             </article>
-                        </div>
+                        </motion.div>
 
-                        <div className="w-1/3 relative">
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={3} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="h-full flex flex-col">
                                 <div className="relative w-full h-[65%]">
                                     <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -227,9 +246,9 @@ export default function Home() {
                                 </div>
                                 
                             </article>
-                        </div>
+                        </motion.div>
 
-                        <div className="w-1/3 relative">
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={5} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="h-full flex flex-col">
                                 <div className="relative w-full h-[65%]">
                                     <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
@@ -244,7 +263,7 @@ export default function Home() {
                                     </span>
                                 </div>
                             </article>
-                        </div>
+                        </motion.div>
                     </div>
 				</div>
 
