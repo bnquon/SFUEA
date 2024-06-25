@@ -1,7 +1,8 @@
 "use client"
 import Image from "next/image";
+import WidgetBot from '@widgetbot/react-embed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowAltCircleUp, faCircleArrowUp } from "@fortawesome/free-solid-svg-icons"
+import { faIdCard, faCircleArrowUp, faFileLines, faComments, faFile } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
 import Faq from "react-faq-component";
 import { Footer } from "@/app/Components/Footer";
@@ -143,9 +144,8 @@ export default function Home() {
 				</div>
 			  	<div className="w-[75vw] flex h-[50vh] box-border gap-4">
 					<div className="w-1/2 flex box-border">
-						<div className="w-1/2 h-full flex flex-col justify-center">
+						<div className="w-1/2 h-full flex flex-col justify-start">
 							<p className="text-3xl font-bold text-black">We are located in the Student Union Building, level 2 room 2400</p><br />
-							<p className="text-xl text-black">The Convocation Mall is to the right of the Student Union Building in the screenshot</p>
 						</div>
 						<Image src="/sfuSnap.jpeg" width={0} height={0} sizes="100vw" className="w-1/2 h-full" alt="Map"/>
 					</div>
@@ -155,6 +155,32 @@ export default function Home() {
 				</div>
 			</div>
 
+            <div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[6vh]">
+
+                <div className="w-[75vw] mb-[12vh]">
+					<span className="relative flex justify-center">
+                    <div
+                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                    ></div>
+
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Schedule</span>
+                    </span>
+				</div>
+
+				<div className="w-[75vw] h-[50vh] flex box-border gap-5 relative">
+					<div className="w-1/3 h-full flex flex-col text-black gap-10 box-border pr-6 justify-start">
+						<p className="text-2xl font-normal">A regulated schedule is currently under construction. Please stay tuned for announcements in our Discord server.</p>
+					</div>
+                    <div className="w-2/3 relative">
+                        <Image src={'/raccoon_construction.png'} height={0} width={0} sizes="100vw" className="absolute scale-x-[-1] h-[25%] w-auto top-0 left-1/2 translate-x-[-50%] -translate-y-[1/2] translate-y-[-100%]" alt="Map"></Image>
+                        <WidgetBot className="w-full h-full"
+                            server= '1251409341676912660'
+                            channel= '1251409341676912663'/>
+                    </div>
+				</div>
+			</div>
+
+
 			<div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[5vh] pb-[10vh]">
 				<div className="w-[75vw] mb-[8vh]">
 					<span className="relative flex justify-center">
@@ -162,31 +188,64 @@ export default function Home() {
                         className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Important Disclaimer</span>
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Important Details</span>
                     </span>
 				</div>
 
-				<div className="w-[75vw] flex box-border gap-4 text-black">
-					<div className="w-1/3 flex flex-col">
-						<p className="text-4xl font-bold mb-[4vh]">1.</p>
-						<p className="text-2xl">You must bring and show your student ID to access the lounge</p>
-					</div>
-					<div className="w-1/3 flex flex-col">
-						<p className="text-4xl font-bold mb-[4vh]">2.</p>
-						<p className="text-2xl">You must sign the SFUEA x SFSS Gamer's Lounge Waiver and User Agreement</p><br />
-						<span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-white bg-black border-black border-2'>
-                            Waiver Agreement &nbsp;
-                            <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
-                        </span>
-					</div>
-					<div className="w-1/3 flex flex-col">
-						<p className="text-4xl font-bold mb-[4vh]">3.</p>
-						<p className="text-2xl">Help us improve the lounge by doing the SFU Esports Gamers' Lounge Experience Survey</p><br />
-						<span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between text-white bg-black border-black border-2'>
-                            Experience Survey &nbsp;
-                            <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
-                        </span>
-					</div>
+				<div className="w-[75vw] flex box-border text-black">
+                    <div className="w-full flex box-border gap-4">
+                        {/* <div className="w-full flex flex-col justify-start items-start mb-[4vh]">
+                            <p className="text-2xl">You must bring and show your student ID to access the lounge</p>
+                        </div> */}
+
+                        <div className="w-1/3 relative">
+                            <article className="flex flex-col">
+                                <div className="relative w-full h-[65%]">
+                                    <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                </div>
+
+                                <div className="py-4">
+                                    <FontAwesomeIcon icon={faIdCard} className="text-3xl mb-2"></FontAwesomeIcon>
+                                    <h3 className="text-xl text-black">You must bring and show your student ID to access the lounge</h3>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div className="w-1/3 relative">
+                            <article className="h-full flex flex-col">
+                                <div className="relative w-full h-[65%]">
+                                    <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                </div>
+
+                                <div className="py-4">
+                                    <FontAwesomeIcon icon={faFileLines} className="text-3xl mb-2"></FontAwesomeIcon>
+                                    <h3 className="text-xl text-black mb-4">You must sign the SFUEA x SFSS Gamer's Lounge Waiver and User Agreement</h3>
+                                    <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
+                                        Waiver Agreement &nbsp;
+                                        <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
+                                    </span>
+                                </div>
+                                
+                            </article>
+                        </div>
+
+                        <div className="w-1/3 relative">
+                            <article className="h-full flex flex-col">
+                                <div className="relative w-full h-[65%]">
+                                    <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                </div>
+
+                                <div className="py-4">
+                                    <FontAwesomeIcon icon={faComments} className="text-3xl mb-2"></FontAwesomeIcon>
+                                    <h3 className="text-xl text-black mb-4">Help us improve the lounge by doing the SFU Esports Gamers' Lounge Experience Survey</h3>
+                                    <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
+                                        Feedback Survey &nbsp;
+                                        <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
+                                    </span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
 				</div>
 
 			</div>
