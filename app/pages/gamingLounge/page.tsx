@@ -202,7 +202,7 @@ export default function Home() {
 			</div>
 
 
-			<div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[5vh] pb-[10vh]">
+			<div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[6vh]">
 				<div className="w-[75vw] mb-[8vh]">
 					<span className="relative flex justify-center">
                     <div
@@ -221,7 +221,7 @@ export default function Home() {
 
                         <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="flex flex-col">
-                                <div className="relative w-full h-[65%]">
+                                <div className="relative w-full h-[30vh]">
                                     <Image src='/ex1.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
@@ -234,7 +234,7 @@ export default function Home() {
 
                         <motion.div variants={fadeInAnimation} initial="initial" custom={3} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="h-full flex flex-col">
-                                <div className="relative w-full h-[65%]">
+                                <div className="relative w-full h-[30vh]">
                                     <Image src='/ex2.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
@@ -252,7 +252,7 @@ export default function Home() {
 
                         <motion.div variants={fadeInAnimation} initial="initial" custom={5} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
                             <article className="h-full flex flex-col">
-                                <div className="relative w-full h-[65%]">
+                                <div className="relative w-full h-[30vh]">
                                     <Image src='/ex3.jpg' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 

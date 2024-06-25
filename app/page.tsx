@@ -12,6 +12,8 @@ import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 import Faq from "react-faq-component";
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
 
 const data = {
     rows: [
@@ -302,7 +304,6 @@ export default function Home() {
                         duration: 1.5, // Duration for one cycle of the animation
                         repeat: Infinity, // Repeat the animation infinitely
                         repeatType: 'loop', // Loop the animation
-                        ease: 'easeInOut' // Easing function
                     }}>
                         <FontAwesomeIcon className="text-black duration-200" style={{ opacity: atTop? '1': '0'}} icon={faAnglesDown}/>
                     </motion.div>

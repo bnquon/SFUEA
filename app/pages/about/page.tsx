@@ -1,7 +1,8 @@
 "use client"
 import dynamic from 'next/dynamic';
 import Image from "next/image";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { Footer } from '@/app/Components/Footer';
 
 const WidgetBot = dynamic(() => import('@widgetbot/react-embed'), { ssr: false });
 
@@ -170,6 +171,8 @@ export default function Home() {
 					))}
 				</div>
 			</div>
+
+			<Footer/>
 
     	</main>
   	);

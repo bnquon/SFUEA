@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { Footer } from "@/app/Components/Footer";
 
 const localizer = momentLocalizer(moment);
 
@@ -52,6 +53,8 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+
+			<Footer />
 
     	</main>
   	);
