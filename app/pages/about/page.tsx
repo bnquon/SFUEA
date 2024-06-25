@@ -1,7 +1,9 @@
 "use client"
+import dynamic from 'next/dynamic';
 import Image from "next/image";
-import WidgetBot from '@widgetbot/react-embed'
 import { delay, motion } from "framer-motion";
+
+const WidgetBot = dynamic(() => import('@widgetbot/react-embed'), { ssr: false });
 
 const cardAnimation = {
 	initial: {

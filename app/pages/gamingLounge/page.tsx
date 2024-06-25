@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import WidgetBot from '@widgetbot/react-embed'
+import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faIdCard, faCircleArrowUp, faFileLines, faComments } from "@fortawesome/free-solid-svg-icons"
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
@@ -8,6 +8,8 @@ import Faq from "react-faq-component";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import { Footer } from "@/app/Components/Footer";
+
+const WidgetBot = dynamic(() => import('@widgetbot/react-embed'), { ssr: false });
 
 const fadeInAnimation = {
     initial: { opacity: 0, y: 100 },
