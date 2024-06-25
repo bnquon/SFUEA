@@ -334,7 +334,7 @@ export default function Home() {
 
                             <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
 
-                                <h3 className="text-xl text-black">Game in the Gamers' Lounge!</h3>
+                                <h3 className="text-xl text-black">Game in the Gamers&apos; Lounge!</h3>
 
 
                                 <p className="mt-2 text-base text-gray-900">
