@@ -255,20 +255,20 @@ export default function Home() {
                         <div className="w-[60%] h-full flex flex-col relative">    
                             <div className="w-full h-full flex flex-col relative box-border gap-4">
                                 <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
-                                    <img src="/test-min.jpg" className="h-full w-full object-cover" alt="" />
+                                    <img src="/test-min.JPG" className="h-full w-full object-cover" alt="" />
                                 </motion.div>
                                 {/* <div className="h-1/5 bg-black rounded-xl"></div> */}
                                 <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
-                                    <img src="/test2.jpg" className="h-full w-full object-cover" alt="" />
+                                    <img src="/test2.JPG" className="h-full w-full object-cover" alt="" />
                                 </motion.div>
                             </div>
                         </div>
                         
                         {/* Left Column */}
                         <div className="w-[40%] h-full flex justify-center flex-col relative box-border gap-4">
-                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
+                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.JPG" className="h-full w-full object-cover" alt="" /></motion.div>
                 
-                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.jpg" className="h-full w-full object-cover" alt="" /></motion.div>
+                            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.JPG" className="h-full w-full object-cover" alt="" /></motion.div>
                         </div>
 
                     </div>
@@ -334,7 +334,7 @@ export default function Home() {
                     <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-1/3 relative">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
-                                <Image src='/ex1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                <Image src='/ex1.JPG' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                             </div>
 
                             <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
@@ -352,7 +352,7 @@ export default function Home() {
                     <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-1/3">
                         <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                             <div className="relative w-full h-[65%]">
-                                <Image src='/ex2.jpg' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                <Image src='/ex2.JPG' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                             </div>
 
                             <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
