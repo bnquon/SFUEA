@@ -338,7 +338,7 @@ export default function Home() {
 
 
                                 <p className="mt-2 text-base text-gray-900">
-                                Drop into the Gamer' Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
+                                Drop into the Gamers&apos; Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
                                 </p>
                             </div>
                         </article>
@@ -484,7 +484,7 @@ export default function Home() {
                 <div className="w-[75vw] flex">
                     <div className="w-1/2 flex flex-col box-border pr-5 pt-[14px]">
                         <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
-                        <p className="text-xl font-normal text-black">If you don't see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
+                        <p className="text-xl font-normal text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                     </div>
                     <div className="w-1/2">
                         <Faq

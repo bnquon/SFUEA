@@ -118,24 +118,25 @@ export default function Home() {
             </div>
 
 			<div className="w-screen bg-[#d3d3d3] flex flex-col pl-[12.5vw]">
-				{games.map((game, index) => (
-                    <div className="w-screen">
-                        <div key={index} className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center mb-[6vh]" style={{marginTop: index == 0 ? '0': '12vh'}}>
+                {games.map((game, gameIndex) => (
+                    <div className="w-screen" key={gameIndex}>
+                        <div className="w-[75vw] h-[20vh] rounded-xl overflow-hidden relative flex justify-center items-center mb-[6vh]" style={{marginTop: gameIndex === 0 ? '0': '12vh'}}>
                             <Image className="brightness-75" src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                             <p id="game-title" className="absolute text-white text-5xl font-bold">{game.title}</p>
                         </div>
                         
-                        <div key={index} className="w-[75vw] h-[15vh] relative flex box-border gap-8">
-                        {people.map((person, index) => (
-                                <div key={index} className="w-1/4 h-full flex flex-col justify-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md">
+                        <div className="w-[75vw] h-[15vh] relative flex box-border gap-8">
+                            {people.map((person, personIndex) => (
+                                <div key={personIndex} className="w-1/4 h-full flex flex-col justify-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md">
                                     <p className="text-3xl font-bold">{person.name}</p>
                                     <p className="text-xl text-red-500 font-semibold">{person.role}</p>
                                 </div>
-                        ))}
+                            ))}
                         </div>
                     </div>
-				))}
-			</div>
+                ))}
+            </div>
+
     	</main>
   	);
 }

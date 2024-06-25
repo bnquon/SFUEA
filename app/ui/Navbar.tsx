@@ -13,7 +13,7 @@ const links = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/pages/about' },
     { name: 'Teams', href: '/pages/teams' },
-    { name: "Gamers Lounge", href: '/pages/gamingLounge' },
+    { name: 'Gamers Lounge', href: '/pages/gamingLounge' },
     { name: 'Events', href: '/pages/events' },
 ];
 

@@ -11,7 +11,7 @@ export const Footer = () => {
             <div className="w-[37.5vw] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
                 <div>
                     <p className='text-5xl font-bold'>JOIN THE CLUB.</p> <br />
-                    <p className='text-2xl'>We want to see you in the Gamers' Lounge or the next in-house!</p>
+                    <p className='text-2xl'>We want to see you in the Gamers&apos; Lounge or the next in-house!</p>
                 </div>
                 <button id='footer-btn' className='bg-black w-fit rounded-full text-2xl hover:bg-white hover:text-black duration-200'>Get Started</button>
             </div>
@@ -22,7 +22,7 @@ export const Footer = () => {
                 <ul className='flex gap-8 mb-10 text-xl'>
                     <li>About</li>
                     <li>Teams</li>
-                    <li>Gamers' Lounge</li>
+                    <li>Gamers&apos; Lounge</li>
                     <li>Events</li>
                 </ul>
                 

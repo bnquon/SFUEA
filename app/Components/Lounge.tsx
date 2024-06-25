@@ -45,7 +45,7 @@ export const Lounge = () => {
 
         <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
             <div className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
-                <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">GAMERS' LOUNGE</h1>
+                <h1 className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">GAMERS&apos; LOUNGE</h1>
             </div>
             <div className="flex-grow flex items-center pl-8">
                 <p className="text-xl font-semibold flex-grow">
