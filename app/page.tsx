@@ -580,12 +580,12 @@ export default function Home() {
                 </div>    
                 
                 <div className="relative w-screen bg-[#d3d3d3] flex justify-center pt-[7.5vh]">
-                    <div className="w-[75vw] flex">
-                        <div className="w-1/2 flex flex-col box-border pr-5 pt-[14px]">
+                    <div className="w-[75vw] flex lg:flex-row flex-col">
+                        <div className="lg:w-1/2 w-full flex flex-col box-border pr-5 pt-[14px]">
                             <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
-                            <p className="text-xl font-normal text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
+                            <p className="text-3xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                         </div>
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2 w-full">
                             <Faq
                                 data={data}
                                 styles={styles}

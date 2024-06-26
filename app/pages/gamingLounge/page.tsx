@@ -220,26 +220,20 @@ export default function Home() {
                             <p className="text-2xl">You must bring and show your student ID to access the lounge</p>
                         </div> */}
 
-                        <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 w-full relative">
-                            <article className="flex flex-col">
-                                <div className="relative w-full h-[30vh]">
-                                    <Image src='/ex1.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                </div>
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 flex lg:flex-col-reverse lg:items-start lg:justify-end flex-row w-full relative">
+                            <div className="lg:py-4 py-0 lg:pl-0 pr-5 w-1/2 lg:w-full">
+                                <FontAwesomeIcon icon={faIdCard} className="text-3xl mb-2"></FontAwesomeIcon>
+                                <h3 className="text-xl text-black">You must bring and show your student ID to access the lounge</h3>
+                            </div>
 
-                                <div className="py-4">
-                                    <FontAwesomeIcon icon={faIdCard} className="text-3xl mb-2"></FontAwesomeIcon>
-                                    <h3 className="text-xl text-black">You must bring and show your student ID to access the lounge</h3>
-                                </div>
-                            </article>
+                            <div className="relative lg:w-full w-1/2 h-[30vh]">
+                                <Image src='/ex1.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                            </div>
+
                         </motion.div>
 
-                        <motion.div variants={fadeInAnimation} initial="initial" custom={3} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
-                            <article className="h-full flex flex-col">
-                                <div className="relative w-full h-[30vh]">
-                                    <Image src='/ex2.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                </div>
-
-                                <div className="py-4">
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={3} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 flex lg:flex-col-reverse lg:items-start lg:justify-end flex-row w-full relative">
+                                <div className="lg:py-4 py-0 lg:pl-0 pr-5 w-1/2 lg:w-full">
                                     <FontAwesomeIcon icon={faFileLines} className="text-3xl mb-2"></FontAwesomeIcon>
                                     <h3 className="text-xl text-black mb-4">You must sign the SFUEA x SFSS Gamers&apos; Lounge Waiver and User Agreement</h3>
                                     <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
@@ -247,17 +241,15 @@ export default function Home() {
                                         <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                                     </span>
                                 </div>
+
+                                <div className="relative lg:w-full w-1/2 h-[30vh]">
+                                    <Image src='/ex2.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                </div>
                                 
-                            </article>
                         </motion.div>
 
-                        <motion.div variants={fadeInAnimation} initial="initial" custom={5} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
-                            <article className="h-full flex flex-col">
-                                <div className="relative w-full h-[30vh]">
-                                    <Image src='/ex3.jpg' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                </div>
-
-                                <div className="py-4">
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={5} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 flex lg:flex-col-reverse lg:items-start lg:justify-end flex-row w-full relative">
+                                <div className="lg:py-4 py-0 lg:pl-0 pr-5 w-1/2 lg:w-full">
                                     <FontAwesomeIcon icon={faComments} className="text-3xl mb-2"></FontAwesomeIcon>
                                     <h3 className="text-xl text-black mb-4">Help us improve the lounge by doing the SFU Esports Gamers&apos; Lounge Experience Survey</h3>
                                     <span className='w-fit text-xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
@@ -265,7 +257,10 @@ export default function Home() {
                                         <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                                     </span>
                                 </div>
-                            </article>
+
+                                <div className="relative lg:w-full w-1/2 h-[30vh]">
+                                    <Image src='/ex3.jpg' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                </div>
                         </motion.div>
                     </div>
 				</div>
@@ -282,11 +277,11 @@ export default function Home() {
                     <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Lounge FAQ</span>
                     </span>
 				</div>
-                <div className="w-[75vw] flex box-border">
-					<div className="w-1/2 box-border pr-8 pt-[14px]">
+                <div className="w-[75vw] flex lg:flex-row flex-col box-border">
+					<div className="lg:w-1/2 w-full box-border lg:pr-8 lg:pt-[14px] mb-5 lg:mb-0">
 						<p className="text-3xl font-semibold text-black">If you have any more questions, please email us at EMAIL@EMAIL.com or chat with us in our discord</p>
 					</div>
-                    <div className="w-1/2">
+                    <div className="lg:w-1/2 w-full">
 						<Faq
                             data={data}
                             styles={styles}
