@@ -29,7 +29,7 @@ function Navbar() {
                 <div className='w-1/4 flex justify-start items-center py-[0.5vh] lg:py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
-                <div id="pageSwitcher" className="w-1/2 flex justify-center items-center relative">
+                <div id="pageSwitcher" className="w-[60vw] flex justify-center items-center relative">
                         {links.map((link) => {
                             if (link.name !== 'Teams') {
                                 return (

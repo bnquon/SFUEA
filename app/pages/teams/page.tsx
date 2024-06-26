@@ -85,14 +85,14 @@ export default function Home() {
     return (
     	<main className="relative">
 
-      		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[15vh]">
+            <div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[10vh]">
         		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
-					<Image className="absolute brightness-50 z-[1]" src='/blob1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+					<Image className="absolute brightness-[35%] z-[1]" src='/blob2.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 					<div className="flex flex-col w-3/5 gap-6 text-white z-[2]">
-						<p className="font-bold text-3xl text-red-500">Gaming Teams</p>
-						<p className="text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
+						<p className="font-bold text-2xl lg:text-3xl text-red-500">Our Teams</p>
+						<p className="text-3xl lg:text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
-					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={250} height={250}></Image>
+					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw' style={{ width: '22.5%', height: '80%' }}></Image>
 				</div>
       		</div>
 
@@ -112,7 +112,7 @@ export default function Home() {
                         className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-10 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Meet our Gaming Teams</span>
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Meet our Gaming Teams</span>
                     </span>
                 </div>
             </div>
@@ -125,9 +125,9 @@ export default function Home() {
                             <p id="game-title" className="absolute text-white text-5xl font-bold">{game.title}</p>
                         </div>
                         
-                        <div className="w-[75vw] h-[15vh] relative flex box-border gap-8">
+                        <div className="w-[75vw] grid grid-flow-row lg:grid-cols-4 grid-cols-3 relative box-border gap-8">
                             {people.map((person, personIndex) => (
-                                <div key={personIndex} className="w-1/4 h-full flex flex-col justify-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md">
+                                <div key={personIndex} className="h-[15vh] flex flex-col justify-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md">
                                     <p className="text-3xl font-bold">{person.name}</p>
                                     <p className="text-xl text-red-500 font-semibold">{person.role}</p>
                                 </div>

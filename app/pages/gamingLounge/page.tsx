@@ -99,16 +99,17 @@ export default function Home() {
     return (
     	<main className="relative">
 
-      		<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[20vh] pb-[7.5vh]">
+            <div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[10vh]">
         		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
-					<Image className="absolute brightness-50 z-[1]" src='/blob1.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+					<Image className="absolute brightness-[35%] z-[1]" src='/blob2.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 					<div className="flex flex-col w-3/5 gap-6 text-white z-[2]">
-						<p className="font-bold text-3xl text-red-500">Gamers&apos; Lounge</p>
-						<p className="text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
+						<p className="font-bold text-2xl lg:text-3xl text-red-500">Gamers Lounge</p>
+						<p className="text-3xl lg:text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
-					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={250} height={250}></Image>
+					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw' style={{ width: '22.5%', height: '80%' }}></Image>
 				</div>
       		</div>
+
 
 			
 
@@ -176,7 +177,7 @@ export default function Home() {
 
             <div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[6vh]">
 
-                <div className="w-[75vw] mb-[12vh]">
+                <div className="w-[75vw] lg:mb-[12vh] mb-[6vh]">
 					<span className="relative flex justify-center">
                     <div
                         className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
@@ -186,15 +187,15 @@ export default function Home() {
                     </span>
 				</div>
 
-				<div className="w-[75vw] h-[50vh] flex box-border gap-5 relative">
-					<div className="w-1/3 h-full flex flex-col text-black gap-10 box-border pr-6 justify-start">
+				<div className="w-[75vw] lg:h-[50vh] flex lg:flex-row flex-col box-border gap-5 relative">
+					<div className="lg:w-1/3 w-full h-full flex flex-col text-black gap-10 box-border pr-6 justify-start lg:mb-0 mb-[8vh]">
 						<p className="text-2xl font-normal">A regulated schedule is currently under construction. Please stay tuned for announcements in our Discord server.</p>
 					</div>
-                    <div className="w-2/3 relative">
+                    <div className="lg:w-2/3 w-full relative">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[100%] flex justify-center">
                             <img src="/raccoon_construction.png" id="constructraccoon" className="w-[25%] scale-x-[-1]" alt="Map" />
                         </div>
-                        <WidgetBot className="w-full h-full" 
+                        <WidgetBot className="w-full lg:h-full h-[40vh]" 
                             server= '1251409341676912660'
                             channel= '1251409341676912663'/>
                     </div>
@@ -214,12 +215,12 @@ export default function Home() {
 				</div>
 
 				<div className="w-[75vw] flex box-border text-black">
-                    <div className="w-full flex box-border gap-4">
+                    <div className="w-full flex lg:flex-row flex-col box-border gap-4">
                         {/* <div className="w-full flex flex-col justify-start items-start mb-[4vh]">
                             <p className="text-2xl">You must bring and show your student ID to access the lounge</p>
                         </div> */}
 
-                        <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="w-1/3 relative">
+                        <motion.div variants={fadeInAnimation} initial="initial" custom={1} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 w-full relative">
                             <article className="flex flex-col">
                                 <div className="relative w-full h-[30vh]">
                                     <Image src='/ex1.JPG' className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>

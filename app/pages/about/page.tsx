@@ -86,10 +86,10 @@ export default function Home() {
         		<div className="w-[75vw] items-center flex justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
 					<Image className="absolute brightness-[35%] z-[1]" src='/blob2.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 					<div className="flex flex-col w-3/5 gap-6 text-white z-[2]">
-						<p className="font-bold text-3xl text-red-500">About Us</p>
-						<p className="text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
+						<p className="font-bold text-2xl lg:text-3xl text-red-500">About Us</p>
+						<p className="text-3xl lg:text-5xl font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
-					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={250} height={250}></Image>
+					<Image className="z-[2]" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw' style={{ width: '22.5%', height: '80%' }}></Image>
 				</div>
       		</div>
 
@@ -105,27 +105,27 @@ export default function Home() {
 				</div>
 
 				<div className="w-[75vw] flex flex-col box-border">
-					<div className="w-full flex text-black py-6">
-						<div className="w-2/5 text-4xl font-bold">
+					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
+						<div className="lg:w-2/5 w-full text-4xl font-bold">
 							<p>How We Started</p>
 						</div>
-						<div className="w-3/5 text-2xl font-normal">
+						<div className="lg:w-3/5 w-full text-2xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
-					<div className="w-full flex text-black border-y-[1px] border-[#999999] py-6">
-						<div className="w-2/5 text-4xl font-bold">
+					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black border-y-[1px] border-[#999999] py-6">
+						<div className="lg:w-2/5 w-full text-4xl font-bold">
 							<p>Our Goals</p>
 						</div>
-						<div className="w-3/5 text-2xl font-normal">
+						<div className="lg:w-3/5 w-full text-2xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
-					<div className="w-full flex text-black py-6">
-						<div className="w-2/5 text-4xl font-bold">
+					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
+						<div className="lg:w-2/5 w-full text-4xl font-bold">
 							<p>Our Vision</p>
 						</div>
-						<div className="w-3/5 text-2xl font-normal">
+						<div className="lg:w-3/5 w-full text-2xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -134,12 +134,12 @@ export default function Home() {
 
 			<div className="w-screen relative bg-[#d3d3d3] flex justify-center items-center box-border pt-[6vh]">
 
-				<div className="w-[75vw] h-[50vh] flex box-border gap-5">
-					<div className="w-2/5 h-full flex flex-col text-black gap-10 box-border pr-6 justify-start">
+				<div className="w-[75vw] lg:h-[50vh] flex lg:flex-row flex-col box-border gap-5">
+					<div className="lg:w-2/5 w-full h-full flex flex-col text-black lg:gap-10 gap-5 box-border pr-6 justify-start">
 						<p className="text-4xl font-extrabold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						<p className="text-2xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
-					<WidgetBot className="w-3/5 h-full"
+					<WidgetBot className="lg:w-3/5 w-full h-[45vh] lg:h-full"
 						server= '1251409341676912660'
 						channel= '1251409341676912663'/>
 				</div>
@@ -152,14 +152,14 @@ export default function Home() {
                         className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-10 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Meet our Leaders</span>
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Meet our Leaders</span>
                     </span>
 				</div>
 
-				<div className="grid grid-cols-4 grid-flow-row w-[75vw] box-border relative gap-[4vw]">
+				<div className="grid lg:grid-cols-4 grid-cols-3 grid-flow-row w-[75vw] box-border relative gap-[4vw]">
 					{people.map((person, index) => (	
 						<motion.div variants={cardAnimation} initial='initial' whileInView='visible' viewport={{ once: true }} key={index} className="w-full h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border py-6 overflow-hidden">
-							<div className="absolute w-full h-2/5 bg-black top-0 left-0 z-0"></div>
+							<div className="absolute w-full lg:h-1/3 h-[30%] bg-black top-0 left-0 z-0"></div>
 							<div className="w-full flex items-center justify-center relative">
 								<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
 							</div>
