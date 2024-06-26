@@ -102,6 +102,13 @@ body {
   padding-left: 6.3% !important;
 }
 
+@media screen and (max-width: 992px) {
+  .rbc-toolbar-label {
+    padding-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
 .rbc-toolbar {
   margin-bottom: 1rem !important;
 }

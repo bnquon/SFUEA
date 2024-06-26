@@ -6,9 +6,9 @@ import { faDiscord, faSquareInstagram, faFacebookF, faXTwitter, faTwitch, faTikt
 export const Footer = () => {
   return (
     <div className='pt-[20vh] relative bg-[#d3d3d3]'>
-        <div className="w-full h-[50vh] bg-black relative pl-[12.5vw]">
+        <div className="w-full lg:h-[50vh] bg-black relative pl-[12.5vw]">
 
-            <div className="w-[37.5vw] h-[30vh] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
+            <div className="lg:w-[37.5vw] w-[75vw] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
                 <div>
                     <p className='text-5xl font-bold'>JOIN THE CLUB.</p> <br />
                     <p className='text-2xl'>We want to see you in the Gamers&apos; Lounge or the next in-house!</p>
@@ -16,7 +16,7 @@ export const Footer = () => {
                 <button id='footer-btn' className='bg-black w-fit rounded-full text-2xl hover:bg-white hover:text-black duration-200'>Get Started</button>
             </div>
             
-            <div className='relative w-[45%] h-[20vh] flex flex-col mt-[-20px]'>
+            <div className='relative w-[75vw] flex flex-col justify-center items-center lg:justify-start lg:items-start mt-[-20px]'>
                 <h1 className='mb-8 text-2xl'>SFU Gaming and Esports Club</h1>
 
                 <ul className='flex gap-8 mb-10 text-xl'>
@@ -26,37 +26,45 @@ export const Footer = () => {
                     <li>Events</li>
                 </ul>
                 
-                <div className='flex h-[8vh] gap-4 relative w-[45%]'>
-                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                <div className='flex h-[8vh] gap-4 relative lg:w-[45%]'>
+                    <div className="h-1/2 bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-xl' icon={faDiscord} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
-                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                    <div className="h-1/2 bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faSquareInstagram} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
-                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                    <div className="h-1/2 bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faFacebookF} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
-                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                    <div className="h-1/2 bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faXTwitter} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
-                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                    <div className="h-1/2 bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faTwitch} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
-                    <div className="h-1/2 w-[35px] bg-white flex items-center justify-center p-2 rounded-lg">
+                    <div className="h-1/2 bg-white flex items-center justify-center p-2 rounded-lg">
                         <FontAwesomeIcon className='text-2xl' icon={faTiktok} style={{color: '000000'}}></FontAwesomeIcon>
                     </div>
                 </div>
 
+                <div className='lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-4 lg:mb-5 lg:absolute w-[45%] h-full right-0 top-0 lg:translate-y-[-75%] flex flex-col items-center justify-center gap-10'>
+                    <Image src='/real-logo.png' width={250} height={250} alt='logo'></Image>
+                    <p className='text-xl'>Contact us: EMAIL@EMAIL.COM</p>
+                </div>
+
+                <div className='flex flex-col justify-center items-center lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[50%]'>
+                    <Image src='/racc.png' width={175} height={175} alt='logo'></Image>
+                </div>
             </div>
 
-            <div className="absolute w-[45%] h-full right-0 top-0 flex flex-col items-center justify-center gap-10">
+            {/* <div className="absolute w-[45%] h-full right-0 top-0 flex flex-col items-center justify-center gap-10">
                 <Image src='/real-logo.png' width={250} height={250} alt='logo'></Image>
                 <p className='text-xl'>Contact us: EMAIL@EMAIL.COM</p>
-            </div>
+            </div> */}
 
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+            {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
                 <Image src='/racc.png' width={175} height={175} alt='logo'></Image>
-            </div>
+            </div> */}
 
         </div>
     </div>

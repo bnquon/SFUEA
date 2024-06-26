@@ -26,7 +26,7 @@ function Navbar() {
     return (
         <StickyHeadroom scrollHeight={100} pinStart={0}> 
             <div className='w-screen fixed z-50 flex bg-black px-[12.5vw]'>
-                <div className='w-1/4 flex justify-start items-center py-[1.5vh]'>
+                <div className='w-1/4 flex justify-start items-center py-[0.5vh] lg:py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
                 <div id="pageSwitcher" className="w-1/2 flex justify-center items-center relative">
@@ -37,9 +37,9 @@ function Navbar() {
                                         key={link.name}
                                         href={link.href}
                                         className={clsx(
-                                            'flex justify-center items-center px-6 h-full hover:bg-slate-200/20 max-w-fit text-xl font-bold',
+                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-200/20 max-w-fit text-sm lg:text-xl font-bold',
                                             {
-                                                'flex justify-center items-center px-6 h-full bg-red-500 text-white text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
+                                                'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-sm lg:text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         {link.name}
@@ -51,13 +51,13 @@ function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={clsx(
-                                            'flex justify-center items-center px-6 h-full hover:bg-slate-200/20 max-w-fit text-xl font-bold',
+                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-200/20 max-w-fit text-sm lg:text-xl font-bold',
                                             {
-                                                'flex justify-center items-center px-6 h-full bg-red-500 text-white text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
+                                                'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-sm lg:text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         <span>
-                                            {link.name}&nbsp; <FontAwesomeIcon className='text-xl' icon={faCaretDown}/>
+                                            {link.name}&nbsp; <FontAwesomeIcon className='text-sm lg:text-xl' icon={faCaretDown}/>
                                         </span>
                                     </Link>
                                     <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw] z-50'>
@@ -74,7 +74,7 @@ function Navbar() {
                         })}
                 </div>
                 <div className="w-1/4 flex justify-end items-center">
-                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='px-6 py-3 bg-red-500 max-w-fit rounded-xl text-xl font-bold'>JOIN NOW</motion.button>
+                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='lg:px-6 lg:py-3 px-2 py-2 bg-red-500 max-w-fit rounded-xl text-sm lg:text-xl font-bold'>JOIN NOW</motion.button>
                 </div>
             </div>
         </StickyHeadroom>
