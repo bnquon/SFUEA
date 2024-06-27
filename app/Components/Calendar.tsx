@@ -69,32 +69,8 @@ export const BasicCalendar = () => {
 
   return (
     <div className='pt-[7.5vh] pb-[10vh] w-screen flex flex-col justify-center items-center relative bg-[#d3d3d3]'>
-      
-      {/* <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto] grid-rows-2 relative box-border">
-            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
-                <h1 
-                  style={{ 
-                  transform: inView ? 'translateY(0)' : 'translateY(100%)',
-                  transition: 'transform 0.5s ease'
-                  }}
-                  className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
-                    EVENT SCHEDULE.
-                </h1>
-            </div>
-            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start">
-                <p className="text-xl font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-6">
-                  Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
-                </p>
-            </div>
-            <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start pt-6">
-                <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                    Learn More &nbsp;
-                    <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                </span>
-            </div>
-      </div> */}
-
-        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+    
+        {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
           <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-[90vw] lg:pr-8 pr-0 flex items-center sm:text-left text-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
               <h1 
               style={{ 
@@ -108,6 +84,30 @@ export const BasicCalendar = () => {
           <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
               <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
               Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
+              </p>
+          </div>
+          <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
+              <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                  Learn More &nbsp;
+                  <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+              </span>
+          </div>
+      </div> */}
+
+      <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+          <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+              <h1 
+              style={{ 
+              transform: inView ? 'translateY(0)' : 'translateY(100%)',
+              transition: 'transform 0.5s ease'
+              }}
+              className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+                  EVENT SCHEDULE.
+              </h1>
+          </div>
+          <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+              <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
               </p>
           </div>
           <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">

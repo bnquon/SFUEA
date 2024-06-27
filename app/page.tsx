@@ -343,7 +343,7 @@ export default function Home() {
                 </div>
 
                 {/* ABOUT US PAGE */}
-                <div className="lg:pt-[8vh] sm:pt-[30vh] pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[35vh] pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
                     {/* <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto,1fr] grid-rows-2 relative box-border">
                         <div ref={headerInView2} className="col-span-1 row-span-1 duration-500 lg:w-fit w-fit lg:pr-8 pr-0 flex items-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
@@ -452,34 +452,11 @@ export default function Home() {
 
                 {/* GRID CONTAINER */}
 
-                {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
-                            <h1 
-                            style={{ 
-                            transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
-                            transition: 'transform 0.5s ease'
-                            }}
-                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
-                                WHO WE ARE.
-                            </h1>
-                        </div>
-                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                            <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
-                                The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
-                            </p>
-                        </div>
-                        <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                            <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                                Learn More &nbsp;
-                                <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                            </span>
-                        </div>
-                    </div> */}
-                <div className="lg:pt-[8vh] sm:pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center  bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
-                    <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+                    <div className="">
 
-                        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+                        <div className="sm:w-[75vw] w-[90vw] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border mb-8">
                             <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                                 <h1 
                                 style={{ 
@@ -516,7 +493,7 @@ export default function Home() {
                             <Slider ref={slider} {...settings}>
                                 {games.map((game, index) => (
                                     <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
-                                        <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
+                                        <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full sm:text-4xl text-3xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
                                         <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                         <Image 
                                             id="game-pic"
@@ -542,6 +519,75 @@ export default function Home() {
 
                     
                 </div>
+
+                {/* <div className="pt-[8vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                    <div className="bg-red-200 sm:w-[75vw] w-[90vw] text-black flex flex-col lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 relative box-border">
+                        <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                        <h1
+                            style={{
+                            transform: inView ? 'translateY(0)' : 'translateY(100%)',
+                            transition: 'transform 0.5s ease',
+                            }}
+                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap"
+                        >
+                            OUR TEAMS.
+                        </h1>
+                        </div>
+                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base bg-green-500">
+                        <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                            Browse the games we have competitive teams, executives, or directors for!
+                            The executives and directors run in-houses and events for their desired game!
+                        </p>
+                        </div>
+                        <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2 bg-blue-200">
+                        <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                            Learn More &nbsp;
+                            <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+                        </span>
+                        </div>
+                    </div>
+
+                    <div className="w-[calc(85vw+60px)] h-[60vh] relative flex justify-center bg-emerald-200">
+                        <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
+                        <FontAwesomeIcon
+                            className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150 z-[1]"
+                            onClick={() => slider?.current?.slickPrev()}
+                            icon={faSquareCaretLeft}
+                            style={{color: "#ff0000"}}
+                        />
+                        </div>
+
+                        <div className="sm:w-[calc(75vw+60px)] w-[70vw] h-full box-border relative">
+                        <Slider ref={slider} {...settings}>
+                            {games.map((game, index) => (
+                            <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
+                                <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
+                                <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
+                                <Image
+                                id="game-pic"
+                                className="duration-300 object-cover"
+                                width={0}
+                                height={0}
+                                src={game.picture}
+                                alt={game.title}
+                                sizes="100vw"
+                                style={{ width: '100%', height: '100%' }}
+                                />
+                            </div>
+                            ))}
+                        </Slider>
+                        </div>
+
+                        <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
+                        <FontAwesomeIcon
+                            className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150 z-[1]"
+                            onClick={() => slider?.current?.slickNext()}
+                            icon={faSquareCaretRight}
+                            style={{color: "#ff0000"}}
+                        />
+                        </div>
+                    </div>
+                    </div> */}
                 
                 
                 <Lounge/>
