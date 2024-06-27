@@ -64,7 +64,7 @@ export const Lounge = () => {
         </div> */}
     
         <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                 <h1 className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                     GAMERS&apos; LOUNGE
                 </h1>

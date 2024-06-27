@@ -367,7 +367,7 @@ export default function Home() {
                     </div> */}
 
                     <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                             <h1 
                             style={{ 
                             transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
@@ -457,7 +457,7 @@ export default function Home() {
                     <div className="">
 
                         <div className="sm:w-[75vw] w-[90vw] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border mb-8">
-                            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                                 <h1 
                                 style={{ 
                                 transform: inView ? 'translateY(0)' : 'translateY(100%)',
