@@ -232,15 +232,15 @@ export default function Home() {
                 <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[15vh] pt-[12vh] sm:gap-[8vh] gap-[4vh]">
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
-                        <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-4">
-                            <p className="text-4xl sm:text-6xl lg:text-7xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
-                            <p className="w-full lg:w-4/5 text-black text-base sm:text-xl font-medium sm:mb-8 mb-2">
+                        <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
+                            <p className="text-4xl sm:text-6xl lg:text-[66px] font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                            <p className="w-full lg:w-full text-black text-base sm:text-xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
                             <div className="flex gap-8 box-border items-center lg:justify-start justify-center">
-                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-8 lg:py-4 px-6 py-3 text-lg sm:text-3xl font-bold italic sm:mr-8">
+                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl font-bold italic sm:mr-8">
                                     <span>
                                         GAME WITH US &nbsp;
                                     </span>
