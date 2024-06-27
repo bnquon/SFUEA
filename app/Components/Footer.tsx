@@ -6,17 +6,17 @@ import { faDiscord, faSquareInstagram, faFacebookF, faXTwitter, faTwitch, faTikt
 export const Footer = () => {
   return (
     <div className='pt-[20vh] relative bg-[#d3d3d3]'>
-        <div className="w-full lg:h-[50vh] bg-black relative pl-[12.5vw]">
+        <div className="w-full lg:h-[50vh] bg-black relative sm:pl-[12.5vw] pl-[5vw]">
 
-            <div className="lg:w-[37.5vw] w-[75vw] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
+            <div className="lg:w-[37.5vw] sm:w-[75vw] w-[90vw] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between p-10 box-border">
                 <div>
                     <p className='text-5xl font-bold'>JOIN THE CLUB.</p> <br />
-                    <p className='text-2xl'>We want to see you in the Gamers&apos; Lounge or the next in-house!</p>
+                    <p className='text-2xl mb-2 sm:mb-0'>We want to see you in the Gamers&apos; Lounge or the next in-house!</p>
                 </div>
-                <button id='footer-btn' className='bg-black w-fit rounded-full text-2xl hover:bg-white hover:text-black duration-200'>Get Started</button>
+                <button id='footer-btn' className='bg-black w-fit rounded-full text-2xl hover:bg-white hover:text-black duration-200 sm:px-10 sm:py-5 px-6 py-3'>Get Started</button>
             </div>
             
-            <div className='relative w-[75vw] flex flex-col justify-center items-center lg:justify-start lg:items-start mt-[-20px]'>
+            <div className='relative sm:w-[75vw] w-[90vw] flex flex-col justify-center items-center lg:justify-start lg:items-start mt-[-20px]'>
                 <h1 className='mb-8 text-2xl'>SFU Gaming and Esports Club</h1>
 
                 <ul className='flex gap-8 mb-10 text-xl'>

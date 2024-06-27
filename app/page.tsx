@@ -161,7 +161,7 @@ export default function Home() {
                 arrows: false,
                 autoplay: true,
                 autoplaySpeed: 4000,
-                dots: true,
+                dots: false,
               }
             }
         ]
@@ -229,18 +229,18 @@ export default function Home() {
                 <SEO></SEO>
 
                 {/* HOME PAGE */}
-                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[15vh] pt-[8vh] sm:gap-[8vh] gap-[4vh]">
+                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[15vh] pt-[12vh] sm:gap-[8vh] gap-[4vh]">
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
-                        <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative">
-                            <p className="text-4xl sm:text-7xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                        <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-4">
+                            <p className="text-4xl sm:text-6xl lg:text-7xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
                             <p className="w-full lg:w-4/5 text-black text-base sm:text-xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
                             <div className="flex gap-8 box-border items-center lg:justify-start justify-center">
-                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-10 lg:py-5 px-4 py-3 text-lg sm:text-3xl font-bold italic sm:mr-10">
+                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-8 lg:py-4 px-6 py-3 text-lg sm:text-3xl font-bold italic sm:mr-8">
                                     <span>
                                         GAME WITH US &nbsp;
                                     </span>
@@ -297,7 +297,7 @@ export default function Home() {
                                 Events
                             </motion.p>
                         </div>
-                        <motion.div className="lg:w-1/4 lg:block hidden items-center justify-end text-3xl text-black"
+                        <motion.div className="lg:w-1/4 hidden lg:flex items-center justify-end text-3xl text-black"
                         animate={{
                             y: [0, -10, 0] // Keyframes for the jump effect
                         }}
@@ -371,10 +371,10 @@ export default function Home() {
 
                                 <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
 
-                                    <h3 className="text-xl text-black">Game in the Gamers&apos; Lounge!</h3>
+                                    <h3 className="sm:text-xl text-lg text-black">Game in the Gamers&apos; Lounge!</h3>
 
 
-                                    <p className="mt-2 text-base text-gray-900">
+                                    <p className="mt-2 sm:text-base text-sm text-gray-900">
                                     Drop into the Gamers&apos; Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
                                     </p>
                                 </div>
@@ -389,10 +389,10 @@ export default function Home() {
 
                                 <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
 
-                                    <h3 className="text-xl text-black">Connect with Like-Minded Gamers!</h3>
+                                    <h3 className="sm:text-xl text-lg text-black">Connect with Like-Minded Gamers!</h3>
 
 
-                                    <p className="mt-2 text-base text-gray-900">
+                                    <p className="mt-2 sm:text-base text-sm text-gray-900">
                                         Forge friendships and bond over shared interests at our gatherings. 
                                         Join us for lively conversations, and the chance to meet others who share your passion for gaming.
                                     </p>
@@ -408,9 +408,9 @@ export default function Home() {
 
                                 <div className="bg-white p-2 sm:p-6 h-[35%] overflow-auto">
 
-                                    <h3 className="text-xl text-black">Engage in Diverse Student-Run Events!</h3>
+                                    <h3 className="sm:text-xl text-lg text-black">Engage in Diverse Student-Run Events!</h3>
 
-                                    <p className="mt-2 text-base text-gray-900">
+                                    <p className="mt-2 sm:text-base text-sm text-gray-900">
                                         Participate in a variety of student-run events, ranging from competitive tournaments and 
                                         casual game nights to community meetups and themed gaming sessions.
                                     </p>
@@ -475,14 +475,14 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="w-[calc(85vw+60px)] h-[60vh] relative flex">
-                        <div className="w-[5vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
+                    <div className="w-[calc(85vw+60px)] h-[60vh] relative flex justify-center">
+                        <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
+                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150 z-[1]"
                             onClick={() => slider?.current?.slickPrev()}
                             icon={faSquareCaretLeft} style={{color: "#ff0000",}}/>
                         </div>
 
-                        <div className="w-[calc(75vw+60px)] h-full box-border relative">
+                        <div className="sm:w-[calc(75vw+60px)] w-[70vw] h-full box-border relative">
                             <Slider ref={slider} {...settings}>
                                 {games.map((game, index) => (
                                     <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
@@ -503,8 +503,8 @@ export default function Home() {
                             </Slider>
                         </div>
 
-                        <div className="w-[5vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
+                        <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
+                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150 z-[1]"
                             onClick={() => slider?.current?.slickNext()}
                             icon={faSquareCaretRight} style={{color: "#ff0000",}}/>
                         </div>
@@ -519,7 +519,7 @@ export default function Home() {
                 <BasicCalendar/>
 
                 <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                    <div className="w-[75vw] h-[35vh] flex relative rounded-xl box-border bg-gradient-to-r from-red-500 from-20% via-black to-black px-[5%] shadow-md">
+                    <div className="sm:w-[75vw] w-[90vw] h-[35vh] flex relative rounded-xl box-border bg-gradient-to-r from-red-500 from-20% via-black to-black px-[5%] shadow-md">
                         <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 text-white">
                             <p className="text-4xl font-bold">BUY A JERSEY!</p>
                             <p className="text-2xl">Club staff and competitive players get 10% off!</p>
@@ -551,10 +551,10 @@ export default function Home() {
                 </div>    
                 
                 <div className="relative w-screen bg-[#d3d3d3] flex justify-center pt-[7.5vh]">
-                    <div className="w-[75vw] flex lg:flex-row flex-col">
+                    <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col">
                         <div className="lg:w-1/2 w-full flex flex-col box-border pr-5 pt-[14px]">
                             <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
-                            <p className="text-3xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
+                            <p className="sm:text-2xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                         </div>
                         <div className="lg:w-1/2 w-full">
                             <Faq
