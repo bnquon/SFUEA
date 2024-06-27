@@ -5,6 +5,7 @@ const config: Config = {
     extend: {
       screens: {
         'sm': '610px',
+        'lg': '1200px',
       },
       inset: {
         '100vh': '100vh'
