@@ -40,13 +40,15 @@ export const BasicCalendar = () => {
       const data = await response.json();
       console.log(data.items);
 
-      const temp: CalendarEvent[] = data.items.map((item: any) => ({
-        title: item.summary,
-        start: new Date(item.start.dateTime || item.start.date),
-        end: new Date(item.end.dateTime || item.end.date),
-      }));
+      if (data.items) {
+        const temp: CalendarEvent[] = data.items.map((item: any) => ({
+          title: item.summary,
+          start: new Date(item.start.dateTime || item.start.date),
+          end: new Date(item.end.dateTime || item.end.date),
+        }));
+        setEvents(temp);
+      }
 
-      setEvents(temp);
     }
 
     fetchData();
