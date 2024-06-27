@@ -92,6 +92,8 @@ const pictureAnimation = {
     animate: (index: number) => ({ scale: 1, opacity: 1, transition: { duration: 0.5, delay: index * 0.1 } }),
 }
 
+// TODO: Make headers their own component
+
 export default function Home() {    
 
     const [headerInView, inView] = useInView({
@@ -473,7 +475,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="w-[calc(85vw+60px)] h-[60vh] relative flex ml-[calc(-5vw-30px)]">
+                    <div className="w-[calc(85vw+60px)] h-[60vh] relative flex">
                         <div className="w-[5vw] h-full items-center flex justify-center">
                             <FontAwesomeIcon className="text-5xl cursor-pointer hover:brightness-75 duration-150"
                             onClick={() => slider?.current?.slickPrev()}
