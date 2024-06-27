@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import { useInView } from 'react-intersection-observer'
@@ -8,6 +9,12 @@ import { faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 const localizer = momentLocalizer(moment);
+
+type CalendarEvent = {
+  title: string;
+  start: Date;
+  end: Date;
+};
 
 const fadeInAnimation = {
   initial: { opacity: 0, y: 100 },
@@ -23,15 +30,34 @@ const fadeInAnimation = {
 
 export const BasicCalendar = () => {
 
+  const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
+
+  const CALENDAR_ID = '33c5491bf7d86bc6d4e92b74d6127f4c5d35f18df8d62da565a7bead6fd9c187@group.calendar.google.com'
+  const API_KEY = 'AIzaSyC8911f4-6R9psQ-l9LPVicrMqeVUg_TNg'
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data.items);
+
+      const temp: CalendarEvent[] = data.items.map((item: any) => ({
+        title: item.summary,
+        start: new Date(item.start.dateTime || item.start.date),
+        end: new Date(item.end.dateTime || item.end.date),
+      }));
+
+      setEvents(temp);
+    }
+
+    fetchData();
+  }, []);
+
   const [headerInView, inView] = useInView({
     threshold: 0.15,
     triggerOnce: true
   })
-
-  type Events = {
-    title: string;
-    picture: string;
-  }
 
   const events = [
     {
@@ -43,24 +69,7 @@ export const BasicCalendar = () => {
 
   return (
     <div className='pt-[7.5vh] pb-[10vh] w-screen flex flex-col justify-center items-start relative bg-[#d3d3d3] pl-[12.5vw]'>
-      {/* <div className="w-[75vw] mb-[80px] text-black flex relative box-border">
-          <div ref={headerInView} className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0">
-              <h1 style={{ 
-                transform: inView ? 'translateY(0)' : 'translateY(100%)',
-                transition: 'transform 0.5s ease'
-                }} className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap overflow-hidden">EVENT SCHEDULE.</h1>
-          </div>
-          <div className="flex-grow flex items-center pl-8">
-              <p className="text-xl font-semibold flex-grow">
-                Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
-              </p>
-              <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
-                  Learn More &nbsp;
-                  <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-              </span>
-          </div>
-      </div>   */}
-
+      
       <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto] grid-rows-2 relative box-border">
             <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                 <h1 
@@ -88,7 +97,7 @@ export const BasicCalendar = () => {
       <div className="w-[75vw] h-[75vh] relative flex box-border mb-20">
         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={2.5} viewport={{ once: true }} className='w-full h-full relative'>
           <Calendar 
-            events={events}
+            events={TestEvents}
             localizer={localizer}
             startAccessor="start"
             endAccessor="end"
