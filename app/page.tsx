@@ -92,7 +92,7 @@ const pictureAnimation = {
     animate: (index: number) => ({ scale: 1, opacity: 1, transition: { duration: 0.5, delay: index * 0.1 } }),
 }
 
-// TODO: Make headers their own component
+// TODO: Make headers their own component, change the gamers lounge card text size, fix jersey card
 
 export default function Home() {    
 
@@ -253,45 +253,75 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="flex lg:w-[55%] w-[100%] box-border gap-4 justify-center relative">
+                        <div className="flex w-full lg:w-[55%] sm:w-full box-border gap-4 justify-center relative">
                             {/* Right Column */}
-                            <div className="lg:w-[60%] w-1/2 h-full flex flex-col relative">    
+                            <div className="lg:w-[60%] sm:w-[50%] w-full h-full flex flex-col relative">    
                                 <div className="w-full h-full flex flex-col relative box-border gap-4">
-                                    <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <motion.div 
+                                        variants={pictureAnimation} 
+                                        initial='initial' 
+                                        whileInView='animate' 
+                                        custom={1} 
+                                        viewport={{ once: true }} 
+                                        className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg"
+                                    >
                                         <img src="/test-min.JPG" className="h-full w-full object-cover" alt="" />
                                     </motion.div>
-                                    {/* <div className="h-1/5 bg-black rounded-xl"></div> */}
-                                    <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <motion.div 
+                                        variants={pictureAnimation} 
+                                        initial='initial' 
+                                        whileInView='animate' 
+                                        custom={3} 
+                                        viewport={{ once: true }} 
+                                        className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg"
+                                    >
                                         <img src="/test2.JPG" className="h-full w-full object-cover" alt="" />
                                     </motion.div>
                                 </div>
                             </div>
                             
                             {/* Left Column */}
-                            <div className="lg:w-[40%] w-1/2 h-full flex justify-center flex-col relative box-border gap-4">
-                                <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/test3-min.JPG" className="h-full w-full object-cover" alt="" /></motion.div>
-                    
-                                <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"><img src="/UNUSEDGOODPIC.JPG" className="h-full w-full object-cover" alt="" /></motion.div>
+                            <div className="lg:w-[40%] sm:w-[50%] w-0 lg:flex sm:flex flex-col hidden relative box-border gap-4">
+                                <motion.div 
+                                    variants={pictureAnimation} 
+                                    initial='initial' 
+                                    whileInView='animate' 
+                                    custom={5} 
+                                    viewport={{ once: true }} 
+                                    className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"
+                                >
+                                    <img src="/test3-min.JPG" className="h-full w-full object-cover" alt="" />
+                                </motion.div>
+                                <motion.div 
+                                    variants={pictureAnimation} 
+                                    initial='initial' 
+                                    whileInView='animate' 
+                                    custom={7} 
+                                    viewport={{ once: true }} 
+                                    className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"
+                                >
+                                    <img src="/UNUSEDGOODPIC.JPG" className="h-full w-full object-cover" alt="" />
+                                </motion.div>
                             </div>
-
                         </div>
+
 
                     </div>
 
                     <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-start lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start sm:justify-center justify-start lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
                             </motion.p>
                         </div>
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start sm:justify-center justify-center lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start sm:justify-center justify-center lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                                 Events
@@ -313,7 +343,7 @@ export default function Home() {
                 </div>
 
                 {/* ABOUT US PAGE */}
-                <div className="lg:pt-[8vh] sm:pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[30vh] pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
                     {/* <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto,1fr] grid-rows-2 relative box-border">
                         <div ref={headerInView2} className="col-span-1 row-span-1 duration-500 lg:w-fit w-fit lg:pr-8 pr-0 flex items-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">

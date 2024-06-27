@@ -127,7 +127,9 @@ export const BasicCalendar = () => {
         </motion.div>
       </div>
 
-      <p className='text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 sm:mb-12 mb-4 sm:pl-[12.5vw] pl-[5vw]'>RECENT EVENTS.</p>
+      <div className="sm:w-[75vw] w-[90vw] relative box-border">
+        <p className='sm:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 sm:mb-12 mb-4'>RECENT EVENTS.</p>
+      </div>
 
       <div className='sm:w-[75vw] w-[90vw] lg:h-[25vh] h-[75vh] relative flex lg:flex-row flex-col gap-5'>
         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
