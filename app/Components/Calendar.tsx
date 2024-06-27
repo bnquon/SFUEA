@@ -32,9 +32,7 @@ export const BasicCalendar = () => {
 
   const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 
-  const CALENDAR_ID = '33c5491bf7d86bc6d4e92b74d6127f4c5d35f18df8d62da565a7bead6fd9c187@group.calendar.google.com'
-  const API_KEY = 'AIzaSyC8911f4-6R9psQ-l9LPVicrMqeVUg_TNg'
-  const url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_CALENDAR_ID}/events?key=${process.env.NEXT_PUBLIC_API_KEY}`
 
   useEffect(() => {
     async function fetchData() {
