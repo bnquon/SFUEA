@@ -13,6 +13,7 @@ import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 import Faq from "react-faq-component";
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import { Hamburger } from "./Components/Hamburger";
 
 import SEO from "./Components/seo";
 
@@ -594,6 +595,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+                <Hamburger/>
 
                 <Footer/>
 

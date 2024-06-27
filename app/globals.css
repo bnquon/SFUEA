@@ -206,6 +206,12 @@ body {
   color: black !important;
 }
 
+.rbc-agenda-content,
+.rbc-agenda-table {
+  background: #e5e5e5 !important;
+  color: black !important;
+}
+
 #event-card:hover #event-info {
   transform: translateY(0);
 }
