@@ -11,7 +11,7 @@ export const Footer = () => {
             <div className="lg:w-[37.5vw] sm:w-[75vw] w-[90vw] relative bg-red-500 rounded-3xl -translate-y-1/3 flex flex-col justify-between sm:p-10 py-6 px-3 box-border">
                 <div>
                     <p className='sm:text-5xl text-3xl font-bold'>JOIN THE CLUB.</p> <br />
-                    <p className='sm:text-2xl text-lg mb-4 sm:mb-0'>We want to see you in the Gamers&apos; Lounge or the next in-house!</p>
+                    <p className='sm:text-2xl text-xl mb-4'>We want to see you in the Gamers&apos; Lounge or the next in-house!</p>
                 </div>
                 <button id='footer-btn' className='bg-black w-fit rounded-full sm:text-2xl text-lg hover:bg-white hover:text-black duration-200 sm:px-10 sm:py-5 px-6 py-3'>Get Started</button>
             </div>
