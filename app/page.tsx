@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
-import { motion, useMotionValue, useTransform, animate, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faUsers, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
@@ -150,6 +150,17 @@ export default function Home() {
                 autoplaySpeed: 4000,
                 dots: true,
               }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                dots: true,
+              }
             }
         ]
     };
@@ -210,59 +221,31 @@ export default function Home() {
         }
     ];
 
-
-	// NEED ANOTHER FIXED PAGE ABOVE THE GAMING TEAM PAGE TO MAKE IT SCROLL UP ON REVEAL AND HAVE THE MASK IN A FIXED CENTER POSITION
-
     return (
         <>
             <main className="relative">
                 <SEO></SEO>
-                {/* <AnimatePresence>
-                    {isVisible && (
-                        <motion.div
-                        className="w-screen h-screen bg-black z-[100] flex justify-center items-center fixed top-0 left-0"
-                        initial={{ y: 0 }}
-                        animate={{ y: [0, -1500] }}
-                        exit={{ y: -1500 }}
-                        transition={{
-                            times: [0.5, 0.75],
-                            duration: 2, // Total duration
-                            ease: "easeInOut"
-                        }}
-                        >
-                        <Image
-                            className="z-[2]"
-                            src={'/real-logo.png'}
-                            alt="ex1"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '20%', height: 'auto' }}
-                        />
-                        </motion.div>
-                    )}
-                </AnimatePresence> */}
 
                 {/* HOME PAGE */}
-                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border pt-[15vh] gap-[8vh]">
+                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[15vh] pt-[8vh] sm:gap-[8vh] gap-[4vh]">
 
-                    <div className="w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
+                    <div className="w-[90vw] sm:w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative">
-                            <p className="text-7xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
-                            <p className="lg:w-4/5 w-full text-black text-xl font-medium mb-8">
+                            <p className="text-4xl sm:text-7xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                            <p className="w-full lg:w-4/5 text-black text-base sm:text-xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
                             <div className="flex gap-8 box-border items-center lg:justify-start justify-center">
-                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit text-3xl font-bold italic mr-10">
+                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-10 lg:py-5 px-4 py-3 text-lg sm:text-3xl font-bold italic sm:mr-10">
                                     <span>
                                         GAME WITH US &nbsp;
                                     </span>
                                 </motion.button>
                                 <div className="flex flex-col text-black">
-                                    <p className="text-3xl font-bold">3800+</p>
-                                    <p className="text-xl font-light">Members</p>
+                                    <p className="sm:text-3xl text-2xl font-bold">3800+</p>
+                                    <p className="sm:text-xl text-lg font-light">Members</p>
                                 </div>
 
                             </div>
@@ -293,26 +276,26 @@ export default function Home() {
 
                     </div>
 
-                    <div className="w-[75vw] h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-start lg:text-3xl text-2xl text-black">
-                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex items-center">
+                    <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
+                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-start lg:text-3xl sm:text-2xl text-base text-black">
+                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
                             </motion.p>
                         </div>
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-center lg:text-3xl text-2xl text-black">
-                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex items-center">
+                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-end lg:text-3xl text-2xl text-black">
-                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex items-center">
+                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
-                                In-Person Events
+                                Events
                             </motion.p>
                         </div>
-                        <motion.div className="lg:w-1/4 w-0 flex items-center justify-end text-3xl text-black"
+                        <motion.div className="lg:w-1/4 lg:block hidden items-center justify-end text-3xl text-black"
                         animate={{
                             y: [0, -10, 0] // Keyframes for the jump effect
                         }}
@@ -328,7 +311,7 @@ export default function Home() {
                 </div>
 
                 {/* ABOUT US PAGE */}
-                <div className="lg:pt-[8vh] pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
                     {/* <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto,1fr] grid-rows-2 relative box-border">
                         <div ref={headerInView2} className="col-span-1 row-span-1 duration-500 lg:w-fit w-fit lg:pr-8 pr-0 flex items-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
@@ -351,24 +334,24 @@ export default function Home() {
                         </div>
                     </div> */}
 
-                    <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto] grid-rows-2 relative box-border">
+                    <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
                         <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                             <h1 
                             style={{ 
                             transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
                             transition: 'transform 0.5s ease'
                             }}
-                            className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
+                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
                                 WHO WE ARE.
                             </h1>
                         </div>
-                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start">
-                            <p className="text-xl font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                            <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
                                 The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                             </p>
                         </div>
-                        <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start">
-                            <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                        <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
+                            <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
                                 Learn More &nbsp;
                                 <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                             </span>
@@ -377,7 +360,7 @@ export default function Home() {
 
                     
 
-                    <div className="w-[75vw] lg:h-[50vh] flex lg:flex-row flex-col  justify-center gap-6 relative">
+                    <div className="sm:w-[75vw] w-[90vw] lg:h-[50vh] flex lg:flex-row flex-col  justify-center gap-6 relative">
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full lg:w-1/3 relative">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                                 <div className="relative w-full h-[65%]">
@@ -437,73 +420,58 @@ export default function Home() {
 
                 {/* GRID CONTAINER */}
 
-                <div className="w-screen pt-[7.5vh] pb-[5vh] bg-[#d3d3d3] relative flex flex-col justify-center items-start pl-[12.5vw]">
-
-                    {/* <div className="w-[75vw] mb-[60px] text-black flex relative box-border">
-                        <div ref={headerInView2} className="w-fit pr-8 flex items-center border-r-black border-r-2 flex-shrink-0 overflow-hidden">
-                            <h1 style={{ 
-                                transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
-                                transition: 'transform 0.5s ease'
-                                }} className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">OUR TEAMS.</h1>
-                        </div>
-                        <div className="flex-grow flex items-center justify-between pl-8">
-                            <p className="text-xl font-semibold flex-grow">
-                                Browse the games we have competitive teams, executives, or directors for!
-                                The executives and directors run in-houses and events for their desired game to foster the community for each one!
-                            </p>
-                            <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black ml-4'>
-                                Learn More &nbsp;
-                                <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                            </span>
-                        </div>
-                    </div>   */}
-
-                    {/* <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto,1fr] grid-rows-2 relative box-border">
-                        <div ref={headerInView} className="col-span-1 row-span-1 duration-500 lg:w-fit w-fit lg:pr-8 pr-0 flex items-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
                             <h1 
-                                style={{ transform: inView ? 'translateY(0)' : 'translateY(100%)', transition: 'transform 0.5s ease' }}  
-                                className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
-                                OUR TEAMS.
+                            style={{ 
+                            transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
+                            transition: 'transform 0.5s ease'
+                            }}
+                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
+                                WHO WE ARE.
                             </h1>
                         </div>
-                        <div className="col-span-2 row-start-2 flex flex-grow overflow-hidden items-center justify-start">
-                            <p className="text-xl font-semibold box-border lg:pl-8 lg:pr-4 px-0 pt-2">
-                            Browse the games we have competitive teams, executives, or directors for!
-                            The executives and directors run in-houses and events for their desired game to foster the community for each one!
+                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                            <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                                The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                             </p>
                         </div>
-                        <div className="col-start-2 ml-auto w-fit flex flex-grow flex-shrink-0 items-center justify-start lg:row-start-1">
-                            <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 items-center text-white duration-200 cursor-pointer bg-black lg:ml-4 ml-0'>
+                        <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
+                            <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
                                 Learn More &nbsp;
                                 <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                             </span>
                         </div>
                     </div> */}
+                <div className="lg:pt-[8vh] sm:pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center  bg-[#d3d3d3]">
 
-            <div className="w-[75vw] mb-[60px] text-black lg:flex lg:flex-row grid grid-cols-[auto] grid-rows-2 relative box-border">
-                <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
-                    <h1 
-                    style={{ 
-                    transform: inView ? 'translateY(0)' : 'translateY(100%)',
-                    transition: 'transform 0.5s ease'
-                    }}
-                    className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
-                        OUR TEAMS.
-                    </h1>
-                </div>
-                <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start">
-                    <p className="text-xl font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
-                        Browse the games we have competitive teams, executives, or directors for!
-                        The executives and directors run in-houses and events for their desired game!
-                    </p>
-                </div>
-                <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start">
-                    <span className='h-fit text-lg p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                        Learn More &nbsp;
-                        <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                    </span>
-                </div>
-            </div>
+                    <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+
+                        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+                            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center justify-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                                <h1 
+                                style={{ 
+                                transform: inView ? 'translateY(0)' : 'translateY(100%)',
+                                transition: 'transform 0.5s ease'
+                                }}
+                                className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
+                                    OUR TEAMS.
+                                </h1>
+                            </div>
+                            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                                <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                                    Browse the games we have competitive teams, executives, or directors for!
+                                    The executives and directors run in-houses and events for their desired game!
+                                </p>
+                            </div>
+                            <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
+                                <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                                    Learn More &nbsp;
+                                    <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="w-[calc(85vw+60px)] h-[60vh] relative flex ml-[calc(-5vw-30px)]">
                         <div className="w-[5vw] h-full items-center flex justify-center">
@@ -516,7 +484,7 @@ export default function Home() {
                             <Slider ref={slider} {...settings}>
                                 {games.map((game, index) => (
                                     <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
-                                        <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600">{game.title}</p>
+                                        <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full text-4xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
                                         <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                         <Image 
                                             id="game-pic"
@@ -540,7 +508,7 @@ export default function Home() {
                         </div>
                     </div>
 
-
+                    
                 </div>
                 
                 

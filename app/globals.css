@@ -35,7 +35,6 @@ body {
 
 #btn-grad {
   background-image: linear-gradient(to right, #e52d27 0%, #fa3a41  51%, #e52d27  100%);
-  padding: 20px 40px;
   text-align: center;
   text-transform: uppercase;
   /* transition: 0.25s; */
