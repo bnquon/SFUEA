@@ -7,7 +7,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
+import { faCaretDown, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { useState } from 'react';
 
 // Dynamic import for StickyHeadroom with SSR disabled
 const StickyHeadroom = dynamic(() => import('@integreat-app/react-sticky-headroom'), { ssr: false });
@@ -23,13 +24,15 @@ const links = [
 function Navbar() {
     const pathname = usePathname();
 
+    const [open, setOpen] = useState(false);
+
     return (
         <StickyHeadroom scrollHeight={100} pinStart={0}> 
-            <div className='w-screen fixed z-50 flex bg-black sm:px-[12.5vw] px-[5vw]'>
-                <div className='w-1/4 flex justify-start items-center py-[0.5vh] lg:py-[1.5vh]'>
+            <div className='w-screen fixed z-50 flex justify-between bg-black sm:px-[12.5vw] px-[5vw]'>
+                <div className='w-1/4 flex justify-start items-center py-[1vh] lg:py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
-                <div id="pageSwitcher" className="w-[60vw] flex justify-center items-center relative">
+                <div id="pageSwitcher" className="w-[60vw] sm:flex hidden justify-center items-center relative">
                         {links.map((link) => {
                             if (link.name !== 'Teams') {
                                 return (
@@ -73,7 +76,26 @@ function Navbar() {
                             );
                         })}
                 </div>
-                <div className="w-1/4 flex justify-end items-center">
+
+                <div className='sm:hidden flex items-center relative'>
+                    <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl' icon={faBars}/>
+                    <div className={`w-[100vw] h-[100vh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+                        <div onClick={() => setOpen(!open)} className={`flex-grow h-full bg-black/30`}></div>
+                        <div className="w-[275px] h-full flex flex-col bg-black px-8">
+                            <div className='w-full h-[8vh] flex items-center box-border'>
+                                <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-2xl' icon={faXmark}/>
+                            </div>
+                            {links.map((link) => (
+                                <div key={link.name} className='w-full h-[8vh] bg-black flex items-center box-border text-lg font-bold border-b-2 border-gray-800 hover:bg-red-500'>
+                                    <Link href={link.href}>{link.name}</Link>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="w-1/4 sm:flex hidden justify-end items-center">
                     <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='lg:px-6 lg:py-3 px-2 py-2 bg-red-500 max-w-fit rounded-xl text-sm lg:text-xl font-bold'>JOIN NOW</motion.button>
                 </div>
             </div>

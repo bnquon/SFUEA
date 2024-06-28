@@ -16,7 +16,7 @@ type CalendarEvent = {
 
 export default function Home() {
 
-	const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
+const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_CALENDAR_ID}/events?key=${process.env.NEXT_PUBLIC_API_KEY}`
 
