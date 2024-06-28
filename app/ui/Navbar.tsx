@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCaretDown, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faCaretDown,faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 import { useState } from 'react';
 
 // Dynamic import for StickyHeadroom with SSR disabled
@@ -25,6 +25,23 @@ function Navbar() {
     const pathname = usePathname();
 
     const [open, setOpen] = useState(false);
+    const [teamsOpen, setTeamsOpen] = useState(false);
+    const [expandedChar, setExpandedChar] = useState('+');
+
+    const handleOutsideClick = () => {
+        setOpen(false);
+        setTeamsOpen(false);
+        setExpandedChar('+');
+    }
+
+    const handleTeamsClick = () => {
+        setExpandedChar(expandedChar === '+' ? '-' : '+');
+        if (expandedChar === '+') {
+            setTeamsOpen(true);
+        } else {
+            setTeamsOpen(false);
+        }
+    }
 
     return (
         <StickyHeadroom scrollHeight={100} pinStart={0}> 
@@ -80,15 +97,19 @@ function Navbar() {
                 <div className='sm:hidden flex items-center relative'>
                     <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl' icon={faBars}/>
                     <div className={`w-[100vw] h-[100vh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
-                        <div onClick={() => setOpen(!open)} className={`flex-grow h-full bg-black/30`}></div>
+                        <div onClick={() => handleOutsideClick()} className={`flex-grow h-full bg-black/30`}></div>
                         <div className="w-[275px] h-full flex flex-col bg-black px-8">
                             <div className='w-full h-[8vh] flex items-center box-border'>
-                                <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-2xl' icon={faXmark}/>
+                                <FontAwesomeIcon onClick={() => handleOutsideClick()} className='text-2xl' icon={faXmark}/>
                             </div>
                             {links.map((link) => (
-                                <div key={link.name} className='w-full h-[8vh] bg-black flex items-center box-border text-lg font-bold border-b-2 border-gray-800 hover:bg-red-500'>
-                                    <Link href={link.href}>{link.name}</Link>
+                                <div key={link.name} className='w-full h-[8vh] bg-black flex items-center justify-between box-border text-lg font-bold border-b-2 border-gray-800'>
+                                    <Link className='text-red-500' href={link.href}>{link.name}</Link>
+                                    {link.name === 'Teams' && 
+                                        <div onClick={() => handleTeamsClick()} className='text-2xl text-red-500'>{expandedChar}</div>
+                                    }  
                                 </div>
+                                
                             ))}
                         </div>
                     </div>
