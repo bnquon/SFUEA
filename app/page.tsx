@@ -85,7 +85,7 @@ const pictureAnimation = {
 export default function Home() {    
 
     const [windowWidth, setWindowWidth] = useState(0);
-    
+
     useEffect(() => {
         setWindowWidth(window.innerWidth);
     }, [])
@@ -100,12 +100,12 @@ export default function Home() {
     }, []);
 
     const getResponsiveStyles = () => {
-        if (windowWidth >= 1024) { // lg breakpoint
+        if (windowWidth >= 1200) { // lg breakpoint
           return {
             rowContentTextSize: '16px',
             rowTitleTextSize: '24px',
           };
-        } else if (windowWidth >= 640) { // sm breakpoint
+        } else if (windowWidth >= 610) { // sm breakpoint
           return {
             rowContentTextSize: '14px',
             rowTitleTextSize: '20px',
@@ -494,7 +494,7 @@ export default function Home() {
 
                     <div className="w-[calc(85vw+60px)] h-[60vh] relative flex justify-center">
                         <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150 z-[1]"
+                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150"
                             onClick={() => slider?.current?.slickPrev()}
                             icon={faSquareCaretLeft} style={{color: "#ff0000",}}/>
                         </div>
@@ -521,7 +521,7 @@ export default function Home() {
                         </div>
 
                         <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150 z-[1]"
+                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150"
                             onClick={() => slider?.current?.slickNext()}
                             icon={faSquareCaretRight} style={{color: "#ff0000",}}/>
                         </div>
