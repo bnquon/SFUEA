@@ -82,7 +82,7 @@ const config = {
 
 export default function Home() {
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState(0);
 
     useEffect(() => {
         const handleResize = () => {
