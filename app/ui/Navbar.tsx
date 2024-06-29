@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown,faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Dynamic import for StickyHeadroom with SSR disabled
 const StickyHeadroom = dynamic(() => import('@integreat-app/react-sticky-headroom'), { ssr: false });
@@ -22,19 +22,22 @@ const links = [
 ];
 
 function Navbar() {
+
     const pathname = usePathname();
 
     const [open, setOpen] = useState(false);
     const [teamsOpen, setTeamsOpen] = useState(false);
     const [expandedChar, setExpandedChar] = useState('+');
 
-    // useEffect(() => {
-    //     if (open) {
-    //         document.getElementById('mainPage').style.overflowY = 'hidden';
-    //     } else {
-    //         document.getElementById('mainPage').style.overflowY = 'auto';
-    //     }
-    // }, [open]);
+    useEffect(() => {
+        if (open) {
+            document.documentElement.classList.add('side-nav-open');
+        }
+
+        return () => {
+            document.documentElement.classList.remove('side-nav-open');
+        }
+    }, [open]);
     
     const handleCloseClick = () => {
         setOpen(false);
@@ -104,10 +107,10 @@ function Navbar() {
                         })}
                 </div>
 
-                <div className='sm:hidden flex items-center relative'>
+                <div id='mobile-nav' className='sm:hidden flex items-center relative z-10'>
                     <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl' icon={faBars}/>
                         
-                        <div className={`w-[100vw] h-[100vh] absolute top-0 right-[-5vw] flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+                        <div className={`w-[100vw] h-[100vh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
                             <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
                             <div className="w-[275px] h-full flex flex-col bg-black px-8 overflow-y-auto">
                                 <div className='w-full h-[8vh] flex items-center box-border flex-shrink-0'>
@@ -118,14 +121,14 @@ function Navbar() {
                                 if (link.name !== 'Teams') {
                                     return (
                                         <div key={link.name} className='w-full h-[8vh] bg-black flex items-center justify-between box-border text-lg font-bold border-b-2 border-gray-800 flex-shrink-0'>
-                                            <Link className='text-red-500' href={link.href}>{link.name}</Link>
+                                            <Link onClick={() => handleCloseClick()} className='text-red-500' href={link.href}>{link.name}</Link>
                                         </div>
                                     )    
                                 }
                                 return (
                                     <div key={link.name} className='w-full flex flex-col items-center box-border text-lg font-bold'>
                                         <div className='w-full h-[8vh] flex items-center justify-between flex-shrink-0 border-b-2 border-gray-800'>
-                                            <Link className='text-red-500' href={link.href}>{link.name}</Link>
+                                            <Link onClick={() => handleCloseClick()} className='text-red-500' href={link.href}>{link.name}</Link>
                                             <div onClick={() => handleTeamsClick()} className='text-2xl text-red-500'>{expandedChar}</div>
                                         </div>
 
@@ -156,3 +159,7 @@ function Navbar() {
 }
 
 export default Navbar;
+function componentDidMount() {
+    throw new Error('Function not implemented.');
+}
+
