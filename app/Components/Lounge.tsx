@@ -81,7 +81,7 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Full Specs &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
@@ -95,7 +95,7 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Video Guide &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
@@ -111,7 +111,7 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Full Schedule &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
@@ -125,7 +125,7 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Read More &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
