@@ -271,7 +271,7 @@ export default function Home() {
                 <SEO></SEO>
 
                 {/* HOME PAGE */}
-                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[15vh] pt-[12vh] sm:gap-[8vh] gap-[4vh]">
+                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] pt-[18vh] sm:gap-[8vh] gap-[4vh]">
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
@@ -351,7 +351,7 @@ export default function Home() {
                     </div>
 
                     <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="w-1/3 flex items-center lg:justify-start sm:justify-center justify-start lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-start justify-center lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
@@ -372,26 +372,6 @@ export default function Home() {
                     </div>
 
                 </div>
-
-                {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-                    <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center sm:justify-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
-                        <h1 className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
-                            GAMERS&apos; LOUNGE
-                        </h1>
-                    </div>
-                    <div className="col-span-1 row-start-2 xl:flex xl:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                        <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
-                        Browse the games we have competitive teams, executives, or directors for!
-                        The executives and directors run in-houses and events for their desired game to foster the community for each one!
-                        </p>
-                    </div>
-                    <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                        <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                            Learn More &nbsp;
-                            <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                        </span>
-                    </div>
-                </div> */}
 
                 {/* ABOUT US PAGE */}
                 <div className="lg:pt-[8vh] sm:pt-[70vh] pt-[60vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
@@ -422,7 +402,7 @@ export default function Home() {
 
                     
 
-                    <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col justify-center gap-6 relative">
+                    <div className="sm:w-[75vw] w-[90vw] flex sm:flex-row flex-col justify-center gap-6 relative">
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full lg:w-1/3 relative">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                                 <div className="relative w-full lg:h-[35vh] h-[25vh]">
@@ -482,7 +462,7 @@ export default function Home() {
 
                 {/* GRID CONTAINER */}
 
-                <div className="lg:pt-[8vh] sm:pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[0vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
                     <div className="">
 
@@ -586,7 +566,7 @@ export default function Home() {
                     </div>
                 </div>    
                 
-                <div className="relative w-screen bg-[#d3d3d3] flex justify-center pt-[7.5vh]">
+                <div className="relative w-screen bg-[#d3d3d3] flex justify-center sm:pt-[5vh] pt-[4vh]">
                     <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col">
                         <div className="lg:w-1/2 w-full flex flex-col box-border pr-5 pt-[14px]">
                             <p className="text-5xl font-bold text-red-500">FAQ</p> <br />

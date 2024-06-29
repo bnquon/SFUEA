@@ -44,7 +44,7 @@ export const Lounge = () => {
     <div className='w-full relative sm:pl-[12.5vw] pl-[5vw] bg-[#d3d3d3] flex flex-col pt-[7.5vh] pb-[7.5vh]'>
     
         <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center sm:justify-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
+            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
                 <h1 className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                     GAMERS&apos; LOUNGE
                 </h1>
@@ -73,7 +73,7 @@ export const Lounge = () => {
                 <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full h-full flex flex-col gap-4">
 
                     <div className='w-full h-1/2 flex sm:flex-row flex-col gap-4'>
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 flex flex-col sm:gap-0 gap-2 justify-between'>
+                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 flex flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='sm:text-2xl text-xl' icon={faComputer}/>
                                 <p className='sm:text-2xl text-xl font-semibold'>&nbsp;DEVICES</p>
@@ -81,13 +81,13 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md lg:py-2 lg:px-2 py-1 px-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Full Specs &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
                         </div>
 
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 sm:flex hidden flex-col sm:gap-0 gap-2 justify-between'>
+                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 sm:flex hidden flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='sm:text-2xl text-xl' icon={faLocationDot}/>
                                 <p className='sm:text-2xl text-xl font-semibold'>&nbsp;LOCATION</p>
@@ -95,7 +95,7 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md lg:py-2 lg:px-2 py-1 px-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Video Guide &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
@@ -103,7 +103,7 @@ export const Lounge = () => {
                     </div>
                     
                     <div className='w-full h-1/2 flex sm:flex-row flex-col gap-4'>
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 sm:flex hidden flex-col sm:gap-0 gap-2 justify-between'>
+                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 sm:flex hidden flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='sm:text-2xl text-xl' icon={faCalendarDays}/>
                                 <p className='sm:text-2xl text-xl font-semibold'>&nbsp;SCHEDULE</p>
@@ -111,13 +111,13 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md lg:py-2 lg:px-2 py-1 px-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Full Schedule &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>
                         </div>
 
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 flex flex-col sm:gap-0 gap-2 justify-between'>
+                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 flex flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
                             <span className='flex items-center'>
                                 <FontAwesomeIcon className='sm:text-2xl text-xl' icon={faCircleExclamation}/>
                                 <p className='sm:text-2xl text-xl font-semibold'>&nbsp;NOTES</p>
@@ -125,7 +125,7 @@ export const Lounge = () => {
                             <p className='sm:text-base text-sm'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md p-1 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
+                            <span className='w-fit mt-2 sm:text-lg text-md lg:py-2 lg:px-2 py-1 px-2 rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
                                 Read More &nbsp;
                                 <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                             </span>

@@ -67,7 +67,7 @@ export const BasicCalendar = () => {
   ];
 
   return (
-    <div className='pt-[7.5vh] pb-[10vh] w-screen flex flex-col justify-center items-center relative bg-[#d3d3d3]'>
+    <div className='sm:pt-[5vh] sm:pb-[5vh] pb-[4vh] w-screen flex flex-col justify-center items-center relative bg-[#d3d3d3]'>
     
         {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
           <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-[90vw] lg:pr-8 pr-0 flex items-center sm:text-left text-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
