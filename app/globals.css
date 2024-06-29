@@ -227,7 +227,7 @@ body {
 } */
 
 #event-card:hover img {
-  filter: brightness(0.75);
+  filter: brightness(0.65);
 }
 
 .slick-slide > div {
