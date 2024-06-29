@@ -97,10 +97,10 @@ export default function Home() {
       		</div>
 
             <div className="w-screen bg-[#d3d3d3] flex justify-center items-center pb-[8vh]">
-                <div className="sm:w-[75vw] w-[90vw] mb-[8vh]">
+                <div className="sm:w-[75vw] w-[90vw]">
 					<span className="relative flex justify-center sm:text-left text-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-5xl font-extrabold">Our Teams</span>
@@ -111,14 +111,14 @@ export default function Home() {
 			<div className="w-screen bg-[#d3d3d3] flex flex-col sm:pl-[12.5vw] pl-[5vw]">
                 {games.map((game, gameIndex) => (
                     <div className="w-screen" key={gameIndex}>
-                        <div className="sm:w-[75vw] w-[90vw] sm:h-[20vh] h-[15vh] rounded-xl overflow-hidden relative flex justify-center items-center sm:mb-[6vh] mb-[4vh]" style={{marginTop: gameIndex === 0 ? '0': '12vh'}}>
+                        <div className="sm:w-[75vw] w-[90vw] sm:h-[20vh] h-[15vh] rounded-xl overflow-hidden relative flex justify-center items-center sm:mb-[6vh] mb-[4vh]">
                             <Image className="brightness-75" src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                            <p id="game-title" className="absolute text-white sm:text-5xl text-4xl font-bold">{game.title}</p>
+                            <p id="game-title" className="absolute text-white sm:text-5xl text-4xl font-bold text-center px-2">{game.title}</p>
                         </div>
                         
-                        <div className="sm:w-[75vw] w-[90vw] grid grid-flow-row lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 relative box-border sm:gap-8 gap-2">
+                        <div className="sm:w-[75vw] w-[90vw] grid grid-flow-row lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 relative box-border sm:gap-8 gap-2 sm:mb-[6vh] mb-[4vh]">
                             {people.map((person, personIndex) => (
-                                <div key={personIndex} className="h-[15vh] flex flex-col justify-center text-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md">
+                                <div key={personIndex} className="h-[15vh] flex flex-col justify-center text-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md px-2">
                                     <p className="sm:text-3xl text-xl font-bold">{person.name}</p>
                                     <p className="sm:text-xl text-lg leading-5 text-red-500 font-semibold">{person.role}</p>
                                 </div>

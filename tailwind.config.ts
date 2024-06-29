@@ -6,6 +6,7 @@ const config: Config = {
       screens: {
         'sm': '610px',
         'lg': '1200px',
+        'xl': '1500px',
       },
       inset: {
         '100vh': '100vh'

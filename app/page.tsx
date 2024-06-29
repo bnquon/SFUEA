@@ -340,41 +340,30 @@ export default function Home() {
                     </div>
 
                     <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start sm:justify-center justify-start lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center lg:justify-start sm:justify-center justify-start lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
                             </motion.p>
                         </div>
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start sm:justify-center justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center justify-center lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="lg:w-1/4 w-1/3 flex items-center lg:justify-start sm:justify-center justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center justify-end lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                                 Events
                             </motion.p>
                         </div>
-                        <motion.div className="lg:w-1/4 hidden lg:flex items-center justify-end text-3xl text-black"
-                        animate={{
-                            y: [0, -10, 0] // Keyframes for the jump effect
-                        }}
-                        transition={{
-                            duration: 1.5, // Duration for one cycle of the animation
-                            repeat: Infinity, // Repeat the animation infinitely
-                            repeatType: 'loop', // Loop the animation
-                        }}>
-                            <FontAwesomeIcon className="text-black duration-200" style={{ opacity: atTop? '1': '0'}} icon={faAnglesDown}/>
-                        </motion.div>
                     </div>
 
                 </div>
 
                 {/* ABOUT US PAGE */}
-                <div className="lg:pt-[8vh] sm:pt-[35vh] pt-[30vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[35vh] pt-[60vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
                     <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
                         <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
@@ -383,7 +372,7 @@ export default function Home() {
                             transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
                             transition: 'transform 0.5s ease'
                             }}
-                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
+                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                                 WHO WE ARE.
                             </h1>
                         </div>

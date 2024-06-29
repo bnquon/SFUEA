@@ -114,7 +114,7 @@ function Navbar() {
                             <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
                             <div className="w-[250px] h-full flex flex-col bg-black px-8 overflow-y-auto">
                                 <div className='w-full h-[8vh] flex items-center box-border flex-shrink-0'>
-                                    <FontAwesomeIcon onClick={() => handleCloseClick()} className='text-2xl' icon={faXmark}/>
+                                    <FontAwesomeIcon onClick={() => handleCloseClick()} className='text-xl text-red-500' icon={faXmark}/>
                                 </div>
                                 
                                 {links.map((link) => {

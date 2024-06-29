@@ -58,7 +58,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 				<div className="sm:w-[75vw] w-[90vw] mb-[8vh]">
 					<span className="relative flex justify-center sm:text-left text-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-2 text-red-500 text-5xl font-extrabold">Schedule</span>

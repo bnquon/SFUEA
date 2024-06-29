@@ -63,14 +63,14 @@ export const Lounge = () => {
             </div>
         </div> */}
     
-        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center sm:justify-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
                 <h1 className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                     GAMERS&apos; LOUNGE
                 </h1>
             </div>
-            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+            <div className="col-span-1 row-start-2 xl:flex xl:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
                 Browse the games we have competitive teams, executives, or directors for!
                 The executives and directors run in-houses and events for their desired game to foster the community for each one!
                 </p>
@@ -85,11 +85,11 @@ export const Lounge = () => {
 
         <div className='sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col relative box-border gap-4'>
 
-            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md lg:w-[60%] lg:h-[70vh] w-full h-[40vh] overflow-hidden shadow-lg">
+            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md lg:w-[50%] lg:h-[70vh] w-full h-[40vh] overflow-hidden shadow-lg">
                 <img src="/gamerslounge3.jpg" className='object-cover w-full h-full' alt="Gamers Lounge" />
             </motion.div>
 
-            <div className='lg:w-[40%] lg:h-[70vh] w-full relative flex box-border'>
+            <div className='lg:w-[50%] lg:h-[70vh] w-full relative flex box-border'>
                 <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full h-full flex flex-col gap-4">
 
                     <div className='w-full h-1/2 flex sm:flex-row flex-col gap-4'>

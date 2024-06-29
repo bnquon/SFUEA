@@ -132,7 +132,7 @@ export default function Home() {
         		<div className="sm:w-[75vw] w-[90vw] sm:items-center items-start flex sm:flex-row flex-col justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
 					<Image className="absolute brightness-[35%] z-[1]" src='/blob2.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 					<div className="flex flex-col sm:w-3/5 w-[90%] pl-[5%] sm:pl-0 gap-6 text-white z-[2]">
-						<p className="font-bold sm:text-2xl lg:text-3xl text-base text-red-500">Gamers Lounge</p>
+						<p className="font-bold sm:text-2xl lg:text-3xl text-base text-red-500">Events</p>
 						<p className="sm:text-2xl lg:text-5xl text-lg font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
 					<Image className="z-[2] sm:w-[20%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
@@ -146,14 +146,14 @@ export default function Home() {
                 <div className="sm:w-[75vw] w-[90vw] mb-[8vh]">
 					<span className="relative flex justify-center sm:text-left text-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-2 text-red-500 text-5xl font-extrabold">Our PCs</span>
                     </span>
 				</div>
 				<div className="sm:w-[75vw] w-[90vw] sm:h-[60vh] flex sm:flex-row flex-col text-black mb-[10vh]">
-					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border gap-4">
+					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border sm:gap-4 gap-0">
 						<div className="w-full sm:h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">GPU and CPU</h2>
 							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
@@ -168,7 +168,7 @@ export default function Home() {
 						<img className="w-[80%] h-full" src="https://www.pngmart.com/files/23/Gaming-Pc-PNG-Isolated-Photo.png" alt="Gaming PC" />
 					</div>
 
-					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border gap-4">
+					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border sm:gap-4 gap-0">
 						<div className="w-full sm:h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Peripherals</h2>
 							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
@@ -185,7 +185,7 @@ export default function Home() {
                 <div className="sm:w-[75vw] w-[90vw] mb-[8vh]">
 					<span className="relative flex justify-center sm:text-left text-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-2 text-red-500 text-5xl font-extrabold">Location</span>
@@ -194,7 +194,7 @@ export default function Home() {
 			  	<div className="sm:w-[75vw] w-[90vw] flex sm:flex-row flex-col box-border gap-4">
 					<div className="sm:w-1/2 w-full flex sm:flex-row flex-col box-border">
 						<div className="sm:w-1/2 h-full flex flex-col justify-start">
-							<p className="text-2xl lg:text-3xl font-bold text-black">We are located in the Student Union Building, level 2 room 2400</p><br />
+							<p className="sm:text-2xl text-xl font-normal text-black">We are located in the Student Union Building, level 2 room 2400</p><br />
 						</div>
 						<Image src="/sfuSnap.jpeg" width={0} height={0} sizes="100vw" className="sm:w-1/2 w-full h-full" alt="Map"/>
 					</div>
@@ -209,7 +209,7 @@ export default function Home() {
                 <div className="w-[75vw] lg:mb-[12vh] mb-[6vh]">
 					<span className="relative flex justify-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] sm:px-6 py-1 text-red-500 text-5xl font-extrabold">Schedule</span>
@@ -236,7 +236,7 @@ export default function Home() {
                 <div className="sm:w-[75vw] w-[90vw] lg:mb-[12vh] mb-[6vh] sm:text-left text-center">
 					<span className="relative flex justify-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] sm:px-6 py-1  text-red-500 text-5xl font-extrabold">Important Details</span>
@@ -300,7 +300,7 @@ export default function Home() {
 				<div className="sm:w-[75vw] w-[90vw] mb-[8vh]">
 					<span className="relative flex justify-center">
                     <div
-                        className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
+                        className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
                     <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Lounge FAQ</span>
