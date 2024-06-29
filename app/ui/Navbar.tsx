@@ -58,11 +58,11 @@ function Navbar() {
 
     return (
         <StickyHeadroom scrollHeight={100} pinStart={0}> 
-            <div className='w-screen fixed z-50 flex justify-between bg-black sm:px-[12.5vw] px-[5vw]'>
+            <div className='w-screen fixed z-100 flex justify-between bg-black sm:px-[12.5vw] px-[5vw]'>
                 <div className='w-1/4 flex justify-start items-center py-[1vh] lg:py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={50} height={50}></Image>
                 </div>
-                <div id="pageSwitcher" className="w-[60vw] sm:flex hidden justify-center items-center relative">
+                <div id="pageSwitcher" className="w-[60vw] sm:flex hidden justify-center items-center relative z-50">
                         {links.map((link) => {
                             if (link.name !== 'Teams') {
                                 return (

@@ -363,7 +363,7 @@ export default function Home() {
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center justify-end lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-end justify-center lg:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                                 Events
