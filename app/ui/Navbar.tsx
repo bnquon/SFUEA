@@ -112,7 +112,7 @@ function Navbar() {
                         
                         <div className={`w-[100vw] h-[100vh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
                             <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
-                            <div className="w-[275px] h-full flex flex-col bg-black px-8 overflow-y-auto">
+                            <div className="w-[250px] h-full flex flex-col bg-black px-8 overflow-y-auto">
                                 <div className='w-full h-[8vh] flex items-center box-border flex-shrink-0'>
                                     <FontAwesomeIcon onClick={() => handleCloseClick()} className='text-2xl' icon={faXmark}/>
                                 </div>

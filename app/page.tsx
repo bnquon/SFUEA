@@ -535,10 +535,10 @@ export default function Home() {
                 <BasicCalendar/>
 
                 <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                    <div className="sm:w-[75vw] w-[90vw] h-[35vh] flex relative rounded-xl box-border bg-gradient-to-r from-red-500 from-20% via-black to-black px-[5%] shadow-md">
-                        <div className="w-[30%] h-full flex flex-col items-start justify-center box-border gap-5 text-white">
-                            <p className="text-4xl font-bold">BUY A JERSEY!</p>
-                            <p className="text-2xl">Club staff and competitive players get 10% off!</p>
+                    <div className="sm:w-[75vw] w-[90vw] sm:h-[35vh] flex sm:flex-row flex-col relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-8 shadow-md">
+                        <div className="sm:w-[30%] w-full h-full flex flex-col items-start justify-center box-border sm:gap-5 gap-0 text-white sm:py-0 py-4">
+                            <p className="sm:text-4xl text-3xl font-bold">BUY A JERSEY!</p>
+                            <p className="sm:text-2xl text-xl">Club staff and competitive players get 10% off!</p>
                             <span className='w-fit text-xl px-4 py-2 mt-2 rounded-xl flex items-center bg-black text-white'>
                                 SHOP NOW &nbsp;
                                 <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
@@ -547,17 +547,17 @@ export default function Home() {
                         
                         <div className="h-full relative box-border">
                             <div className="h-full flex relative box-border gap-0">
-                                <div className="h-full w-1/3 relative flex">
+                                <div className="h-full sm:w-1/3 w-full relative flex">
                                     <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                                     <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                                 </div>
 
-                                <div className="h-full w-1/3 relative flex">
+                                <div className="h-full w-1/3 relative sm:flex hidden">
                                     <Image alt="forced" className="absolute  scale-x-125 scale-y-110" src='/pinkJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                                     <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                                 </div>
 
-                                <div className="h-full w-1/3 relative flex">
+                                <div className="h-full w-1/3 relative sm:flex hidden">
                                     <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/whiteJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                                     <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
                                 </div>
@@ -572,7 +572,7 @@ export default function Home() {
                             <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
                             <p className="sm:text-2xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                         </div>
-                        <div className="lg:w-1/2 w-full">
+                        <div className="lg:w-1/2 w-full bg-black">
                             <Faq
                                 data={data}
                                 styles={styles}
