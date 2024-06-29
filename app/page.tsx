@@ -373,11 +373,31 @@ export default function Home() {
 
                 </div>
 
+                {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+                    <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center sm:justify-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
+                        <h1 className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+                            GAMERS&apos; LOUNGE
+                        </h1>
+                    </div>
+                    <div className="col-span-1 row-start-2 xl:flex xl:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                        <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
+                        Browse the games we have competitive teams, executives, or directors for!
+                        The executives and directors run in-houses and events for their desired game to foster the community for each one!
+                        </p>
+                    </div>
+                    <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
+                        <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                            Learn More &nbsp;
+                            <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+                        </span>
+                    </div>
+                </div> */}
+
                 {/* ABOUT US PAGE */}
                 <div className="lg:pt-[8vh] sm:pt-[35vh] pt-[60vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
-                    <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                    <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
                             <h1 
                             style={{ 
                             transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
@@ -388,7 +408,7 @@ export default function Home() {
                             </h1>
                         </div>
                         <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                            <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                            <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
                                 The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                             </p>
                         </div>
@@ -402,14 +422,14 @@ export default function Home() {
 
                     
 
-                    <div className="sm:w-[75vw] w-[90vw] lg:h-[50vh] flex lg:flex-row flex-col  justify-center gap-6 relative">
+                    <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col justify-center gap-6 relative">
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full lg:w-1/3 relative">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
-                                <div className="relative w-full lg:h-[65%] h-[25vh]">
+                                <div className="relative w-full lg:h-[35vh] h-[25vh]">
                                     <Image src='/ex1.JPG' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
-                                <div className="bg-white p-4 sm:p-6 sm:h-[35%] overflow-auto">
+                                <div className="bg-white p-4 sm:p-6 lg:h-fit xl:h-[35%] overflow-hidden flex flex-col flex-grow">
 
                                     <h3 className="sm:text-xl text-lg text-black">Game in the Gamers&apos; Lounge!</h3>
 
@@ -423,11 +443,11 @@ export default function Home() {
 
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-full lg:w-1/3">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
-                                <div className="relative w-full lg:h-[65%] h-[25vh]">
+                                <div className="relative w-full lg:h-[35vh] h-[25vh]">
                                     <Image src='/ex2.JPG' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
-                                <div className="bg-white p-4 sm:p-6 sm:h-[35%] overflow-auto">
+                                <div className="bg-white p-4 sm:p-6 lg:h-fit xl:h-[35%] overflow-hidden flex flex-col flex-grow">
 
                                     <h3 className="sm:text-xl text-lg text-black">Connect with Like-Minded Gamers!</h3>
 
@@ -442,11 +462,11 @@ export default function Home() {
 
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="w-full lg:w-1/3">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
-                                <div className="relative w-full lg:h-[65%] h-[25vh]">
+                                <div className="relative w-full lg:h-[35vh] h-[25vh]">
                                     <Image src='/ex3.jpg' alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </div>
 
-                                <div className="bg-white p-4 sm:p-6 sm:h-[35%] overflow-auto">
+                                <div className="bg-white p-4 sm:p-6 lg:h-fit xl:h-[35%] overflow-hidden flex flex-col flex-grow">
 
                                     <h3 className="sm:text-xl text-lg text-black">Engage in Diverse Student-Run Events!</h3>
 
@@ -466,8 +486,8 @@ export default function Home() {
 
                     <div className="">
 
-                        <div className="sm:w-[75vw] w-[90vw] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border mb-8">
-                            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+                        <div className="sm:w-[75vw] w-[90vw] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border mb-8">
+                            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
                                 <h1 
                                 style={{ 
                                 transform: inView ? 'translateY(0)' : 'translateY(100%)',
@@ -478,7 +498,7 @@ export default function Home() {
                                 </h1>
                             </div>
                             <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                                <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+                                <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
                                     Browse the games we have competitive teams, executives, or directors for!
                                     The executives and directors run in-houses and events for their desired game!
                                 </p>
@@ -535,11 +555,11 @@ export default function Home() {
                 <BasicCalendar/>
 
                 <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                    <div className="sm:w-[75vw] w-[90vw] sm:h-[35vh] flex sm:flex-row flex-col relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-8 shadow-md">
-                        <div className="sm:w-[30%] w-full h-full flex flex-col items-start justify-center box-border sm:gap-5 gap-0 text-white sm:py-0 py-4">
-                            <p className="sm:text-4xl text-3xl font-bold">BUY A JERSEY!</p>
-                            <p className="sm:text-2xl text-xl">Club staff and competitive players get 10% off!</p>
-                            <span className='w-fit text-xl px-4 py-2 mt-2 rounded-xl flex items-center bg-black text-white'>
+                    <div className="sm:w-[75vw] w-[90vw] h-[35vh] sm:h-fit flex lg:flex-row flex-col items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-6 shadow-md">
+                        <div className="w-[30%] sm:w-full h-full flex flex-col flex-grow sm:items-start items-center justify-center box-border lg:gap-4 sm:gap-2 gap-0 text-white py-4">
+                            <p className="text-3xl xl:text-4xl font-bold">BUY A JERSEY!</p>
+                            <p className="xl:text-2xl text-xl">Club staff and competitive players get 10% off!</p>
+                            <span className='w-fit lg:text-xl text-lg xl:px-4 xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
                                 SHOP NOW &nbsp;
                                 <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
                             </span>

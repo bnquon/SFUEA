@@ -92,7 +92,7 @@ export default function Home() {
 						<p className="font-bold sm:text-2xl lg:text-3xl text-base text-red-500">About Us</p>
 						<p className="sm:text-2xl lg:text-5xl text-lg font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
-					<Image className="z-[2] sm:w-[20%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
+					<Image className="z-[2] sm:w-[20%] xl:w-[17.5%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
 				</div>
       		</div>
 

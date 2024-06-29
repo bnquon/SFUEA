@@ -17,17 +17,16 @@ type CalendarEvent = {
 };
 
 const fadeInAnimation = {
-  initial: { opacity: 0, y: 100 },
-  animate: (index: number) => ({
-      opacity: 1, 
-      y: 0,
-      transition: {
-          duration: 0.5,
-          delay: index * 0.1
-      }
-  }),
-};
-
+	initial: { opacity: 0, y: 100 },
+	animate: (index: number) => ({
+		opacity: 1, 
+		y: 0,
+		transition: {
+			duration: 0.5,
+			delay: index * 0.1
+		}
+	}),
+  };
 export const BasicCalendar = () => {
 
   const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
@@ -94,8 +93,8 @@ export const BasicCalendar = () => {
           </div>
       </div> */}
 
-      <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-          <div ref={headerInView} className="col-span-2 row-span-1 duration-500 lg:w-fit w-full lg:pr-8 pr-0 flex items-center sm:justify-center justify-start lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
+      <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
+          <div ref={headerInView} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
               <h1 
               style={{ 
               transform: inView ? 'translateY(0)' : 'translateY(100%)',
@@ -106,7 +105,7 @@ export const BasicCalendar = () => {
               </h1>
           </div>
           <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-              <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
+              <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
                 Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
               </p>
           </div>
@@ -118,7 +117,7 @@ export const BasicCalendar = () => {
           </div>
       </div>
 
-      <div className="sm:w-[75vw] w-[90vw] h-[75vh] relative flex box-border mb-20">
+      <div className="sm:w-[75vw] w-[90vw] h-[75vh] relative flex box-border">
         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={2.5} viewport={{ once: true }} className='w-full h-full relative'>
           <Calendar 
             events={TestEvents}
@@ -126,25 +125,6 @@ export const BasicCalendar = () => {
             startAccessor="start"
             endAccessor="end"
           />
-        </motion.div>
-      </div>
-
-      <div className="sm:w-[75vw] w-[90vw] relative box-border">
-        <p className='sm:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 sm:mb-12 mb-4'>RECENT EVENTS.</p>
-      </div>
-
-      <div className='sm:w-[75vw] w-[90vw] lg:h-[25vh] h-[75vh] relative flex lg:flex-row flex-col gap-5'>
-        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
-          <img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
-          <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </motion.div>
-        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
-          <img className='w-full h-full object-cover' src="/IMG_7099.jpg" alt="" />
-          <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </motion.div>
-        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
-          <img className='w-full h-full object-cover' src="/IMG_20230930_145502-min.jpg" alt="" />
-          <p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </motion.div>
       </div>
 

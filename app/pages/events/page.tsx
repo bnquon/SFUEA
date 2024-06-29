@@ -5,6 +5,9 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Footer } from "@/app/Components/Footer";
+import { motion } from 'framer-motion';
+
+  
 
 const localizer = momentLocalizer(moment);
 
@@ -13,6 +16,18 @@ type CalendarEvent = {
 	start: Date;
 	end: Date;
   };
+
+const fadeInAnimation = {
+initial: { opacity: 0, y: 100 },
+animate: (index: number) => ({
+	opacity: 1, 
+	y: 0,
+	transition: {
+		duration: 0.5,
+		delay: index * 0.1
+	}
+}),
+};
 
 export default function Home() {
 
@@ -41,7 +56,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
   }, []);
 
     return (
-    	<main className="relative">
+    	<main className="relative bg-[#d3d3d3]">
 
 			<div id="section1" className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[15vh] pb-[10vh]">
         		<div className="sm:w-[75vw] w-[90vw] sm:items-center items-start flex sm:flex-row flex-col justify-evenly text-black py-10 rounded-xl overflow-hidden relative z-0">
@@ -50,7 +65,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 						<p className="font-bold sm:text-2xl lg:text-3xl text-base text-red-500">Events</p>
 						<p className="sm:text-2xl lg:text-5xl text-lg font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
-					<Image className="z-[2] sm:w-[20%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
+					<Image className="z-[2] sm:w-[20%] xl:w-[17.5%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
 				</div>
       		</div>
 
@@ -75,6 +90,27 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 					/>
 					</div>
 				</div>
+			</div>
+
+			<div className="sm:w-[75vw] w-[90vw] relative box-border sm:pl-[12.5vw] pl:5vw">
+				<p className='sm:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 sm:mb-12 mb-4'>RECENT EVENTS.</p>
+			</div>
+
+			<div className='sm:w-[75vw] w-[90vw] lg:h-[30vh] h-[75vh] relative flex lg:flex-row flex-col gap-5 lg:ml-[12.5vw]'>
+				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
+					<img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
+					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</motion.div>
+
+				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
+					<img className='w-full h-full object-cover' src="/IMG_7099.jpg" alt="" />
+					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</motion.div>
+
+				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
+					<img className='w-full h-full object-cover' src="/IMG_20230930_145502-min.jpg" alt="" />
+					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium text-xl text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</motion.div>
 			</div>
 
 			<Footer />

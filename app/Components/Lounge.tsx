@@ -42,26 +42,6 @@ const fadeInAnimation = {
 export const Lounge = () => {
   return (
     <div className='w-full relative sm:pl-[12.5vw] pl-[5vw] bg-[#d3d3d3] flex flex-col pt-[7.5vh] pb-[7.5vh]'>
-
-        {/* <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black lg:flex lg:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-[90vw] lg:pr-8 pr-0 flex items-center sm:text-left text-center lg:border-r-black border-r-0 lg:border-r-2 lg:border-b-0 flex-shrink-0 overflow-hidden">
-                <h1 className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
-                    GAMERS&apos; LOUNGE
-                </h1>
-            </div>
-            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                <p className="font-semibold box-border lg:pl-8 lg:pr-4 lg:pt-0 pr-2 pt-2">
-                Browse the games we have competitive teams, executives, or directors for!
-                The executives and directors run in-houses and events for their desired game to foster the community for each one!
-                </p>
-            </div>
-            <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                    <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                    Learn More &nbsp;
-                    <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                </span>
-            </div>
-        </div> */}
     
         <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
             <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center sm:justify-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
