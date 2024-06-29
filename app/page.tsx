@@ -174,9 +174,9 @@ export default function Home() {
         dots: true,
         responsive: [
             {
-              breakpoint: 1024,
+              breakpoint: 1200,
               settings: {
-                slidesToShow: 2,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 arrows: false,
                 autoplay: true,
@@ -185,7 +185,18 @@ export default function Home() {
               }
             },
             {
-              breakpoint: 600,
+                breakpoint: 900,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  arrows: false,
+                  autoplay: true,
+                  autoplaySpeed: 4000,
+                  dots: true,
+                }
+              },
+            {
+              breakpoint: 620,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,

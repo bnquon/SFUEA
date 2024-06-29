@@ -85,11 +85,11 @@ export const Lounge = () => {
 
         <div className='sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col relative box-border gap-4'>
 
-            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md lg:w-[50%] lg:h-[70vh] w-full h-[40vh] overflow-hidden shadow-lg">
+            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md xl:w-[60%] lg:w-[50%] lg:h-[70vh] w-full h-[40vh] overflow-hidden shadow-lg">
                 <img src="/gamerslounge3.jpg" className='object-cover w-full h-full' alt="Gamers Lounge" />
             </motion.div>
 
-            <div className='lg:w-[50%] lg:h-[70vh] w-full relative flex box-border'>
+            <div className='lg:w-[50%] xl:w-[40%] lg:h-[70vh] w-full relative flex box-border'>
                 <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full h-full flex flex-col gap-4">
 
                     <div className='w-full h-1/2 flex sm:flex-row flex-col gap-4'>
