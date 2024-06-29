@@ -555,8 +555,8 @@ export default function Home() {
                 <BasicCalendar/>
 
                 <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                    <div className="sm:w-[75vw] w-[90vw] h-[35vh] sm:h-fit flex lg:flex-row flex-col items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-6 shadow-md">
-                        <div className="w-[30%] sm:w-full h-full flex flex-col flex-grow sm:items-start items-center justify-center box-border lg:gap-4 sm:gap-2 gap-0 text-white py-4">
+                    <div className="sm:w-[75vw] w-[90vw] sm:h-fit flex lg:flex-row flex-col lg:items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-6 shadow-md">
+                        <div className="lg:w-[30%] w-full flex flex-col flex-grow sm:items-start items-start justify-center box-border lg:gap-4 sm:gap-2 gap-0 text-white py-4">
                             <p className="text-3xl xl:text-4xl font-bold">BUY A JERSEY!</p>
                             <p className="xl:text-2xl text-xl">Club staff and competitive players get 10% off!</p>
                             <span className='w-fit lg:text-xl text-lg xl:px-4 xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
@@ -565,7 +565,7 @@ export default function Home() {
                             </span>
                         </div>
                         
-                        <div className="h-full relative box-border">
+                        <div className="h-full lg:w-[70%] w-full relative box-border">
                             <div className="h-full flex relative box-border gap-0">
                                 <div className="h-full sm:w-1/3 w-full relative flex">
                                     <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
