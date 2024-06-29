@@ -156,11 +156,11 @@ export default function Home() {
 					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border sm:gap-4 gap-0">
 						<div className="w-full sm:h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">GPU and CPU</h2>
-							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+							<p className="text-lg xl:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
 						<div className="w-full sm:h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Ram and Storage</h2>
-							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+							<p className="text-lg xl:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
 					</div>
 					
@@ -171,11 +171,11 @@ export default function Home() {
 					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border sm:gap-4 gap-0">
 						<div className="w-full sm:h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Peripherals</h2>
-							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+							<p className="text-lg xl:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
 						<div className="w-full sm:h-1/2 flex flex-col justify-start pt-4">
 							<h2 className="text-2xl font-bold mb-2">Game Library</h2>
-							<p className="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+							<p className="text-lg xl:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
 						</div>
 					</div>
 				</div>

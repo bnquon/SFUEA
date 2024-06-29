@@ -106,7 +106,7 @@ export default function Home() {
 
 				<div className="sm:w-[75vw] w-[90vw] flex flex-col box-border">
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
-						<div className="lg:w-2/5 w-full sm:text-4xl text-2xl font-bold">
+						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
 							<p>How We Started</p>
 						</div>
 						<div className="lg:w-3/5 w-full sm:text-2xl text-lg font-normal">
@@ -114,15 +114,15 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black border-y-[1px] border-[#999999] py-6">
-						<div className="lg:w-2/5 w-full sm:text-4xl text-2xl font-bold">
+						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
 							<p>Our Goals</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-2xl text-lg font-normal">
+						<div className="lg:w-3/5 w-full sm:text-2xl text-xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
-						<div className="lg:w-2/5 w-full sm:text-4xl text-2xl font-bold">
+						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
 							<p>Our Vision</p>
 						</div>
 						<div className="lg:w-3/5 w-full sm:text-2xl text-lg font-normal">
@@ -136,7 +136,7 @@ export default function Home() {
 
 				<div className="sm:w-[75vw] w-[90vw] lg:h-[50vh] flex lg:flex-row flex-col box-border gap-5">
 					<div className="lg:w-2/5 w-full h-full flex flex-col text-black lg:gap-10 gap-5 box-border pr-6 justify-start">
-						<p className="sm:text-4xl text-2xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p className="sm:text-3xl text-2xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						<p className="sm:text-2xl text-lg font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
 					<WidgetBot className="lg:w-3/5 w-full h-[45vh] lg:h-full"
