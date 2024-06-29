@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown,faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // Dynamic import for StickyHeadroom with SSR disabled
 const StickyHeadroom = dynamic(() => import('@integreat-app/react-sticky-headroom'), { ssr: false });
@@ -28,23 +28,20 @@ function Navbar() {
     const [teamsOpen, setTeamsOpen] = useState(false);
     const [expandedChar, setExpandedChar] = useState('+');
 
-    useEffect(() => {
-        if (open) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-
-        // Cleanup function to reset the overflow when the component unmounts
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
-    }, [open]);
+    // useEffect(() => {
+    //     if (open) {
+    //         document.getElementById('mainPage').style.overflowY = 'hidden';
+    //     } else {
+    //         document.getElementById('mainPage').style.overflowY = 'auto';
+    //     }
+    // }, [open]);
     
     const handleCloseClick = () => {
         setOpen(false);
-        setTeamsOpen(false);
-        setExpandedChar('+');
+        setTimeout(() => {
+            setTeamsOpen(false);
+            setExpandedChar('+');
+        }, 500);
     }
 
     const handleTeamsClick = () => {
@@ -109,42 +106,44 @@ function Navbar() {
 
                 <div className='sm:hidden flex items-center relative'>
                     <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl' icon={faBars}/>
-                    <div className={`w-[100vw] h-[100vh] absolute top-0 right-[-5vw] flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
-                        <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
-                        <div className="w-[275px] h-full flex flex-col bg-black px-8 overflow-y-auto">
-                            <div className='w-full h-[8vh] flex items-center box-border flex-shrink-0'>
-                                <FontAwesomeIcon onClick={() => handleCloseClick()} className='text-2xl' icon={faXmark}/>
-                            </div>
-                            
-                            {links.map((link) => {
-                            if (link.name !== 'Teams') {
-                                return (
-                                    <div key={link.name} className='w-full h-[8vh] bg-black flex items-center justify-between box-border text-lg font-bold border-b-2 border-gray-800 flex-shrink-0'>
-                                        <Link className='text-red-500' href={link.href}>{link.name}</Link>
-                                    </div>
-                                )    
-                            }
-                            return (
-                                <div key={link.name} className='w-full flex flex-col items-center box-border text-lg font-bold border-b-2 border-gray-800'>
-                                    <div className='w-full h-[8vh] flex items-center justify-between flex-shrink-0'>
-                                        <Link className='text-red-500' href={link.href}>{link.name}</Link>
-                                        <div onClick={() => handleTeamsClick()} className='text-2xl text-red-500'>{expandedChar}</div>
-                                    </div>
-
-                                    <div className='w-full flex flex-col' style={{ display: teamsOpen ? 'block' : 'none' }}>
-                                        {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
-                                            <div key={index} className='w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
-                                                {game}
-                                            </div>
-                                        ))}
-                                    </div>
-
+                        
+                        <div className={`w-[100vw] h-[100vh] absolute top-0 right-[-5vw] flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+                            <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
+                            <div className="w-[275px] h-full flex flex-col bg-black px-8 overflow-y-auto">
+                                <div className='w-full h-[8vh] flex items-center box-border flex-shrink-0'>
+                                    <FontAwesomeIcon onClick={() => handleCloseClick()} className='text-2xl' icon={faXmark}/>
                                 </div>
-                            );
-                        })}
+                                
+                                {links.map((link) => {
+                                if (link.name !== 'Teams') {
+                                    return (
+                                        <div key={link.name} className='w-full h-[8vh] bg-black flex items-center justify-between box-border text-lg font-bold border-b-2 border-gray-800 flex-shrink-0'>
+                                            <Link className='text-red-500' href={link.href}>{link.name}</Link>
+                                        </div>
+                                    )    
+                                }
+                                return (
+                                    <div key={link.name} className='w-full flex flex-col items-center box-border text-lg font-bold'>
+                                        <div className='w-full h-[8vh] flex items-center justify-between flex-shrink-0 border-b-2 border-gray-800'>
+                                            <Link className='text-red-500' href={link.href}>{link.name}</Link>
+                                            <div onClick={() => handleTeamsClick()} className='text-2xl text-red-500'>{expandedChar}</div>
+                                        </div>
 
+                                        <div className='w-full flex flex-col' style={{ display: teamsOpen ? 'block' : 'none' }}>
+                                            {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
+                                                <div key={index} className='w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
+                                                    {game}
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                    </div>
+                                );
+                            })}
+
+                            </div>
                         </div>
-                    </div>
+                    
                 </div>
 
 

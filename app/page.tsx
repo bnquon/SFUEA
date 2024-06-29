@@ -256,7 +256,7 @@ export default function Home() {
 
     return (
         <>
-            <main className="relative">
+            <main id="mainPage" className="relative">
                 <SEO></SEO>
 
                 {/* HOME PAGE */}
