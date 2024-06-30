@@ -275,7 +275,7 @@ export default function Home() {
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
-                            <p className="text-4xl sm:text-6xl lg:text-[66px] font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                            <p className="text-4xl sm:text-6xl xl:text-7xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
                             <p className="w-full lg:w-full text-black text-base sm:text-xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
@@ -351,19 +351,19 @@ export default function Home() {
                     </div>
 
                     <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="w-1/3 flex items-center sm:justify-start justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-start justify-center xl:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center justify-center xl:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center sm:justify-end justify-center lg:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-end justify-center xl:text-3xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                                 Events
@@ -478,7 +478,7 @@ export default function Home() {
                                 </h1>
                             </div>
                             <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-                                <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
+                                <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
                                     Browse the games we have competitive teams, executives, or directors for!
                                     The executives and directors run in-houses and events for their desired game!
                                 </p>

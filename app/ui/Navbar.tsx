@@ -70,9 +70,9 @@ function Navbar() {
                                         key={link.name}
                                         href={link.href}
                                         className={clsx(
-                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-200/20 max-w-fit text-sm lg:text-xl font-bold',
+                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-200/20 max-w-fit text-lg lg:text-xl font-bold',
                                             {
-                                                'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-sm lg:text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
+                                                'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-lg lg:text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         {link.name}
@@ -84,19 +84,19 @@ function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={clsx(
-                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-200/20 max-w-fit text-sm lg:text-xl font-bold',
+                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-200/20 max-w-fit text-lg lg:text-xl font-bold',
                                             {
-                                                'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-sm lg:text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
+                                                'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-lg lg:text-xl hover:bg-slate-200 font-bold max-w-fit': pathname === link.href,
                                             },
                                         )}>
                                         <span>
-                                            {link.name}&nbsp; <FontAwesomeIcon className='text-sm lg:text-xl' icon={faCaretDown}/>
+                                            {link.name}&nbsp; <FontAwesomeIcon className='text-base lg:text-xl' icon={faCaretDown}/>
                                         </span>
                                     </Link>
                                     <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw] z-50'>
-                                        <div className='text-xl bg-black text-white grid grid-cols-2 grid-rows-6 relative'>
+                                        <div className='text-lg lg:text-xl bg-black text-white grid grid-cols-2 grid-rows-6 relative'>
                                             {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
-                                                <div key={index} className='w-full h-full font-bold py-4 px-6 flex items-center justify-start'>
+                                                <div key={index} className='w-full h-full font-bold lg:py-4 py-2 lg:px-6 px-3 flex items-center justify-start'>
                                                     {game}
                                                 </div>
                                             ))}
@@ -151,7 +151,7 @@ function Navbar() {
 
 
                 <div className="w-1/4 sm:flex hidden justify-end items-center">
-                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='lg:px-6 lg:py-3 px-2 py-2 bg-red-500 max-w-fit rounded-xl text-sm lg:text-xl font-bold'>JOIN NOW</motion.button>
+                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='lg:px-6 lg:py-3 px-2 py-3 bg-red-500 max-w-fit rounded-xl text-base lg:text-xl font-bold'>JOIN NOW</motion.button>
                 </div>
             </div>
         </StickyHeadroom>

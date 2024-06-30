@@ -105,7 +105,7 @@ export const BasicCalendar = () => {
               </h1>
           </div>
           <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
-              <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
+              <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
                 Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
               </p>
           </div>
