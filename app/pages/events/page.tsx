@@ -63,7 +63,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 					<Image className="absolute brightness-[35%] z-[1]" src='/blob2.jpg' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
 					<div className="flex flex-col sm:w-3/5 w-[90%] pl-[5%] sm:pl-0 gap-6 text-white z-[2]">
 						<p className="font-bold sm:text-2xl lg:text-3xl text-base text-red-500">Events</p>
-						<p className="sm:text-2xl lg:text-5xl text-lg font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
+						<p className="sm:text-[27px] lg:text-4xl xl:text-5xl text-[21px] font-extrabold">SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION.</p>
 					</div>
 					<Image className="z-[2] sm:w-[20%] xl:w-[17.5%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
 				</div>
@@ -92,11 +92,11 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 				</div>
 			</div>
 
-			<div className="sm:w-[75vw] w-[90vw] relative box-border lg:ml-[12.5vw] ml-[5vw]">
+			<div className="sm:w-[75vw] w-[90vw] relative box-border sm:ml-[12.5vw] ml-[5vw]">
 				<p className='sm:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 sm:mb-12 mb-4'>RECENT EVENTS.</p>
 			</div>
 
-			<div className='sm:w-[75vw] w-[90vw] lg:h-[30vh] h-[75vh] relative flex lg:flex-row flex-col gap-5 lg:ml-[12.5vw] ml-[5vw]'>
+			<div className='sm:w-[75vw] w-[90vw] lg:h-[30vh] h-[40vh] relative flex sm:flex-row flex-col gap-5 sm:ml-[12.5vw] ml-[5vw]'>
 				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
 					<img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
 					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -107,7 +107,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</motion.div>
 
-				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
+				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full lg:block hidden rounded-md overflow-hidden relative shadow-lg'>
 					<img className='w-full h-full object-cover' src="/IMG_20230930_145502-min.jpg" alt="" />
 					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				</motion.div>
