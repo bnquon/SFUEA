@@ -103,7 +103,7 @@ export default function Home() {
                         className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-5xl font-extrabold">Our Teams</span>
+                    <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-4xl sm:text-6xl font-extrabold">Our Teams</span>
                     </span>
 				</div>
             </div>

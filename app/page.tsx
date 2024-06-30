@@ -281,7 +281,7 @@ export default function Home() {
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
-                            <div className="flex sm:gap-4 box-border items-center lg:justify-start justify-center">
+                            <div className="flex sm:gap-4 box-border items-center lg:justify-start justify-evenly">
                                 <div className="sm:w-[50%] flex justify-center lg:justify-start">
                                     <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl xl:text-4xl font-bold italic">
                                         <span>

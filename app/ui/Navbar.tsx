@@ -96,7 +96,7 @@ function Navbar() {
                                     <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw] z-50'>
                                         <div className='text-lg lg:text-xl xl:text-2xl bg-black text-white grid grid-cols-2 grid-rows-6 relative'>
                                             {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
-                                                <div key={index} className='w-full h-full font-bold lg:py-4 py-2 lg:px-6 px-3 flex items-center justify-start'>
+                                                <div key={index} className='w-full h-full font-bold lg:py-6 py-2 lg:px-6 px-3 flex items-center justify-start'>
                                                     {game}
                                                 </div>
                                             ))}
