@@ -109,7 +109,7 @@ export default function Home() {
 						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
 							<p>How We Started</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-2xl text-lg font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -117,7 +117,7 @@ export default function Home() {
 						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
 							<p>Our Goals</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-2xl text-xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -125,7 +125,7 @@ export default function Home() {
 						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
 							<p>Our Vision</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-2xl text-lg font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -137,7 +137,7 @@ export default function Home() {
 				<div className="sm:w-[75vw] w-[90vw] lg:h-[50vh] flex lg:flex-row flex-col box-border gap-5">
 					<div className="lg:w-2/5 w-full h-full flex flex-col text-black lg:gap-10 gap-5 box-border pr-6 justify-start">
 						<p className="sm:text-3xl text-2xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<p className="sm:text-2xl text-lg font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+						<p className="sm:text-xl lg:text-2xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
 					<WidgetBot className="lg:w-3/5 w-full h-[45vh] lg:h-full"
 						server= '1251409341676912660'
@@ -158,14 +158,14 @@ export default function Home() {
 
 				<div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 grid-flow-row sm:w-[75vw] w-[90vw] box-border relative gap-[4vw]">
 					{people.map((person, index) => (	
-						<motion.div variants={cardAnimation} initial='initial' whileInView='visible' viewport={{ once: true }} key={index} className="w-full sm:h-[30vh] h-[35vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border sm:py-6 py-2 overflow-hidden">
+						<motion.div variants={cardAnimation} initial='initial' whileInView='visible' viewport={{ once: true }} key={index} className="w-full sm:h-[30vh] h-[30vh] bg-white rounded-lg shadow-md flex flex-col items-center gap-5 relative box-border sm:py-6 py-2 overflow-hidden">
 							<div className="absolute w-full lg:h-1/3 h-[30%] bg-black top-0 left-0 z-0"></div>
 							<div className="w-full flex items-center justify-center relative">
-								<div className="aspect-square rounded-full bg-gray-500 w-1/2"></div>
+								<div className="aspect-square rounded-full bg-gray-500 lg:w-1/2 sm:w-2/5 w-1/2"></div>
 							</div>
 							<div className="w-full text-xl sm:px-2 px-1 flex flex-col items-center justify-center text-center">
-								<p className="sm:text-2xl text-xl text-black font-bold">{person.name}</p>
-								<p className="sm:text-xl sm:leading-6 text-lg leading-5 text-black font-normal">{person.role}</p>
+								<p className="lg:text-2xl sm:text-xl text-lg text-black font-bold">{person.name}</p>
+								<p className="lg:text-xl sm:leading-6 sm:text-lg text-base leading-5 text-black font-normal">{person.role}</p>
 							</div>
 						</motion.div>
 					))}
