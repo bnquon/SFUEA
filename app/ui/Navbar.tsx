@@ -57,7 +57,7 @@ function Navbar() {
     }
 
     return (
-        <StickyHeadroom scrollHeight={100} pinStart={0}> 
+        <StickyHeadroom scrollHeight={120} pinStart={0}> 
             <div className='w-screen fixed z-100 flex justify-between bg-black sm:px-[12.5vw] px-[5vw]'>
                 <div className='w-1/4 flex justify-start items-center py-[1vh] lg:py-[1.5vh]'>
                     <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={60} height={60}></Image>
