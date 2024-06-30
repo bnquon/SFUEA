@@ -281,13 +281,15 @@ export default function Home() {
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
-                            <div className="flex sm:gap-14 gap-7 box-border items-center lg:justify-start justify-center">
-                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl xl:text-4xl font-bold italic">
-                                    <span>
-                                        GAME WITH US &nbsp;
-                                    </span>
-                                </motion.button>
-                                <div className="flex flex-col text-black">
+                            <div className="flex sm:gap-4 box-border items-center lg:justify-start justify-center">
+                                <div className="sm:w-[50%] flex justify-center lg:justify-start">
+                                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl xl:text-4xl font-bold italic">
+                                        <span>
+                                            GAME WITH US &nbsp;
+                                        </span>
+                                    </motion.button>
+                                </div>
+                                <div className="flex flex-col items-center text-black sm:w-[50%] lg:w-fit">
                                     <p className="sm:text-3xl text-2xl xl:text-4xl font-bold">3800+</p>
                                     <p className="sm:text-xl text-lg font-normal">Members</p>
                                 </div>
@@ -487,7 +489,7 @@ export default function Home() {
 
                     <div className="w-[calc(85vw+60px)] h-[60vh] relative flex justify-center">
                         <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150"
+                            <FontAwesomeIcon className="sm:text-4xl text-2xl xl:text-6xl cursor-pointer hover:brightness-75 duration-150"
                             onClick={() => slider?.current?.slickPrev()}
                             icon={faSquareCaretLeft} style={{color: "#ff0000",}}/>
                         </div>
@@ -514,7 +516,7 @@ export default function Home() {
                         </div>
 
                         <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="sm:text-5xl text-3xl cursor-pointer hover:brightness-75 duration-150"
+                            <FontAwesomeIcon className="sm:text-4xl text-2xl xl:text-6xl cursor-pointer hover:brightness-75 duration-150"
                             onClick={() => slider?.current?.slickNext()}
                             icon={faSquareCaretRight} style={{color: "#ff0000",}}/>
                         </div>

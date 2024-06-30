@@ -47,7 +47,7 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className='lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-4 lg:mb-5 mt-4 sm:mt-4 lg:absolute w-[45%] h-full right-0 top-0 lg:translate-y-[-75%] xl:translate-y-[-50%] flex flex-col items-center justify-center gap-10'>
+                <div className='lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-4 lg:mb-5 mt-4 sm:mt-4 lg:absolute w-[45%] h-full right-0 top-0 lg:translate-y-[-75%] xl:translate-y-[-50%] flex flex-col items-center justify-center gap-10 xl:gap-14'>
                     <Image src='/real-logo.png' width={250} height={250} alt='logo'></Image>
                     <p className='text-xl xl:text-2xl sm:text-left text-center'>Contact us: EMAIL@EMAIL.COM</p>
                 </div>
