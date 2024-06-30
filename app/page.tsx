@@ -102,18 +102,18 @@ export default function Home() {
     const getResponsiveStyles = () => {
         if (windowWidth >= 1200) { // lg breakpoint
           return {
-            rowContentTextSize: '16px',
-            rowTitleTextSize: '24px',
+            rowContentTextSize: '20px',
+            rowTitleTextSize: '28px',
           };
         } else if (windowWidth >= 610) { // sm breakpoint
           return {
-            rowContentTextSize: '14px',
-            rowTitleTextSize: '20px',
+            rowContentTextSize: '16px',
+            rowTitleTextSize: '24px',
           };
         } else {
           return {
             rowContentTextSize: '14px',
-            rowTitleTextSize: '16px',
+            rowTitleTextSize: '20px',
           };
         }
       };
@@ -273,23 +273,23 @@ export default function Home() {
                 {/* HOME PAGE */}
                 <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] pt-[18vh] sm:gap-[8vh] gap-[4vh]">
 
-                    <div className="w-[90vw] sm:w-[75vw] lg:h-[70%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
+                    <div className="w-[90vw] sm:w-[75vw] lg:h-[75%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
-                            <p className="text-4xl sm:text-6xl xl:text-7xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
-                            <p className="w-full lg:w-full text-black text-base sm:text-xl xl:text-2xl font-medium sm:mb-8 mb-2">
+                            <p className="text-4xl sm:text-6xl xl:text-8xl font-bold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                            <p className="w-full lg:w-full text-black text-base sm:text-xl xl:text-3xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
-                            <div className="flex gap-8 box-border items-center lg:justify-start justify-center">
-                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl font-bold italic sm:mr-8">
+                            <div className="flex sm:gap-14 gap-7 box-border items-center lg:justify-start justify-center">
+                                <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl xl:text-4xl font-bold italic">
                                     <span>
                                         GAME WITH US &nbsp;
                                     </span>
                                 </motion.button>
                                 <div className="flex flex-col text-black">
-                                    <p className="sm:text-3xl text-2xl font-bold">3800+</p>
-                                    <p className="sm:text-xl text-lg font-light">Members</p>
+                                    <p className="sm:text-3xl text-2xl xl:text-4xl font-bold">3800+</p>
+                                    <p className="sm:text-xl text-lg font-normal">Members</p>
                                 </div>
 
                             </div>
@@ -351,19 +351,19 @@ export default function Home() {
                     </div>
 
                     <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="w-1/3 flex items-center sm:justify-start justify-center xl:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-start justify-center lg:text-3xl xl:text-4xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center justify-center xl:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center justify-center lg:text-3xl xl:text-4xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center sm:justify-end justify-center xl:text-3xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-end justify-center lg:text-3xl xl:text-4xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                                 Events
@@ -383,17 +383,17 @@ export default function Home() {
                             transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
                             transition: 'transform 0.5s ease'
                             }}
-                            className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+                            className="text-4xl sm:text-6xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                                 WHO WE ARE.
                             </h1>
                         </div>
-                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl lg:text-2xl text-base">
                             <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
                                 The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
                             </p>
                         </div>
                         <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                            <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                            <span className='h-fit sm:text-lg lg:text-xl text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
                                 Learn More &nbsp;
                                 <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                             </span>
@@ -403,19 +403,16 @@ export default function Home() {
                     
 
                     <div className="sm:w-[75vw] w-[90vw] flex sm:flex-row flex-col justify-center gap-6 relative">
-                        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full lg:w-1/3 relative">
+                        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full lg:w-1/3">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                                 <div className="relative w-full lg:h-[35vh] h-[25vh]">
-                                    <Image src='/ex1.JPG' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src='/ex1.JPG' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }}></Image>
                                 </div>
 
-                                <div className="bg-white p-4 sm:p-6 lg:h-fit xl:h-[35%] overflow-hidden flex flex-col flex-grow">
-
-                                    <h3 className="sm:text-xl text-lg text-black">Game in the Gamers&apos; Lounge!</h3>
-
-
-                                    <p className="mt-2 sm:text-base text-sm text-gray-900">
-                                    Drop into the Gamers&apos; Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
+                                <div className="bg-white p-4 sm:p-6 flex flex-col flex-grow">
+                                    <h3 className="sm:text-xl lg:text-2xl text-lg text-black">Game in the Gamers&apos; Lounge!</h3>
+                                    <p className="mt-2 sm:text-base lg:text-lg text-sm text-gray-900">
+                                        Drop into the Gamers&apos; Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
                                     </p>
                                 </div>
                             </article>
@@ -424,15 +421,12 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-full lg:w-1/3">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                                 <div className="relative w-full lg:h-[35vh] h-[25vh]">
-                                    <Image src='/ex2.JPG' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src='/ex2.JPG' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }}></Image>
                                 </div>
 
-                                <div className="bg-white p-4 sm:p-6 lg:h-fit xl:h-[35%] overflow-hidden flex flex-col flex-grow">
-
-                                    <h3 className="sm:text-xl text-lg text-black">Connect with Like-Minded Gamers!</h3>
-
-
-                                    <p className="mt-2 sm:text-base text-sm text-gray-900">
+                                <div className="bg-white p-4 sm:p-6 flex flex-col flex-grow">
+                                    <h3 className="sm:text-xl lg:text-2xl text-lg text-black">Connect with Like-Minded Gamers!</h3>
+                                    <p className="mt-2 sm:text-base lg:text-lg text-sm text-gray-900">
                                         Forge friendships and bond over shared interests at our gatherings. 
                                         Join us for the chance to meet others who share your passion for gaming.
                                     </p>
@@ -443,14 +437,12 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="w-full lg:w-1/3">
                             <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
                                 <div className="relative w-full lg:h-[35vh] h-[25vh]">
-                                    <Image src='/ex3.jpg' alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src='/ex3.jpg' alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }}></Image>
                                 </div>
 
-                                <div className="bg-white p-4 sm:p-6 lg:h-fit xl:h-[35%] overflow-hidden flex flex-col flex-grow">
-
-                                    <h3 className="sm:text-xl text-lg text-black">Engage in Diverse Student-Run Events!</h3>
-
-                                    <p className="mt-2 sm:text-base text-sm text-gray-900">
+                                <div className="bg-white p-4 sm:p-6 flex flex-col flex-grow">
+                                    <h3 className="sm:text-xl lg:text-2xl text-lg text-black">Engage in Diverse Student-Run Events!</h3>
+                                    <p className="mt-2 sm:text-base lg:text-lg text-sm text-gray-900">
                                         Participate in a variety of student-run events, ranging from competitive tournaments and 
                                         casual game nights to community meetups.
                                     </p>
@@ -458,6 +450,7 @@ export default function Home() {
                             </article>
                         </motion.div>
                     </div>
+
                 </div>
 
                 {/* GRID CONTAINER */}
@@ -473,18 +466,18 @@ export default function Home() {
                                 transform: inView ? 'translateY(0)' : 'translateY(100%)',
                                 transition: 'transform 0.5s ease'
                                 }}
-                                className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
+                                className="text-4xl sm:text-6xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
                                     OUR TEAMS.
                                 </h1>
                             </div>
-                            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+                            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl lg:text-2xl text-base">
                                 <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
                                     Browse the games we have competitive teams, executives, or directors for!
                                     The executives and directors run in-houses and events for their desired game!
                                 </p>
                             </div>
                             <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                                <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+                                <span className='h-fit sm:text-lg lg:text-xl text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
                                     Learn More &nbsp;
                                     <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
                                 </span>
@@ -503,7 +496,7 @@ export default function Home() {
                             <Slider ref={slider} {...settings}>
                                 {games.map((game, index) => (
                                     <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
-                                        <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full sm:text-4xl text-3xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
+                                        <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full sm:text-4xl xl:text-5xl text-3xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
                                         <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
                                         <Image 
                                             id="game-pic"
@@ -537,9 +530,9 @@ export default function Home() {
                 <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
                     <div className="sm:w-[75vw] w-[90vw] sm:h-fit flex lg:flex-row flex-col lg:items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-6 shadow-md">
                         <div className="lg:w-[30%] w-full flex flex-col flex-grow sm:items-start items-start justify-center box-border lg:gap-4 sm:gap-2 gap-0 text-white py-4">
-                            <p className="text-3xl xl:text-4xl font-bold">BUY A JERSEY!</p>
-                            <p className="xl:text-2xl text-xl">Club staff and competitive players get 10% off!</p>
-                            <span className='w-fit lg:text-xl text-lg xl:px-4 xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
+                            <p className="text-3xl xl:text-5xl font-bold">BUY A JERSEY!</p>
+                            <p className="xl:text-3xl text-xl">Club staff and competitive players get 10% off!</p>
+                            <span className='w-fit lg:text-xl xl:text-2xl text-lg xl:px-4 xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
                                 SHOP NOW &nbsp;
                                 <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
                             </span>
@@ -569,8 +562,8 @@ export default function Home() {
                 <div className="relative w-screen bg-[#d3d3d3] flex justify-center sm:pt-[5vh] pt-[4vh]">
                     <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col">
                         <div className="lg:w-1/2 w-full flex flex-col box-border pr-5 pt-[14px]">
-                            <p className="text-5xl font-bold text-red-500">FAQ</p> <br />
-                            <p className="sm:text-2xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
+                            <p className="text-5xl xl:text-6xl font-bold text-red-500">FAQ</p> <br />
+                            <p className="sm:text-2xl xl:text-3xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                         </div>
                         <div className="lg:w-1/2 w-full bg-black">
                             <Faq

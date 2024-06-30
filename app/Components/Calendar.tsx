@@ -100,17 +100,17 @@ export const BasicCalendar = () => {
               transform: inView ? 'translateY(0)' : 'translateY(100%)',
               transition: 'transform 0.5s ease'
               }}
-              className="sm:text-7xl text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
+              className="text-4xl sm:text-6xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
                   EVENT SCHEDULE.
               </h1>
           </div>
-          <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl text-base">
+          <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl lg:text-2xl text-base">
               <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
                 Discover upcoming events and activities in our schedule. Stay informed and join us for exciting opportunities!
               </p>
           </div>
           <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-              <span className='h-fit sm:text-lg text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
+              <span className='h-fit sm:text-lg lg:text-xl text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
                   Learn More &nbsp;
                   <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
               </span>

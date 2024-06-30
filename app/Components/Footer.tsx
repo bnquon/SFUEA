@@ -52,7 +52,7 @@ export const Footer = () => {
                     <p className='text-xl sm:text-left text-center'>Contact us: EMAIL@EMAIL.COM</p>
                 </div>
 
-                <div className='flex flex-col justify-center items-center lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[50%] mt-4 sm:mt-0'>
+                <div className='flex flex-col justify-center items-center lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[calc(100%-20px)] mt-4 sm:mt-0'>
                     <Image src='/racc.png' width={175} height={175} alt='logo'></Image>
                 </div>
             </div>
