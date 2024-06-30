@@ -271,7 +271,7 @@ export default function Home() {
                 <SEO></SEO>
 
                 {/* HOME PAGE */}
-                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] pt-[18vh] sm:gap-[8vh] gap-[4vh]">
+                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] lg:pt-[18vh] xl:pt-[15vh] sm:gap-[8vh] gap-[4vh]">
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[75%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">

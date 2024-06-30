@@ -1,1 +1,8 @@
-Fix button and '3800 member' text spacing on the tablet and maybe mobile screen
+1.
+All the headers + the banner can be a component, pass through text
+
+2.
+FAQ can be a component
+
+3. 
+Calendar can be a component
