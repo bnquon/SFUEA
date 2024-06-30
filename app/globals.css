@@ -69,7 +69,12 @@ body {
 
 .rbc-button-link {
   color: black !important;
-  font-size: 16px !important;
+  font-size: 20px !important;
+  z-index: 1 !important;
+}
+
+.rbc-date-cell {
+  z-index: 1 !important;
 }
 
 [role=columnheader] {
@@ -127,7 +132,15 @@ body {
   width: 100% !important;
   background-color: red !important;
   padding-left: 4px !important;
-  z-index: 10 !important;
+  z-index: 0 !important;
+}
+
+.rbc-selected {
+  z-index: 0 !important;
+}
+
+.rbc-row-segment {
+  z-index: 0 !important;
 }
 
 .rbc-events-container {
@@ -136,6 +149,7 @@ body {
 }
 
 .rbc-event-content {
+  z-index: 0 !important;
   font-size: 16px !important;
 }
 

@@ -353,19 +353,19 @@ export default function Home() {
                     </div>
 
                     <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="w-1/3 flex items-center sm:justify-start justify-center lg:text-3xl xl:text-4xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-start justify-center xl:text-4xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
                                 Tournaments
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center justify-center lg:text-3xl xl:text-4xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center justify-center xl:text-4xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
                                 In-Houses
                             </motion.p>
                         </div>
-                        <div className="w-1/3 flex items-center sm:justify-end justify-center lg:text-3xl xl:text-4xl sm:text-2xl text-base text-black">
+                        <div className="w-1/3 flex items-center sm:justify-end justify-center xl:text-4xl sm:text-2xl text-base text-black">
                             <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
                                 <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
                                 Events
