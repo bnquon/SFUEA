@@ -100,32 +100,32 @@ export default function Home() {
                         className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-5xl font-extrabold">Who We Are</span>
+                    <span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-4xl sm:text-6xl font-extrabold">Who We Are</span>
                     </span>
 				</div>
 
 				<div className="sm:w-[75vw] w-[90vw] flex flex-col box-border">
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
-						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
+						<div className="lg:w-2/5 w-full sm:text-3xl xl:text-4xl text-2xl font-bold">
 							<p>How We Started</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black border-y-[1px] border-[#999999] py-6">
-						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
+						<div className="lg:w-2/5 w-full sm:text-3xl xl:text-4xl text-2xl font-bold">
 							<p>Our Goals</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
-						<div className="lg:w-2/5 w-full sm:text-3xl text-2xl font-bold">
+						<div className="lg:w-2/5 w-full sm:text-3xl xl:text-4xl text-2xl font-bold">
 							<p>Our Vision</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -136,8 +136,8 @@ export default function Home() {
 
 				<div className="sm:w-[75vw] w-[90vw] lg:h-[50vh] flex lg:flex-row flex-col box-border gap-5">
 					<div className="lg:w-2/5 w-full h-full flex flex-col text-black lg:gap-10 gap-5 box-border pr-6 justify-start">
-						<p className="sm:text-3xl text-2xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<p className="sm:text-xl lg:text-2xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+						<p className="sm:text-3xl xl:text-4xl text-2xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p className="sm:text-xl lg:text-2xl xl:text-3xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
 					<WidgetBot className="lg:w-3/5 w-full h-[45vh] lg:h-full"
 						server= '1251409341676912660'
@@ -152,7 +152,7 @@ export default function Home() {
                         className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     	></div>
 
-                    	<span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-5xl font-extrabold">Meet our Leaders</span>
+                    	<span className="relative z-1 bg-[#d3d3d3] sm:px-6 px-0 text-red-500 text-4xl sm:text-6xl font-extrabold">Meet our Leaders</span>
                     </span>
 				</div>
 
@@ -164,8 +164,8 @@ export default function Home() {
 								<div className="aspect-square rounded-full bg-gray-500 lg:w-1/2 sm:w-2/5 w-1/2"></div>
 							</div>
 							<div className="w-full text-xl sm:px-2 px-1 flex flex-col items-center justify-center text-center">
-								<p className="lg:text-2xl sm:text-xl text-lg text-black font-bold">{person.name}</p>
-								<p className="lg:text-xl sm:leading-6 sm:text-lg text-base leading-5 text-black font-normal">{person.role}</p>
+								<p className="sm:text-3xl xl:text-4xl text-xl text-black font-bold">{person.name}</p>
+								<p className="lg:text-xl sm:text-lg xl:text-2xl text-base sm:leading-6 leading-5 text-black font-normal">{person.role}</p>
 							</div>
 						</motion.div>
 					))}

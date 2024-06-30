@@ -1,0 +1,1 @@
+Fix button and '3800 member' text spacing on the tablet and maybe mobile screen
