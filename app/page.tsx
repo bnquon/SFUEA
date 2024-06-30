@@ -271,25 +271,25 @@ export default function Home() {
                 <SEO></SEO>
 
                 {/* HOME PAGE */}
-                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] lg:pt-[18vh] xl:pt-[15vh] sm:gap-[8vh] gap-[4vh]">
+                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] lg:pt-[18vh] xl:pt-[15vh] sm:gap-[8vh] pt-[16vh] gap-[4vh]">
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[75%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
-                            <p className="text-4xl sm:text-6xl xl:text-7xl font-extrabold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                            <p className="text-4xl lg:w-full w-full sm:px-4 lg:px-0 sm:text-6xl xl:text-7xl font-extrabold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
                             <p className="w-full lg:w-full text-black text-base sm:text-xl xl:text-3xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
                             </p>
 
                             <div className="flex sm:gap-4 box-border items-center lg:justify-start justify-evenly">
-                                <div className="sm:w-[50%] flex justify-center lg:justify-start lg:w-fit lg:mr-6 xl:mr-12">
+                                <div className="sm:w-[50%] flex sm:justify-end justify-center lg:justify-start lg:w-fit sm:mr-6 lg:mr-6 xl:mr-12">
                                     <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl xl:text-4xl font-bold italic">
                                         <span>
                                             GAME WITH US &nbsp;
                                         </span>
                                     </motion.button>
                                 </div>
-                                <div className="flex flex-col items-center text-black sm:w-[50%] lg:w-fit">
+                                <div className="flex flex-col items-center sm:items-start text-black sm:w-[50%] sm:ml-6 lg:w-fit">
                                     <p className="sm:text-3xl text-2xl xl:text-4xl font-bold">3800+</p>
                                     <p className="sm:text-xl text-lg font-normal">Members</p>
                                 </div>
