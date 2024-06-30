@@ -275,7 +275,7 @@ export default function Home() {
 
                     <div className="w-[90vw] sm:w-[75vw] lg:h-[75%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
                         <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
-                            <p className="text-4xl lg:w-full w-full sm:px-4 lg:px-0 sm:text-6xl xl:text-7xl font-extrabold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
+                            <p className="text-4xl lg:w-full w-full sm:px-8 lg:px-0 sm:text-6xl xl:text-7xl font-extrabold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
                             <p className="w-full lg:w-full text-black text-base sm:text-xl xl:text-3xl font-medium sm:mb-8 mb-2">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation. 
