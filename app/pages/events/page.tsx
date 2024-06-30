@@ -96,7 +96,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 				<p className='sm:text-5xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 sm:mb-12 mb-4'>RECENT EVENTS.</p>
 			</div>
 
-			<div className='sm:w-[75vw] w-[90vw] lg:h-[30vh] h-[40vh] relative flex sm:flex-row flex-col gap-5 sm:ml-[12.5vw] ml-[5vw]'>
+			<div className='sm:w-[75vw] w-[90vw] lg:h-[35vh] sm:h-[35vh] h-[45vh] relative flex sm:flex-row flex-col gap-5 sm:ml-[12.5vw] ml-[5vw]'>
 				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
 					<img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
 					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
