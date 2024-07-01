@@ -111,7 +111,7 @@ export default function Home() {
 			<div className="w-screen bg-[#d3d3d3] flex flex-col sm:pl-[12.5vw] pl-[5vw]">
                 {games.map((game, gameIndex) => (
                     <div className="w-screen" key={gameIndex}>
-                        <div className="sm:w-[75vw] w-[90vw] sm:h-[20vh] h-[15vh] rounded-xl overflow-hidden relative flex justify-center items-center sm:mb-[6vh] mb-[4vh]">
+                        <div id={game.title} className="sm:w-[75vw] w-[90vw] sm:h-[20vh] h-[15vh] rounded-xl overflow-hidden relative flex justify-center items-center sm:mb-[6vh] mb-[4vh]">
                             <Image className="brightness-75" src={game.picture} alt={game.title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                             <p id="game-title" className="absolute text-white xl:text-6xl sm:text-5xl text-4xl font-bold text-center px-2">{game.title}</p>
                         </div>
