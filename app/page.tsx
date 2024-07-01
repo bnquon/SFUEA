@@ -105,17 +105,17 @@ export default function Home() {
         if (windowWidth >= 1200) { // lg breakpoint
           return {
             rowContentTextSize: '20px',
-            rowTitleTextSize: '28px',
+            rowTitleTextSize: '24px',
           };
         } else if (windowWidth >= 610) { // sm breakpoint
           return {
             rowContentTextSize: '16px',
-            rowTitleTextSize: '24px',
+            rowTitleTextSize: '20px',
           };
         } else {
           return {
             rowContentTextSize: '14px',
-            rowTitleTextSize: '20px',
+            rowTitleTextSize: '18px',
           };
         }
       };
