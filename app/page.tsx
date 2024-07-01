@@ -534,11 +534,11 @@ export default function Home() {
                 <BasicCalendar/>
 
                 <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                    <div className="sm:w-[75vw] w-[90vw] sm:h-fit flex lg:flex-row flex-col lg:items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:px-6 shadow-md">
+                    <div className="sm:w-[75vw] w-[90vw] sm:h-fit flex lg:flex-row flex-col lg:items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:pl-6 xl:pl-12 shadow-md">
                         <div className="lg:w-[30%] w-full flex flex-col flex-grow sm:items-start items-start justify-center box-border lg:gap-4 sm:gap-2 gap-0 text-white py-4">
                             <p className="text-3xl xl:text-5xl font-bold">BUY A JERSEY!</p>
                             <p className="xl:text-3xl text-xl">Club staff and competitive players get 10% off!</p>
-                            <span className='w-fit lg:text-xl xl:text-2xl text-lg xl:px-4 xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
+                            <span className='w-fit lg:text-xl xl:text-2xl text-lg xl:px-4 xl:p xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
                                 SHOP NOW &nbsp;
                                 <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
                             </span>
