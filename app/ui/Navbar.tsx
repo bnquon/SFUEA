@@ -112,7 +112,7 @@ function Navbar() {
                 <div id='mobile-nav' className='sm:hidden flex items-center relative z-[999999]'>
                     <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl' icon={faBars}/>
                         
-                        <div className={`w-[100vw] h-[100svh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
+                        <div className={`w-[100vw] h-[100dvh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
                             <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
                             <div className="w-[250px] h-full flex flex-col bg-black px-8 overflow-y-auto">
                                 <div className='w-full h-[8vh] flex items-center box-border flex-shrink-0'>
