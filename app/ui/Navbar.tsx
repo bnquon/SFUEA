@@ -95,12 +95,12 @@ function Navbar() {
                                     </Link>
                                     <div className='absolute bottom-0 translate-y-[100%] left-0 hidden group-hover:block w-[30vw] z-[999999]'>
                                         <div className='text-lg lg:text-xl xl:text-2xl bg-black text-white grid grid-cols-2 grid-rows-6 relative'>
-                                            {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
-                                                <div key={index} className='w-full h-full font-bold lg:py-6 py-2 lg:px-6 px-3 flex items-center justify-start'>
-                                                    <Link href={`${link.href}#${game}`}>
+                                            {['Valorant', 'League of Legends', 'TFT', 'Overwatch', 'Fighting Games', 'FIFA', 'Rainbow Six Siege', 'Smite', 'Pokemon', 'Trading Card Games', 'Call of Duty', 'Destiny 2'].map((game, index) => (
+                                                <Link href={`${link.href}#${game}`}  key={index}>
+                                                    <div className='w-full h-full font-bold lg:py-6 py-2 lg:px-6 px-3 flex items-center justify-start hover:bg-slate-800 duration-150'>
                                                         {game}
-                                                    </Link>
-                                                </div>
+                                                    </div>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>        
@@ -135,7 +135,7 @@ function Navbar() {
                                         </div>
 
                                         <div className='w-full flex flex-col' style={{ display: teamsOpen ? 'block' : 'none' }}>
-                                            {['Valorant', 'League', 'TFT', 'Overwatch', 'Fighting Games', 'Fifa', 'Rainbow 6', 'Smite', 'Pokemon', 'Trading Card Games', 'COD', 'Destiny 2'].map((game, index) => (
+                                            {['Valorant', 'League of Legends', 'TFT', 'Overwatch', 'Fighting Games', 'FIFA', 'Rainbow Six Siege', 'Smite', 'Pokemon', 'Trading Card Games', 'Call of Duty', 'Destiny 2'].map((game, index) => (
                                                 <div key={index} className='w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
                                                     {game}
                                                 </div>

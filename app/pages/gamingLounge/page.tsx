@@ -233,8 +233,8 @@ export default function Home() {
 
 
 			<div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[6vh]">
-                <div className="sm:w-[75vw] w-[90vw] lg:mb-[12vh] mb-[6vh] sm:text-left text-center">
-					<span className="relative flex justify-center">
+                <div className="sm:w-[75vw] w-[90vw] lg:mb-[12vh] mb-[6vh]">
+					<span className="relative flex justify-center sm:text-center text-center">
                     <div
                         className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
@@ -264,8 +264,8 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial="initial" custom={3} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 flex lg:flex-col-reverse lg:items-start lg:justify-end sm:flex-row flex-col-reverse w-full relative">
                                 <div className="lg:py-4 sm:py-0 py-4 lg:pl-0 pr-5 sm:w-1/2 w-full lg:w-full">
                                     <FontAwesomeIcon icon={faFileLines} className="text-3xl xl:text-4xl mb-2"></FontAwesomeIcon>
-                                    <h3 className="text-xl xl:text-2xl text-black mb-4">You must sign the SFUEA x SFSS Gamers&apos; Lounge Waiver and User Agreement</h3>
-                                    <span className='w-fit text-xl xl:text-2xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
+                                    <h3 className="text-lg leading-6 sm:leading-normal sm:text-xl xl:text-2xl text-black mb-4">You must sign the SFUEA x SFSS Gamers&apos; Lounge Waiver and User Agreement</h3>
+                                    <span className='w-fit text-base sm:text-xl xl:text-2xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
                                         Waiver Agreement &nbsp;
                                         <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                                     </span>
@@ -280,8 +280,8 @@ export default function Home() {
                         <motion.div variants={fadeInAnimation} initial="initial" custom={5} whileInView={"animate"} viewport={{ once: true }} className="lg:w-1/3 flex lg:flex-col-reverse lg:items-start lg:justify-end sm:flex-row flex-col-reverse w-full relative">
                                 <div className="lg:py-4 sm:py-0 py-4 lg:pl-0 pr-5 sm:w-1/2 w-full lg:w-full">
                                     <FontAwesomeIcon icon={faComments} className="text-3xl xl:text-4xl mb-2"></FontAwesomeIcon>
-                                    <h3 className="text-xl xl:text-2xl text-black mb-4">Help us improve the lounge by doing the SFU Esports Gamers&apos; Lounge Experience Survey</h3>
-                                    <span className='w-fit text-xl xl:text-2xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
+                                    <h3 className="text-lg leading-6 sm:leading-normal sm:text-xl xl:text-2xl text-black mb-4">Help us improve the lounge by doing the SFU Esports Gamers&apos; Lounge Experience Survey</h3>
+                                    <span className='w-fit text-base sm:text-xl xl:text-2xl p-2 rounded-xl flex items-center justify-between bg-black text-white'>
                                         Feedback Survey &nbsp;
                                         <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
                                     </span>
@@ -298,12 +298,12 @@ export default function Home() {
 
 			<div className="relative w-screen bg-[#d3d3d3] flex flex-col justify-center items-center pt-[7.5vh]">
 				<div className="sm:w-[75vw] w-[90vw] mb-[8vh]">
-					<span className="relative flex justify-center">
+					<span className="relative flex justify-center sm:text-left text-center">
                     <div
                         className="sm:block hidden absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
                     ></div>
 
-                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-5xl font-extrabold">Lounge FAQ</span>
+                    <span className="relative z-1 bg-[#d3d3d3] px-6 text-red-500 text-4xl sm:text-6xl font-extrabold">Lounge FAQ</span>
                     </span>
 				</div>
                 <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col box-border">

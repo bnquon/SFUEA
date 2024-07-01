@@ -104,12 +104,12 @@ export default function Home() {
                     </span>
 				</div>
 
-				<div className="sm:w-[75vw] w-[90vw] flex flex-col box-border">
+				<div className="sm:w-[75vw] w-[90vw] flex flex-col box-border gap-0 lg:gap-2 xl:gap-4">
 					<div className="w-full flex lg:flex-row lg:gap-0 gap-4 flex-col text-black py-6">
 						<div className="lg:w-2/5 w-full sm:text-3xl xl:text-4xl text-2xl font-bold">
 							<p>How We Started</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl xl:leading-10 font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -117,7 +117,7 @@ export default function Home() {
 						<div className="lg:w-2/5 w-full sm:text-3xl xl:text-4xl text-2xl font-bold">
 							<p>Our Goals</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl xl:leading-10 font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -125,7 +125,7 @@ export default function Home() {
 						<div className="lg:w-2/5 w-full sm:text-3xl xl:text-4xl text-2xl font-bold">
 							<p>Our Vision</p>
 						</div>
-						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl font-normal">
+						<div className="lg:w-3/5 w-full sm:text-xl lg:text-2xl xl:text-3xl xl:leading-10 font-normal">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio fugit minus molestias deserunt, reiciendis asperiores? Dolores cum distinctio ratione veritatis tenetur? Quibusdam ipsa vero reprehenderit dolorem veritatis dicta eveniet.</p>
 						</div>
 					</div>
@@ -137,7 +137,7 @@ export default function Home() {
 				<div className="sm:w-[75vw] w-[90vw] lg:h-[50vh] flex lg:flex-row flex-col box-border gap-5">
 					<div className="lg:w-2/5 w-full h-full flex flex-col text-black lg:gap-10 gap-5 box-border pr-6 justify-start">
 						<p className="sm:text-3xl xl:text-4xl text-2xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<p className="sm:text-xl lg:text-2xl xl:text-3xl font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+						<p className="sm:text-xl lg:text-2xl xl:text-3xl xl:leading-10 font-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
 					</div>
 					<WidgetBot className="lg:w-3/5 w-full h-[45vh] lg:h-full"
 						server= '1251409341676912660'
