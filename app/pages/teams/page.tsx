@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Footer } from "@/app/Components/Footer";
+
 export default function Home() {
 
     type Person = {
