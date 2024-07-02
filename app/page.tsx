@@ -378,7 +378,7 @@ export default function Home() {
                 </div>
 
                 {/* ABOUT US PAGE */}
-                <div className="lg:pt-[8vh] sm:pt-[70vh] pt-[60vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="lg:pt-[8vh] sm:pt-[70vh] pt-[45vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
 
                     <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
                         <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
@@ -463,7 +463,7 @@ export default function Home() {
 
                     <div className="">
 
-                        <div className="sm:w-[75vw] w-[90vw] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border mb-8">
+                        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
                             <div ref={headerInView} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
                                 <h1 
                                 style={{ 
