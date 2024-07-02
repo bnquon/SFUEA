@@ -138,9 +138,11 @@ function Navbar() {
 
                                         <div className='w-full flex flex-col' style={{ display: teamsOpen ? 'block' : 'none' }}>
                                             {['Valorant', 'League of Legends', 'TFT', 'Overwatch', 'Fighting Games', 'FIFA', 'Rainbow Six Siege', 'Smite', 'Pokemon', 'Trading Card Games', 'Call of Duty', 'Destiny 2'].map((game, index) => (
-                                                <div key={index} className='w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
-                                                    {game}
-                                                </div>
+                                                <Link onClick={() => handleCloseClick()} href={`${link.href}#${game}`}  key={index}>
+                                                    <div key={index} className='w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
+                                                        {game}
+                                                    </div>
+                                                </Link>
                                             ))}
                                         </div>
 
