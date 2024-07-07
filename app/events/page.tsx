@@ -1,13 +1,12 @@
 "use client"
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { Footer } from "@/app/Components/Footer";
-import { motion } from 'framer-motion';
 import { SubPageBanner } from "../Components/SubPageBanner";
 import { SubPageHeader } from "../Components/SubPageHeader";
+import { RecentEventCard } from "./RecentEventCard";
   
 
 const localizer = momentLocalizer(moment);
@@ -17,18 +16,6 @@ type CalendarEvent = {
 	start: Date;
 	end: Date;
   };
-
-const fadeInAnimation = {
-initial: { opacity: 0, y: 100 },
-animate: (index: number) => ({
-	opacity: 1, 
-	y: 0,
-	transition: {
-		duration: 0.5,
-		delay: index * 0.1
-	}
-}),
-};
 
 export default function Home() {
 
@@ -81,20 +68,13 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 			</div>
 
 			<div className='sm:w-[75vw] w-[90vw] lg:h-[35vh] sm:h-[35vh] h-[45vh] relative flex sm:flex-row flex-col gap-5 sm:ml-[12.5vw] ml-[5vw]'>
-				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
-					<img className='w-full h-full object-cover' src="/IMG_3779.jpg" alt="" />
-					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl xl:text-2xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</motion.div>
+				
+				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/IMG_3779.jpg" delay={1}/>
 
-				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full rounded-md overflow-hidden relative shadow-lg'>
-					<img className='w-full h-full object-cover' src="/IMG_7099.jpg" alt="" />
-					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl xl:text-2xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</motion.div>
+				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/IMG_7099.jpg" delay={3}/>
 
-				<motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} id='event-card' className='lg:w-1/3 w-full h-full lg:block hidden rounded-md overflow-hidden relative shadow-lg'>
-					<img className='w-full h-full object-cover' src="/IMG_20230930_145502-min.jpg" alt="" />
-					<p id='event-info' className='absolute duration-200 translate-y-[100%] bottom-0 w-full p-2 font-medium sm:text-xl xl:text-2xl text-base text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				</motion.div>
+				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/IMG_20230930_145502-min.jpg" delay={5}/>
+
 			</div>
 
 			<Footer />
