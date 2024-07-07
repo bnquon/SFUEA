@@ -15,10 +15,10 @@ const StickyHeadroom = dynamic(() => import('@integreat-app/react-sticky-headroo
 
 const links = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/pages/about' },
-    { name: 'Teams', href: '/pages/teams' },
-    { name: 'Gamers Lounge', href: '/pages/gamingLounge' },
-    { name: 'Events', href: '/pages/events' },
+    { name: 'About', href: '/about' },
+    { name: 'Teams', href: '/teams' },
+    { name: 'Gamers Lounge', href: '/gamingLounge' },
+    { name: 'Events', href: '/events' },
 ];
 
 function Navbar() {
