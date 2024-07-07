@@ -11,47 +11,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
-import Faq from "react-faq-component";
+import { FAQ } from "./Components/FAQ";
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import Link from 'next/link';
 
 import SEO from "./Components/seo";
-
-const data = {
-    rows: [
-        {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
-        },
-        {
-            title: "Nunc maximus, magna at ultricies elementum",
-            content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
-        },
-        {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
-        },
-        {
-            title: "What is the package version",
-            content: <p>current version is 1.2.1</p>,
-        },
-    ],
-};
-
-
-const config = {
-    animate: true,
-    expandIcon: "+",
-    collapseIcon: "-",
-};
 
 const fadeInAnimation = {
     initial: { opacity: 0, y: 100 },
@@ -85,49 +50,6 @@ const pictureAnimation = {
 // TODO: Make headers their own component, change the gamers lounge card text size, fix jersey card
 
 export default function Home() {    
-
-    const [windowWidth, setWindowWidth] = useState(0);
-
-    useEffect(() => {
-        setWindowWidth(window.innerWidth);
-    }, [])
-
-    useEffect(() => {
-        const handleResize = () => {
-          setWindowWidth(window.innerWidth);
-        };
-    
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const getResponsiveStyles = () => {
-        if (windowWidth >= 1200) { // lg breakpoint
-          return {
-            rowContentTextSize: '20px',
-            rowTitleTextSize: '24px',
-          };
-        } else if (windowWidth >= 610) { // sm breakpoint
-          return {
-            rowContentTextSize: '16px',
-            rowTitleTextSize: '20px',
-          };
-        } else {
-          return {
-            rowContentTextSize: '14px',
-            rowTitleTextSize: '18px',
-          };
-        }
-      };
-
-        const styles = {
-        bgColor: '#d3d3d3',
-        titleTextColor: "black",
-        rowTitleColor: "black",
-        rowContentPaddingTop: '8px',
-        rowContentPaddingBottom: '8px',
-        ...getResponsiveStyles(),
-      };
 
     const [headerInView, inView] = useInView({
         threshold: 0.15,
@@ -572,11 +494,7 @@ export default function Home() {
                             <p className="sm:text-2xl xl:text-3xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                         </div>
                         <div className="lg:w-1/2 w-full bg-black">
-                            <Faq
-                                data={data}
-                                styles={styles}
-                                config={config}
-                            />
+                            <FAQ onWhatPage="home"/>
                         </div>
                     </div>
                 </div>
