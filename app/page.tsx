@@ -342,7 +342,7 @@ export default function Home() {
                         <div className="sm:w-[calc(75vw+60px)] w-[70vw] h-full box-border relative">
                             <Slider ref={slider} {...settings}>
                                 {games.map((game: Game, index) => (
-                                    <Link href={`/pages/teams#${game.title}`} key={index}>
+                                    <Link href={`/teams#${game.title}`} key={index}>
                                         <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
                                             <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full sm:text-4xl xl:text-5xl text-3xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
                                             <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>

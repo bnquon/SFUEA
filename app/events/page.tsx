@@ -19,7 +19,7 @@ type CalendarEvent = {
 
 export default function Home() {
 
-const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
+  const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_CALENDAR_ID}/events?key=${process.env.NEXT_PUBLIC_API_KEY}`
 
@@ -27,7 +27,6 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
     async function fetchData() {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data.items);
 
       if (data.items) {
         const temp: CalendarEvent[] = data.items.map((item: any) => ({
@@ -41,7 +40,7 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
     }
 
     fetchData();
-  }, []);
+  }, [url]);
 
     return (
     	<main className="relative bg-[#d3d3d3]">
