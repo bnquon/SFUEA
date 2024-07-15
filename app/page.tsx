@@ -154,7 +154,7 @@ export default function Home() {
                                         viewport={{ once: true }} 
                                         className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg"
                                     >
-                                        <Image src={'/Home1x1.webp'} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                        <Image src={'/Home1x1.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                     </motion.div>
                                     <motion.div 
                                         variants={pictureAnimation} 
@@ -164,7 +164,7 @@ export default function Home() {
                                         viewport={{ once: true }} 
                                         className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg"
                                     >
-                                        <Image src={'/Home2x1.webp'} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                        <Image src={'/Home2x1.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                     </motion.div>
                                 </div>
                             </div>
@@ -179,7 +179,7 @@ export default function Home() {
                                     viewport={{ once: true }} 
                                     className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"
                                 >
-                                    <Image src={'/Home1x2.webp'} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src={'/Home1x2.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </motion.div>
                                 <motion.div 
                                     variants={pictureAnimation} 
@@ -189,7 +189,7 @@ export default function Home() {
                                     viewport={{ once: true }} 
                                     className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"
                                 >
-                                    <Image src={'/Home2x2.webp'} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
+                                    <Image src={'/Home2x2.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
                                 </motion.div>
                             </div>
                         </div>
