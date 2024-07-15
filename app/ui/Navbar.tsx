@@ -112,7 +112,7 @@ function Navbar() {
                 </div>
 
                 <div id='mobile-nav' className='sm:hidden flex items-center relative z-[999999]'>
-                    <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl' icon={faBars}/>
+                    <FontAwesomeIcon onClick={() => setOpen(!open)} className='text-4xl text-white' icon={faBars}/>
                         
                         <div className={`w-[100vw] h-[100dvh] fixed top-0 right-0 flex transform transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
                             <div onClick={() => handleCloseClick()} className={`flex-grow h-full bg-black/30`}></div>
@@ -139,7 +139,7 @@ function Navbar() {
                                         <div className='w-full flex flex-col' style={{ display: teamsOpen ? 'block' : 'none' }}>
                                             {['Valorant', 'League of Legends', 'TFT', 'Overwatch', 'Fighting Games', 'FIFA', 'Rainbow Six Siege', 'Smite', 'Pokemon', 'Trading Card Games', 'Call of Duty', 'Destiny 2'].map((game, index) => (
                                                 <Link onClick={() => handleCloseClick()} href={`${link.href}#${game}`}  key={index}>
-                                                    <div key={index} className='w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
+                                                    <div key={index} className='text-white w-full h-[8vh] flex items-center justify-between border-b-2 border-gray-800'>
                                                         {game}
                                                     </div>
                                                 </Link>
