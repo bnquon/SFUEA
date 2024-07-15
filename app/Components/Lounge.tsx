@@ -1,147 +1,190 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faComputer,
+  faLocationDot,
+  faCircleExclamation,
+  faCircleArrowUp,
+  faCalendarDays,
+  faArrowCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const cardAnimation = {
-    initial: { opacity: 0, x: 100},
-    animate: (index: number) => ({
-        opacity: 1, 
-        x: 0,
-        transition: {
-            duration: 0.5,
-            delay: index * 0.2
-        }
-    }),
+  initial: { opacity: 0, x: 100 },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.2,
+    },
+  }),
 };
 
 const pictureAnimation = {
-    initial: { opacity: 0, x: -100 },
-    animate: (index: number) => ({
-        opacity: 1, 
-        x: 0,
-        transition: {
-            duration: 0.5,
-            delay: index * 0.2
-        }
-    }),
+  initial: { opacity: 0, x: -100 },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.2,
+    },
+  }),
 };
 
 const fadeInAnimation = {
-    initial: { opacity: 0, y: 100 },
-    animate: (index: number) => ({
-        opacity: 1, 
-        y: 0,
-        transition: {
-            duration: 0.5,
-            delay: index * 0.1
-        }
-    }),
+  initial: { opacity: 0, y: 100 },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.1,
+    },
+  }),
 };
 
 export const Lounge = () => {
   return (
-    <div className='w-full relative sm:pl-[12.5vw] pl-[5vw] bg-[#d3d3d3] flex flex-col pt-[7.5vh] pb-[7.5vh]'>
-    
-        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-            <div className="col-span-2 row-span-1 duration-500 lg:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
-                <h1 className="text-4xl sm:text-6xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
-                    GAMERS&apos; LOUNGE
-                </h1>
-            </div>
-            <div className="col-span-1 row-start-2 xl:flex xl:flex-grow overflow-hidden items-center justify-start sm:text-xl lg:text-2xl text-base">
-                <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
-                Browse the games we have competitive teams, executives, or directors for!
-                The executives and directors run in-houses and events for their desired game to foster the community for each one!
-                </p>
-            </div>
-            <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                <span className='h-fit sm:text-lg lg:text-xl text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                    Learn More &nbsp;
-                    <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
+    <div className="relative flex w-full flex-col bg-[#d3d3d3] pb-[7.5vh] pl-[5vw] pt-[7.5vh] sm:pl-[12.5vw]">
+      <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
+        <div className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 lg:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8">
+          <h1 className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl">
+            GAMERS&apos; LOUNGE
+          </h1>
+        </div>
+        <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:text-2xl xl:flex xl:flex-grow">
+          <p className="box-border pr-6 pt-2 font-semibold xl:pl-8 xl:pr-4 xl:pt-0">
+            Browse the games we have competitive teams, executives, or directors
+            for! The executives and directors run in-houses and events for their
+            desired game to foster the community for each one!
+          </p>
+        </div>
+        <div className="mt-2 flex w-fit flex-shrink-0 flex-grow items-center justify-start sm:mt-0">
+          <span className="flex h-fit flex-shrink-0 flex-grow cursor-pointer items-center rounded-full bg-black p-2 text-base text-white duration-200 sm:p-3 sm:text-lg lg:text-xl">
+            Learn More &nbsp;
+            <FontAwesomeIcon
+              className="-rotate-45 text-2xl"
+              icon={faArrowCircleRight}
+            />
+          </span>
+        </div>
+      </div>
+
+      <div className="relative box-border flex w-[90vw] flex-col gap-4 sm:w-[75vw] lg:flex-row">
+        <motion.div
+          variants={pictureAnimation}
+          initial="initial"
+          whileInView="animate"
+          custom={1}
+          viewport={{ once: true }}
+          className="relative h-[40vh] w-full overflow-hidden rounded-md shadow-lg lg:h-[70vh] lg:w-[50%] xl:w-[60%]"
+        >
+          <Image
+            src={"/gamerslounge3.webp"}
+            className="rounded-xl"
+            alt="ex1"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          ></Image>
+        </motion.div>
+
+        <div className="relative box-border flex w-full lg:h-[70vh] lg:w-[50%] xl:w-[40%]">
+          <motion.div
+            variants={cardAnimation}
+            initial="initial"
+            whileInView="animate"
+            custom={1}
+            viewport={{ once: true }}
+            className="flex h-full w-full flex-col gap-4"
+          >
+            <div className="flex h-1/2 w-full flex-col gap-4 sm:flex-row">
+              <div className="flex h-full w-full flex-col justify-between gap-2 rounded-md bg-white p-4 text-black shadow-md sm:w-1/2 sm:gap-4 lg:gap-0 xl:p-6">
+                <span className="flex items-center text-xl sm:text-2xl xl:text-4xl">
+                  <FontAwesomeIcon className="" icon={faComputer} />
+                  <p className="font-semibold">&nbsp;DEVICES</p>
                 </span>
-            </div>
-        </div>
+                <p className="text-sm sm:text-base xl:text-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam,
+                </p>
+                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                  Full Specs &nbsp;
+                  <FontAwesomeIcon
+                    className="rotate-45 text-2xl"
+                    icon={faCircleArrowUp}
+                  />
+                </span>
+              </div>
 
-        <div className='sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col relative box-border gap-4'>
-
-            <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md xl:w-[60%] lg:w-[50%] lg:h-[70vh] w-full h-[40vh] overflow-hidden shadow-lg">
-                <Image src={'/gamerslounge3.webp'} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-            </motion.div>
-
-            <div className='lg:w-[50%] xl:w-[40%] lg:h-[70vh] w-full relative flex box-border'>
-                <motion.div variants={cardAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full h-full flex flex-col gap-4">
-
-                    <div className='w-full h-1/2 flex sm:flex-row flex-col gap-4'>
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 flex flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
-                            <span className='flex items-center sm:text-2xl text-xl xl:text-4xl'>
-                                <FontAwesomeIcon className='' icon={faComputer}/>
-                                <p className='font-semibold'>&nbsp;DEVICES</p>
-                            </span>
-                            <p className='sm:text-base text-sm xl:text-xl'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md py-1 px-2 xl:py-2 xl:px-4 xl:text-xl rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
-                                Full Specs &nbsp;
-                                <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
-                            </span>
-                        </div>
-
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 sm:flex hidden flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
-                            <span className='flex items-center sm:text-2xl text-xl xl:text-4xl'>
-                                <FontAwesomeIcon className='' icon={faLocationDot}/>
-                                <p className='font-semibold'>&nbsp;LOCATION</p>
-                            </span>
-                            <p className='sm:text-base text-sm xl:text-xl'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md py-1 px-2 xl:py-2 xl:px-4 xl:text-xl rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
-                                Video Guide &nbsp;
-                                <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div className='w-full h-1/2 flex sm:flex-row flex-col gap-4'>
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 sm:flex hidden flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
-                            <span className='flex items-center sm:text-2xl text-xl xl:text-4xl'>
-                                <FontAwesomeIcon className='' icon={faCalendarDays}/>
-                                <p className='font-semibold'>&nbsp;SCHEDULE</p>
-                            </span>
-                            <p className='sm:text-base text-sm xl:text-xl'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md py-1 px-2 xl:py-2 xl:px-4 xl:text-xl rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
-                                Full Schedule &nbsp;
-                                <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
-                            </span>
-                        </div>
-
-                        <div className='sm:w-1/2 w-full h-full bg-white rounded-md shadow-md text-black xl:p-6 p-4 flex flex-col sm:gap-4 lg:gap-0 gap-2 justify-between'>
-                            <span className='flex items-center sm:text-2xl text-xl xl:text-4xl'>
-                                <FontAwesomeIcon className='' icon={faCircleExclamation}/>
-                                <p className='font-semibold'>&nbsp;NOTES</p>
-                            </span>
-                            <p className='sm:text-base text-sm xl:text-xl'>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            </p>
-                            <span className='w-fit mt-2 sm:text-lg text-md py-1 px-2 xl:py-2 xl:px-4 xl:text-xl rounded-xl flex items-center justify-between text-black border-black border-2 duration-200 cursor-pointer hover:bg-black hover:text-white'>
-                                Read More &nbsp;
-                                <FontAwesomeIcon className='rotate-45 text-2xl' icon={faCircleArrowUp}/>
-                            </span>
-                        </div>
-
-                    </div>
-
-                </motion.div>
-               
+              <div className="hidden h-full w-full flex-col justify-between gap-2 rounded-md bg-white p-4 text-black shadow-md sm:flex sm:w-1/2 sm:gap-4 lg:gap-0 xl:p-6">
+                <span className="flex items-center text-xl sm:text-2xl xl:text-4xl">
+                  <FontAwesomeIcon className="" icon={faLocationDot} />
+                  <p className="font-semibold">&nbsp;LOCATION</p>
+                </span>
+                <p className="text-sm sm:text-base xl:text-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam,
+                </p>
+                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                  Video Guide &nbsp;
+                  <FontAwesomeIcon
+                    className="rotate-45 text-2xl"
+                    icon={faCircleArrowUp}
+                  />
+                </span>
+              </div>
             </div>
 
-            
+            <div className="flex h-1/2 w-full flex-col gap-4 sm:flex-row">
+              <div className="hidden h-full w-full flex-col justify-between gap-2 rounded-md bg-white p-4 text-black shadow-md sm:flex sm:w-1/2 sm:gap-4 lg:gap-0 xl:p-6">
+                <span className="flex items-center text-xl sm:text-2xl xl:text-4xl">
+                  <FontAwesomeIcon className="" icon={faCalendarDays} />
+                  <p className="font-semibold">&nbsp;SCHEDULE</p>
+                </span>
+                <p className="text-sm sm:text-base xl:text-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam,
+                </p>
+                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                  Full Schedule &nbsp;
+                  <FontAwesomeIcon
+                    className="rotate-45 text-2xl"
+                    icon={faCircleArrowUp}
+                  />
+                </span>
+              </div>
 
+              <div className="flex h-full w-full flex-col justify-between gap-2 rounded-md bg-white p-4 text-black shadow-md sm:w-1/2 sm:gap-4 lg:gap-0 xl:p-6">
+                <span className="flex items-center text-xl sm:text-2xl xl:text-4xl">
+                  <FontAwesomeIcon className="" icon={faCircleExclamation} />
+                  <p className="font-semibold">&nbsp;NOTES</p>
+                </span>
+                <p className="text-sm sm:text-base xl:text-xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam,
+                </p>
+                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                  Read More &nbsp;
+                  <FontAwesomeIcon
+                    className="rotate-45 text-2xl"
+                    icon={faCircleArrowUp}
+                  />
+                </span>
+              </div>
+            </div>
+          </motion.div>
         </div>
-    
+      </div>
     </div>
-  )
-}
+  );
+};

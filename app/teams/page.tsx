@@ -4,17 +4,19 @@ import { SubPageHeader } from "../Components/SubPageHeader";
 import { GamesAndPlayers } from "./GamesAndPlayers";
 
 export default function Home() {
-    return (
-    	<main className="relative">
+  return (
+    <main className="relative">
+      <SubPageBanner
+        pageTitle="Teams"
+        pageDescription="SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION."
+        blobImage="/blob2.webp"
+      />
 
-    		<SubPageBanner pageTitle="Teams" pageDescription="SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION." blobImage="/blob2.webp" />
+      <SubPageHeader title="Our Team" />
 
-            <SubPageHeader title="Our Team" />
+      <GamesAndPlayers />
 
-            <GamesAndPlayers />
-
-            <Footer />
-
-    	</main>
-  	);
+      <Footer />
+    </main>
+  );
 }

@@ -1,27 +1,26 @@
 import type { Metadata } from "next";
 import { raleway } from "@/app/ui/fonts";
 import { GeistMono } from "geist/font/mono";
-import { GeistSans } from 'geist/font/sans'
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import Navbar from "./ui/Navbar";
 
-
 export const metadata: Metadata = {
-    title: "SFU Gaming & Esports Club",
-    description: "The official website for the SFU Gaming and Esports Club",
+  title: "SFU Gaming & Esports Club",
+  description: "The official website for the SFU Gaming and Esports Club",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={`${GeistSans.className}`}>
-					<Navbar />
-					{children}
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={`${GeistSans.className}`}>
+        <Navbar />
+        {children}
+      </body>
+    </html>
+  );
 }

@@ -1,11 +1,19 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { useInView } from 'react-intersection-observer'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareCaretRight, faSquareCaretLeft, faArrowCircleRight, faTrophy, faHeadset, faUsers, faAnglesDown } from "@fortawesome/free-solid-svg-icons"
-import Slider from "react-slick"
+import { useInView } from "react-intersection-observer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSquareCaretRight,
+  faSquareCaretLeft,
+  faArrowCircleRight,
+  faTrophy,
+  faHeadset,
+  faUsers,
+  faAnglesDown,
+} from "@fortawesome/free-solid-svg-icons";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BasicCalendar } from "./Components/Calendar";
@@ -13,416 +21,647 @@ import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 import { FAQ } from "./Components/FAQ";
 import { games, Game } from "./data/Games";
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import Link from 'next/link';
+import Link from "next/link";
 
 import SEO from "./Components/seo";
 
 const fadeInAnimation = {
-    initial: { opacity: 0, y: 100 },
-    animate: (index: number) => ({
-        opacity: 1, 
-        y: 0,
-        transition: {
-            duration: 0.5,
-            delay: index * 0.1
-        }
-    }),
+  initial: { opacity: 0, y: 100 },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.1,
+    },
+  }),
 };
 
 const iconAnimation = {
-    initial: { opacity: 0, x: -100 },
-    animate: (index: number) => ({
-        opacity: 1, 
-        x: 0,
-        transition: {
-            duration: 0.5,
-            delay: index * 0.1
-        }
-    }),
+  initial: { opacity: 0, x: -100 },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      delay: index * 0.1,
+    },
+  }),
 };
 
 const pictureAnimation = {
-    initial: { scale: 0.2, opacity: 0 },
-    animate: (index: number) => ({ scale: 1, opacity: 1, transition: { duration: 0.5, delay: index * 0.1 } }),
-}
+  initial: { scale: 0.2, opacity: 0 },
+  animate: (index: number) => ({
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, delay: index * 0.1 },
+  }),
+};
 
 // TODO: Make headers their own component, change the gamers lounge card text size, fix jersey card
 
-export default function Home() {    
+export default function Home() {
+  const [headerInView, inView] = useInView({
+    threshold: 0.15,
+    triggerOnce: true,
+  });
 
-    const [headerInView, inView] = useInView({
-        threshold: 0.15,
-        triggerOnce: true
-    })
+  const [headerInView2, inView2] = useInView({
+    threshold: 0.15,
+    triggerOnce: true,
+  });
 
-    const [headerInView2, inView2] = useInView({
-        threshold: 0.15,
-        triggerOnce: true
-    })
+  const slider = useRef<Slider | null>(null);
 
-    const slider = useRef<Slider | null>(null);
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          dots: false,
+        },
+      },
+    ],
+  };
 
-    const settings = {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        dots: true,
-        responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 4000,
-                dots: true,
-              }
-            },
-            {
-                breakpoint: 900,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1,
-                  arrows: false,
-                  autoplay: true,
-                  autoplaySpeed: 4000,
-                  dots: true,
-                }
-              },
-            {
-              breakpoint: 620,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                autoplay: true,
-                autoplaySpeed: 4000,
-                dots: false,
-              }
-            }
-        ]
-    };
+  //
 
-    return (
-        <>
-            <main id="mainPage" className="relative">
-                <SEO></SEO>
+  return (
+    <>
+      <main id="mainPage" className="relative">
+        <SEO></SEO>
 
-                {/* HOME PAGE */}
-                <div id="container" className="w-screen h-screen flex flex-col items-center relative bg-[#d3d3d3] text-white box-border sm:pt-[18vh] lg:pt-[18vh] xl:pt-[15vh] sm:gap-[8vh] pt-[16vh] gap-[4vh]">
+        {/* HOME PAGE */}
+        <div
+          id="container"
+          className="relative box-border flex h-screen w-screen flex-col items-center gap-[4vh] bg-[#d3d3d3] pt-[16vh] text-white sm:gap-[8vh] sm:pt-[18vh] lg:pt-[18vh] xl:pt-[15vh]"
+        >
+          <div className="relative box-border flex w-[90vw] flex-col gap-10 sm:w-[75vw] lg:h-[75%] lg:flex-row lg:gap-0">
+            <div className="relative flex w-[100%] flex-col justify-center text-center lg:w-[45%] lg:pr-6 lg:text-left">
+              <p className="mb-2 w-full bg-gradient-to-r from-red-700 to-red-500 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:mb-8 sm:px-8 sm:text-6xl lg:w-full lg:px-0 xl:text-[80px]">
+                SFU GAMING AND ESPORTS CLUB
+              </p>
+              <p className="mb-2 w-full text-base font-medium text-black sm:mb-8 sm:text-xl lg:w-full xl:text-3xl">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.
+              </p>
 
-                    <div className="w-[90vw] sm:w-[75vw] lg:h-[75%] relative flex lg:flex-row flex-col box-border lg:gap-0 gap-10">
-                        <div className="flex flex-col lg:w-[45%] w-[100%] lg:text-left text-center justify-center relative lg:pr-6">
-                            <p className="text-4xl lg:w-full w-full sm:px-8 lg:px-0 sm:text-6xl xl:text-[80px] font-extrabold sm:mb-8 mb-2 text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-500 leading-tight">SFU GAMING AND ESPORTS CLUB</p>
-                            <p className="w-full lg:w-full text-black text-base sm:text-xl xl:text-3xl font-medium sm:mb-8 mb-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation. 
-                            </p>
+              <div className="box-border flex items-center justify-evenly sm:gap-4 lg:justify-start">
+                <div className="flex justify-center sm:mr-6 sm:w-[50%] sm:justify-end lg:mr-6 lg:w-fit lg:justify-start xl:mr-12">
+                  <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05 }}
+                    id="btn-grad"
+                    className="w-fit px-4 py-3 text-lg font-bold italic sm:text-2xl lg:px-6 lg:py-4 xl:text-4xl"
+                  >
+                    <span>GAME WITH US &nbsp;</span>
+                  </motion.button>
+                </div>
+                <div className="flex flex-col items-center text-black sm:ml-6 sm:w-[50%] sm:items-start lg:w-fit">
+                  <p className="text-2xl font-bold sm:text-3xl xl:text-4xl">
+                    3800+
+                  </p>
+                  <p className="text-lg font-normal sm:text-xl">Members</p>
+                </div>
+              </div>
+            </div>
 
-                            <div className="flex sm:gap-4 box-border items-center lg:justify-start justify-evenly">
-                                <div className="sm:w-[50%] flex sm:justify-end justify-center lg:justify-start lg:w-fit sm:mr-6 lg:mr-6 xl:mr-12">
-                                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} id="btn-grad" className="w-fit lg:px-6 lg:py-4 px-4 py-3 text-lg sm:text-2xl xl:text-4xl font-bold italic">
-                                        <span>
-                                            GAME WITH US &nbsp;
-                                        </span>
-                                    </motion.button>
-                                </div>
-                                <div className="flex flex-col items-center sm:items-start text-black sm:w-[50%] sm:ml-6 lg:w-fit">
-                                    <p className="sm:text-3xl text-2xl xl:text-4xl font-bold">3800+</p>
-                                    <p className="sm:text-xl text-lg font-normal">Members</p>
-                                </div>
+            <div className="relative box-border flex w-full justify-center gap-4 sm:w-full lg:w-[55%]">
+              {/* Right Column */}
+              <div className="relative flex h-full w-full flex-col sm:w-[50%] lg:w-[60%]">
+                <div className="relative box-border flex h-full w-full flex-col gap-4">
+                  <motion.div
+                    variants={pictureAnimation}
+                    initial="initial"
+                    whileInView="animate"
+                    custom={1}
+                    viewport={{ once: true }}
+                    className="h-1/2 overflow-hidden rounded-xl bg-black shadow-lg"
+                  >
+                    <Image
+                      src={"/Home1x1.webp"}
+                      priority={true}
+                      className="rounded-xl"
+                      alt="ex1"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    ></Image>
+                  </motion.div>
+                  <motion.div
+                    variants={pictureAnimation}
+                    initial="initial"
+                    whileInView="animate"
+                    custom={3}
+                    viewport={{ once: true }}
+                    className="h-1/2 overflow-hidden rounded-xl bg-black shadow-lg"
+                  >
+                    <Image
+                      src={"/Home2x1.webp"}
+                      priority={true}
+                      className="rounded-xl"
+                      alt="ex1"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    ></Image>
+                  </motion.div>
+                </div>
+              </div>
 
-                            </div>
-                        </div>
+              {/* Left Column */}
+              <div className="relative box-border hidden w-0 flex-col gap-4 sm:flex sm:w-[50%] lg:flex lg:w-[40%]">
+                <motion.div
+                  variants={pictureAnimation}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={5}
+                  viewport={{ once: true }}
+                  className="h-[50%] overflow-hidden rounded-xl bg-black shadow-lg"
+                >
+                  <Image
+                    src={"/Home1x2.webp"}
+                    priority={true}
+                    className="rounded-xl"
+                    alt="ex1"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  ></Image>
+                </motion.div>
+                <motion.div
+                  variants={pictureAnimation}
+                  initial="initial"
+                  whileInView="animate"
+                  custom={7}
+                  viewport={{ once: true }}
+                  className="h-[50%] overflow-hidden rounded-xl bg-black shadow-lg"
+                >
+                  <Image
+                    src={"/Home2x2.webp"}
+                    priority={true}
+                    className="rounded-xl"
+                    alt="ex1"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  ></Image>
+                </motion.div>
+              </div>
+            </div>
+          </div>
 
-                        <div className="flex w-full lg:w-[55%] sm:w-full box-border gap-4 justify-center relative">
-                            {/* Right Column */}
-                            <div className="lg:w-[60%] sm:w-[50%] w-full h-full flex flex-col relative">    
-                                <div className="w-full h-full flex flex-col relative box-border gap-4">
-                                    <motion.div 
-                                        variants={pictureAnimation} 
-                                        initial='initial' 
-                                        whileInView='animate' 
-                                        custom={1} 
-                                        viewport={{ once: true }} 
-                                        className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg"
-                                    >
-                                        <Image src={'/Home1x1.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                    </motion.div>
-                                    <motion.div 
-                                        variants={pictureAnimation} 
-                                        initial='initial' 
-                                        whileInView='animate' 
-                                        custom={3} 
-                                        viewport={{ once: true }} 
-                                        className="h-1/2 bg-black rounded-xl overflow-hidden shadow-lg"
-                                    >
-                                        <Image src={'/Home2x1.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                    </motion.div>
-                                </div>
-                            </div>
-                            
-                            {/* Left Column */}
-                            <div className="lg:w-[40%] sm:w-[50%] w-0 lg:flex sm:flex flex-col hidden relative box-border gap-4">
-                                <motion.div 
-                                    variants={pictureAnimation} 
-                                    initial='initial' 
-                                    whileInView='animate' 
-                                    custom={5} 
-                                    viewport={{ once: true }} 
-                                    className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"
-                                >
-                                    <Image src={'/Home1x2.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                </motion.div>
-                                <motion.div 
-                                    variants={pictureAnimation} 
-                                    initial='initial' 
-                                    whileInView='animate' 
-                                    custom={7} 
-                                    viewport={{ once: true }} 
-                                    className="h-[50%] bg-black rounded-xl overflow-hidden shadow-lg"
-                                >
-                                    <Image src={'/Home2x2.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
-                                </motion.div>
-                            </div>
-                        </div>
+          <div className="flex w-[90vw] border-t-2 border-t-black pt-4 sm:h-[15vh] sm:w-[75vw] lg:pt-0">
+            <div className="flex w-1/3 items-center justify-center text-base text-black sm:justify-start sm:text-2xl xl:text-4xl">
+              <motion.p
+                variants={iconAnimation}
+                initial="initial"
+                whileInView="animate"
+                custom={5}
+                viewport={{ once: true }}
+                className="flex flex-col items-center sm:flex-row"
+              >
+                <FontAwesomeIcon className="text-black" icon={faTrophy} />{" "}
+                &nbsp; Tournaments
+              </motion.p>
+            </div>
+            <div className="flex w-1/3 items-center justify-center text-base text-black sm:text-2xl xl:text-4xl">
+              <motion.p
+                variants={iconAnimation}
+                initial="initial"
+                whileInView="animate"
+                custom={7}
+                viewport={{ once: true }}
+                className="flex flex-col items-center sm:flex-row"
+              >
+                <FontAwesomeIcon className="text-black" icon={faHeadset} />{" "}
+                &nbsp; In-Houses
+              </motion.p>
+            </div>
+            <div className="flex w-1/3 items-center justify-center text-base text-black sm:justify-end sm:text-2xl xl:text-4xl">
+              <motion.p
+                variants={iconAnimation}
+                initial="initial"
+                whileInView="animate"
+                custom={9}
+                viewport={{ once: true }}
+                className="flex flex-col items-center sm:flex-row"
+              >
+                <FontAwesomeIcon className="text-black" icon={faUsers} /> &nbsp;
+                Events
+              </motion.p>
+            </div>
+          </div>
+        </div>
 
+        {/* ABOUT US PAGE */}
+        <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] pt-[45vh] text-6xl sm:pt-[70vh] lg:pt-[8vh]">
+          <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
+            <div
+              ref={headerInView2}
+              className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 xl:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8"
+            >
+              <h1
+                style={{
+                  transform: inView2 ? "translateY(0)" : "translateY(100%)",
+                  transition: "transform 0.5s ease",
+                }}
+                className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
+              >
+                WHO WE ARE.
+              </h1>
+            </div>
+            <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:flex lg:flex-grow lg:text-2xl">
+              <p className="box-border pr-2 pt-2 font-semibold xl:pl-8 xl:pr-4 xl:pt-0">
+                The SFU Gaming and Esports Club is a student-run nonprofit
+                organization at Simon Fraser University that fosters a vibrant
+                gaming community for both competitive and casual players.
+              </p>
+            </div>
+            <div className="mt-2 flex w-fit flex-shrink-0 flex-grow items-center justify-start sm:mt-0">
+              <span className="flex h-fit flex-shrink-0 flex-grow cursor-pointer items-center rounded-full bg-black p-2 text-base text-white duration-200 sm:p-3 sm:text-lg lg:text-xl">
+                Learn More &nbsp;
+                <FontAwesomeIcon
+                  className="-rotate-45 text-2xl"
+                  icon={faArrowCircleRight}
+                />
+              </span>
+            </div>
+          </div>
 
-                    </div>
-
-                    <div className="sm:w-[75vw] w-[90vw] sm:h-[15vh] border-t-black border-t-2 flex lg:pt-0 pt-4">
-                        <div className="w-1/3 flex items-center sm:justify-start justify-center xl:text-4xl sm:text-2xl text-base text-black">
-                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
-                                <FontAwesomeIcon className="text-black" icon={faTrophy}/> &nbsp;
-                                Tournaments
-                            </motion.p>
-                        </div>
-                        <div className="w-1/3 flex items-center justify-center xl:text-4xl sm:text-2xl text-base text-black">
-                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={7} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
-                                <FontAwesomeIcon className="text-black" icon={faHeadset}/> &nbsp;
-                                In-Houses
-                            </motion.p>
-                        </div>
-                        <div className="w-1/3 flex items-center sm:justify-end justify-center xl:text-4xl sm:text-2xl text-base text-black">
-                            <motion.p variants={iconAnimation} initial='initial' whileInView='animate' custom={9} viewport={{ once: true }} className="flex sm:flex-row flex-col items-center">
-                                <FontAwesomeIcon className="text-black" icon={faUsers}/> &nbsp;
-                                Events
-                            </motion.p>
-                        </div>
-                    </div>
-
+          <div className="relative flex w-[90vw] flex-col justify-center gap-6 sm:w-[75vw] sm:flex-row">
+            <motion.div
+              variants={fadeInAnimation}
+              initial="initial"
+              whileInView="animate"
+              custom={1}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/3"
+            >
+              <article className="flex h-full flex-col overflow-hidden rounded-lg shadow-lg">
+                <div className="relative h-[25vh] w-full lg:h-[35vh]">
+                  <Image
+                    src="/ex1.webp"
+                    alt="ex1"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  ></Image>
                 </div>
 
-                {/* ABOUT US PAGE */}
-                <div className="lg:pt-[8vh] sm:pt-[70vh] pt-[45vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
+                <div className="flex flex-grow flex-col bg-white p-4 sm:p-6">
+                  <h3 className="text-lg text-black sm:text-xl lg:text-2xl">
+                    Game in the Gamers&apos; Lounge!
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-900 sm:text-base lg:text-lg">
+                    Drop into the Gamers&apos; Lounge on campus to play on one
+                    of our 16 high-performance PCs or enjoy console gaming on a
+                    big-screen TV.
+                  </p>
+                </div>
+              </article>
+            </motion.div>
 
-                    <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-                        <div ref={headerInView2} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
-                            <h1 
-                            style={{ 
-                            transform: inView2 ? 'translateY(0)' : 'translateY(100%)',
-                            transition: 'transform 0.5s ease'
-                            }}
-                            className="text-4xl sm:text-6xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400">
-                                WHO WE ARE.
-                            </h1>
-                        </div>
-                        <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl lg:text-2xl text-base">
-                            <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-2 pt-2">
-                                The SFU Gaming and Esports Club is a student-run nonprofit organization at Simon Fraser University that fosters a vibrant gaming community for both competitive and casual players.
-                            </p>
-                        </div>
-                        <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                            <span className='h-fit sm:text-lg lg:text-xl text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                                Learn More &nbsp;
-                                <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                            </span>
-                        </div>
-                    </div>
-
-                    
-
-                    <div className="sm:w-[75vw] w-[90vw] flex sm:flex-row flex-col justify-center gap-6 relative">
-                        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="w-full lg:w-1/3">
-                            <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
-                                <div className="relative w-full lg:h-[35vh] h-[25vh]">
-                                    <Image src='/ex1.webp' alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }}></Image>
-                                </div>
-
-                                <div className="bg-white p-4 sm:p-6 flex flex-col flex-grow">
-                                    <h3 className="sm:text-xl lg:text-2xl text-lg text-black">Game in the Gamers&apos; Lounge!</h3>
-                                    <p className="mt-2 sm:text-base lg:text-lg text-sm text-gray-900">
-                                        Drop into the Gamers&apos; Lounge on campus to play on one of our 16 high-performance PCs or enjoy console gaming on a big-screen TV.
-                                    </p>
-                                </div>
-                            </article>
-                        </motion.div>
-
-                        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={3} viewport={{ once: true }} className="w-full lg:w-1/3">
-                            <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
-                                <div className="relative w-full lg:h-[35vh] h-[25vh]">
-                                    <Image src='/ex2.webp' alt="ex2" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }}></Image>
-                                </div>
-
-                                <div className="bg-white p-4 sm:p-6 flex flex-col flex-grow">
-                                    <h3 className="sm:text-xl lg:text-2xl text-lg text-black">Connect with Like-Minded Gamers!</h3>
-                                    <p className="mt-2 sm:text-base lg:text-lg text-sm text-gray-900">
-                                        Forge friendships and bond over shared interests at our gatherings. 
-                                        Join us for the chance to meet others who share your passion for gaming.
-                                    </p>
-                                </div>
-                            </article>
-                        </motion.div>
-
-                        <motion.div variants={fadeInAnimation} initial='initial' whileInView='animate' custom={5} viewport={{ once: true }} className="w-full lg:w-1/3">
-                            <article className="overflow-hidden rounded-lg shadow-lg h-full flex flex-col">
-                                <div className="relative w-full lg:h-[35vh] h-[25vh]">
-                                    <Image src='/ex3.webp' alt="ex3" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover' }}></Image>
-                                </div>
-
-                                <div className="bg-white p-4 sm:p-6 flex flex-col flex-grow">
-                                    <h3 className="sm:text-xl lg:text-2xl text-lg text-black">Engage in Diverse Student-Run Events!</h3>
-                                    <p className="mt-2 sm:text-base lg:text-lg text-sm text-gray-900">
-                                        Participate in a variety of student-run events, ranging from competitive tournaments and 
-                                        casual game nights to community meetups.
-                                    </p>
-                                </div>
-                            </article>
-                        </motion.div>
-                    </div>
-
+            <motion.div
+              variants={fadeInAnimation}
+              initial="initial"
+              whileInView="animate"
+              custom={3}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/3"
+            >
+              <article className="flex h-full flex-col overflow-hidden rounded-lg shadow-lg">
+                <div className="relative h-[25vh] w-full lg:h-[35vh]">
+                  <Image
+                    src="/ex2.webp"
+                    alt="ex2"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  ></Image>
                 </div>
 
-                {/* GRID CONTAINER */}
-
-                <div className="lg:pt-[8vh] sm:pt-[0vh] pb-[5vh] w-screen text-6xl flex flex-col justify-center items-center bg-[#d3d3d3]">
-
-                    <div className="">
-
-                        <div className="sm:w-[75vw] w-[90vw] mb-[60px] text-black xl:flex xl:flex-row sm:grid sm:grid-cols-[auto] sm:grid-rows-2 flex flex-col relative box-border">
-                            <div ref={headerInView} className="col-span-2 row-span-1 duration-500 xl:w-fit w-full xl:pr-8 pr-0 flex items-center justify-start xl:border-r-black border-r-0 xl:border-r-2 xl:border-b-0 flex-shrink-0 overflow-hidden">
-                                <h1 
-                                style={{ 
-                                transform: inView ? 'translateY(0)' : 'translateY(100%)',
-                                transition: 'transform 0.5s ease'
-                                }}
-                                className="text-4xl sm:text-6xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-400 whitespace-nowrap">
-                                    OUR TEAMS.
-                                </h1>
-                            </div>
-                            <div className="col-span-1 row-start-2 lg:flex lg:flex-grow overflow-hidden items-center justify-start sm:text-xl lg:text-2xl text-base">
-                                <p className="font-semibold box-border xl:pl-8 xl:pr-4 xl:pt-0 pr-6 pt-2">
-                                    Browse the games we have competitive teams, executives, or directors for!
-                                    The executives and directors run in-houses and events for their desired game!
-                                </p>
-                            </div>
-                            <div className="w-fit flex flex-grow flex-shrink-0 items-center justify-start sm:mt-0 mt-2">
-                                <span className='h-fit sm:text-lg lg:text-xl text-base p-2 sm:p-3 rounded-full flex flex-shrink-0 flex-grow items-center text-white duration-200 cursor-pointer bg-black'>
-                                    Learn More &nbsp;
-                                    <FontAwesomeIcon className='-rotate-45 text-2xl' icon={faArrowCircleRight}/>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="w-[calc(85vw+60px)] h-[60vh] relative flex justify-center">
-                        <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="sm:text-4xl text-2xl xl:text-6xl cursor-pointer hover:brightness-75 duration-150"
-                            onClick={() => slider?.current?.slickPrev()}
-                            icon={faSquareCaretLeft} style={{color: "#ff0000",}}/>
-                        </div>
-
-                        <div className="sm:w-[calc(75vw+60px)] w-[70vw] h-full box-border relative">
-                            <Slider ref={slider} {...settings}>
-                                {games.map((game: Game, index) => (
-                                    <Link href={`/teams#${game.title}`} key={index}>
-                                        <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
-                                            <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full sm:text-4xl xl:text-5xl text-3xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
-                                            <p className="z-10 absolute top-0 w-full h-[8%] bg-gradient-to-b from-red-500"></p>
-                                            <Image 
-                                                id="game-pic"
-                                                className="duration-300 object-cover"
-                                                width={0}
-                                                height={0}
-                                                src={game.picture} 
-                                                alt={game.title}
-                                                sizes="100vw"  
-                                                style={{ width: '100%', height: '100%' }}
-                                            />
-                                        </div>
-                                    </Link>
-                                ))}
-                            </Slider>
-                        </div>
-
-                        <div className="sm:w-[5vw] w-[10vw] h-full items-center flex justify-center">
-                            <FontAwesomeIcon className="sm:text-4xl text-2xl xl:text-6xl cursor-pointer hover:brightness-75 duration-150"
-                            onClick={() => slider?.current?.slickNext()}
-                            icon={faSquareCaretRight} style={{color: "#ff0000",}}/>
-                        </div>
-                    </div>
-
-                    
+                <div className="flex flex-grow flex-col bg-white p-4 sm:p-6">
+                  <h3 className="text-lg text-black sm:text-xl lg:text-2xl">
+                    Connect with Like-Minded Gamers!
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-900 sm:text-base lg:text-lg">
+                    Forge friendships and bond over shared interests at our
+                    gatherings. Join us for the chance to meet others who share
+                    your passion for gaming.
+                  </p>
                 </div>
-                
-                <Lounge/>
+              </article>
+            </motion.div>
 
-                <BasicCalendar/>
-
-                <div className="pt-[7.5vh] pb-[5vh] w-screen flex flex-col justify-center items-center bg-[#d3d3d3]">
-                    <div className="sm:w-[75vw] w-[90vw] sm:h-fit flex lg:flex-row flex-col lg:items-center relative rounded-xl box-border sm:bg-gradient-to-r bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 sm:pl-6 xl:pl-12 shadow-md">
-                        <div className="lg:w-[30%] w-full flex flex-col flex-grow sm:items-start items-start justify-center box-border lg:gap-4 sm:gap-2 gap-0 text-white py-4">
-                            <p className="text-3xl xl:text-5xl font-bold">BUY A JERSEY!</p>
-                            <p className="xl:text-3xl text-xl">Club staff and competitive players get 10% off!</p>
-                            <span className='w-fit lg:text-xl xl:text-2xl text-lg xl:px-4 xl:p xl:py-2 px-2 py-1 mt-2 rounded-xl flex items-center bg-black text-white'>
-                                SHOP NOW &nbsp;
-                                <FontAwesomeIcon className='-rotate-90 text-2xl' icon={faAnglesDown}/>
-                            </span>
-                        </div>
-                        
-                        <div className="h-full lg:w-[70%] w-full relative box-border">
-                            <div className="h-full flex relative box-border gap-0">
-                                <div className="h-full sm:w-1/3 w-full relative flex">
-                                    <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/blackJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                    <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/blackJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                </div>
-
-                                <div className="h-full w-1/3 relative sm:flex hidden">
-                                    <Image alt="forced" className="absolute  scale-x-125 scale-y-110" src='/pinkJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                    <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200  scale-x-125 scale-y-110" src='/pinkJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                </div>
-
-                                <div className="h-full w-1/3 relative sm:flex hidden">
-                                    <Image alt="forced" className="absolute scale-x-125 scale-y-110" src='/whiteJerseyBack.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                    <Image id="front-image" alt="forced" className="hover:opacity-0 duration-200 scale-x-125 scale-y-110" src='/whiteJerseyFront.webp' width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%'}}></Image>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-                
-                <div className="relative w-screen bg-[#d3d3d3] flex justify-center sm:pt-[5vh] pt-[4vh]">
-                    <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col">
-                        <div className="lg:w-1/2 w-full flex flex-col box-border pr-5 pt-[14px]">
-                            <p className="text-5xl xl:text-6xl font-bold text-red-600">FAQ</p> <br />
-                            <p className="sm:text-2xl xl:text-3xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
-                        </div>
-                        <div className="lg:w-1/2 w-full bg-black">
-                            <FAQ onWhatPage="home"/>
-                        </div>
-                    </div>
+            <motion.div
+              variants={fadeInAnimation}
+              initial="initial"
+              whileInView="animate"
+              custom={5}
+              viewport={{ once: true }}
+              className="w-full lg:w-1/3"
+            >
+              <article className="flex h-full flex-col overflow-hidden rounded-lg shadow-lg">
+                <div className="relative h-[25vh] w-full lg:h-[35vh]">
+                  <Image
+                    src="/ex3.webp"
+                    alt="ex3"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  ></Image>
                 </div>
 
-                <Footer/>
+                <div className="flex flex-grow flex-col bg-white p-4 sm:p-6">
+                  <h3 className="text-lg text-black sm:text-xl lg:text-2xl">
+                    Engage in Diverse Student-Run Events!
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-900 sm:text-base lg:text-lg">
+                    Participate in a variety of student-run events, ranging from
+                    competitive tournaments and casual game nights to community
+                    meetups.
+                  </p>
+                </div>
+              </article>
+            </motion.div>
+          </div>
+        </div>
 
-            </main>
-        </>
-    );
+        {/* GRID CONTAINER */}
+
+        <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] text-6xl sm:pt-[0vh] lg:pt-[8vh]">
+          <div className="">
+            <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
+              <div
+                ref={headerInView}
+                className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 xl:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8"
+              >
+                <h1
+                  style={{
+                    transform: inView ? "translateY(0)" : "translateY(100%)",
+                    transition: "transform 0.5s ease",
+                  }}
+                  className="whitespace-nowrap bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
+                >
+                  OUR TEAMS.
+                </h1>
+              </div>
+              <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:flex lg:flex-grow lg:text-2xl">
+                <p className="box-border pr-6 pt-2 font-semibold xl:pl-8 xl:pr-4 xl:pt-0">
+                  Browse the games we have competitive teams, executives, or
+                  directors for! The executives and directors run in-houses and
+                  events for their desired game!
+                </p>
+              </div>
+              <div className="mt-2 flex w-fit flex-shrink-0 flex-grow items-center justify-start sm:mt-0">
+                <span className="flex h-fit flex-shrink-0 flex-grow cursor-pointer items-center rounded-full bg-black p-2 text-base text-white duration-200 sm:p-3 sm:text-lg lg:text-xl">
+                  Learn More &nbsp;
+                  <FontAwesomeIcon
+                    className="-rotate-45 text-2xl"
+                    icon={faArrowCircleRight}
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative flex h-[60vh] w-[calc(85vw+60px)] justify-center">
+            <div className="flex h-full w-[10vw] items-center justify-center sm:w-[5vw]">
+              <FontAwesomeIcon
+                className="cursor-pointer text-2xl duration-150 hover:brightness-75 sm:text-4xl xl:text-6xl"
+                onClick={() => slider?.current?.slickPrev()}
+                icon={faSquareCaretLeft}
+                style={{ color: "#ff0000" }}
+              />
+            </div>
+
+            <div className="relative box-border h-full w-[70vw] sm:w-[calc(75vw+60px)]">
+              <Slider ref={slider} {...settings}>
+                {games.map((game: Game, index) => (
+                  <Link href={`/teams#${game.title}`} key={index}>
+                    <div
+                      id="game-div"
+                      key={index}
+                      className="relative box-border flex h-[60vh] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-md shadow-md"
+                    >
+                      <p
+                        id="game-title"
+                        className="absolute bottom-0 z-10 flex h-[30%] w-full items-end justify-center bg-gradient-to-t from-red-600 pb-[15%] pl-5 pr-5 text-center text-3xl font-bold text-white sm:text-4xl xl:text-5xl"
+                      >
+                        {game.title}
+                      </p>
+                      <p className="absolute top-0 z-10 h-[8%] w-full bg-gradient-to-b from-red-500"></p>
+                      <Image
+                        id="game-pic"
+                        className="object-cover duration-300"
+                        width={0}
+                        height={0}
+                        src={game.picture}
+                        alt={game.title}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                    </div>
+                  </Link>
+                ))}
+              </Slider>
+            </div>
+
+            <div className="flex h-full w-[10vw] items-center justify-center sm:w-[5vw]">
+              <FontAwesomeIcon
+                className="cursor-pointer text-2xl duration-150 hover:brightness-75 sm:text-4xl xl:text-6xl"
+                onClick={() => slider?.current?.slickNext()}
+                icon={faSquareCaretRight}
+                style={{ color: "#ff0000" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        <Lounge />
+
+        <BasicCalendar />
+
+        <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] pt-[7.5vh]">
+          <div className="relative box-border flex w-[90vw] flex-col rounded-xl bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 shadow-md sm:h-fit sm:w-[75vw] sm:bg-gradient-to-r sm:pl-6 lg:flex-row lg:items-center xl:pl-12">
+            <div className="box-border flex w-full flex-grow flex-col items-start justify-center gap-0 py-4 text-white sm:items-start sm:gap-2 lg:w-[30%] lg:gap-4">
+              <p className="text-3xl font-bold xl:text-5xl">BUY A JERSEY!</p>
+              <p className="text-xl xl:text-3xl">
+                Club staff and competitive players get 10% off!
+              </p>
+              <span className="xl:p mt-2 flex w-fit items-center rounded-xl bg-black px-2 py-1 text-lg text-white lg:text-xl xl:px-4 xl:py-2 xl:text-2xl">
+                SHOP NOW &nbsp;
+                <FontAwesomeIcon
+                  className="-rotate-90 text-2xl"
+                  icon={faAnglesDown}
+                />
+              </span>
+            </div>
+
+            <div className="relative box-border h-full w-full lg:w-[70%]">
+              <div className="relative box-border flex h-full gap-0">
+                <div className="relative flex h-full w-full sm:w-1/3">
+                  <Image
+                    alt="forced"
+                    className="absolute scale-x-125 scale-y-110"
+                    src="/blackJerseyBack.webp"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "100%", height: "100%" }}
+                  ></Image>
+                  <Image
+                    id="front-image"
+                    alt="forced"
+                    className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
+                    src="/blackJerseyFront.webp"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "100%", height: "100%" }}
+                  ></Image>
+                </div>
+
+                <div className="relative hidden h-full w-1/3 sm:flex">
+                  <Image
+                    alt="forced"
+                    className="absolute scale-x-125 scale-y-110"
+                    src="/pinkJerseyBack.webp"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "100%", height: "100%" }}
+                  ></Image>
+                  <Image
+                    id="front-image"
+                    alt="forced"
+                    className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
+                    src="/pinkJerseyFront.webp"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "100%", height: "100%" }}
+                  ></Image>
+                </div>
+
+                <div className="relative hidden h-full w-1/3 sm:flex">
+                  <Image
+                    alt="forced"
+                    className="absolute scale-x-125 scale-y-110"
+                    src="/whiteJerseyBack.webp"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "100%", height: "100%" }}
+                  ></Image>
+                  <Image
+                    id="front-image"
+                    alt="forced"
+                    className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
+                    src="/whiteJerseyFront.webp"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ width: "100%", height: "100%" }}
+                  ></Image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative flex w-screen justify-center bg-[#d3d3d3] pt-[4vh] sm:pt-[5vh]">
+          <div className="flex w-[90vw] flex-col sm:w-[75vw] lg:flex-row">
+            <div className="box-border flex w-full flex-col pr-5 pt-[14px] lg:w-1/2">
+              <p className="text-5xl font-bold text-red-600 xl:text-6xl">FAQ</p>{" "}
+              <br />
+              <p className="text-xl font-semibold text-black sm:text-2xl xl:text-3xl">
+                If you don&apos;t see your question here, reach out in the
+                discord or email EMAIL@EMAIL.COM
+              </p>
+            </div>
+            <div className="w-full bg-black lg:w-1/2">
+              <FAQ onWhatPage="home" />
+            </div>
+          </div>
+        </div>
+
+        <Footer />
+      </main>
+    </>
+  );
 }
