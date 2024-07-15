@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,6 +12,7 @@ import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
 import { FAQ } from "./Components/FAQ";
+import { games, Game } from "./data/Games";
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import Link from 'next/link';
@@ -61,30 +62,6 @@ export default function Home() {
         triggerOnce: true
     })
 
-    const [atTop, setAtTop] = useState(true);
-  
-    useEffect(() => {
-        const handleScroll = () => {
-        let height;
-        if (typeof window !== 'undefined') { 
-            height = window.scrollY;
-        }
-        
-        if (height === 0) {
-            setAtTop(true);
-        } else {
-            setAtTop(false);
-        }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-        };
-
-    }, []);
-
     const slider = useRef<Slider | null>(null);
 
     const settings = {
@@ -132,62 +109,6 @@ export default function Home() {
             }
         ]
     };
-
-    type Game = {
-        title: string;
-        picture: string;
-    }
-
-    const games: Game[] = [
-        {
-            title: "Valorant",
-            picture: '/val.jpg'
-        },
-        {
-            title: "League of Legends",
-            picture: '/crank.jpg'
-        },
-        {
-            title: "TFT",
-            picture: '/tft.jpg'
-        },
-		{
-			title: 'Overwatch',
-			picture: '/overwatch.jpeg'
-		},
-        {
-            title: 'Fighting Games',
-            picture: '/fighting.jpg'
-        },
-        {
-            title: 'Trading Card Games',
-            picture: '/pokemon.jpg'
-        },
-        {
-            title: 'Destiny 2',
-            picture: '/destiny.jpg'
-        },
-        {
-            title: 'Rainbow Six Siege',
-            picture: '/r6.jpg'
-        },
-        {
-            title: 'FIFA',
-            picture: '/fifa.jpg'
-        },
-        {
-            title: 'Call of Duty',
-            picture: '/cod.jpg'
-        },
-        {
-            title: 'Smite',
-            picture: '/smite.jpg'
-        },
-        {
-            title: 'Pokemon',
-            picture: '/pokemon1.jpg'
-        }
-    ];
 
     return (
         <>
@@ -420,7 +341,7 @@ export default function Home() {
 
                         <div className="sm:w-[calc(75vw+60px)] w-[70vw] h-full box-border relative">
                             <Slider ref={slider} {...settings}>
-                                {games.map((game, index) => (
+                                {games.map((game: Game, index) => (
                                     <Link href={`/pages/teams#${game.title}`} key={index}>
                                         <div id="game-div" key={index} className="h-[60vh] flex flex-col items-center justify-center box-border relative cursor-pointer rounded-md overflow-hidden shadow-md">
                                             <p id="game-title" className="z-10 flex justify-center items-end pb-[15%] pl-5 pr-5 absolute bottom-0 w-full sm:text-4xl xl:text-5xl text-3xl font-bold text-center h-[30%] bg-gradient-to-t from-red-600 text-white">{game.title}</p>
