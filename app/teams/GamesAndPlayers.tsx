@@ -16,7 +16,7 @@ export const GamesAndPlayers = () => {
                 <div className="sm:w-[75vw] w-[90vw] grid grid-flow-row lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 relative box-border sm:gap-8 gap-2 sm:mt-[6vh] mt-[4vh]">
                     {people.map((person: Person, personIndex) => (
                         <div key={personIndex} className="h-[15vh] flex flex-col justify-center text-center items-center bg-gradient-to-t from-black to-gray-700 rounded-xl shadow-md px-2">
-                            <p className="sm:text-3xl xl:text-4xl text-xl font-bold">{person.name}</p>
+                            <p className="sm:text-3xl xl:text-4xl text-xl font-bold text-white">{person.name}</p>
                             <p className="sm:text-xl text-lg xl:text-2xl leading-5 text-red-500 font-semibold">{person.role}</p>
                         </div>
                     ))}
