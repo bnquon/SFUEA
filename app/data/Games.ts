@@ -6,50 +6,50 @@ export type Game = {
 export const games: Game[] = [
     {
         title: "Valorant",
-        picture: '/val.jpg'
+        picture: '/val.webp'
     },
     {
         title: "League of Legends",
-        picture: '/crank.jpg'
+        picture: '/crank.webp'
     },
     {
         title: "TFT",
-        picture: '/tft.jpg'
+        picture: '/tft.webp'
     },
     {
         title: 'Overwatch',
-        picture: '/overwatch.jpeg'
+        picture: '/overwatch.webp'
     },
     {
         title: 'Fighting Games',
-        picture: '/fighting.jpg'
+        picture: '/fighting.webp'
     },
     {
         title: 'Trading Card Games',
-        picture: '/pokemon.jpg'
+        picture: '/pokemon.webp'
     },
     {
         title: 'Destiny 2',
-        picture: '/destiny.jpg'
+        picture: '/destiny.webp'
     },
     {
         title: 'Rainbow Six Siege',
-        picture: '/r6.jpg'
+        picture: '/r6.webp'
     },
     {
         title: 'FIFA',
-        picture: '/fifa.jpg'
+        picture: '/fifa.webp'
     },
     {
         title: 'Call of Duty',
-        picture: '/cod.jpg'
+        picture: '/cod.webp'
     },
     {
         title: 'Smite',
-        picture: '/smite.jpg'
+        picture: '/smite.webp'
     },
     {
         title: 'Pokemon',
-        picture: '/pokemon1.jpg'
+        picture: '/pokemon1.webp'
     }
 ];

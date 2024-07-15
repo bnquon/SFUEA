@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer, faLocationDot, faCircleExclamation, faCircleArrowUp, faCalendarDays, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons"
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const cardAnimation = {
     initial: { opacity: 0, x: 100},
@@ -66,7 +67,7 @@ export const Lounge = () => {
         <div className='sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col relative box-border gap-4'>
 
             <motion.div variants={pictureAnimation} initial='initial' whileInView='animate' custom={1} viewport={{ once: true }} className="relative rounded-md xl:w-[60%] lg:w-[50%] lg:h-[70vh] w-full h-[40vh] overflow-hidden shadow-lg">
-                <img src="/gamerslounge3.jpg" className='object-cover w-full h-full' alt="Gamers Lounge" />
+                <Image src={'/gamerslounge3.webp'} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '100%', height: '100%', objectFit: 'cover'}}></Image>
             </motion.div>
 
             <div className='lg:w-[50%] xl:w-[40%] lg:h-[70vh] w-full relative flex box-border'>

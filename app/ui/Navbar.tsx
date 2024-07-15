@@ -61,7 +61,7 @@ function Navbar() {
             <div className='w-screen fixed z-[999999] flex justify-between bg-black sm:px-[12.5vw] px-[5vw]'>
                 <div className='w-1/4 flex justify-start items-center py-[1vh] lg:py-[1.5vh]'>
                     <Link href={"/"}>
-                        <Image src={"/real-logo.png"} alt={'PLACEHOLDER'} width={60} height={60}></Image>
+                        <Image src={"/real-logo.webp"} alt={'PLACEHOLDER'} width={60} height={60}></Image>
                     </Link>
                 </div>
                 <div id="pageSwitcher" className="w-[60vw] sm:flex hidden justify-center items-center relative z-[99999999999999]">

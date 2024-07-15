@@ -50,12 +50,12 @@ export const Footer = () => {
                 <div className="w-fit h-[4vh] text-white text-lg"><span>Created by: <a className='underline' href="https://www.linkedin.com/in/brandon-quon/" target="_blank">Brandon Quon</a></span></div>
 
                 <div className='lg:flex lg:flex-col lg:justify-center lg:items-center lg:gap-4 lg:mb-5 mt-4 sm:mt-4 lg:absolute w-[45%] h-full right-0 top-0 lg:translate-y-[-75%] xl:translate-y-[-50%] flex flex-col items-center justify-center gap-10 xl:gap-14'>
-                    <Image src='/real-logo.png' width={250} height={250} alt='logo'></Image>
+                    <Image src='/real-logo.webp' width={250} height={250} alt='logo'></Image>
                     <p className='text-xl xl:text-2xl text-center'>Contact us: EMAIL@EMAIL.COM</p>
                 </div>
 
                 <div className='flex flex-col justify-center items-center lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-[calc(100%-20px)] mt-4 sm:mt-0'>
-                    <Image src='/racc.png' width={175} height={175} alt='logo'></Image>
+                    <Image src='/racc.webp' width={175} height={175} alt='logo'></Image>
                 </div>
             </div>
 

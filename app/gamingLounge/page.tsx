@@ -119,7 +119,7 @@ export default function Home() {
     return (
     	<main className="relative">
 
-            <SubPageBanner pageTitle="Gaming Lounge" pageDescription="SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION." blobImage="/blob2.jpg" />
+            <SubPageBanner pageTitle="Gaming Lounge" pageDescription="SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION." blobImage="/blob2.webp" />
 
 			<div className="w-screen relative bg-[#d3d3d3] flex flex-col justify-center items-center box-border pt-[5vh]">
                 

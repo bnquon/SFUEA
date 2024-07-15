@@ -7,7 +7,7 @@ export default function Home() {
     return (
     	<main className="relative">
 
-    		<SubPageBanner pageTitle="Teams" pageDescription="SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION." blobImage="/blob2.jpg" />
+    		<SubPageBanner pageTitle="Teams" pageDescription="SFU GAMING AND ESPORTS CLUB IS THE PREMIUM LIFESTYLE BRAND FOR THE GAMING GENERATION." blobImage="/blob2.webp" />
 
             <SubPageHeader title="Our Team" />
 

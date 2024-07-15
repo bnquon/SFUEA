@@ -16,7 +16,7 @@ export const SubPageBanner: React.FC<SubPageBannerProps> = ({ pageTitle, pageDes
                     <p className="font-bold sm:text-2xl lg:text-3xl text-base text-red-500">{pageTitle}</p>
                     <p className="sm:text-[27px] lg:text-4xl xl:text-5xl text-[21px] font-extrabold">{pageDescription}</p>
                 </div>
-                <Image className="z-[2] sm:w-[20%] xl:w-[17.5%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.png' alt="ex1" width={0} height={0} sizes='100vw'></Image>
+                <Image className="z-[2] sm:w-[20%] xl:w-[17.5%] w-[150px] h-auto mt-5 pl-[5%] sm:pl-0 sm:mt-0" src='/real-logo.webp' alt="ex1" width={0} height={0} sizes='100vw'></Image>
             </div>
         </div>
     )
