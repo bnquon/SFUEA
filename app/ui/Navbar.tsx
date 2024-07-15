@@ -72,7 +72,7 @@ function Navbar() {
                                         key={link.name}
                                         href={link.href}
                                         className={clsx(
-                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-800 max-w-fit text-lg lg:text-xl xl:text-2xl font-bold z-[999999]',
+                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-800 text-white max-w-fit text-lg lg:text-xl xl:text-2xl font-bold z-[999999]',
                                             {
                                                 'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-lg lg:text-xl xl:text-2xl hover:bg-slate-200 font-bold max-w-fit z-[999999]': pathname === link.href,
                                             },
@@ -86,7 +86,7 @@ function Navbar() {
                                     <Link
                                         href={link.href}
                                         className={clsx(
-                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-800 max-w-fit text-lg lg:text-xl xl:text-2xl font-bold z-[999999]',
+                                            'flex justify-center items-center lg:px-6 px-3 h-full hover:bg-slate-800 text-white max-w-fit text-lg lg:text-xl xl:text-2xl font-bold z-[999999]',
                                             {
                                                 'flex justify-center items-center lg:px-6 px-3 h-full bg-red-500 text-white text-lg lg:text-xl xl:text-2xl hover:bg-slate-200 font-bold max-w-fit z-[999999]': pathname === link.href,
                                             },
@@ -157,7 +157,7 @@ function Navbar() {
 
 
                 <div className="w-1/4 sm:flex hidden justify-end items-center z-[999999]">
-                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='lg:px-6 lg:py-3 px-2 py-3 bg-red-500 max-w-fit rounded-xl text-base lg:text-xl xl:text-2xl font-bold'>JOIN NOW</motion.button>
+                    <motion.button whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }} className='lg:px-6 lg:py-3 px-2 py-3 bg-red-500 text-white max-w-fit rounded-xl text-base lg:text-xl xl:text-2xl font-bold'>JOIN NOW</motion.button>
                 </div>
             </div>
         </StickyHeadroom>

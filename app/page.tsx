@@ -411,7 +411,7 @@ export default function Home() {
                 <div className="relative w-screen bg-[#d3d3d3] flex justify-center sm:pt-[5vh] pt-[4vh]">
                     <div className="sm:w-[75vw] w-[90vw] flex lg:flex-row flex-col">
                         <div className="lg:w-1/2 w-full flex flex-col box-border pr-5 pt-[14px]">
-                            <p className="text-5xl xl:text-6xl font-bold text-red-500">FAQ</p> <br />
+                            <p className="text-5xl xl:text-6xl font-bold text-red-600">FAQ</p> <br />
                             <p className="sm:text-2xl xl:text-3xl text-xl font-semibold text-black">If you don&apos;t see your question here, reach out in the discord or email EMAIL@EMAIL.COM</p>
                         </div>
                         <div className="lg:w-1/2 w-full bg-black">
