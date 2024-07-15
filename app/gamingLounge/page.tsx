@@ -138,7 +138,7 @@ export default function Home() {
 					</div>
 					
 					<div className="sm:w-[40%] h-full flex justify-center items-center order-first sm:order-none">
-						<img className="w-[80%] h-full" src="https://www.pngmart.com/files/23/Gaming-Pc-PNG-Isolated-Photo.png" alt="Gaming PC" />
+                        <Image src={'/gamingPC.webp'} priority={true} className="rounded-xl" alt="ex1" width={0} height={0} sizes="100vw" style={{ width: '80%', height: '100%', objectFit: 'cover'}}></Image>
 					</div>
 
 					<div className="sm:w-[30%] w-full sm:h-full h-fit flex flex-col box-border sm:gap-4 gap-0">
@@ -163,7 +163,7 @@ export default function Home() {
 						<div className="sm:w-1/2 h-full flex flex-col justify-start xl:pr-4">
 							<p className="sm:text-2xl text-xl xl:text-4xl font-normal text-black">We are located in the Student Union Building, level 2 room 2400</p><br />
 						</div>
-						<Image src="/sfuSnap.jpeg" width={0} height={0} sizes="100vw" className="sm:w-1/2 w-full h-full" alt="Map"/>
+						<Image src="/sfuSnap.webp" width={0} height={0} sizes="100vw" className="sm:w-1/2 w-full h-full" alt="Map"/>
 					</div>
 					<div className="sm:w-1/2 aspect-video">
 						<YoutubeEmbed embedId="vtgDsTFrCE8"/>
@@ -181,7 +181,7 @@ export default function Home() {
 					</div>
                     <div className="lg:w-2/3 w-full relative">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[100%] flex justify-center">
-                            <img src="/raccoon_construction.png" id="constructraccoon" className="sm:w-[25%] w-[40%] scale-x-[-1]" alt="Map" />
+                            <img src="/raccoon_construction.webp" id="constructraccoon" className="sm:w-[25%] w-[40%] scale-x-[-1]" alt="Map" />
                         </div>
                         <WidgetBot className="w-full h-[45vh] lg:h-full" 
                             server= '1251409341676912660'
@@ -198,11 +198,11 @@ export default function Home() {
 				<div className="sm:w-[75vw] w-[90vw] flex box-border text-black">
                     <div className="w-full flex lg:flex-row flex-col box-border gap-4">
 
-                        <ImportantDetailCard description="You must bring and show your student ID to access the lounge" image="/ex1.JPG" icon={faIdCard} buttonText={null} delay={0}/>
+                        <ImportantDetailCard description="You must bring and show your student ID to access the lounge" image="/ex1.webp" icon={faIdCard} buttonText={null} delay={0}/>
 
-                        <ImportantDetailCard description="Sign the SFUEA x SFSS Gamers' Lounge Waiver and User Agreement" image="/ex2.JPG" icon={faFileLines} buttonText="Waiver Agreement" delay={1}/>
+                        <ImportantDetailCard description="Sign the SFUEA x SFSS Gamers' Lounge Waiver and User Agreement" image="/ex2.webp" icon={faFileLines} buttonText="Waiver Agreement" delay={1}/>
 
-                        <ImportantDetailCard description="Help us improve the lounge by doing the SFU Esports Gamers' Lounge Experience Survey" image="/ex3.JPG" icon={faComments} buttonText="Feedback Survey" delay={2}/>
+                        <ImportantDetailCard description="Help us improve the lounge by doing the SFU Esports Gamers' Lounge Experience Survey" image="/ex3.webp" icon={faComments} buttonText="Feedback Survey" delay={2}/>
                         
     
                     </div>

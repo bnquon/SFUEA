@@ -69,11 +69,11 @@ const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 
 			<div className='sm:w-[75vw] w-[90vw] lg:h-[35vh] sm:h-[35vh] h-[45vh] relative flex sm:flex-row flex-col gap-5 sm:ml-[12.5vw] ml-[5vw]'>
 				
-				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/IMG_3779.jpg" delay={1}/>
+				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/recentEvent1.webp" delay={1}/>
 
-				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/IMG_7099.jpg" delay={3}/>
+				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/recentEvent2.webp" delay={3}/>
 
-				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/IMG_20230930_145502-min.jpg" delay={5}/>
+				<RecentEventCard description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." image="/recentEvent3.webp" delay={5}/>
 
 			</div>
 
