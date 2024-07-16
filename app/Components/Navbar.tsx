@@ -13,6 +13,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
+import { games, Game } from "../data/Games";
 
 // Dynamic import for StickyHeadroom with SSR disabled
 const StickyHeadroom = dynamic(
@@ -69,7 +70,7 @@ function Navbar() {
           <Link href={"/"}>
             <Image
               src={"/real-logo.webp"}
-              alt={"PLACEHOLDER"}
+              alt={"placeholder"}
               width={60}
               height={60}
             ></Image>
@@ -119,23 +120,10 @@ function Navbar() {
                 </Link>
                 <div className="absolute bottom-0 left-0 z-[999999] hidden w-[30vw] translate-y-[100%] group-hover:block">
                   <div className="relative grid grid-cols-2 grid-rows-6 bg-black text-lg text-white lg:text-xl xl:text-2xl">
-                    {[
-                      "Valorant",
-                      "League of Legends",
-                      "TFT",
-                      "Overwatch",
-                      "Fighting Games",
-                      "FIFA",
-                      "Rainbow Six Siege",
-                      "Smite",
-                      "Pokemon",
-                      "Trading Card Games",
-                      "Call of Duty",
-                      "Destiny 2",
-                    ].map((game, index) => (
-                      <Link href={`${link.href}#${game}`} key={index}>
+                    {games.map((game: Game, index) => (
+                      <Link href={`${link.href}#${game.title}`} key={index}>
                         <div className="flex h-full w-full items-center justify-start px-3 py-2 font-bold duration-150 hover:bg-slate-800 lg:px-6 lg:py-6">
-                          {game}
+                          {game.title}
                         </div>
                       </Link>
                     ))}
@@ -214,30 +202,17 @@ function Navbar() {
                       className="flex w-full flex-col"
                       style={{ display: teamsOpen ? "block" : "none" }}
                     >
-                      {[
-                        "Valorant",
-                        "League of Legends",
-                        "TFT",
-                        "Overwatch",
-                        "Fighting Games",
-                        "FIFA",
-                        "Rainbow Six Siege",
-                        "Smite",
-                        "Pokemon",
-                        "Trading Card Games",
-                        "Call of Duty",
-                        "Destiny 2",
-                      ].map((game, index) => (
+                      {games.map((game: Game, index) => (
                         <Link
                           onClick={() => handleCloseClick()}
-                          href={`${link.href}#${game}`}
+                          href={`${link.href}#${game.title}`}
                           key={index}
                         >
                           <div
                             key={index}
                             className="flex h-[8vh] w-full items-center justify-between border-b-2 border-gray-800 text-white"
                           >
-                            {game}
+                            {game.title}
                           </div>
                         </Link>
                       ))}
@@ -264,6 +239,3 @@ function Navbar() {
 }
 
 export default Navbar;
-function componentDidMount() {
-  throw new Error("Function not implemented.");
-}

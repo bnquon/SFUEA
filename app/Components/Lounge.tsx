@@ -8,6 +8,7 @@ import {
   faCalendarDays,
   faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { HomeHeader } from "./HomeHeader";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -50,7 +51,7 @@ const fadeInAnimation = {
 export const Lounge = () => {
   return (
     <div className="relative flex w-full flex-col bg-[#d3d3d3] pb-[7.5vh] pl-[5vw] pt-[7.5vh] sm:pl-[12.5vw]">
-      <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
+      {/* <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
         <div className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 lg:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8">
           <h1 className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl">
             GAMERS&apos; LOUNGE
@@ -72,7 +73,13 @@ export const Lounge = () => {
             />
           </span>
         </div>
-      </div>
+      </div> */}
+      <HomeHeader
+        title="GAMERS' LOUNGE"
+        description="Browse the games we have competitive teams, executives, or directors
+                    for! The executives and directors run in-houses and events for their
+                    desired game to foster the community for each one!"
+      />
 
       <div className="relative box-border flex w-[90vw] flex-col gap-4 sm:w-[75vw] lg:flex-row">
         <motion.div

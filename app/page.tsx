@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +11,7 @@ import {
   faUsers,
   faAnglesDown,
 } from "@fortawesome/free-solid-svg-icons";
+import { HomeHeader } from "./Components/HomeHeader";
 import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./Components/Lounge";
@@ -255,7 +256,7 @@ export default function Home() {
 
         {/* ABOUT US PAGE */}
         <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] pt-[45vh] text-6xl sm:pt-[70vh] lg:pt-[8vh]">
-          <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
+          {/* <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
             <div
               ref={headerInView2}
               className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 xl:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8"
@@ -267,7 +268,7 @@ export default function Home() {
                 }}
                 className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
               >
-                WHO WE ARE.
+                WHO WE ARE
               </h1>
             </div>
             <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:flex lg:flex-grow lg:text-2xl">
@@ -286,7 +287,14 @@ export default function Home() {
                 />
               </span>
             </div>
-          </div>
+          </div> */}
+
+          <HomeHeader
+            title="WHO WE ARE"
+            description="The SFU Gaming and Esports Club is a student-run nonprofit
+                        organization at Simon Fraser University that fosters a vibrant
+                        gaming community for both competitive and casual players."
+          />
 
           <div className="relative flex w-[90vw] flex-col justify-center gap-6 sm:w-[75vw] sm:flex-row">
             <motion.div
@@ -405,7 +413,7 @@ export default function Home() {
         {/* GRID CONTAINER */}
 
         <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] text-6xl sm:pt-[0vh] lg:pt-[8vh]">
-          <div className="">
+          {/* <div className="">
             <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
               <div
                 ref={headerInView}
@@ -418,7 +426,7 @@ export default function Home() {
                   }}
                   className="whitespace-nowrap bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
                 >
-                  OUR TEAMS.
+                  OUR TEAMS
                 </h1>
               </div>
               <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:flex lg:flex-grow lg:text-2xl">
@@ -438,10 +446,16 @@ export default function Home() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <GameCarousel/>
+          <HomeHeader
+            title="OUR TEAMS"
+            description="Browse the games we have competitive teams, executives, or
+                        directors for! The executives and directors run in-houses and
+                        events for their desired game!"
+          />
 
+          <GameCarousel />
         </div>
 
         <Lounge />
