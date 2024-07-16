@@ -39,7 +39,6 @@ export const BasicCalendar = () => {
     async function fetchData() {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data.items);
 
       if (data.items) {
         const temp: CalendarEvent[] = data.items.map((item: any) => ({

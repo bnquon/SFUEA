@@ -101,7 +101,7 @@ export const Footer = () => {
             </span>
           </div>
 
-          <div className="right-0 top-0 mt-4 flex h-full w-[45%] flex-col items-center justify-center gap-10 sm:mt-4 lg:absolute lg:mb-5 lg:flex lg:translate-y-[-75%] lg:flex-col lg:items-center lg:justify-center lg:gap-4 xl:translate-y-[-50%] xl:gap-14">
+          <div className="right-0 top-0 mt-4 flex flex-col items-center justify-center gap-10 sm:mt-4 lg:absolute lg:mb-5 lg:flex lg:translate-y-[-75%] lg:flex-col lg:items-center lg:justify-center lg:gap-4 xl:translate-y-[-50%] xl:gap-14">
             <Image
               src="/real-logo.webp"
               width={250}
