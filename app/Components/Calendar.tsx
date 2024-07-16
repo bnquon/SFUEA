@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
@@ -51,7 +51,7 @@ export const BasicCalendar = () => {
     }
 
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [headerInView, inView] = useInView({
