@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { useEffect, useState } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
@@ -27,6 +28,7 @@ const fadeInAnimation = {
     },
   }),
 };
+
 export const BasicCalendar = () => {
   const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
 
@@ -49,20 +51,13 @@ export const BasicCalendar = () => {
     }
 
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [headerInView, inView] = useInView({
     threshold: 0.15,
     triggerOnce: true,
   });
-
-  const events = [
-    {
-      title: "League In-house",
-      start: moment("2024-06-01T11:00:00").toDate(),
-      end: moment("2024-06-01T12:00:00").toDate(),
-    },
-  ];
 
   return (
     <div className="relative flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[4vh] sm:pb-[5vh] sm:pt-[5vh]">
