@@ -61,21 +61,19 @@ export const ImportantDetailCard: React.FC<ImportantDetailCardProps> = ({
         ></FontAwesomeIcon>
         <h3 className="mb-4 text-xl text-black xl:text-2xl">{description}</h3>
         {buttonText && (
-          <motion.a
-            whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.05 }}
+          <a
             href={importantLinks[buttonText]}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="flex w-fit items-center justify-between rounded-xl bg-black p-2 text-base text-white sm:text-xl xl:text-2xl">
+            <span className="flex w-fit items-center justify-between rounded-xl bg-black p-2 text-base text-white sm:text-xl xl:text-2xl hover:scale-105 active:scale-95 duration-[125ms]">
               {buttonText} &nbsp;
               <FontAwesomeIcon
                 className="rotate-45 text-2xl"
                 icon={faCircleArrowUp}
               />
             </span>
-          </motion.a>
+          </a>
         )}
       </div>
 

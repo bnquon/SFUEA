@@ -7,8 +7,6 @@ import {
   faComments,
 } from "@fortawesome/free-solid-svg-icons";
 import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
-import Faq from "react-faq-component";
-import { useState, useEffect } from "react";
 import { Footer } from "@/app/Components/Footer";
 
 import { SubPageBanner } from "../Components/SubPageBanner";
@@ -20,106 +18,7 @@ const WidgetBot = dynamic(() => import("@widgetbot/react-embed"), {
   ssr: false,
 });
 
-// const data = {
-//     rows: [
-//         {
-//             title: "Lorem ipsum dolor sit amet,",
-//             content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-//               ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-//               In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-//               Fusce sed commodo purus, at tempus turpis.`,
-//         },
-//         {
-//             title: "Nunc maximus, magna at ultricies elementum",
-//             content:
-//                 "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
-//         },
-//         {
-//             title: "Curabitur laoreet, mauris vel blandit fringilla",
-//             content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-//             Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-//             Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-//             Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
-//         },
-//         {
-//             title: "What is the package version",
-//             content: <p>current version is 1.2.1</p>,
-//         },
-// 		{
-//             title: "Lorem ipsum dolor sit amet,",
-//             content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-//               ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-//               In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-//               Fusce sed commodo purus, at tempus turpis.`,
-//         },
-//         {
-//             title: "Nunc maximus, magna at ultricies elementum",
-//             content:
-//                 "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
-//         },
-//         {
-//             title: "Curabitur laoreet, mauris vel blandit fringilla",
-//             content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-//             Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-//             Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-//             Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
-//         },
-//         {
-//             title: "What is the package version",
-//             content: <p>current version is 1.2.1</p>,
-//         },
-//     ],
-// };
-
-// const config = {
-//     animate: true,
-//     expandIcon: "+",
-//     collapseIcon: "-",
-// };
-
 export default function Home() {
-  // const [windowWidth, setWindowWidth] = useState(0);
-
-  // useEffect(() => {
-  //     setWindowWidth(window.innerWidth);
-  // }, [])
-
-  // useEffect(() => {
-  //     const handleResize = () => {
-  //       setWindowWidth(window.innerWidth);
-  //     };
-
-  //     window.addEventListener('resize', handleResize);
-  //     return () => window.removeEventListener('resize', handleResize);
-  // }, []);
-
-  // const getResponsiveStyles = () => {
-  //     if (windowWidth >= 1200) { // lg breakpoint
-  //       return {
-  //         rowContentTextSize: '20px',
-  //         rowTitleTextSize: '28px',
-  //       };
-  //     } else if (windowWidth >= 610) { // sm breakpoint
-  //       return {
-  //         rowContentTextSize: '16px',
-  //         rowTitleTextSize: '24px',
-  //       };
-  //     } else {
-  //       return {
-  //         rowContentTextSize: '14px',
-  //         rowTitleTextSize: '20px',
-  //       };
-  //     }
-  //   };
-
-  //     const styles = {
-  //     bgColor: '#d3d3d3',
-  //     titleTextColor: "black",
-  //     rowTitleColor: "black",
-  //     rowContentPaddingTop: '8px',
-  //     rowContentPaddingBottom: '8px',
-  //     ...getResponsiveStyles(),
-  //   };
 
   return (
     <main className="relative">
