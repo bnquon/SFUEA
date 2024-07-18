@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTrophy,
@@ -54,22 +53,13 @@ const pictureAnimation = {
 };
 
 export default function Home() {
-  const [headerInView, inView] = useInView({
-    threshold: 0.15,
-    triggerOnce: true,
-  });
-
-  const [headerInView2, inView2] = useInView({
-    threshold: 0.15,
-    triggerOnce: true,
-  });
-
   return (
     <>
       <main id="mainPage" className="relative">
         <SEO></SEO>
 
         {/* HOME PAGE */}
+
         <div
           id="container"
           className="relative box-border flex h-screen w-screen flex-col items-center gap-[4vh] bg-[#d3d3d3] pt-[16vh] text-white sm:gap-[8vh] sm:pt-[18vh] lg:pt-[18vh] xl:pt-[15vh]"
@@ -87,14 +77,20 @@ export default function Home() {
 
               <div className="box-border flex items-center justify-evenly sm:gap-4 lg:justify-start">
                 <div className="flex justify-center sm:mr-6 sm:w-[50%] sm:justify-end lg:mr-6 lg:w-fit lg:justify-start xl:mr-12">
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    whileHover={{ scale: 1.05 }}
-                    id="btn-grad"
-                    className="w-fit px-4 py-3 text-lg font-bold italic sm:text-2xl lg:px-6 lg:py-4 xl:text-4xl"
+                  <a
+                    href="http://discord.gg/sfuesports"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <span>GAME WITH US &nbsp;</span>
-                  </motion.button>
+                    <motion.button
+                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05 }}
+                      id="btn-grad"
+                      className="w-fit px-4 py-3 text-lg font-bold italic sm:text-2xl lg:px-6 lg:py-4 xl:text-4xl"
+                    >
+                      <span>GAME WITH US &nbsp;</span>
+                    </motion.button>
+                  </a>
                 </div>
                 <div className="flex flex-col items-center text-black sm:ml-6 sm:w-[50%] sm:items-start lg:w-fit">
                   <p className="text-2xl font-bold sm:text-3xl xl:text-4xl">
@@ -107,6 +103,7 @@ export default function Home() {
 
             <div className="relative box-border flex w-full justify-center gap-4 sm:w-full lg:w-[55%]">
               {/* Right Column */}
+
               <div className="relative flex h-full w-full flex-col sm:w-[50%] lg:w-[60%]">
                 <div className="relative box-border flex h-full w-full flex-col gap-4">
                   <motion.div
@@ -159,6 +156,7 @@ export default function Home() {
               </div>
 
               {/* Left Column */}
+
               <div className="relative box-border hidden w-0 flex-col gap-4 sm:flex sm:w-[50%] lg:flex lg:w-[40%]">
                 <motion.div
                   variants={pictureAnimation}
@@ -254,45 +252,14 @@ export default function Home() {
         </div>
 
         {/* ABOUT US PAGE */}
-        <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] pt-[45vh] text-6xl sm:pt-[70vh] lg:pt-[8vh]">
-          {/* <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
-            <div
-              ref={headerInView2}
-              className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 xl:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8"
-            >
-              <h1
-                style={{
-                  transform: inView2 ? "translateY(0)" : "translateY(100%)",
-                  transition: "transform 0.5s ease",
-                }}
-                className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
-              >
-                WHO WE ARE
-              </h1>
-            </div>
-            <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:flex lg:flex-grow lg:text-2xl">
-              <p className="box-border pr-2 pt-2 font-semibold xl:pl-8 xl:pr-4 xl:pt-0">
-                The SFU Gaming and Esports Club is a student-run nonprofit
-                organization at Simon Fraser University that fosters a vibrant
-                gaming community for both competitive and casual players.
-              </p>
-            </div>
-            <div className="mt-2 flex w-fit flex-shrink-0 flex-grow items-center justify-start sm:mt-0">
-              <span className="flex h-fit flex-shrink-0 flex-grow cursor-pointer items-center rounded-full bg-black p-2 text-base text-white duration-200 sm:p-3 sm:text-lg lg:text-xl">
-                Learn More &nbsp;
-                <FontAwesomeIcon
-                  className="-rotate-45 text-2xl"
-                  icon={faArrowCircleRight}
-                />
-              </span>
-            </div>
-          </div> */}
 
+        <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] pt-[45vh] text-6xl sm:pt-[70vh] lg:pt-[8vh]">
           <HomeHeader
             title="WHO WE ARE"
             description="The SFU Gaming and Esports Club is a student-run nonprofit
                         organization at Simon Fraser University that fosters a vibrant
                         gaming community for both competitive and casual players."
+            toPage="about"
           />
 
           <div className="relative flex w-[90vw] flex-col justify-center gap-6 sm:w-[75vw] sm:flex-row">
@@ -412,46 +379,12 @@ export default function Home() {
         {/* GRID CONTAINER */}
 
         <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] text-6xl sm:pt-[0vh] lg:pt-[8vh]">
-          {/* <div className="">
-            <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
-              <div
-                ref={headerInView}
-                className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 xl:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8"
-              >
-                <h1
-                  style={{
-                    transform: inView ? "translateY(0)" : "translateY(100%)",
-                    transition: "transform 0.5s ease",
-                  }}
-                  className="whitespace-nowrap bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
-                >
-                  OUR TEAMS
-                </h1>
-              </div>
-              <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:flex lg:flex-grow lg:text-2xl">
-                <p className="box-border pr-6 pt-2 font-semibold xl:pl-8 xl:pr-4 xl:pt-0">
-                  Browse the games we have competitive teams, executives, or
-                  directors for! The executives and directors run in-houses and
-                  events for their desired game!
-                </p>
-              </div>
-              <div className="mt-2 flex w-fit flex-shrink-0 flex-grow items-center justify-start sm:mt-0">
-                <span className="flex h-fit flex-shrink-0 flex-grow cursor-pointer items-center rounded-full bg-black p-2 text-base text-white duration-200 sm:p-3 sm:text-lg lg:text-xl">
-                  Learn More &nbsp;
-                  <FontAwesomeIcon
-                    className="-rotate-45 text-2xl"
-                    icon={faArrowCircleRight}
-                  />
-                </span>
-              </div>
-            </div>
-          </div> */}
-
           <HomeHeader
             title="OUR TEAMS"
             description="Browse the games we have competitive teams, executives, or
                         directors for! The executives and directors run in-houses and
                         events for their desired game!"
+            toPage="teams"
           />
 
           <GameCarousel />
@@ -468,13 +401,21 @@ export default function Home() {
               <p className="text-xl xl:text-3xl">
                 Club staff and competitive players get 10% off!
               </p>
-              <span className="xl:p mt-2 flex w-fit items-center rounded-xl bg-black px-2 py-1 text-lg text-white lg:text-xl xl:px-4 xl:py-2 xl:text-2xl">
-                SHOP NOW &nbsp;
-                <FontAwesomeIcon
-                  className="-rotate-90 text-2xl"
-                  icon={faAnglesDown}
-                />
-              </span>
+              <motion.a
+                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05 }}
+                href="https://esportsgear.com/search?q=Simon+Fraser+University&options%5Bprefix%5D=last&type=product"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="xl:p mt-2 flex w-fit items-center rounded-xl bg-black px-2 py-1 text-lg text-white lg:text-xl xl:px-4 xl:py-2 xl:text-2xl">
+                  SHOP NOW &nbsp;
+                  <FontAwesomeIcon
+                    className="-rotate-90 text-2xl"
+                    icon={faAnglesDown}
+                  />
+                </span>
+              </motion.a>
             </div>
 
             <div className="relative box-border h-full w-full lg:w-[70%]">

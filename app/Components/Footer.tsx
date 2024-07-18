@@ -1,14 +1,31 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDiscord,
-  faSquareInstagram,
+  faInstagram,
   faFacebookF,
   faXTwitter,
   faTwitch,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+
+const footerLinks = [
+  { name: "About", href: "/about" },
+  { name: "Teams", href: "/teams" },
+  { name: "Gamers Lounge", href: "/gamingLounge" },
+  { name: "Events", href: "/events" },
+];
+
+const socialsIcons = [
+  { website: "https://google.com", icon: faDiscord },
+  { website: "https://google.com", icon: faInstagram },
+  { website: "https://google.com", icon: faFacebookF },
+  { website: "https://google.com", icon: faXTwitter },
+  { website: "https://google.com", icon: faTwitch },
+  { website: "https://google.com", icon: faTiktok },
+]
 
 export const Footer = () => {
   return (
@@ -23,12 +40,18 @@ export const Footer = () => {
               in-house!
             </p>
           </div>
-          <button
-            id="footer-btn"
-            className="w-fit rounded-full bg-black px-6 py-3 text-lg duration-200 hover:bg-white hover:text-black sm:px-10 sm:py-5 sm:text-2xl"
+          <a
+            href="http://discord.gg/sfuesports"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Get Started
-          </button>
+            <button
+              id="footer-btn"
+              className="w-fit rounded-full bg-black px-6 py-3 text-lg duration-200 hover:bg-white hover:text-black sm:px-10 sm:py-5 sm:text-2xl"
+            >
+              Get Started
+            </button>
+          </a>
         </div>
 
         <div className="relative mt-[-20px] flex w-[90vw] flex-col items-center justify-center text-white sm:w-[75vw] lg:items-start lg:justify-start">
@@ -37,55 +60,32 @@ export const Footer = () => {
           </h1>
 
           <ul className="mb-10 flex gap-8 text-xl xl:text-2xl">
-            <li>About</li>
-            <li>Teams</li>
-            <li>Gamers&apos; Lounge</li>
-            <li>Events</li>
+            {footerLinks.map((link) => (
+              <Link href={link.href} key={link.name}>
+                <li className="text-white duration-150 hover:text-red-500">
+                  {link.name}
+                </li>
+              </Link>
+            ))}
           </ul>
 
           <div className="relative flex h-[8vh] gap-4 lg:w-fit">
-            <div className="box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 xl:h-[50px] xl:w-[50px]">
-              <FontAwesomeIcon
-                className="text-2xl xl:text-3xl"
-                icon={faDiscord}
-                style={{ color: "000000" }}
-              ></FontAwesomeIcon>
-            </div>
-            <div className="box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 xl:h-[50px] xl:w-[50px]">
-              <FontAwesomeIcon
-                className="text-2xl xl:text-3xl"
-                icon={faSquareInstagram}
-                style={{ color: "000000" }}
-              ></FontAwesomeIcon>
-            </div>
-            <div className="box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 xl:h-[50px] xl:w-[50px]">
-              <FontAwesomeIcon
-                className="text-2xl xl:text-3xl"
-                icon={faFacebookF}
-                style={{ color: "000000" }}
-              ></FontAwesomeIcon>
-            </div>
-            <div className="box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 xl:h-[50px] xl:w-[50px]">
-              <FontAwesomeIcon
-                className="text-2xl xl:text-3xl"
-                icon={faXTwitter}
-                style={{ color: "000000" }}
-              ></FontAwesomeIcon>
-            </div>
-            <div className="box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 xl:h-[50px] xl:w-[50px]">
-              <FontAwesomeIcon
-                className="text-2xl xl:text-3xl"
-                icon={faTwitch}
-                style={{ color: "000000" }}
-              ></FontAwesomeIcon>
-            </div>
-            <div className="box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 xl:h-[50px] xl:w-[50px]">
-              <FontAwesomeIcon
-                className="text-2xl xl:text-3xl"
-                icon={faTiktok}
-                style={{ color: "000000" }}
-              ></FontAwesomeIcon>
-            </div>
+
+            {socialsIcons.map((social) => (
+              <a
+                href={social.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={social.website}
+                className="group box-border flex h-[40px] w-[40px] items-center justify-center rounded-lg bg-white p-2 hover:bg-red-500 xl:h-[50px] xl:w-[50px] duration-150 cursor-pointer"
+              >
+                <FontAwesomeIcon
+                  className="text-2xl text-black group-hover:text-white xl:text-3xl duration-150"
+                  icon={social.icon}
+                ></FontAwesomeIcon>
+              </a>
+            ))}
+
           </div>
 
           <div className="h-[4vh] w-fit text-lg text-white">

@@ -28,10 +28,6 @@
   display: block;
 }
 
-#game-div:hover #game-pic {
-  transform: scale(1.1);
-}
-
 #game-title {
   text-shadow: 2px 2px 2px #000000;
 }

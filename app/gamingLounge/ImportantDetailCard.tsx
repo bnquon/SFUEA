@@ -2,10 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faIdCard,
   faCircleArrowUp,
-  faFileLines,
-  faComments,
   IconDefinition,
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
@@ -17,6 +14,17 @@ interface ImportantDetailCardProps {
   buttonText: string | null;
   delay: number;
 }
+
+type ImportantLinks = {
+  [key: string]: string;
+};
+
+const importantLinks: ImportantLinks = {
+  "Waiver Agreement":
+    "https://docs.google.com/forms/d/e/1FAIpQLSfPmBle0HodkXa4GZLPZcXq2N8GekFzIWbamnrmDUDtMD0BaQ/viewform",
+  "Feedback Survey":
+    "https://docs.google.com/forms/d/e/1FAIpQLSdJcfGBR6XWNlckZV6M8whJ_HPQ7gb8rr8XFhFiydxybWKA_Q/viewform",
+};
 
 const fadeInAnimation = {
   initial: { opacity: 0, y: 100 },
@@ -53,13 +61,21 @@ export const ImportantDetailCard: React.FC<ImportantDetailCardProps> = ({
         ></FontAwesomeIcon>
         <h3 className="mb-4 text-xl text-black xl:text-2xl">{description}</h3>
         {buttonText && (
-          <span className="flex w-fit items-center justify-between rounded-xl bg-black p-2 text-base text-white sm:text-xl xl:text-2xl">
-            {buttonText} &nbsp;
-            <FontAwesomeIcon
-              className="rotate-45 text-2xl"
-              icon={faCircleArrowUp}
-            />
-          </span>
+          <motion.a
+            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05 }}
+            href={importantLinks[buttonText]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="flex w-fit items-center justify-between rounded-xl bg-black p-2 text-base text-white sm:text-xl xl:text-2xl">
+              {buttonText} &nbsp;
+              <FontAwesomeIcon
+                className="rotate-45 text-2xl"
+                icon={faCircleArrowUp}
+              />
+            </span>
+          </motion.a>
         )}
       </div>
 

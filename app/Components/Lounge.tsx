@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faComputer,
@@ -36,49 +37,15 @@ const pictureAnimation = {
   }),
 };
 
-const fadeInAnimation = {
-  initial: { opacity: 0, y: 100 },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      delay: index * 0.1,
-    },
-  }),
-};
-
 export const Lounge = () => {
   return (
     <div className="relative flex w-full flex-col bg-[#d3d3d3] pb-[7.5vh] pl-[5vw] pt-[7.5vh] sm:pl-[12.5vw]">
-      {/* <div className="relative mb-[60px] box-border flex w-[90vw] flex-col text-black sm:grid sm:w-[75vw] sm:grid-cols-[auto] sm:grid-rows-2 xl:flex xl:flex-row">
-        <div className="col-span-2 row-span-1 flex w-full flex-shrink-0 items-center justify-start overflow-hidden border-r-0 pr-0 duration-500 lg:w-fit xl:border-b-0 xl:border-r-2 xl:border-r-black xl:pr-8">
-          <h1 className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl">
-            GAMERS&apos; LOUNGE
-          </h1>
-        </div>
-        <div className="col-span-1 row-start-2 items-center justify-start overflow-hidden text-base sm:text-xl lg:text-2xl xl:flex xl:flex-grow">
-          <p className="box-border pr-6 pt-2 font-semibold xl:pl-8 xl:pr-4 xl:pt-0">
-            Browse the games we have competitive teams, executives, or directors
-            for! The executives and directors run in-houses and events for their
-            desired game to foster the community for each one!
-          </p>
-        </div>
-        <div className="mt-2 flex w-fit flex-shrink-0 flex-grow items-center justify-start sm:mt-0">
-          <span className="flex h-fit flex-shrink-0 flex-grow cursor-pointer items-center rounded-full bg-black p-2 text-base text-white duration-200 sm:p-3 sm:text-lg lg:text-xl">
-            Learn More &nbsp;
-            <FontAwesomeIcon
-              className="-rotate-45 text-2xl"
-              icon={faArrowCircleRight}
-            />
-          </span>
-        </div>
-      </div> */}
       <HomeHeader
         title="GAMERS' LOUNGE"
         description="Browse the games we have competitive teams, executives, or directors
                     for! The executives and directors run in-houses and events for their
                     desired game to foster the community for each one!"
+        toPage="teams"
       />
 
       <div className="relative box-border flex w-[90vw] flex-col gap-4 sm:w-[75vw] lg:flex-row">
@@ -121,13 +88,15 @@ export const Lounge = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
                 </p>
-                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
-                  Full Specs &nbsp;
-                  <FontAwesomeIcon
-                    className="rotate-45 text-2xl"
-                    icon={faCircleArrowUp}
-                  />
-                </span>
+                <Link href="/gamingLounge#specs">
+                  <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                    Full Specs &nbsp;
+                    <FontAwesomeIcon
+                      className="rotate-45 text-2xl"
+                      icon={faCircleArrowUp}
+                    />
+                  </span>
+                </Link>
               </div>
 
               <div className="hidden h-full w-full flex-col justify-between gap-2 rounded-md bg-white p-4 text-black shadow-md sm:flex sm:w-1/2 sm:gap-4 lg:gap-0 xl:p-6">
@@ -140,13 +109,15 @@ export const Lounge = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
                 </p>
-                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
-                  Video Guide &nbsp;
-                  <FontAwesomeIcon
-                    className="rotate-45 text-2xl"
-                    icon={faCircleArrowUp}
-                  />
-                </span>
+                <Link href="/gamingLounge#location">
+                  <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                    Video Guide &nbsp;
+                    <FontAwesomeIcon
+                      className="rotate-45 text-2xl"
+                      icon={faCircleArrowUp}
+                    />
+                  </span>
+                </Link>
               </div>
             </div>
 
@@ -161,13 +132,15 @@ export const Lounge = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
                 </p>
-                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
-                  Full Schedule &nbsp;
-                  <FontAwesomeIcon
-                    className="rotate-45 text-2xl"
-                    icon={faCircleArrowUp}
-                  />
-                </span>
+                <Link href="/gamingLounge#schedule">
+                  <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                    Full Schedule &nbsp;
+                    <FontAwesomeIcon
+                      className="rotate-45 text-2xl"
+                      icon={faCircleArrowUp}
+                    />
+                  </span>
+                </Link>
               </div>
 
               <div className="flex h-full w-full flex-col justify-between gap-2 rounded-md bg-white p-4 text-black shadow-md sm:w-1/2 sm:gap-4 lg:gap-0 xl:p-6">
@@ -180,13 +153,15 @@ export const Lounge = () => {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
                 </p>
-                <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
-                  Read More &nbsp;
-                  <FontAwesomeIcon
-                    className="rotate-45 text-2xl"
-                    icon={faCircleArrowUp}
-                  />
-                </span>
+                <Link href="/gamingLounge#important">
+                  <span className="text-md mt-2 flex w-fit cursor-pointer items-center justify-between rounded-xl border-2 border-black px-2 py-1 text-black duration-200 hover:bg-black hover:text-white sm:text-lg xl:px-4 xl:py-2 xl:text-xl">
+                    Read More &nbsp;
+                    <FontAwesomeIcon
+                      className="rotate-45 text-2xl"
+                      icon={faCircleArrowUp}
+                    />
+                  </span>
+                </Link>
               </div>
             </div>
           </motion.div>

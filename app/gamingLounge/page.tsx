@@ -132,7 +132,7 @@ export default function Home() {
       <div className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pt-[5vh]">
         <SubPageHeader title="Our PCs" />
 
-        <div className="mb-[10vh] flex w-[90vw] flex-col text-black sm:h-[60vh] sm:w-[75vw] sm:flex-row">
+        <div id="specs" className="mb-[10vh] flex w-[90vw] flex-col text-black sm:h-[60vh] sm:w-[75vw] sm:flex-row">
           <div className="box-border flex h-fit w-full flex-col gap-0 sm:h-full sm:w-[30%] sm:gap-4">
             <div className="flex w-full flex-col justify-start pt-4 sm:h-1/2">
               <h2 className="mb-2 text-2xl font-bold xl:text-4xl">
@@ -190,7 +190,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh]">
+      <div id="location" className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh]">
         <SubPageHeader title="Location" />
 
         <div className="box-border flex w-[90vw] flex-col gap-4 sm:w-[75vw] sm:flex-row">
@@ -216,7 +216,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pt-[6vh]">
+      <div id="schedule" className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pt-[6vh]">
         <SubPageHeader title="Schedule" />
 
         <div className="relative box-border flex w-[90vw] flex-col gap-5 sm:w-[75vw] lg:h-[50vh] lg:flex-row">
@@ -244,7 +244,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pt-[6vh]">
+      <div id="important" className="relative box-border flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pt-[6vh]">
         <SubPageHeader title="Important Details" />
 
         <div className="box-border flex w-[90vw] text-black sm:w-[75vw]">

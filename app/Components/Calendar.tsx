@@ -97,6 +97,7 @@ export const BasicCalendar = () => {
         title="EVENT SCHEDULE"
         description="Discover upcoming events and activities in our schedule. 
                     Stay informed and join us for exciting opportunities!"
+        toPage="events"
       />
 
       <div className="relative box-border flex h-[75vh] w-[90vw] sm:w-[75vw]">

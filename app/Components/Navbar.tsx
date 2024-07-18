@@ -225,13 +225,19 @@ function Navbar() {
         </div>
 
         <div className="z-[999999] hidden w-1/4 items-center justify-end sm:flex">
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            whileHover={{ scale: 1.05 }}
-            className="max-w-fit rounded-xl bg-red-500 px-2 py-3 text-base font-bold text-white lg:px-6 lg:py-3 lg:text-xl xl:text-2xl"
+          <a
+            href="https://discord.gg/sfuesports"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            JOIN NOW
-          </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05 }}
+              className="max-w-fit rounded-xl bg-red-500 px-2 py-3 text-base font-bold text-white lg:px-6 lg:py-3 lg:text-xl xl:text-2xl"
+            >
+              JOIN NOW
+            </motion.button>
+          </a>
         </div>
       </div>
     </StickyHeadroom>
