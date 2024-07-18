@@ -1,5 +1,4 @@
 "use client";
-
 import dynamic from "next/dynamic";
 import clsx from "clsx"; // Conditional className functionalities
 import Link from "next/link";

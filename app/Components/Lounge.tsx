@@ -7,7 +7,6 @@ import {
   faCircleExclamation,
   faCircleArrowUp,
   faCalendarDays,
-  faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { HomeHeader } from "./HomeHeader";
 import { motion } from "framer-motion";

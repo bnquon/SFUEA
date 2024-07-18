@@ -17,7 +17,8 @@ type CalendarEvent = {
 };
 
 export default function Home() {
-  const [TestEvents, setEvents] = useState<CalendarEvent[]>([]);
+
+  const [events, setEvents] = useState<CalendarEvent[]>([]);
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_CALENDAR_ID}/events?key=${process.env.NEXT_PUBLIC_API_KEY}`;
 
@@ -53,7 +54,7 @@ export default function Home() {
         <div className="relative mb-20 box-border flex h-[75vh] w-[90vw] sm:w-[75vw]">
           <div className="relative h-full w-full">
             <Calendar
-              events={TestEvents}
+              events={events}
               localizer={localizer}
               startAccessor="start"
               endAccessor="end"
