@@ -1,44 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+import { EventCalendar } from "../Components/EventCalendar";
 import { Footer } from "@/app/Components/Footer";
 import { SubPageBanner } from "../Components/SubPageBanner";
 import { SubPageHeader } from "../Components/SubPageHeader";
 import { RecentEventCard } from "./RecentEventCard";
 
-const localizer = momentLocalizer(moment);
-
-type CalendarEvent = {
-  title: string;
-  start: Date;
-  end: Date;
-};
 
 export default function Home() {
-
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
-
-  const url = `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_CALENDAR_ID}/events?key=${process.env.NEXT_PUBLIC_API_KEY}`;
-
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(url);
-      const data = await response.json();
-
-      if (data.items) {
-        const temp: CalendarEvent[] = data.items.map((item: any) => ({
-          title: item.summary,
-          start: new Date(item.start.dateTime || item.start.date),
-          end: new Date(item.end.dateTime || item.end.date),
-        }));
-        setEvents(temp);
-      }
-    }
-
-    fetchData();
-  }, [url]);
 
   return (
     <main className="relative bg-[#d3d3d3]">
@@ -53,12 +21,7 @@ export default function Home() {
 
         <div className="relative mb-20 box-border flex h-[75vh] w-[90vw] sm:w-[75vw]">
           <div className="relative h-full w-full">
-            <Calendar
-              events={events}
-              localizer={localizer}
-              startAccessor="start"
-              endAccessor="end"
-            />
+            <EventCalendar />
           </div>
         </div>
       </div>

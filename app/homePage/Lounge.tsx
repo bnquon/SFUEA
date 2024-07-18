@@ -8,7 +8,6 @@ import {
   faCircleArrowUp,
   faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
-import { HomeHeader } from "./HomeHeader";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -38,14 +37,6 @@ const pictureAnimation = {
 
 export const Lounge = () => {
   return (
-    <div className="relative flex w-full flex-col bg-[#d3d3d3] pb-[7.5vh] pl-[5vw] pt-[7.5vh] sm:pl-[12.5vw]">
-      <HomeHeader
-        title="GAMERS' LOUNGE"
-        description="Browse the games we have competitive teams, executives, or directors
-                    for! The executives and directors run in-houses and events for their
-                    desired game to foster the community for each one!"
-        toPage="teams"
-      />
 
       <div className="relative box-border flex w-[90vw] flex-col gap-4 sm:w-[75vw] lg:flex-row">
         <motion.div
@@ -166,6 +157,6 @@ export const Lounge = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+
   );
 };

@@ -9,7 +9,7 @@ import {
   faUsers,
   faAnglesDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { BasicCalendar } from "./Components/Calendar";
+import { EventCalendar } from "./Components/EventCalendar";
 import { Footer } from "./Components/Footer";
 import { Lounge } from "./homePage/Lounge";
 import { FAQ } from "./Components/FAQ";
@@ -375,7 +375,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* GRID CONTAINER */}
+        {/* Our Teams Section */}
 
         <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] text-6xl sm:pt-[0vh] lg:pt-[8vh]">
           <HomeHeader
@@ -389,9 +389,33 @@ export default function Home() {
           <GameCarousel />
         </div>
 
-        <Lounge />
+        {/* Gaming Lounge Section */}
 
-        <BasicCalendar />
+        <div className="relative flex w-full flex-col bg-[#d3d3d3] pb-[7.5vh] pl-[5vw] pt-[7.5vh] sm:pl-[12.5vw]">
+          <HomeHeader
+            title="GAMERS' LOUNGE"
+            description="Browse the games we have competitive teams, executives, or directors
+                        for! The executives and directors run in-houses and events for their
+                        desired game to foster the community for each one!"
+            toPage="teams"
+          />
+          <Lounge />
+        </div>
+
+        {/* Calendar Section */}
+
+        <div className="relative flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[4vh] sm:pb-[5vh] sm:pt-[5vh]">
+          <HomeHeader
+            title="EVENT SCHEDULE"
+            description="Discover upcoming events and activities in our schedule. 
+              Stay informed and join us for exciting opportunities!"
+            toPage="events"
+          />
+
+          <EventCalendar />
+        </div>
+
+        {/* Buy A Jersey Section */}
 
         <div className="flex w-screen flex-col items-center justify-center bg-[#d3d3d3] pb-[5vh] pt-[7.5vh]">
           <div className="relative box-border flex w-[90vw] flex-col rounded-xl bg-gradient-to-br from-red-500 from-20% via-black to-black px-3 shadow-md sm:h-fit sm:w-[75vw] sm:bg-gradient-to-r sm:pl-6 lg:flex-row lg:items-center xl:pl-12">
