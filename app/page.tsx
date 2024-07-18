@@ -9,15 +9,14 @@ import {
   faUsers,
   faAnglesDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { HomeHeader } from "./Components/HomeHeader";
 import { BasicCalendar } from "./Components/Calendar";
 import { Footer } from "./Components/Footer";
-import { Lounge } from "./Components/Lounge";
+import { Lounge } from "./homePage/Lounge";
 import { FAQ } from "./Components/FAQ";
 import { GameCarousel } from "./homePage/GameCarousel";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-
-import SEO from "./Components/seo";
+import { HomeHeader } from "./homePage/HomeHeader";
+import SEO from "./homePage/seo";
 
 const fadeInAnimation = {
   initial: { opacity: 0, y: 100 },
