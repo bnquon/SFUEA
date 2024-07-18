@@ -19,12 +19,12 @@ const footerLinks = [
 ];
 
 const socialsIcons = [
-  { website: "https://google.com", icon: faDiscord },
-  { website: "https://google.com", icon: faInstagram },
-  { website: "https://google.com", icon: faFacebookF },
-  { website: "https://google.com", icon: faXTwitter },
-  { website: "https://google.com", icon: faTwitch },
-  { website: "https://google.com", icon: faTiktok },
+  { website: "https://discord.gg/sfuesports", icon: faDiscord },
+  { website: "https://www.instagram.com/official_sfuesports/", icon: faInstagram },
+  { website: "https://www.facebook.com/sfuesports/", icon: faFacebookF },
+  { website: "https://x.com/sfuesports?lang=en", icon: faXTwitter },
+  { website: "https://www.twitch.tv/sfuea", icon: faTwitch },
+  { website: "https://www.tiktok.com/@sfuesports", icon: faTiktok },
 ]
 
 export const Footer = () => {
