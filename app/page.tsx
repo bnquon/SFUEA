@@ -446,69 +446,75 @@ export default function Home() {
             <div className="relative box-border h-full w-full lg:w-[70%]">
               <div className="relative box-border flex h-full gap-0">
                 <div className="relative flex h-full w-full sm:w-1/3">
-                  <Image
-                    alt="forced"
-                    className="absolute scale-x-125 scale-y-110"
-                    src="/blackJerseyBack.webp"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "100%" }}
-                  ></Image>
-                  <Image
-                    id="front-image"
-                    alt="forced"
-                    className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
-                    src="/blackJerseyFront.webp"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "100%" }}
-                  ></Image>
+                  <a href="https://esportsgear.com/products/simon-frasier-university-immortal-series-jersey" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      alt="forced"
+                      className="absolute scale-x-125 scale-y-110"
+                      src="/blackJerseyBack.webp"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "100%" }}
+                    ></Image>
+                    <Image
+                      id="front-image"
+                      alt="forced"
+                      className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
+                      src="/blackJerseyFront.webp"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "100%" }}
+                    ></Image>
+                  </a>
                 </div>
 
                 <div className="relative hidden h-full w-1/3 sm:flex">
-                  <Image
-                    alt="forced"
-                    className="absolute scale-x-125 scale-y-110"
-                    src="/pinkJerseyBack.webp"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "100%" }}
-                  ></Image>
-                  <Image
-                    id="front-image"
-                    alt="forced"
-                    className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
-                    src="/pinkJerseyFront.webp"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "100%" }}
-                  ></Image>
+                  <a href="https://esportsgear.com/products/simon-frasier-university-immortal-series-jersey-alt?_pos=1&_sid=f2c25b032&_ss=r" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      alt="forced"
+                      className="absolute scale-x-125 scale-y-110"
+                      src="/pinkJerseyBack.webp"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "100%" }}
+                    ></Image>
+                    <Image
+                      id="front-image"
+                      alt="forced"
+                      className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
+                      src="/pinkJerseyFront.webp"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "100%" }}
+                    ></Image>
+                  </a>
                 </div>
 
                 <div className="relative hidden h-full w-1/3 sm:flex">
-                  <Image
-                    alt="forced"
-                    className="absolute scale-x-125 scale-y-110"
-                    src="/whiteJerseyBack.webp"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "100%" }}
-                  ></Image>
-                  <Image
-                    id="front-image"
-                    alt="forced"
-                    className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
-                    src="/whiteJerseyFront.webp"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    style={{ width: "100%", height: "100%" }}
-                  ></Image>
+                  <a href="https://esportsgear.com/products/simon-frasier-university-immortal-series-jersey-away" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      alt="forced"
+                      className="absolute scale-x-125 scale-y-110"
+                      src="/whiteJerseyBack.webp"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "100%" }}
+                    ></Image>
+                    <Image
+                      id="front-image"
+                      alt="forced"
+                      className="scale-x-125 scale-y-110 duration-200 hover:opacity-0"
+                      src="/whiteJerseyFront.webp"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "100%" }}
+                    ></Image>
+                  </a>
                 </div>
               </div>
             </div>

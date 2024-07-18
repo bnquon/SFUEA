@@ -32,7 +32,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({
             transform: inView ? "translateY(0)" : "translateY(100%)",
             transition: "transform 0.5s ease",
           }}
-          className="bg-gradient-to-r from-red-700 to-red-400 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
+          className="bg-gradient-to-tr from-red-800 to-red-500 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl xl:text-8xl"
         >
           {title}
         </h1>

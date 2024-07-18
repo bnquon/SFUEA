@@ -73,7 +73,7 @@ export const Lounge = () => {
                   <FontAwesomeIcon className="" icon={faComputer} />
                   <p className="font-semibold">&nbsp;DEVICES</p>
                 </span>
-                <p className="text-sm sm:text-base xl:text-xl">
+                <p className="text-sm sm:text-base xl:text-xl xl:font-semibold font-normal">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
@@ -94,7 +94,7 @@ export const Lounge = () => {
                   <FontAwesomeIcon className="" icon={faLocationDot} />
                   <p className="font-semibold">&nbsp;LOCATION</p>
                 </span>
-                <p className="text-sm sm:text-base xl:text-xl">
+                <p className="text-sm sm:text-base xl:text-xl xl:font-semibold font-normal">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
@@ -117,7 +117,7 @@ export const Lounge = () => {
                   <FontAwesomeIcon className="" icon={faCalendarDays} />
                   <p className="font-semibold">&nbsp;SCHEDULE</p>
                 </span>
-                <p className="text-sm sm:text-base xl:text-xl">
+                <p className="text-sm sm:text-base xl:text-xl xl:font-semibold font-normal">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
@@ -138,7 +138,7 @@ export const Lounge = () => {
                   <FontAwesomeIcon className="" icon={faCircleExclamation} />
                   <p className="font-semibold">&nbsp;NOTES</p>
                 </span>
-                <p className="text-sm sm:text-base xl:text-xl">
+                <p className="text-sm sm:text-base xl:text-xl xl:font-semibold font-normal">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam,
