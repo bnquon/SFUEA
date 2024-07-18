@@ -55,6 +55,7 @@ export default function Home() {
   return (
     <>
       <main id="mainPage" className="relative">
+        
         <SEO></SEO>
 
         {/* HOME PAGE */}
@@ -101,6 +102,7 @@ export default function Home() {
             </div>
 
             <div className="relative box-border flex w-full justify-center gap-4 sm:w-full lg:w-[55%]">
+
               {/* Right Column */}
 
               <div className="relative flex h-full w-full flex-col sm:w-[50%] lg:w-[60%]">
