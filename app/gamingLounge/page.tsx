@@ -6,7 +6,7 @@ import {
   faFileLines,
   faComments,
 } from "@fortawesome/free-solid-svg-icons";
-import YoutubeEmbed from "@/app/Components/YoutubeEmbed";
+import YoutubeEmbed from "./YoutubeEmbed";
 import { Footer } from "@/app/Components/Footer";
 
 import { SubPageBanner } from "../Components/SubPageBanner";
