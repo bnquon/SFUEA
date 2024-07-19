@@ -26,7 +26,7 @@ export const SubPageBanner: React.FC<SubPageBannerProps> = ({
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         ></Image>
         <div className="z-[2] flex w-[90%] flex-col gap-6 pl-[5%] text-white sm:w-3/5 sm:pl-0">
-          <p className="text-base font-bold text-red-500 sm:text-2xl lg:text-3xl">
+          <p className="text-lg font-bold text-red-500 sm:text-2xl lg:text-3xl">
             {pageTitle}
           </p>
           <p className="text-[21px] font-extrabold sm:text-[27px] lg:text-4xl xl:text-5xl">
