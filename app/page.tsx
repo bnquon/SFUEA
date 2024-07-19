@@ -93,7 +93,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex flex-col items-center text-black sm:ml-6 sm:w-[50%] sm:items-start lg:w-fit">
-                  <p className="text-2xl font-bold sm:text-2xl xl:text-4xl">
+                  <p className="text-xl font-bold sm:text-2xl xl:text-4xl">
                     3800+
                   </p>
                   <p className="text-lg font-normal sm:text-xl">Members</p>

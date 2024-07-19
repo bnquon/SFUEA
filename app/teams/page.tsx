@@ -12,7 +12,7 @@ export default function Home() {
         blobImage="/blob2.webp"
       />
 
-      <SubPageHeader title="Our Team" />
+      <SubPageHeader title="Our Teams" />
 
       <GamesAndPlayers />
 
