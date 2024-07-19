@@ -66,7 +66,7 @@ export default function Home() {
         >
           <div className="relative box-border flex w-[90vw] flex-col gap-10 sm:w-[75vw] lg:h-[75%] lg:flex-row lg:gap-0">
             <div className="relative flex w-[100%] flex-col justify-center text-center lg:w-[45%] lg:pr-6 lg:text-left">
-              <p className="mb-2 w-full bg-gradient-to-r from-red-700 to-red-500 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:mb-8 sm:px-8 sm:text-6xl lg:w-full lg:px-0 xl:text-[80px]">
+              <p className="mb-2 w-full bg-gradient-to-tr from-red-800 to-red-500 bg-clip-text text-4xl font-extrabold leading-tight text-transparent sm:mb-8 sm:px-8 sm:text-5xl lg:w-full lg:px-0 xl:text-[80px]">
                 SFU GAMING AND ESPORTS CLUB
               </p>
               <p className="mb-2 w-full text-base font-medium text-black sm:mb-8 sm:text-xl lg:w-full xl:text-3xl">
@@ -93,7 +93,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className="flex flex-col items-center text-black sm:ml-6 sm:w-[50%] sm:items-start lg:w-fit">
-                  <p className="text-2xl font-bold sm:text-3xl xl:text-4xl">
+                  <p className="text-2xl font-bold sm:text-2xl xl:text-4xl">
                     3800+
                   </p>
                   <p className="text-lg font-normal sm:text-xl">Members</p>
@@ -289,10 +289,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-grow flex-col bg-white p-4 sm:p-6">
-                  <h3 className="text-lg text-black sm:text-xl lg:text-2xl">
+                  <h3 className="text-lg text-black sm:text-xl xl:text-2xl">
                     Game in the Gamers&apos; Lounge!
                   </h3>
-                  <p className="mt-2 text-sm text-gray-900 sm:text-base lg:text-lg">
+                  <p className="mt-2 text-sm text-gray-900 sm:text-base xl:text-lg">
                     Drop into the Gamers&apos; Lounge on campus to play on one
                     of our 16 high-performance PCs or enjoy console gaming on a
                     big-screen TV.
@@ -326,10 +326,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-grow flex-col bg-white p-4 sm:p-6">
-                  <h3 className="text-lg text-black sm:text-xl lg:text-2xl">
+                  <h3 className="text-lg text-black sm:text-xl xl:text-2xl">
                     Connect with Like-Minded Gamers!
                   </h3>
-                  <p className="mt-2 text-sm text-gray-900 sm:text-base lg:text-lg">
+                  <p className="mt-2 text-sm text-gray-900 sm:text-base xl:text-lg">
                     Forge friendships and bond over shared interests at our
                     gatherings. Join us for the chance to meet others who share
                     your passion for gaming.
@@ -363,10 +363,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-grow flex-col bg-white p-4 sm:p-6">
-                  <h3 className="text-lg text-black sm:text-xl lg:text-2xl">
+                  <h3 className="text-lg text-black sm:text-xl xl:text-2xl">
                     Engage in Diverse Student-Run Events!
                   </h3>
-                  <p className="mt-2 text-sm text-gray-900 sm:text-base lg:text-lg">
+                  <p className="mt-2 text-sm text-gray-900 sm:text-base xl:text-lg">
                     Participate in a variety of student-run events, ranging from
                     competitive tournaments and casual game nights to community
                     meetups.
@@ -433,7 +433,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="xl:p mt-2 flex w-fit items-center rounded-xl bg-black px-2 py-1 text-lg text-white lg:text-xl xl:px-4 xl:py-2 xl:text-2xl">
+                <span className="mt-2 flex w-fit items-center rounded-xl bg-black px-2 py-1 text-lg text-white lg:px-3 lg:py-[6px] lg:text-xl xl:px-4 xl:py-2 xl:text-2xl">
                   SHOP NOW &nbsp;
                   <FontAwesomeIcon
                     className="-rotate-90 text-2xl"
@@ -524,7 +524,7 @@ export default function Home() {
         <div className="relative flex w-screen justify-center bg-[#d3d3d3] pt-[4vh] sm:pt-[5vh]">
           <div className="flex w-[90vw] flex-col sm:w-[75vw] lg:flex-row">
             <div className="box-border flex w-full flex-col pr-5 pt-[14px] lg:w-1/2">
-              <p className="text-5xl font-bold text-red-600 xl:text-6xl">FAQ</p>{" "}
+              <p className="bg-gradient-to-tr from-red-700 to-red-500 bg-clip-text text-4xl sm:text-5xl font-bold text-red-700 xl:text-6xl">FAQ</p>{" "}
               <br />
               <p className="text-xl font-semibold text-black sm:text-2xl xl:text-3xl">
                 If you don&apos;t see your question here, reach out in the

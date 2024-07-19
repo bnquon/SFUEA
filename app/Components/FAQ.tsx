@@ -32,22 +32,28 @@ export const FAQ: React.FC<FAQProps> = ({ onWhatPage }) => {
   }, []);
 
   const getResponsiveStyles = () => {
-    if (windowWidth >= 1200) {
+    if (windowWidth >= 1500) {
+      return {
+        rowContentTextSize: "18px",
+        rowTitleTextSize: "24px",
+      }
+    }
+    else if (windowWidth >= 1200) {
       // lg breakpoint
       return {
-        rowContentTextSize: "20px",
-        rowTitleTextSize: "28px",
+        rowContentTextSize: "16px",
+        rowTitleTextSize: "22px",
       };
     } else if (windowWidth >= 610) {
       // sm breakpoint
       return {
-        rowContentTextSize: "16px",
-        rowTitleTextSize: "24px",
+        rowContentTextSize: "14px",
+        rowTitleTextSize: "20px",
       };
     } else {
       return {
-        rowContentTextSize: "14px",
-        rowTitleTextSize: "20px",
+        rowContentTextSize: "12px",
+        rowTitleTextSize: "18px",
       };
     }
   };

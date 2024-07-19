@@ -33,9 +33,9 @@ export const Footer = () => {
       <div className="relative w-full bg-black pl-[5vw] sm:pl-[12.5vw] lg:h-[50vh]">
         <div className="relative box-border flex w-[90vw] -translate-y-1/3 flex-col justify-between rounded-3xl bg-red-500 px-3 py-6 text-white sm:w-[75vw] sm:p-10 lg:w-[37.5vw]">
           <div>
-            <p className="text-3xl font-bold sm:text-5xl">JOIN THE CLUB.</p>{" "}
+            <p className="text-3xl font-bold sm:text-4xl xl:text-5xl">JOIN THE CLUB.</p>{" "}
             <br />
-            <p className="mb-4 text-xl sm:text-2xl xl:mb-8 xl:text-3xl">
+            <p className="mb-4 text-xl sm:text-xl xl:mb-8 xl:text-3xl">
               We want to see you in the Gamers&apos; Lounge or the next
               in-house!
             </p>
@@ -47,7 +47,7 @@ export const Footer = () => {
           >
             <button
               id="footer-btn"
-              className="w-fit rounded-full bg-black px-6 py-3 text-lg duration-200 hover:bg-white hover:text-black sm:px-10 sm:py-5 sm:text-2xl"
+              className="w-fit rounded-full bg-black px-6 py-3 text-lg duration-200 hover:bg-white hover:text-black sm:px-8 sm:py-4 sm:text-2xl xl:px-10 xl:py-5"
             >
               Get Started
             </button>

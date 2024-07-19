@@ -90,7 +90,7 @@ export const GameCarousel = () => {
                 <p className="absolute top-0 z-10 h-[8%] w-full bg-gradient-to-b from-red-500"></p>
                 <Image
                   id="game-pic"
-                  className="object-cover brightness-[85%] duration-300 hover:scale-110 hover:brightness-100"
+                  className="object-cover lg:brightness-[85%] duration-300 lg:hover:scale-110 lg:hover:brightness-100 brightness-100"
                   width={0}
                   height={0}
                   src={game.picture}
