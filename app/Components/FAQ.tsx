@@ -32,7 +32,13 @@ export const FAQ: React.FC<FAQProps> = ({ onWhatPage }) => {
   }, []);
 
   const getResponsiveStyles = () => {
-    if (windowWidth >= 1500) {
+    if (windowWidth >= 1800) {
+      return {
+        rowContentTextSize: "20px",
+        rowTitleTextSize: "26px",
+      }
+    }
+    else if (windowWidth >= 1500) {
       return {
         rowContentTextSize: "18px",
         rowTitleTextSize: "24px",
